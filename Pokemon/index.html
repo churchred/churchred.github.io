@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Math Addintion Game</title>
+
+   <!-- Css Link -->
+   <link rel="stylesheet" href="style.css">
+
+   <!--Script Links-->
+   <script src="main.js"></script>
+
+</head>
+
+
+<body>
+   <div class="line_at_the_top">
+      <div class="dropdown_div">
+         <select id ="dropdown" name="dropdown" class="droppdown" onmousedown="this.value='';" onchange="change_diff(this.value);">
+            <option value="add10">Addisjon 0-10</option>
+            <option value="add20">Addisjon 0-20</option>
+            <option value="sub10">Subtraksjon 0-10</option>
+            <option value="sub20">Subtraksjon 0-20</option>
+        </select>
+      </div>
+   </div>
+   <!-- Main Container -->
+   <div class="hele_spill_box" id="hele_spill_box">
+      
+      <div class="main">
+         <!-- Heading -->
+         <h1>Matematikkspill: <span> Pluss</span></h1>
+
+         <!-- Main Box -->
+         <div class="main_game_box" id="main_game_box">
+            <div class="show-anwser"><span id="show_answer"></span></div>
+            <div class="pkball" id="pkball"></div>
+            <div class="box1">
+               <div class="box-col">
+                  <input type="textf" id="intext" class="all_numbers">
+               </div>
+
+               <div class="add_pluss">
+                  <p id="fortegn">+</p>
+               </div>
+
+                <div class="box2">
+                  <input type="textf" id="intext1" class="all_numbers">
+               </div>
+            </div>
+
+            <!-- text input -->
+            <div class="box3">
+               <input type="text" id="intext2">
+            </div>
+
+            <!-- button -->
+             <div class="box2">
+               <button class="btn" id="btn" onclick="sjekk_svar()">Sjekk svar</button>
+            </div>
+            <div class="box3">
+              <button class="btn2" id="btn2" onclick="lag_regnestykke()"> Ny</button>
+           </div>
+         </div>
+         
+      </div> 
+      <div class="pokemon_box" id="pokemon_box"></div>
+   </div>
+   
+</body>
+</html>
