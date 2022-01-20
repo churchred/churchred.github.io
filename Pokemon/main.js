@@ -4,6 +4,7 @@ var math_completed = true
 var pokeball_visible = false
 var current_diff = "add10"
 
+
 function change_diff(e){
   current_diff = e
   console.log(current_diff)
@@ -54,8 +55,8 @@ function lag_regnestykke(){
 
     //Lag regnestykke men tall mellom 1-10
     if(current_diff == "add10"){
-      n1 = Math.floor(Math.random()*10+1);
-      n2 = Math.floor(Math.random()*10+1);
+      n1 = Math.floor(Math.random()*11);
+      n2 = Math.floor(Math.random()*(11-n1));
       //Gjør om det ene tallet i regnestykket slik at svaret ALDRI blir over 10.
       if(n1+n2 > 10){
         for (let i = 0; n1+n2 > 10; i++) {
@@ -66,12 +67,13 @@ function lag_regnestykke(){
 
     //Lag regnestykke men tall mellom 1-20
     if(current_diff == "add20"){
-      n1 = Math.floor(Math.random()*20+1);
-      n2 = Math.floor(Math.random()*20+1);
+      n1 = Math.floor(Math.random()*21);
+      n2 = Math.floor(Math.random()*(21-n1));
       //Gjør om det ene tallet i regnestykket slik at svaret ALDRI blir over 10.
       if(n1+n2 > 20){
         for (let i = 0; n1+n2 > 20; i++){
-          n1 = Math.floor(Math.random()*20+1);}
+          n1 = Math.floor(Math.random()*10+1);
+        }
       }
     }
 
@@ -160,4 +162,3 @@ function open_pkball(){
   element.parentNode.removeChild(element);
   console.log("You opened a Pokeball")
 }
-
