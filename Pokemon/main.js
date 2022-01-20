@@ -1,6 +1,6 @@
 
 var counter_completed = 0
-var math_completed = false
+var math_completed = true
 var pokeball_visible = false
 var current_diff = "add10"
 
@@ -71,7 +71,7 @@ function lag_regnestykke(){
       //Gjør om det ene tallet i regnestykket slik at svaret ALDRI blir over 10.
       if(n1+n2 > 20){
         for (let i = 0; n1+n2 > 20; i++){
-        n1 = Math.floor(Math.random()*20+1);}
+          n1 = Math.floor(Math.random()*20+1);}
       }
     }
 

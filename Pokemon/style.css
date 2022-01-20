@@ -100,7 +100,7 @@
   border: none;
   font-size: 16px;
   color: #fff;
-  background: #fb6868;
+  background: gray;
    box-shadow: 1px 1px 0px #999,
   2px 2px 0px #999,
   3px 2px 0px #999,
@@ -168,7 +168,7 @@
 
 .dropdown_div{
   padding-top: 6px;
-  padding-left: 125px;
+  padding-left: 50px;
 }
 
 #dropdown{
