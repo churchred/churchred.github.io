@@ -140,7 +140,7 @@ function sjekk_svar(){
       pokeball()
       poeng_func();}
     else{
-      document.getElementById("show_answer").innerHTML = "Riktig svar er: " + adds + " . Prøv igjen";}  
+      document.getElementById("show_answer").innerHTML = "Det er ikke riktig. Prøv igjen";}  
 }
 }
 
