@@ -158,6 +158,14 @@
   border: 1px solid black;
 }
 
+.pkmn_img_shiny{ /*original scale: 96x96*/
+  height: 117px;
+  width: 117px;
+  padding: 1px;
+  margin: -1px 1px;
+  border: 2px solid rgb(173, 175, 36);
+}
+
 .pkmn_ball{
   height: 150px;
   width: 150px;

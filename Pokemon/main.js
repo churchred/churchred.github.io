@@ -1,9 +1,12 @@
 
-var counter_completed = 0
-var math_completed = true
-var pokeball_visible = false
-var current_diff = "add10"
+var counter_completed = 0 //Teller hvor mange riktige du får. Når den er lik points_for_pkm får du pokeball
+var math_completed = true //Er mattestykke ferdig? Denne låser Sjekk-knappen.
+var pokeball_visible = false //Om det finnes en Pokeball på skjermen, denne låser knappene.
+var current_diff = "add10" //Starter på Addisjon 1-10
 var points = 0
+
+var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
+var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 
 
 function poeng_func(){
@@ -35,7 +38,7 @@ function add_pokemon(){
   rand= Math.floor(Math.random()*151+1); //Denne finner et random tall.
 
   //Shiny or no Shiny? Vi bruker random tall til å lage path.
-  shinycalc = Math.floor(Math.random()*20+1);
+  shinycalc = Math.floor(Math.random()*chance_shiny);
   if(shinycalc == 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + rand + "s" + ".png"} 
   if(shinycalc != 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + rand + ".png"}
 
@@ -45,7 +48,10 @@ function add_pokemon(){
   //img.width = 150;
 
   //optionally set a css class on the image
-  var class_name = "pkmn_img";
+  if(shinycalc == 1) {var class_name = "pkmn_img_shiny";} 
+  if(shinycalc != 1) {var class_name = "pkmn_img";}
+
+  
   img.setAttribute("class", class_name);
 
   //Add image
@@ -139,7 +145,7 @@ function sjekk_svar(){
 }
 
 function pokeball(){
-  if (counter_completed == 5){
+  if (counter_completed == points_for_pkm){
     pokeball_visible = true
     counter_completed = 0;}
 
