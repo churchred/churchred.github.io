@@ -130,6 +130,19 @@
   border-bottom-right-radius: 10px;
 }
 
+.poeng_sum{
+  font-size: 40px;
+  padding-left: 0px;
+  padding-top: 15px;
+  margin-top: -15px;
+}
+
+.poeng_text{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
 .main h1{
   margin: 10px 40px;
 }

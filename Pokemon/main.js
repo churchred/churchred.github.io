@@ -3,7 +3,14 @@ var counter_completed = 0
 var math_completed = true
 var pokeball_visible = false
 var current_diff = "add10"
+var points = 0
 
+
+function poeng_func(){
+  points = points + 1
+  document.getElementById("poeng_sum").innerHTML = points
+
+}
 
 function change_diff(e){
   current_diff = e
@@ -124,7 +131,8 @@ function sjekk_svar(){
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
-      pokeball();}
+      pokeball()
+      poeng_func();}
     else{
       document.getElementById("show_answer").innerHTML = "Riktig svar er: " + adds + " . Prøv igjen";}  
 }
