@@ -5,30 +5,44 @@
   font-family: roboto;
 }
 
-.pokemon_box{ 
-  width: 980px;
-  height: 420px;
-  background: rgb(255, 255, 255);
-  display: grid, inline-grid;
-  justify-content: left;
-  align-items: top;
-  float: right;
-  margin: 75px 0px;
-  padding-top: 40px;
-  padding-left: 25px;
-}
-
-
 .hele_spill_box{
-  width: 100%;
-  height: 500px;
+  width: 1280px;
+  height: 100%;
   background: rgb(255, 255, 255);
   display: flex;
   justify-content: left;
-  align-items: center;
-  margin: 0px 30px;
+  align-items: top;
   float: left;
 }
+
+.pokedex_box{
+  width: 100%;
+  height: 40px;
+  background: #e63c3c;
+  margin: 0px 0px 3px 0px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
+
+.pokemon_box{ 
+  width: 55.95%;
+  height: 100%;
+  background: rgb(190, 192, 192);
+  display: grid, inline-grid;
+  align-items: center;
+  border-radius: 10px;
+  border: black 1px solid;
+  margin-left: 50px;
+  margin-top: 57px;
+}
+
 
 .main_game_box{
   width: 400px;
@@ -38,6 +52,8 @@
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  border: black 1px solid;
+  margin: 0px 30px;
 }
 
 .show-anwser{
@@ -53,11 +69,23 @@
   color: #fff;
   font-size: 18px;
   font-weight: 500;
+  border-bottom: 1px solid black;
 }
 
 .h1{
-  padding-left: 50px;
+  padding-left: 75px;
   margin-bottom: -50px;
+  padding-top: 41px;
+}
+
+
+
+.antall_pokemon{
+  padding-left: 100px;
+}
+
+.h2{
+  color: rgb(0, 0, 0);
 }
 
 .box1{
@@ -101,6 +129,7 @@
 
 .btn{
   padding: 8px 20px;
+  width: 120px;
   border: none;
   font-size: 16px;
   color: #fff;
@@ -118,6 +147,8 @@
   padding: 4px 20px;
   margin: 10px 0px;
   border: none;
+  width: 110px;
+  height: 30px;
   font-size: 16px;
   color: #fff;
   background: #5da06e;
@@ -163,7 +194,7 @@
   width: 117px;
   padding: 1px;
   margin: -1px 1px;
-  border: 2px solid rgb(173, 175, 36);
+  border: 2px solid rgb(243, 155, 73);
 }
 
 .pkmn_ball{
@@ -186,14 +217,22 @@
 /*DROPDOWN MENU STUFF UNDER HERE*/
 
 .line_at_the_top{
-  width: 100%px;
+  width: 100%;
   height: 50px;
+  align-items: center;
   background: rgb(0, 0, 0);
+}
+
+.v_grad{
+  color: green;
+  margin-left: 235px;
+  padding-top: 8px;
 }
 
 .dropdown_div{
   padding-top: 6px;
-  padding-left: 50px;
+  padding-left: 20px;
+  margin-top: -43px;
 }
 
 #dropdown{
