@@ -3,14 +3,19 @@ var counter_completed = 0 //Teller hvor mange riktige du får. Når den er lik p
 var math_completed = true //Er mattestykke ferdig? Denne låser Sjekk-knappen.
 var pokeball_visible = false //Om det finnes en Pokeball på skjermen, denne låser knappene.
 var current_diff = "add10" //Starter på Addisjon 1-10
-var points = 0
 
 pokemon_counter = 0 //Antall pokemon du har.
 alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 
-var points_for_pkm = 1; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
+var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 
+badges_array = ['Bilder\\Badges\\Kanto\\box_0.png','Bilder\\Badges\\Kanto\\box_1.png','Bilder\\Badges\\Kanto\\box_2.png',
+                'Bilder\\Badges\\Kanto\\box_3.png','Bilder\\Badges\\Kanto\\box_4.png','Bilder\\Badges\\Kanto\\box_5.png',
+                'Bilder\\Badges\\Kanto\\box_6.png','Bilder\\Badges\\Kanto\\box_7.png','Bilder\\Badges\\Kanto\\box_8.png']
+
+
+                
 //Array med all pokemon Info!
 let pokedex_array = [  //Pokedex Nr, Navn, Har du den?, Er den Shiny?
 [1, 'Bulbasaur',0 ,0], [2, 'Ivysaur',0 ,0], [3, 'Venusaur',0 ,0], [4, 'Charmander',0 ,0], [5, 'Charmeleon',0 ,0], [6, 'Charizard',0 ,0],
@@ -41,8 +46,7 @@ let pokedex_array = [  //Pokedex Nr, Navn, Har du den?, Er den Shiny?
 [151, 'Mew',0 ,0]
 ]
 
-
-//-----------------------------Testing for loop-------------------------------
+//-----------------------------Testing "for-loop"-------------------------------
 
 function load_all_pokemon_in_order(){
   for(i = 0; i < pokedex_array.length; i++){
@@ -60,16 +64,146 @@ function load_all_pokemon_in_order(){
     document.getElementById("pokemon_box").appendChild(img);}
 }
 
-function load_all_pokemon_normal_way(){
+function load_all_pokemon_normal_way(x){
   for(i=0; i < pokedex_array.length; i++){
-  add_pokemon()}
+    add_pokemon()}
 }
 
 //----------------------------------------------------------------------------
 
+//Cookie Saving
+function cookie_save(){
+  //localStorage.setItem("points", points)
+  for(i = 0; i<pokedex_array.length; i++){
+    localStorage.setItem(pokedex_array[i][0]+"_got", pokedex_array[i][2])
+    localStorage.setItem(pokedex_array[i][0]+"_shiny", pokedex_array[i][3])
+  } 
+}
+
+//Cookie Loading
+function cookie_load(){
+  console.log("Game Loaded!")
+  //console.log(localStorage)
+  var array = [];
+  try{
+    if(localStorage.length > 5){
+      for(i = 0; i<pokedex_array.length; i++){
+        pokedex_array[i][2] = localStorage.getItem(pokedex_array[i][0]+"_got")
+        pokedex_array[i][3] = localStorage.getItem(pokedex_array[i][0]+"_shiny")
+        if(pokedex_array[i][2] == 1){load_spesific_pokemon(i);}
+      }
+      
+    }
+  }
+  catch(error_msg){
+    console.log(error_msg)
+  }
+  badges_check()
+}
+
+function load_spesific_pokemon(y){
+  if(pokedex_array[y][3] == 0){var path = 'Bilder' + "\\" + 'Sprites' + "\\" + pokedex_array[y][0] + ".png"}
+  if(pokedex_array[y][3] == 1){var path = 'Bilder' + "\\" + 'Sprites' + "\\" + pokedex_array[y][0] + "s" + ".png"}
+  var img = document.createElement("img");
+
+  img.src = path 
+  
+  if(pokedex_array[y][3] == 0){var class_name = "pkmn_img";}
+  if(pokedex_array[y][3] == 1){var class_name = "pkmn_img_shiny";}
+  
+  img.setAttribute("class", class_name);
+  img.setAttribute("id", y);
+
+  pokemon_counter += 1
+  document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + "151")
+  //console.log("Added:", pokedex_array[y][1], "Pokedex:", pokemon_counter, "/", pokedex_array.length)
+
+  if(pokemon_counter == pokedex_array.length){alle_pokemon = true;}
+
+  //Add image
+  document.getElementById("pokemon_box").appendChild(img);
+}
+
+function badges_check(){
+  console.log(badges_array[0])
+  if(pokemon_counter >= 0){
+    var badge_number = 0;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 10){
+    var badge_number = 1;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 25){
+    var badge_number = 2;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 50){
+    var badge_number = 3;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 75){
+    var badge_number = 4;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 100){
+    var badge_number = 5;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 120){
+    var badge_number = 6;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 140){
+    var badge_number = 7;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+  if(pokemon_counter >= 151){
+    var badge_number = 8;
+    var img = document.createElement("img");
+    var path = badges_array[badge_number] 
+  }
+
+  document.getElementById("badges_box").innerHTML = ""
+  img.src = path
+  var class_name = "badges_number_img";
+  img.setAttribute("class", class_name);
+  img.setAttribute("id", "Badges")
+  document.getElementById("badges_box").appendChild(img);
+
+  if(alle_pokemon == true){
+    var img = document.createElement("img");
+    img.src = "Bilder\\Badges\\league_trophy.png"
+    var class_name = "trophy";
+    img.setAttribute("class", class_name);
+    img.setAttribute("id", "trophy")
+    document.getElementById("badges_box").appendChild(img);
+  }
+
+}
+
 function poeng_func(){ //Holder styr på poengene dine
-  points = points + 1
-  document.getElementById("poeng_sum").innerHTML = points
+  if(alle_pokemon == false){
+    var lys = ""
+    for(i=0; i<counter_completed; i++){
+      lys = "poeng_" + (i+1)
+      document.getElementById(lys).style.background = "#5da06e";
+    }
+    if (counter_completed == 0){
+      for(i=0; i<5; i++){
+        lys = "poeng_" + (i+1)
+        document.getElementById(lys).style.background = "#fb6868";
+      }
+    }
+  } 
 }
 
 function change_diff(e){
@@ -113,43 +247,57 @@ function change_diff(e){
 }
 
 function add_pokemon(){
-  rand= Math.floor(Math.random()*pokedex_array.length); //Denne finner et random tall.
-
-  if(pokedex_array[rand][3] == 1){
-    console.log(pokedex_array[rand][1], "?", "Already have that one!")
-    for(var i = 0; i<100; i++){
-      rand = Math.floor(Math.random()*pokedex_array.length)
-      if (pokedex_array[rand][3] != 1) {break;}
-    }
+  
+  var temp_array = []
+  //console.log(temp_array)
+  for(i=0; i < pokedex_array.length; i++){
+      if(pokedex_array[i][2] == 0){
+        temp_array.push(pokedex_array[i])
+      }
   }
+  
+  rand= Math.floor(Math.random()*temp_array.length); //Denne finner et random tall.
 
   //Shiny or no Shiny? Vi bruker random tall til å lage path.
   shinycalc = Math.floor(Math.random()*chance_shiny);
-  if(shinycalc == 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + pokedex_array[rand][0] + "s" + ".png", console.log("A shiny!")}
-  if(shinycalc != 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + pokedex_array[rand][0] + ".png"}
+  if(shinycalc == 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + temp_array[rand][0] + "s" + ".png", console.log("A shiny!")}
+  if(shinycalc != 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + temp_array[rand][0] + ".png"}
 
   var img = document.createElement("img");
   img.src = path 
 
   //optionally set a css class on the image
-  if(shinycalc == 1) {var class_name = "pkmn_img_shiny"; pokedex_array[rand][3] = 1;} 
+  if(shinycalc == 1) {var class_name = "pkmn_img_shiny"; temp_array[rand][3] = 1;} 
   if(shinycalc != 1) {var class_name = "pkmn_img";}
 
   img.setAttribute("class", class_name);
   img.setAttribute("id", rand);
 
-  pokedex_array[rand][2] = 1
-  
+  temp_array[rand][2] = 1
+
+  //console.log("Added:", temp_array[rand][1], "Pokedex:", pokemon_counter, "/", pokedex_array.length)
 
   pokemon_counter += 1
-  document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + "151")
-
-  console.log("Added:", pokedex_array[rand][1], "Pokedex:", pokemon_counter, "/", pokedex_array.length)
-
   if(pokemon_counter == pokedex_array.length){alle_pokemon = true;}
+
+
+  for(i=0; i < temp_array.length; i++){    //Gjør om på Pokedex array til å matche forandringene i temp_array
+    if(temp_array[i][2] == 1){
+      for(y=0; y < pokedex_array.length; y++){
+        if(temp_array[i][0] == pokedex_array[y][0]){
+          pokedex_array[y] = temp_array[i]
+        }
+      } 
+    }
+  }
+
+  console.log(temp_array.length + "/" + pokedex_array.length)
 
   //Add image
   document.getElementById("pokemon_box").appendChild(img);
+  document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + "151")
+  cookie_save()
+  badges_check()
 }
 
 //Lager 2 tilfeldige tall(0-20) til mattestykket
@@ -266,8 +414,8 @@ function sjekk_svar(){
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
-      pokeball()
-      poeng_func();}
+      poeng_func()
+      pokeball()}
     else{
       document.getElementById("show_answer").innerHTML = "Det er ikke riktig. Prøv igjen";}  
 }
@@ -306,4 +454,6 @@ function open_pkball(){
   add_pokemon()
   var element = document.getElementById("pokeball_img");
   element.parentNode.removeChild(element);
+  poeng_func() //Teller poeng
+  lag_regnestykke()
 }

@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>Matematikk spill (ver. 1.4)</title>
+   <title>Matematikk spill (ver 1.8)</title>
 
    <!-- Css Link -->
    <link rel="stylesheet" href="style.css">
@@ -12,11 +12,15 @@
    <script src="main.js"></script>
 
 </head>
-
-
-<body>
+<body onload= "cookie_load()">
    <div class="line_at_the_top">
       <h1 class="v_grad" id="v_grad">Pluss</h1>
+      <div class="region_btn_div">
+         <button class="kanto_btn" id="kanto_btn">Not ready</button>
+         <button class="johto_btn" id="johto_btn">Not ready</button>
+         <button class="hoenn_btn" id="hoenn_btn">Not ready</button>
+      </div>
+
       <div class="dropdown_div">
          <select id ="dropdown" name="dropdown" class="droppdown" onmousedown="this.value='';" onchange="change_diff(this.value);">
             <option value="add10">Addisjon 0-10</option>
@@ -73,19 +77,24 @@
               <button class="btn2" id="btn2" onclick="lag_regnestykke()"> Ny</button>
             </div>
             <div class="poeng_div">
-               <p class="poeng_text">Poeng:</p>
+               <div class="poeng_1" id="poeng_1"></div>
+               <div class="poeng_2" id="poeng_2"></div>
+               <div class="poeng_3" id="poeng_3"></div>
+               <div class="poeng_4" id="poeng_4"></div>
+               <div class="poeng_5" id="poeng_5"></div>
             </div>
-            <div><p class="poeng_sum" id="poeng_sum">0</p></div>
          </div>
-         
+         <div class="badges_box_div" id="badges_box_div">
+            <div class="badges_box" id="badges_box"></div>
+         </div>
       </div> 
       <div class="pokemon_box" id="pokemon_box">
          <div class="pokedex_box" id="pokedex_box">
             <h2 class="h2">POKEDEX:</h2>
             <h2 class="h2" id="antall pokemon">&nbsp 0/151</h2>
+            <button class="btn2" id="btn2" onclick="add_pokemon()">ADD</button>
          </div>
       </div>
-      
    </div>
    
 </body>
