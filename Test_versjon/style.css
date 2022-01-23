@@ -15,6 +15,26 @@
   float: left;
 }
 
+.badges_box{
+  width: 239px;
+  height: 135px;
+  margin-left: 83px;
+  margin-top: 8px;
+}
+
+.trophy{
+  width: 150px;
+  height: 250px;
+  margin-left: 45px;
+  margin-top: 8px;
+}
+
+.badges_box_div{
+  width: 400px;
+  height: 300px;
+  margin-left: 31px;
+}
+
 .pokedex_box{
   width: 100%;
   height: 40px;
@@ -232,6 +252,38 @@
   width: 200px;
   height: 35px;
 }
+
+.kanto_btn{
+  background-color: rgb(95, 93, 93);
+  font-size: 18px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  margin-left: 710px;
+  margin-top: -35px;
+}
+
+.johto_btn{
+  background-color: rgb(95, 93, 93);
+  font-size: 18px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  margin-left: 820px;
+  margin-top: -35px;
+
+}
+
+.hoenn_btn{
+  background-color: rgb(95, 93, 93);
+  font-size: 18px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  margin-left: 930px;
+  margin-top: -35px;
+}
+
 
 /*POENG STUFF UNDER HER*/
 
