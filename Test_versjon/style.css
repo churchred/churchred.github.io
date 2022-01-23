@@ -161,18 +161,6 @@
   border-bottom-right-radius: 10px;
 }
 
-.poeng_sum{
-  font-size: 40px;
-  padding-left: 0px;
-  padding-top: 15px;
-  margin-top: -15px;
-}
-
-.poeng_text{
-  font-size: 20px;
-  padding-left: 10px;
-  padding-top: 10px;
-}
 
 .main h1{
   margin: 10px 40px;
@@ -243,4 +231,57 @@
 #dropdown option{
   width: 200px;
   height: 35px;
+}
+
+/*POENG STUFF UNDER HER*/
+
+.poeng_div{
+  width: 105px;
+  height: 35px;
+  margin-left: 5px;
+  margin-top: 5px;
+  justify-content: left;
+  align-items: left;
+  display: flex;
+}
+
+.poeng_1{
+  width: 19px;
+  height: 19px;
+  background-color: #fb6868;
+  margin-right: 2px;
+  margin-left: 2px;
+  border: black solid 1px;
+}
+
+.poeng_2{
+  width: 19px;
+  height: 19px;
+  background-color: #fb6868;
+  margin-right: 2px;
+  border: black solid 1px;
+}
+
+.poeng_3{
+  width: 19px;
+  height: 19px;
+  background-color: #fb6868;
+  margin-right: 2px;
+  border: black solid 1px;
+}
+
+.poeng_4{
+  width: 19px;
+  height: 19px;
+  background-color: #fb6868;
+  margin-right: 2px;
+  border: black solid 1px;
+}
+
+.poeng_5{
+  width: 19px;
+  height: 19px;
+  background-color: #fb6868;
+  margin-right: 2px;
+  border: black solid 1px;
 }

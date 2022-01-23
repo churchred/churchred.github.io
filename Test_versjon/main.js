@@ -3,13 +3,12 @@ var counter_completed = 0 //Teller hvor mange riktige du får. Når den er lik p
 var math_completed = true //Er mattestykke ferdig? Denne låser Sjekk-knappen.
 var pokeball_visible = false //Om det finnes en Pokeball på skjermen, denne låser knappene.
 var current_diff = "add10" //Starter på Addisjon 1-10
-var points = 0
 
 pokemon_counter = 0 //Antall pokemon du har.
 alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 
-var points_for_pkm = 1; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
-var chance_shiny = 3;  //Sjanse for Shiny  - orginal: 20
+var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
+var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 
 //Array med all pokemon Info!
 let pokedex_array = [  //Pokedex Nr, Navn, Har du den?, Er den Shiny?
@@ -123,8 +122,19 @@ function load_spesific_pokemon(y){
 
 
 function poeng_func(){ //Holder styr på poengene dine
-  points = points + 1
-  document.getElementById("poeng_sum").innerHTML = points
+  var lys = ""
+  for(i=0; i<counter_completed; i++){
+    lys = "poeng_" + (i+1)
+    document.getElementById(lys).style.background = "#5da06e";
+  }
+  if (counter_completed == 0){
+    for(i=0; i<5; i++){
+      lys = "poeng_" + (i+1)
+      document.getElementById(lys).style.background = "#fb6868";
+    }
+  }
+  
+  
 }
 
 function change_diff(e){
@@ -322,8 +332,8 @@ function sjekk_svar(){
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
-      pokeball()
-      poeng_func();}
+      poeng_func()
+      pokeball()}
     else{
       document.getElementById("show_answer").innerHTML = "Det er ikke riktig. Prøv igjen";}  
 }
@@ -362,4 +372,6 @@ function open_pkball(){
   add_pokemon()
   var element = document.getElementById("pokeball_img");
   element.parentNode.removeChild(element);
+  poeng_func() //Teller poeng
+  lag_regnestykke()
 }
