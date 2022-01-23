@@ -10,10 +10,12 @@ alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 
-badges_array = ['\\Bilder\\Badges\\Kanto\\box_0.png', '\\Bilder\\Badges\\Kanto\\box_1.png','\\Bilder\\Badges\\Kanto\\box_2.png',
-                '\\Bilder\\Badges\\Kanto\\box_3.png','\\Bilder\\Badges\\Kanto\\box_4.png','\\Bilder\\Badges\\Kanto\\box_5.png',
-                '\\Bilder\\Badges\\Kanto\\box_6.png','\\Bilder\\Badges\\Kanto\\box_7.png', '\\Bilder\\Badges\\Kanto\\box_8.png']
+badges_array = ['Bilder\\Badges\\Kanto\\box_0.png','Bilder\\Badges\\Kanto\\box_1.png','Bilder\\Badges\\Kanto\\box_2.png',
+                'Bilder\\Badges\\Kanto\\box_3.png','Bilder\\Badges\\Kanto\\box_4.png','Bilder\\Badges\\Kanto\\box_5.png',
+                'Bilder\\Badges\\Kanto\\box_6.png','Bilder\\Badges\\Kanto\\box_7.png','Bilder\\Badges\\Kanto\\box_8.png']
 
+
+                
 //Array med all pokemon Info!
 let pokedex_array = [  //Pokedex Nr, Navn, Har du den?, Er den Shiny?
 [1, 'Bulbasaur',0 ,0], [2, 'Ivysaur',0 ,0], [3, 'Venusaur',0 ,0], [4, 'Charmander',0 ,0], [5, 'Charmeleon',0 ,0], [6, 'Charizard',0 ,0],
@@ -43,8 +45,6 @@ let pokedex_array = [  //Pokedex Nr, Navn, Har du den?, Er den Shiny?
 [145, 'Zapdos',0 ,0], [146, 'Moltres',0 ,0], [147, 'Dratini',0 ,0], [148, 'Dragonair',0 ,0], [149, 'Dragonair',0 ,0], [150, 'Mewtwo',0 ,0],
 [151, 'Mew',0 ,0]
 ]
-
-
 
 //-----------------------------Testing "for-loop"-------------------------------
 
@@ -125,7 +125,7 @@ function load_spesific_pokemon(y){
 }
 
 function badges_check(){
-  //console.log(document.getElementById("badges_box"))
+  console.log(badges_array[0])
   if(pokemon_counter >= 0){
     var badge_number = 0;
     var img = document.createElement("img");
