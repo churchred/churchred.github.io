@@ -149,7 +149,10 @@
 
 .btn{
   padding: 8px 20px;
-  width: 120px;
+  margin-top: -13px;
+  margin-bottom: 5px;
+  height: 50px;
+  width: 130px;
   border: none;
   font-size: 16px;
   color: #fff;
