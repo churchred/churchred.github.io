@@ -13,27 +13,29 @@
 
 </head>
 <body onload= "cookie_load()">
+   
    <div class="line_at_the_top">
       <h1 class="v_grad" id="v_grad">Pluss</h1>
       <div class="region_btn_div">
-         <button class="kanto_btn" id="kanto_btn">Not ready</button>
-         <button class="johto_btn" id="johto_btn">Not ready</button>
-         <button class="hoenn_btn" id="hoenn_btn">Not ready</button>
+         <button class="kanto_btn" id="kanto_btn" onclick="switch_region('Kanto')">Kanto</button>
+         <button class="johto_btn" id="johto_btn" onclick="switch_region('Johto')">Johto</button>
+         <button class="hoenn_btn" id="hoenn_btn" onclick="switch_region('Hoenn')">Hoenn</button>
       </div>
-
       <div class="dropdown_div">
          <select id ="dropdown" name="dropdown" class="droppdown" onmousedown="this.value='';" onchange="change_diff(this.value);">
-            <option value="add10">Addisjon 0-10</option>
-            <option value="add20">Addisjon 0-20</option>
+            <option value="add10">Pluss 0-10</option>
+            <option value="add20">Pluss 0-20</option>
             <option value="" disabled>---------------</option>
-            <option value="sub10">Subtraksjon 0-10</option>
-            <option value="sub20">Subtraksjon 0-20</option>
+            <option value="sub10">Minus 0-10</option>
+            <option value="sub20">Minus 0-20</option>
             <option value="" disabled>---------------</option>
             <option value="multi1">Multiplikasjon 1-5</option>
             <option value="multi2">Multiplikasjon 1-10</option>
             <option value="" disabled>---------------</option>
             <option value="div1">Divisjon I</option>
             <option value="div2">Divisjon II</option>
+            <option value="" disabled>---------------</option>
+            <option value="tiven2">Pluss 1-100(Tiervenner)</option>
         </select>
       </div>
    </div>
@@ -43,7 +45,7 @@
       
       <div class="main">
          <!-- Heading -->
-         <h1 class="h1">Matematikkspill</h1>
+         <img src="Bilder\\overskrift.png" alt="Matematikkspill" class="overskrift">
 
          <!-- Main Box -->
          <div class="main_game_box" id="main_game_box">
@@ -92,6 +94,7 @@
          <div class="pokedex_box" id="pokedex_box">
             <h2 class="h2">POKEDEX:</h2>
             <h2 class="h2" id="antall pokemon">&nbsp 0/151</h2>
+            <button class="btn2" id="btn2" onclick="add_pokemon()">ADD</button>
          </div>
       </div>
    </div>
