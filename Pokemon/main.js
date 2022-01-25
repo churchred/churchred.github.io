@@ -10,14 +10,25 @@ alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 
-badges_array = ['Bilder\\Badges\\Kanto\\box_0.png','Bilder\\Badges\\Kanto\\box_1.png','Bilder\\Badges\\Kanto\\box_2.png',
-                'Bilder\\Badges\\Kanto\\box_3.png','Bilder\\Badges\\Kanto\\box_4.png','Bilder\\Badges\\Kanto\\box_5.png',
-                'Bilder\\Badges\\Kanto\\box_6.png','Bilder\\Badges\\Kanto\\box_7.png','Bilder\\Badges\\Kanto\\box_8.png']
+let badges_array_kanto = ['Bilder\\Badges\\Kanto\\box_0.png','Bilder\\Badges\\Kanto\\box_1.png','Bilder\\Badges\\Kanto\\box_2.png',
+                          'Bilder\\Badges\\Kanto\\box_3.png','Bilder\\Badges\\Kanto\\box_4.png','Bilder\\Badges\\Kanto\\box_5.png',
+                          'Bilder\\Badges\\Kanto\\box_6.png','Bilder\\Badges\\Kanto\\box_7.png','Bilder\\Badges\\Kanto\\box_8.png'
+]
+
+let badges_array_johto = ['Bilder\\Badges\\Johto\\box_0.png','Bilder\\Badges\\Johto\\box_1.png','Bilder\\Badges\\Johto\\box_2.png',
+                          'Bilder\\Badges\\Johto\\box_3.png','Bilder\\Badges\\Johto\\box_4.png','Bilder\\Badges\\Johto\\box_5.png',
+                          'Bilder\\Badges\\Johto\\box_6.png','Bilder\\Badges\\Johto\\box_7.png','Bilder\\Badges\\Johto\\box_8.png'
+]
+
+let badges_array_hoenn = ['Bilder\\Badges\\Hoenn\\box_0.png','Bilder\\Badges\\Hoenn\\box_1.png','Bilder\\Badges\\Hoenn\\box_2.png',
+                          'Bilder\\Badges\\Hoenn\\box_3.png','Bilder\\Badges\\Hoenn\\box_4.png','Bilder\\Badges\\Hoenn\\box_5.png',
+                          'Bilder\\Badges\\Hoenn\\box_6.png','Bilder\\Badges\\Hoenn\\box_7.png','Bilder\\Badges\\Hoenn\\box_8.png'
+]
 
 
                 
-//Array med all pokemon Info!
-let pokedex_array = [  //Pokedex Nr, Navn, Har du den?, Er den Shiny?
+//Array med all pokemon Info!       //Pokedex Nr, Navn, Har du den?, Er den Shiny?
+let pokedex_array_kanto = [  
 [1, 'Bulbasaur',0 ,0], [2, 'Ivysaur',0 ,0], [3, 'Venusaur',0 ,0], [4, 'Charmander',0 ,0], [5, 'Charmeleon',0 ,0], [6, 'Charizard',0 ,0],
 [7, 'Squirtle',0 ,0], [8, 'Wartortle',0 ,0], [9, 'Blastoise',0 ,0], [10, 'Caterpie',0 ,0], [11, 'Metapod',0 ,0], [12, 'Butterfree',0 ,0],
 [13, 'Weedle',0 ,0], [14, 'Kakuna',0 ,0], [15, 'Beedrill',0 ,0], [16, 'Pidgey',0 ,0], [17, 'Pidgeotto',0 ,0], [18, 'Pidgeot',0 ,0],
@@ -38,13 +49,162 @@ let pokedex_array = [  //Pokedex Nr, Navn, Har du den?, Er den Shiny?
 [103, 'Exeggutor',0 ,0], [104, 'Cubone',0 ,0], [105, 'Marowak',0 ,0], [106, 'Hitmonlee',0 ,0], [107, 'Hitmonchan',0 ,0], [108, 'Lickitung',0 ,0],
 [109, 'Koffing',0 ,0], [110, 'Weezing',0 ,0], [111, 'Rhyhorn',0 ,0], [112, 'Rhydon',0 ,0], [113, 'Chansey',0 ,0], [114, 'Tangela',0 ,0],
 [115, 'Kangaskhan',0 ,0], [116, 'Horsea',0 ,0], [117, 'Seadra',0 ,0], [118, 'Goldeen',0 ,0], [119, 'Seaking',0 ,0], [120, 'Staryu',0 ,0],
-[121, 'Starmie',0 ,0], [122, 'Mr. Mime',0 ,0], [123, 'Scyther',0 ,0], [124, 'Jynx',0 ,0], [125, 'Electabuzz',0 ,0], [126, 'Magmar',0 ,0],
+[121, 'Starmie',0 ,0], [122, 'Mr.Mime',0 ,0], [123, 'Scyther',0 ,0], [124, 'Jynx',0 ,0], [125, 'Electabuzz',0 ,0], [126, 'Magmar',0 ,0],
 [127, 'Pinsir',0 ,0], [128, 'Tauros',0 ,0], [129, 'Magikarp',0 ,0], [130, 'Gyarados',0 ,0], [131, 'Lapras',0 ,0], [132, 'Ditto',0 ,0],
 [133, 'Eevee',0 ,0], [134, 'Vaporeon',0 ,0], [135, 'Jolteon',0 ,0], [136, 'Flareon',0 ,0], [137, 'Porygon',0 ,0], [138, 'Omanyte',0 ,0],
 [139, 'Omastar',0 ,0], [140, 'Kabuto',0 ,0], [141, 'Kabutops',0 ,0], [142, 'Aerodactyl',0 ,0], [143, 'Snorlax',0 ,0], [144, 'Articuno',0 ,0],
 [145, 'Zapdos',0 ,0], [146, 'Moltres',0 ,0], [147, 'Dratini',0 ,0], [148, 'Dragonair',0 ,0], [149, 'Dragonair',0 ,0], [150, 'Mewtwo',0 ,0],
 [151, 'Mew',0 ,0]
 ]
+
+let pokedex_array_johto = [
+[152,'Chikorita',0 ,0], [153,'Bayleef',0 ,0], [154,'Meganium',0 ,0], [155,'Cyndaquil',0 ,0], [156,'Quilava',0 ,0], [157,'Typhlosion',0 ,0], 
+[158,'Totodile',0 ,0], [159,'Croconaw',0 ,0], [160,'Feraligatr',0 ,0], [161,'Sentret',0 ,0], [162,'Furret',0 ,0], [163,'Hoothoot',0 ,0], 
+[164,'Noctowl',0 ,0], [165,'Ledyba',0 ,0], [166,'Ledian',0 ,0], [167,'Spinarak',0 ,0], [168,'Ariados',0 ,0], [169,'Crobat',0 ,0], 
+[170,'Chinchou',0 ,0], [171,'Lanturn',0 ,0], [172,'Pichu',0 ,0], [173,'Cleffa',0 ,0], [174,'Igglybuff',0 ,0], [175,'Togepi',0 ,0], 
+[176,'Togetic',0 ,0], [177,'Natu',0 ,0], [178,'Xatu',0 ,0], [179,'Mareep',0 ,0], [180,'Flaaffy',0 ,0], [181,'Ampharos',0 ,0], 
+[182,'Bellossom',0 ,0], [183,'Marill',0 ,0], [184,'Azumarill',0 ,0], [185,'Sudowoodo',0 ,0], [186,'Politoed',0 ,0], [187,'Hoppip',0 ,0], 
+[188,'Skiploom',0 ,0], [189,'Jumpluff',0 ,0], [190,'Aipom',0 ,0], [191,'Sunkern',0 ,0], [192,'Sunflora',0 ,0], [193,'	Yanma',0 ,0], 
+[194,'Wooper',0 ,0], [195,'Quagsire',0 ,0], [196,'Espeon',0 ,0], [197,'Umbreon',0 ,0], [198,'Murkrow',0 ,0], [199,'Slowking',0 ,0], 
+[200,'Misdreavus',0 ,0], [201,'Unown',0 ,0], [202,'Wobbuffet',0 ,0], [203,'Girafarig',0 ,0], [204,'Pineco',0 ,0], [205,'Forretress',0 ,0], 
+[206,'Dunsparce',0 ,0], [207,'Gligar',0 ,0], [208,'Steelix',0 ,0], [209,'Snubbull',0 ,0], [210,'Granbull',0 ,0], [211,'Qwilfish',0 ,0], 
+[212,'Scizor',0 ,0], [213,'Shuckle',0 ,0], [214,'Heracross',0 ,0], [215,'Sneasel',0 ,0], [216,'Teddiursa',0 ,0], [217,'Ursaring',0 ,0], 
+[218,'Slugma',0 ,0], [219,'Magcargo',0 ,0], [220,'Swinub',0 ,0], [221,'Piloswine',0 ,0], [222,'Corsola',0 ,0], [223,'Remoraid',0 ,0], 
+[224,'Octillery',0 ,0], [225,'Delibird',0 ,0], [226,'Mantine',0 ,0], [227,'Skarmory',0 ,0], [228,'Houndour',0 ,0], [229,'Houndoom',0 ,0], 
+[230,'Kingdra',0 ,0], [231,'Phanpy',0 ,0], [232,'Donphan',0 ,0], [233,'Porygon2',0 ,0], [234,'Stantler',0 ,0], [235,'Smeargle',0 ,0],
+[236,'Tyrogue',0 ,0], [237,'Hitmontop',0 ,0], [238,'Smoochum',0 ,0], [239,'Elekid',0 ,0], [240,'Magby',0 ,0], [241,'Miltank',0 ,0],
+[242,'Blissey',0 ,0], [243,'Raikou',0 ,0], [244,'Entei',0 ,0], [245,'Suicune',0 ,0], [246,'Larvitar',0 ,0], [247,'Pupitar',0 ,0],
+[248,'Tyranitar',0 ,0], [249,'Lugia',0 ,0], [250,'Ho_oh',0 ,0], [251,'Celebi',0 ,0]
+]
+
+let pokedex_array_hoenn = [
+[252,'Treecko',0 ,0], [253,'Grovyle',0 ,0], [254,'Sceptile',0 ,0], [255,'Torchic',0 ,0], [256,'Combusken',0 ,0], [257,'Blaziken',0 ,0], 
+[258,'Mudkip',0 ,0], [259,'Marshtomp',0 ,0], [260,'Swampert',0 ,0], [261,'Poochyena',0 ,0], [262,'Mightyena',0 ,0], [263,'Zigzagoon',0 ,0], 
+[264,'Linoone',0 ,0], [265,'Wurmple',0 ,0], [266,'Silcoon',0 ,0], [267,'Beautifly',0 ,0], [268,'Cascoon',0 ,0], [269,'Dustox',0 ,0], 
+[270,'Lotad',0 ,0], [271,'Lombre',0 ,0], [272,'Ludicolo',0 ,0], [273,'Seedot',0 ,0], [274,'Nuzleaf',0 ,0], [275,'Shiftry',0 ,0], 
+[276,'Taillow',0 ,0], [277,'Swellow',0 ,0], [278,'Wingull',0 ,0], [279,'Pelipper',0 ,0], [280,'Ralts',0 ,0], [281,'Kirlia',0 ,0], 
+[282,'Gardevoir',0 ,0], [283,'Surskit',0 ,0], [284,'Masquerain',0 ,0], [285,'Shroomish',0 ,0], [286,'Breloom',0 ,0], [287,'Slakoth',0 ,0], 
+[288,'Vigoroth',0 ,0], [289,'Slaking',0 ,0], [290,'Nincada',0 ,0], [291,'Ninjask',0 ,0], [292,'Shedinja',0 ,0], [293,'Whismur',0 ,0], 
+[294,'Loudred',0 ,0], [295,'Exploud',0 ,0], [296,'Makuhita',0 ,0], [297,'Hariyama',0 ,0], [298,'Azurill',0 ,0], [299,'Nosepass',0 ,0], 
+[300,'Skitty',0 ,0], [301,'Delcatty',0 ,0], [302,'Sableye',0 ,0], [303,'Mawile',0 ,0], [304,'Aron',0 ,0], [305,'Lairon',0 ,0], 
+[306,'Aggron',0 ,0], [307,'Meditite',0 ,0], [308,'Medicham',0 ,0], [309,'Electrike',0 ,0], [310,'Manectric',0 ,0], [311,'Plusle',0 ,0], 
+[312,'Minun',0 ,0], [313,'Volbeat',0 ,0], [314,'Illumise',0 ,0], [315,'Roselia',0 ,0], [316,'Gulpin',0 ,0], [317,'Swalot',0 ,0], 
+[318,'Carvanha',0 ,0], [319,'Sharpedo',0 ,0], [320,'Wailmer',0 ,0], [321,'Wailord',0 ,0], [322,'Numel',0 ,0], [323,'Camerupt',0 ,0], 
+[324,'Torkoal',0 ,0], [325,'Spoink',0 ,0], [326,'Grumpig',0 ,0], [327,'Spinda',0 ,0], [328,'Trapinch',0 ,0], [329,'Vibrava',0 ,0], 
+[330,'Flygon',0 ,0], [331,'Cacnea',0 ,0], [332,'Cacturne',0 ,0], [333,'Swablu',0 ,0], [334,'Altaria',0 ,0], [335,'Zangoose',0 ,0], 
+[336,'Seviper',0 ,0], [337,'Lunatone',0 ,0], [338,'Solrock',0 ,0], [339,'Barboach',0 ,0], [340,'Whiscash',0 ,0], [341,'Corphish',0 ,0], 
+[342,'Crawdaunt',0 ,0], [343,'Baltoy',0 ,0], [344,'Claydol',0 ,0], [345,'Lileep',0 ,0], [346,'Cradily',0 ,0], [347,'Anorith',0 ,0], 
+[348,'Armaldo',0 ,0], [349,'Feebas',0 ,0], [350,'Milotic',0 ,0], [351,'Castform',0 ,0], [352,'Kecleon',0 ,0], [353,'Shuppet',0 ,0], 
+[354,'Banette',0 ,0], [355,'Duskull',0 ,0], [356,'Dusclops',0 ,0], [357,'Tropius',0 ,0], [358,'Chimecho',0 ,0], [359,'Absol',0 ,0], 
+[360,'Wynaut',0 ,0], [361,'Snorunt',0 ,0], [362,'Glalie',0 ,0], [363,'Spheal',0 ,0], [364,'Sealeo',0 ,0], [365,'Walrein',0 ,0], 
+[366,'Clamperl',0 ,0], [367,'Huntail',0 ,0], [368,'Gorebyss',0 ,0], [369,'Relicanth',0 ,0], [370,'Luvdisc',0 ,0], [371,'Bagon',0 ,0], 
+[372,'Shelgon',0 ,0], [373,'Salamence',0 ,0], [374,'Beldum',0 ,0], [375,'Metang',0 ,0], [376,'Metagross',0 ,0], [377,'Regirock',0 ,0], 
+[378,'Regice',0 ,0], [379,'Registeel',0 ,0], [380,'Latias',0 ,0], [381,'Latios',0 ,0], [382,'Kyogre',0 ,0], [383,'Groudon',0 ,0],
+[384,'Rayquaza',0 ,0], [385,'Jirachi',0 ,0], [386,'Deoxys',0 ,0]
+]
+
+let pokedex_array = pokedex_array_kanto
+let badges_array = badges_array_kanto
+
+var current_region = "Kanto"
+var max_pokemon = 151;
+var travel_buttons = false
+
+var goto_johto = false
+var goto_hoenn = false
+
+//Switch Region!
+
+function switch_region(sent_region){
+  //TIL KANTO
+  if(sent_region == "Kanto" && current_region != "Kanto"){
+    console.log("Traveling to ", sent_region)
+    clear_pokedex_img(sent_region) //Fjerner pkmn bildene i pokedexen
+    current_region = "Kanto"
+    badges_array = badges_array_kanto
+    document.getElementById("kanto_btn").style.background = "rgb(135, 156, 121)";
+    document.getElementById("johto_btn").style.background = "rgb(163, 159, 159)";
+    document.getElementById("hoenn_btn").style.background = "rgb(163, 159, 159)";
+    document.getElementById("pokedex_box").style.background = "#e63c3c"
+    pokedex_array = pokedex_array_kanto
+    pokemon_counter = 0
+    max_pokemon = 151
+    lag_regnestykke()
+    cookie_load()
+    counter_completed = 0
+    poeng_func() //Resetter lysene
+  }
+
+  //TIL JOHTO
+  if(sent_region == "Johto" && current_region != "Johto" && goto_johto == true){
+    console.log("Traveling to ", sent_region)
+    clear_pokedex_img(sent_region)
+    current_region = "Johto"
+    badges_array = badges_array_johto
+    document.getElementById("kanto_btn").style.background = "rgb(163, 159, 159)";
+    document.getElementById("johto_btn").style.background = "rgb(135, 156, 121)";
+    document.getElementById("hoenn_btn").style.background = "rgb(163, 159, 159)";
+    document.getElementById("pokedex_box").style.background = "#0080FF"
+    pokedex_array = pokedex_array_johto
+    pokemon_counter = 0
+    max_pokemon = 100
+    lag_regnestykke()
+    cookie_load()
+    counter_completed = 0
+    poeng_func() //Resetter lysene
+  }
+
+  //TIL HOENN
+  if(sent_region == "Hoenn" && current_region != "Hoenn" && goto_hoenn == true){
+    console.log("Traveling to ", sent_region)
+    clear_pokedex_img(sent_region) 
+    current_region = "Hoenn"
+    badges_array = badges_array_hoenn
+    document.getElementById("kanto_btn").style.background = "rgb(163, 159, 159)";
+    document.getElementById("johto_btn").style.background = "rgb(163, 159, 159)";
+    document.getElementById("hoenn_btn").style.background = "rgb(135, 156, 121)";
+    document.getElementById("pokedex_box").style.background = "#FF9933"
+    pokedex_array = pokedex_array_hoenn
+    pokemon_counter = 0
+    max_pokemon = 135
+    lag_regnestykke()
+    cookie_load()
+    counter_completed = 0
+    poeng_func() //Resetter lysene
+  }
+
+  if(goto_hoenn == false){document.getElementById("hoenn_btn").style.background = "rgb(66, 64, 64)";}
+}
+
+function check_unlock_buttons(){
+  if(current_region == "Kanto" && pokemon_counter == pokedex_array_kanto.length){
+    console.log("Unlocked Johto")
+    document.getElementById("johto_btn").style.background = "rgb(163, 159, 159)";
+    goto_johto = true
+    localStorage.setItem("goto_johto:", true)
+  }
+
+  if(current_region == "Johto" && pokemon_counter == pokedex_array_johto.length){
+    console.log("Unlocked Hoenn")
+    document.getElementById("hoenn_btn").style.background = "rgb(163, 159, 159)";
+    localStorage.setItem("goto_hoenn:", true)
+    goto_hoenn = true
+  }
+
+  if(goto_hoenn == true && current_region == "Kanto"){document.getElementById("hoenn_btn").style.background = "rgb(163, 159, 159)";}
+}
+
+function clear_pokedex_img(sent_region){
+    for(i=0; i < pokedex_array.length; i++){
+      if(pokedex_array[i][2] == 1){
+        var elemt_delete_path = 'block' + pokedex_array[i][0];
+        var elemt_delete = document.getElementById(elemt_delete_path);
+        elemt_delete.remove()
+        //console.log("Deleting: ", pokedex_array_kanto[i][1], "(", elemt_delete, ")")
+      }
+    }
+}
+
 
 //-----------------------------Testing "for-loop"-------------------------------
 
@@ -84,12 +244,15 @@ function cookie_save(){
 function cookie_load(){
   console.log("Game Loaded!")
   //console.log(localStorage)
+  document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + max_pokemon)
   var array = [];
   try{
     if(localStorage.length > 5){
       for(i = 0; i<pokedex_array.length; i++){
         pokedex_array[i][2] = localStorage.getItem(pokedex_array[i][0]+"_got")
         pokedex_array[i][3] = localStorage.getItem(pokedex_array[i][0]+"_shiny")
+        if(pokedex_array[i][2] == null){pokedex_array[i][2] = 0}
+        if(pokedex_array[i][3] == null){pokedex_array[i][3] = 0}
         if(pokedex_array[i][2] == 1){load_spesific_pokemon(i);}
       }
       
@@ -98,7 +261,28 @@ function cookie_load(){
   catch(error_msg){
     console.log(error_msg)
   }
+  
+  if(pokemon_counter == pokedex_array.length){
+    alle_pokemon = true;}
+  if(pokemon_counter != pokedex_array.length){
+    alle_pokemon = false;}
+  
+
+  console.log("Region:", current_region)
+  goto_johto = localStorage.getItem("goto_johto:", goto_johto)
+  goto_hoenn = localStorage.getItem("goto_hoenn:", goto_hoenn)
+  if(goto_hoenn == null){goto_hoenn = false}
+  if(goto_johto == null){goto_johto = false}
+  if(goto_hoenn == 'false'){goto_hoenn = false}
+  if(goto_johto == 'false'){goto_johto = false}
+  if(goto_hoenn == "true"){goto_hoenn = true}
+  if(goto_johto == "true"){goto_johto = true}
+  check_unlock_buttons()
   badges_check()
+  
+  console.log(goto_johto, goto_hoenn)
+  console.log(pokemon_counter, "/", pokedex_array.length)
+
 }
 
 function load_spesific_pokemon(y){
@@ -108,10 +292,10 @@ function load_spesific_pokemon(y){
 
   img.src = path 
   
-  if(pokedex_array[y][3] == 0){var class_name = "pkmn_img";}
-  if(pokedex_array[y][3] == 1){var class_name = "pkmn_img_shiny";}
+  if(pokedex_array[y][3] == 0){var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block";}
+  if(pokedex_array[y][3] == 1){var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block_shiny";}
   
-  img.setAttribute("class", class_name);
+  img.setAttribute("class", class_name_img);
   img.setAttribute("id", y);
 
   pokemon_counter += 1
@@ -120,56 +304,174 @@ function load_spesific_pokemon(y){
 
   if(pokemon_counter == pokedex_array.length){alle_pokemon = true;}
 
+  //Lager en Div som bildet og tekst skal legges inn i
+  var iDiv = document.createElement('div');
+  var temp_id = 'block' + pokedex_array[y][0];
+  iDiv.id = temp_id
+  iDiv.className = class_name_div;
+  document.getElementById('pokemon_box').appendChild(iDiv);
+
   //Add image
-  document.getElementById("pokemon_box").appendChild(img);
+  document.getElementById(temp_id).appendChild(img);
+
+  //Lager variabel for boksen som pokemon og navn skal inn i
+  var theDiv = document.getElementById(temp_id);
+
+  //Legger til pokemon navn
+  var content = document.createTextNode(pokedex_array[y][1]);
+  theDiv.appendChild(content);
+
+  //Legger til pokedex nummer
+  //var content2 = document.createTextNode("#" + temp_array[rand][0]);
+  //theDiv.appendChild(content2);
+
+  document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + max_pokemon)
 }
 
 function badges_check(){
-  console.log(badges_array[0])
-  if(pokemon_counter >= 0){
-    var badge_number = 0;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
+  //console.log(badges_array[0])
+  if(current_region == "Kanto"){
+    if(pokemon_counter >= 0){
+      var badge_number = 0;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 10){
+      var badge_number = 1;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 25){
+      var badge_number = 2;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 50){
+      var badge_number = 3;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 75){
+      var badge_number = 4;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 100){
+      var badge_number = 5;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 120){
+      var badge_number = 6;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 140){
+      var badge_number = 7;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 151){
+      var badge_number = 8;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
   }
-  if(pokemon_counter >= 10){
-    var badge_number = 1;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
+
+  if(current_region == "Johto"){
+    if(pokemon_counter >= 0){
+      var badge_number = 0;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 10){
+      var badge_number = 1;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 20){
+      var badge_number = 2;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 40){
+      var badge_number = 3;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 50){
+      var badge_number = 4;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 60){
+      var badge_number = 5;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 80){
+      var badge_number = 6;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 90){
+      var badge_number = 7;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 100){
+      var badge_number = 8;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
   }
-  if(pokemon_counter >= 25){
-    var badge_number = 2;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
-  }
-  if(pokemon_counter >= 50){
-    var badge_number = 3;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
-  }
-  if(pokemon_counter >= 75){
-    var badge_number = 4;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
-  }
-  if(pokemon_counter >= 100){
-    var badge_number = 5;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
-  }
-  if(pokemon_counter >= 120){
-    var badge_number = 6;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
-  }
-  if(pokemon_counter >= 140){
-    var badge_number = 7;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
-  }
-  if(pokemon_counter >= 151){
-    var badge_number = 8;
-    var img = document.createElement("img");
-    var path = badges_array[badge_number] 
+
+  if(current_region == "Hoenn"){
+    if(pokemon_counter >= 0){
+      var badge_number = 0;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 10){
+      var badge_number = 1;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 25){
+      var badge_number = 2;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 50){
+      var badge_number = 3;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 75){
+      var badge_number = 4;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 100){
+      var badge_number = 5;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 110){
+      var badge_number = 6;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 125){
+      var badge_number = 7;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
+    if(pokemon_counter >= 135){
+      var badge_number = 8;
+      var img = document.createElement("img");
+      var path = badges_array[badge_number] 
+    }
   }
 
   document.getElementById("badges_box").innerHTML = ""
@@ -187,7 +489,6 @@ function badges_check(){
     img.setAttribute("id", "trophy")
     document.getElementById("badges_box").appendChild(img);
   }
-
 }
 
 function poeng_func(){ //Holder styr på poengene dine
@@ -212,35 +513,39 @@ function change_diff(e){
 
   if (e == "add10"){
     document.getElementById("fortegn").innerHTML = "+";
-    document.getElementById("v_grad").innerHTML = "Pluss"
+    document.getElementById("v_grad").innerHTML = "Pluss I"
   }
   else if (e == "add20"){
     document.getElementById("fortegn").innerHTML = "+";
-    document.getElementById("v_grad").innerHTML = "Pluss"
+    document.getElementById("v_grad").innerHTML = "Pluss II"
   }
   else if (e == "sub10"){
     document.getElementById("fortegn").innerHTML = "-";
-    document.getElementById("v_grad").innerHTML = "Minus"
+    document.getElementById("v_grad").innerHTML = "Minus I"
   }
   else if (e == "sub20"){
     document.getElementById("fortegn").innerHTML = "-";
-    document.getElementById("v_grad").innerHTML = "Minus"
+    document.getElementById("v_grad").innerHTML = "Minus II"
   }
   else if (e == "multi1"){
     document.getElementById("fortegn").innerHTML = "*";
-    document.getElementById("v_grad").innerHTML = "Ganging"
+    document.getElementById("v_grad").innerHTML = "Ganging 1-5"
   }
   else if (e == "multi2"){
     document.getElementById("fortegn").innerHTML = "*";
-    document.getElementById("v_grad").innerHTML = "Ganging"
+    document.getElementById("v_grad").innerHTML = "Ganging 1-10"
   }
   else if (e == "div1"){
     document.getElementById("fortegn").innerHTML = ":";
-    document.getElementById("v_grad").innerHTML = "Deling"
+    document.getElementById("v_grad").innerHTML = "Deling I"
   }
   else if (e == "div2"){
     document.getElementById("fortegn").innerHTML = ":";
-    document.getElementById("v_grad").innerHTML = "Deling"
+    document.getElementById("v_grad").innerHTML = "Deling II"
+  }
+  else if (e == "tiven2"){
+    document.getElementById("fortegn").innerHTML = "+";
+    document.getElementById("v_grad").innerHTML = "Pluss /m tiervenner"
   }
   
   lag_regnestykke()
@@ -249,12 +554,31 @@ function change_diff(e){
 function add_pokemon(){
   
   var temp_array = []
-  //console.log(temp_array)
-  for(i=0; i < pokedex_array.length; i++){
-      if(pokedex_array[i][2] == 0){
-        temp_array.push(pokedex_array[i])
-      }
+  //loader riktig pokedex inn i en temp_array
+  if(current_region == "Kanto"){
+    for(i=0; i < pokedex_array_kanto.length; i++){
+        if(pokedex_array_kanto[i][2] == 0){
+          temp_array.push(pokedex_array_kanto[i])
+        }
+    }
   }
+
+  if(current_region == "Johto"){
+    for(i=0; i < pokedex_array_johto.length; i++){
+        if(pokedex_array_johto[i][2] == 0){
+          temp_array.push(pokedex_array_johto[i])
+        }
+    }
+  }
+
+  if(current_region == "Hoenn"){
+    for(i=0; i < pokedex_array_hoenn.length; i++){
+        if(pokedex_array_hoenn[i][2] == 0){
+          temp_array.push(pokedex_array_hoenn[i])
+        }
+    }
+  }
+  
   
   rand= Math.floor(Math.random()*temp_array.length); //Denne finner et random tall.
 
@@ -267,10 +591,10 @@ function add_pokemon(){
   img.src = path 
 
   //optionally set a css class on the image
-  if(shinycalc == 1) {var class_name = "pkmn_img_shiny"; temp_array[rand][3] = 1;} 
-  if(shinycalc != 1) {var class_name = "pkmn_img";}
+  if(shinycalc == 1) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block_shiny"; temp_array[rand][3] = 1;} 
+  if(shinycalc != 1) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block";}
 
-  img.setAttribute("class", class_name);
+  img.setAttribute("class", class_name_img);
   img.setAttribute("id", rand);
 
   temp_array[rand][2] = 1
@@ -279,9 +603,11 @@ function add_pokemon(){
 
   pokemon_counter += 1
   if(pokemon_counter == pokedex_array.length){alle_pokemon = true;}
+  
 
+  //Gjør om på Pokedex array til å matche forandringene i temp_array
 
-  for(i=0; i < temp_array.length; i++){    //Gjør om på Pokedex array til å matche forandringene i temp_array
+  for(i=0; i < temp_array.length; i++){    
     if(temp_array[i][2] == 1){
       for(y=0; y < pokedex_array.length; y++){
         if(temp_array[i][0] == pokedex_array[y][0]){
@@ -291,13 +617,34 @@ function add_pokemon(){
     }
   }
 
+
   console.log(temp_array.length + "/" + pokedex_array.length)
 
+  //Lager en Div som bildet og tekst skal legges inn i
+  var iDiv = document.createElement('div');
+  var temp_id = 'block' + temp_array[rand][0];
+  iDiv.id = temp_id
+  iDiv.className = class_name_div;
+  document.getElementById('pokemon_box').appendChild(iDiv);
+
   //Add image
-  document.getElementById("pokemon_box").appendChild(img);
-  document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + "151")
+  document.getElementById(temp_id).appendChild(img);
+
+  //Lager variabel for boksen som pokemon og navn skal inn i
+  var theDiv = document.getElementById(temp_id);
+
+  //Legger til pokemon navn
+  var content = document.createTextNode(temp_array[rand][1]);
+  theDiv.appendChild(content);
+
+  //Legger til pokedex nummer
+  //var content2 = document.createTextNode("#" + temp_array[rand][0]);
+  //theDiv.appendChild(content2);
+
+  document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + max_pokemon)
   cookie_save()
   badges_check()
+  check_unlock_buttons()
 }
 
 //Lager 2 tilfeldige tall(0-20) til mattestykket
@@ -378,6 +725,20 @@ function lag_regnestykke(){
       n1 = n1*n2
     }
 
+    //Lager tall mellom 1-100 hvor enerne er tiervenner
+    if(current_diff == "tiven2"){
+      let ti_tall_1 = Math.floor(Math.random()*9+1);
+      let ti_tall_2 = Math.floor(Math.random()*(10-ti_tall_1));
+      ti_tall_1 *= 10
+      ti_tall_2 *= 10
+      
+      let ener_tall_1 = Math.floor(Math.random()*9+1);
+      let ener_tall_2 = 10 - ener_tall_1 
+
+      n1 = ti_tall_1 + ener_tall_1 
+      n2 = ti_tall_2 + ener_tall_2
+    }
+
     document.getElementById("show_answer").innerHTML = " "; //Fjerner at det står "Bra jobba" fra forrige stykke
     document.getElementById("intext").value = n1;  //Gjør om til nytt nummer i boks 1
     document.getElementById("intext1").value = n2; //Gjør om til nytt nummer i boks 2
@@ -396,7 +757,7 @@ function sjekk_svar(){
     adds= Number(n1) - Number(n2);}
 
     //Sjekker Pluss regnestykker
-   if(current_diff == "add10" || current_diff == "add20"){
+   if(current_diff == "add10" || current_diff == "add20" || current_diff == "tiven2"){
       adds= Number(n1) + Number(n2);}
   
    //Sjekker Gange regnestykker
@@ -410,14 +771,15 @@ function sjekk_svar(){
 
    //Sjekker om svaret er riktig
    if(user_input == adds){
-      document.getElementById("show_answer").innerHTML = "Bra jobba! Svaret ditt er riktig!";
+      document.getElementById("show_answer").innerHTML = "Bra jobba!";
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
       poeng_func()
-      pokeball()}
+      pokeball()
+      document.activeElement.blur();}
     else{
-      document.getElementById("show_answer").innerHTML = "Det er ikke riktig. Prøv igjen";}  
+      document.getElementById("show_answer").innerHTML = "Prøv igjen";}  
 }
 }
 
@@ -428,7 +790,7 @@ function pokeball(){
       counter_completed = 0;}
 
     if(pokeball_visible == true){
-      document.getElementById("main_game_box").style.height = "500px"
+      document.getElementById("main_game_box").style.height = "520px"
       document.getElementById("btn").style.background = "gray";
       document.getElementById("btn2").style.background = "gray";
 
