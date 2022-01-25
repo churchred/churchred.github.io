@@ -776,7 +776,8 @@ function sjekk_svar(){
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
       poeng_func()
-      pokeball()}
+      pokeball()
+      document.activeElement.blur();}
     else{
       document.getElementById("show_answer").innerHTML = "Prøv igjen";}  
 }
