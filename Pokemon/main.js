@@ -125,7 +125,7 @@ function switch_region(sent_region){
     document.getElementById("kanto_btn").style.background = "rgb(135, 156, 121)";
     document.getElementById("johto_btn").style.background = "rgb(163, 159, 159)";
     document.getElementById("hoenn_btn").style.background = "rgb(163, 159, 159)";
-    document.getElementById("pokedex_box").style.background = "#e63c3c"
+    document.getElementById("pokedex_box").style.background = "#fb6868"
     pokedex_array = pokedex_array_kanto
     pokemon_counter = 0
     max_pokemon = 151
