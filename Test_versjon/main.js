@@ -261,7 +261,7 @@ function cookie_load(){
   catch(error_msg){
     console.log(error_msg)
   }
-  badges_check()
+  
   if(pokemon_counter == pokedex_array.length){
     alle_pokemon = true;}
   if(pokemon_counter != pokedex_array.length){
@@ -278,6 +278,7 @@ function cookie_load(){
   if(goto_hoenn == "true"){goto_hoenn = true}
   if(goto_johto == "true"){goto_johto = true}
   check_unlock_buttons()
+  badges_check()
   
   console.log(goto_johto, goto_hoenn)
   console.log(pokemon_counter, "/", pokedex_array.length)

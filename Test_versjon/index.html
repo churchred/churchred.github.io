@@ -12,7 +12,7 @@
    <script src="main.js"></script>
 
 </head>
-<body onload= "cookie_load()";>
+<body onload= "cookie_load(), lag_regnestykke()";>
    
    <div class="line_at_the_top">
       <h1 class="v_grad" id="v_grad">Pluss</h1>
@@ -67,13 +67,13 @@
 
             <!-- text input -->
             <div class="box3">
-               <input type="tel" pattern="[0-9]*" novalidate id="intext2">
+               <input type="tel" pattern="[0-9]*" novalidate id="intext2" onkeydown="if (event.keyCode == 13) document.getElementById('btn').click()">
                <!-- <input type="text" id="intext2"> -->
             </div>
 
             <!-- button -->
              <div class="box2">
-               <button class="btn" id="btn" input type="submit" onclick="sjekk_svar()">Sjekk svar</button>
+               <button class="btn" id="btn" input type="submit"  onclick="sjekk_svar()">Sjekk svar</button>
             </div>
             <div class="box3">
               <button class="btn2" id="btn2" onclick="lag_regnestykke()"> Ny</button>
