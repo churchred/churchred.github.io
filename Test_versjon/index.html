@@ -12,7 +12,7 @@
    <script src="main.js"></script>
 
 </head>
-<body onload= "cookie_load()">
+<body onload= "cookie_load()";>
    
    <div class="line_at_the_top">
       <h1 class="v_grad" id="v_grad">Pluss</h1>
@@ -73,7 +73,7 @@
 
             <!-- button -->
              <div class="box2">
-               <button class="btn" id="btn" onclick="sjekk_svar()">Sjekk svar</button>
+               <button class="btn" id="btn" input type="submit" onclick="sjekk_svar()">Sjekk svar</button>
             </div>
             <div class="box3">
               <button class="btn2" id="btn2" onclick="lag_regnestykke()"> Ny</button>
@@ -84,6 +84,7 @@
                <div class="poeng_3" id="poeng_3"></div>
                <div class="poeng_4" id="poeng_4"></div>
                <div class="poeng_5" id="poeng_5"></div>
+               <button style="visibility:hidden;position:absolute;" input-type="submit" input enterkeyhint="go" onclick="sjekk_svar()">Sjekk svar</button>
             </div>
          </div>
          <div class="badges_box_div" id="badges_box_div">

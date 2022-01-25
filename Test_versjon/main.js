@@ -49,7 +49,7 @@ let pokedex_array_kanto = [
 [103, 'Exeggutor',0 ,0], [104, 'Cubone',0 ,0], [105, 'Marowak',0 ,0], [106, 'Hitmonlee',0 ,0], [107, 'Hitmonchan',0 ,0], [108, 'Lickitung',0 ,0],
 [109, 'Koffing',0 ,0], [110, 'Weezing',0 ,0], [111, 'Rhyhorn',0 ,0], [112, 'Rhydon',0 ,0], [113, 'Chansey',0 ,0], [114, 'Tangela',0 ,0],
 [115, 'Kangaskhan',0 ,0], [116, 'Horsea',0 ,0], [117, 'Seadra',0 ,0], [118, 'Goldeen',0 ,0], [119, 'Seaking',0 ,0], [120, 'Staryu',0 ,0],
-[121, 'Starmie',0 ,0], [122, 'Mr. Mime',0 ,0], [123, 'Scyther',0 ,0], [124, 'Jynx',0 ,0], [125, 'Electabuzz',0 ,0], [126, 'Magmar',0 ,0],
+[121, 'Starmie',0 ,0], [122, 'Mr.Mime',0 ,0], [123, 'Scyther',0 ,0], [124, 'Jynx',0 ,0], [125, 'Electabuzz',0 ,0], [126, 'Magmar',0 ,0],
 [127, 'Pinsir',0 ,0], [128, 'Tauros',0 ,0], [129, 'Magikarp',0 ,0], [130, 'Gyarados',0 ,0], [131, 'Lapras',0 ,0], [132, 'Ditto',0 ,0],
 [133, 'Eevee',0 ,0], [134, 'Vaporeon',0 ,0], [135, 'Jolteon',0 ,0], [136, 'Flareon',0 ,0], [137, 'Porygon',0 ,0], [138, 'Omanyte',0 ,0],
 [139, 'Omastar',0 ,0], [140, 'Kabuto',0 ,0], [141, 'Kabutops',0 ,0], [142, 'Aerodactyl',0 ,0], [143, 'Snorlax',0 ,0], [144, 'Articuno',0 ,0],
@@ -74,7 +74,7 @@ let pokedex_array_johto = [
 [230,'Kingdra',0 ,0], [231,'Phanpy',0 ,0], [232,'Donphan',0 ,0], [233,'Porygon2',0 ,0], [234,'Stantler',0 ,0], [235,'Smeargle',0 ,0],
 [236,'Tyrogue',0 ,0], [237,'Hitmontop',0 ,0], [238,'Smoochum',0 ,0], [239,'Elekid',0 ,0], [240,'Magby',0 ,0], [241,'Miltank',0 ,0],
 [242,'Blissey',0 ,0], [243,'Raikou',0 ,0], [244,'Entei',0 ,0], [245,'Suicune',0 ,0], [246,'Larvitar',0 ,0], [247,'Pupitar',0 ,0],
-[248,'Tyranitar',0 ,0], [249,'Lugia',0 ,0], [250,'Ho-oh',0 ,0], [251,'Celebi',0 ,0]
+[248,'Tyranitar',0 ,0], [249,'Lugia',0 ,0], [250,'Ho_oh',0 ,0], [251,'Celebi',0 ,0]
 ]
 
 let pokedex_array_hoenn = [
@@ -110,6 +110,9 @@ var current_region = "Kanto"
 var max_pokemon = 151;
 var travel_buttons = false
 
+var goto_johto = false
+var goto_hoenn = false
+
 //Switch Region!
 
 function switch_region(sent_region){
@@ -126,11 +129,14 @@ function switch_region(sent_region){
     pokedex_array = pokedex_array_kanto
     pokemon_counter = 0
     max_pokemon = 151
+    lag_regnestykke()
     cookie_load()
+    counter_completed = 0
+    poeng_func() //Resetter lysene
   }
 
   //TIL JOHTO
-  if(sent_region == "Johto" && current_region != "Johto"){
+  if(sent_region == "Johto" && current_region != "Johto" && goto_johto == true){
     console.log("Traveling to ", sent_region)
     clear_pokedex_img(sent_region)
     current_region = "Johto"
@@ -142,11 +148,14 @@ function switch_region(sent_region){
     pokedex_array = pokedex_array_johto
     pokemon_counter = 0
     max_pokemon = 100
+    lag_regnestykke()
     cookie_load()
+    counter_completed = 0
+    poeng_func() //Resetter lysene
   }
 
   //TIL HOENN
-  if(sent_region == "Hoenn" && current_region != "Hoenn"){
+  if(sent_region == "Hoenn" && current_region != "Hoenn" && goto_hoenn == true){
     console.log("Traveling to ", sent_region)
     clear_pokedex_img(sent_region) 
     current_region = "Hoenn"
@@ -158,8 +167,31 @@ function switch_region(sent_region){
     pokedex_array = pokedex_array_hoenn
     pokemon_counter = 0
     max_pokemon = 135
+    lag_regnestykke()
     cookie_load()
+    counter_completed = 0
+    poeng_func() //Resetter lysene
   }
+
+  if(goto_hoenn == false){document.getElementById("hoenn_btn").style.background = "rgb(66, 64, 64)";}
+}
+
+function check_unlock_buttons(){
+  if(current_region == "Kanto" && pokemon_counter == pokedex_array_kanto.length){
+    console.log("Unlocked Johto")
+    document.getElementById("johto_btn").style.background = "rgb(163, 159, 159)";
+    goto_johto = true
+    localStorage.setItem("goto_johto:", true)
+  }
+
+  if(current_region == "Johto" && pokemon_counter == pokedex_array_johto.length){
+    console.log("Unlocked Hoenn")
+    document.getElementById("hoenn_btn").style.background = "rgb(163, 159, 159)";
+    localStorage.setItem("goto_hoenn:", true)
+    goto_hoenn = true
+  }
+
+  if(goto_hoenn == true && current_region == "Kanto"){document.getElementById("hoenn_btn").style.background = "rgb(163, 159, 159)";}
 }
 
 function clear_pokedex_img(sent_region){
@@ -173,7 +205,6 @@ function clear_pokedex_img(sent_region){
     }
 }
 
-///--------------
 
 //-----------------------------Testing "for-loop"-------------------------------
 
@@ -231,6 +262,26 @@ function cookie_load(){
     console.log(error_msg)
   }
   badges_check()
+  if(pokemon_counter == pokedex_array.length){
+    alle_pokemon = true;}
+  if(pokemon_counter != pokedex_array.length){
+    alle_pokemon = false;}
+  
+
+  console.log("Region:", current_region)
+  goto_johto = localStorage.getItem("goto_johto:", goto_johto)
+  goto_hoenn = localStorage.getItem("goto_hoenn:", goto_hoenn)
+  if(goto_hoenn == null){goto_hoenn = false}
+  if(goto_johto == null){goto_johto = false}
+  if(goto_hoenn == 'false'){goto_hoenn = false}
+  if(goto_johto == 'false'){goto_johto = false}
+  if(goto_hoenn == "true"){goto_hoenn = true}
+  if(goto_johto == "true"){goto_johto = true}
+  check_unlock_buttons()
+  
+  console.log(goto_johto, goto_hoenn)
+  console.log(pokemon_counter, "/", pokedex_array.length)
+
 }
 
 function load_spesific_pokemon(y){
@@ -437,7 +488,6 @@ function badges_check(){
     img.setAttribute("id", "trophy")
     document.getElementById("badges_box").appendChild(img);
   }
-
 }
 
 function poeng_func(){ //Holder styr på poengene dine
@@ -552,6 +602,7 @@ function add_pokemon(){
 
   pokemon_counter += 1
   if(pokemon_counter == pokedex_array.length){alle_pokemon = true;}
+  
 
   //Gjør om på Pokedex array til å matche forandringene i temp_array
 
@@ -592,6 +643,7 @@ function add_pokemon(){
   document.getElementById("antall pokemon").innerHTML = ("&nbsp" + pokemon_counter + "/" + max_pokemon)
   cookie_save()
   badges_check()
+  check_unlock_buttons()
 }
 
 //Lager 2 tilfeldige tall(0-20) til mattestykket
@@ -674,7 +726,7 @@ function lag_regnestykke(){
 
     //Lager tall mellom 1-100 hvor enerne er tiervenner
     if(current_diff == "tiven2"){
-      let ti_tall_1 = 9;
+      let ti_tall_1 = Math.floor(Math.random()*9+1);
       let ti_tall_2 = Math.floor(Math.random()*(10-ti_tall_1));
       ti_tall_1 *= 10
       ti_tall_2 *= 10
@@ -704,7 +756,7 @@ function sjekk_svar(){
     adds= Number(n1) - Number(n2);}
 
     //Sjekker Pluss regnestykker
-   if(current_diff == "add10" || current_diff == "add20"){
+   if(current_diff == "add10" || current_diff == "add20" || current_diff == "tiven2"){
       adds= Number(n1) + Number(n2);}
   
    //Sjekker Gange regnestykker
@@ -718,14 +770,14 @@ function sjekk_svar(){
 
    //Sjekker om svaret er riktig
    if(user_input == adds){
-      document.getElementById("show_answer").innerHTML = "Bra jobba! Svaret ditt er riktig!";
+      document.getElementById("show_answer").innerHTML = "Bra jobba!";
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
       poeng_func()
       pokeball()}
     else{
-      document.getElementById("show_answer").innerHTML = "Det er ikke riktig. Prøv igjen";}  
+      document.getElementById("show_answer").innerHTML = "Prøv igjen";}  
 }
 }
 
@@ -736,7 +788,7 @@ function pokeball(){
       counter_completed = 0;}
 
     if(pokeball_visible == true){
-      document.getElementById("main_game_box").style.height = "500px"
+      document.getElementById("main_game_box").style.height = "520px"
       document.getElementById("btn").style.background = "gray";
       document.getElementById("btn2").style.background = "gray";
 
