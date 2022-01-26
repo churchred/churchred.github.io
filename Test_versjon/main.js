@@ -7,6 +7,8 @@ var current_diff = "add10" //Starter på Addisjon 1-10
 pokemon_counter = 0 //Antall pokemon du har.
 alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 
+sprites_dir = "Sprites2"
+
 var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 
@@ -53,7 +55,7 @@ let pokedex_array_kanto = [
 [127, 'Pinsir',0 ,0], [128, 'Tauros',0 ,0], [129, 'Magikarp',0 ,0], [130, 'Gyarados',0 ,0], [131, 'Lapras',0 ,0], [132, 'Ditto',0 ,0],
 [133, 'Eevee',0 ,0], [134, 'Vaporeon',0 ,0], [135, 'Jolteon',0 ,0], [136, 'Flareon',0 ,0], [137, 'Porygon',0 ,0], [138, 'Omanyte',0 ,0],
 [139, 'Omastar',0 ,0], [140, 'Kabuto',0 ,0], [141, 'Kabutops',0 ,0], [142, 'Aerodactyl',0 ,0], [143, 'Snorlax',0 ,0], [144, 'Articuno',0 ,0],
-[145, 'Zapdos',0 ,0], [146, 'Moltres',0 ,0], [147, 'Dratini',0 ,0], [148, 'Dragonair',0 ,0], [149, 'Dragonair',0 ,0], [150, 'Mewtwo',0 ,0],
+[145, 'Zapdos',0 ,0], [146, 'Moltres',0 ,0], [147, 'Dratini',0 ,0], [148, 'Dragonair',0 ,0], [149, 'Dragonite',0 ,0], [150, 'Mewtwo',0 ,0],
 [151, 'Mew',0 ,0]
 ]
 
@@ -210,7 +212,7 @@ function clear_pokedex_img(sent_region){
 
 function load_all_pokemon_in_order(){
   for(i = 0; i < pokedex_array.length; i++){
-    path = 'Bilder' + "\\" + 'Sprites' + "\\" + pokedex_array[i][0] + ".png"
+    path = 'Bilder' + "\\" + sprites_dir + "\\" + pokedex_array[i][0] + ".png"
     var img = document.createElement("img");
     img.src = path 
     var class_name = "pkmn_img";
@@ -230,6 +232,11 @@ function load_all_pokemon_normal_way(x){
 }
 
 //----------------------------------------------------------------------------
+
+
+
+
+
 
 //Cookie Saving
 function cookie_save(){
@@ -280,14 +287,14 @@ function cookie_load(){
   check_unlock_buttons()
   badges_check()
   
-  console.log(goto_johto, goto_hoenn)
-  console.log(pokemon_counter, "/", pokedex_array.length)
+  console.log("Johto button:", goto_johto,"  Hoenn button:", goto_hoenn)
+  console.log(pokemon_counter + "/" + pokedex_array.length + " pkmn caught")
 
 }
 
 function load_spesific_pokemon(y){
-  if(pokedex_array[y][3] == 0){var path = 'Bilder' + "\\" + 'Sprites' + "\\" + pokedex_array[y][0] + ".png"}
-  if(pokedex_array[y][3] == 1){var path = 'Bilder' + "\\" + 'Sprites' + "\\" + pokedex_array[y][0] + "s" + ".png"}
+  if(pokedex_array[y][3] == 0){var path = 'Bilder' + "\\" + sprites_dir + "\\" + pokedex_array[y][0] + ".png"}
+  if(pokedex_array[y][3] == 1){var path = 'Bilder' + "\\" + sprites_dir + "\\" + pokedex_array[y][0] + "s" + ".png"}                                
   var img = document.createElement("img");
 
   img.src = path 
@@ -600,8 +607,8 @@ function add_pokemon(){
 
   //Shiny or no Shiny? Vi bruker random tall til å lage path.
   shinycalc = Math.floor(Math.random()*chance_shiny);
-  if(shinycalc == 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + temp_array[rand][0] + "s" + ".png", console.log("A shiny!")}
-  if(shinycalc != 1){path = 'Bilder' + "\\" + 'Sprites' + "\\" + temp_array[rand][0] + ".png"}
+  if(shinycalc == 1){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + "s" + ".png", console.log("A shiny!")}
+  if(shinycalc != 1){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + ".png"}
 
   var img = document.createElement("img");
   img.src = path 
@@ -634,7 +641,7 @@ function add_pokemon(){
   }
 
 
-  console.log(temp_array.length + "/" + pokedex_array.length)
+  console.log(temp_array.length + "/" + pokedex_array.length + " pkmn left")
 
   //Lager en Div som bildet og tekst skal legges inn i
   var iDiv = document.createElement('div');
@@ -665,11 +672,12 @@ function add_pokemon(){
 
 //Lager 2 tilfeldige tall(0-20) til mattestykket
 function lag_regnestykke(ee){
-  if (pokeball_visible == false){
+  if (pokeball_visible == false && math_completed == true || ee == 0){
     let n1 = 0
     let n2 = 0
     math_completed = false
     document.getElementById("btn").style.background = "#fb6868";
+    document.getElementById("btn2").style.background = "gray";
 
     //Lag regnestykke men tall mellom 1-10
     if(current_diff == "add10"){
@@ -808,6 +816,7 @@ function sjekk_svar(){
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
+      document.getElementById("btn2").style.background = "#5da06e";
       poeng_func()
       pokeball()
       document.activeElement.blur();}
@@ -851,4 +860,20 @@ function open_pkball(){
   element.parentNode.removeChild(element);
   poeng_func() //Teller poeng
   lag_regnestykke()
+}
+
+function change_sprite(){
+  clear_pokedex_img(current_region)
+  pokemon_counter = 0
+  if(sprites_dir == "Sprites1"){
+    console.log("Changing to Animation!")
+    sprites_dir = "Sprites2";
+    document.getElementById("sprite_btn").src = "Bilder\\sprites_use_3d.png";
+  }
+  else if(sprites_dir == "Sprites2"){
+    console.log("Changing to Sprites!")
+    sprites_dir = "Sprites1"
+    document.getElementById("sprite_btn").src = "Bilder\\sprites_use_pixel.png";
+  }
+  cookie_load()
 }
