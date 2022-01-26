@@ -76,8 +76,8 @@ body {
 }
 
 .pkmn_block{
-  height: 144px;
-  width: 128px;
+  height: calc(1*144px);
+  width:  calc(1*128px);
   background-color: white;
   border: 1px solid black;
   align-items: center;
@@ -92,8 +92,8 @@ body {
 }
 
 .pkmn_block_shiny{
-  height: 144px;
-  width: 128px;
+  height: calc(1*144px);
+  width:  calc(1*128px);
   background-color: rgb(240, 234, 202);
   border: 1px solid rgb(243, 155, 73);
   align-items: center;
@@ -107,8 +107,9 @@ body {
 }
 
 .pkmn_img{ /*original scale: 96x96*/
-  height: 96px;
-  width: 96px;
+  height: calc(128*0.8px);
+  width: calc(128*0.8px);
+  image-rendering: smooth;
 }
 
 .main_game_box{
@@ -319,6 +320,14 @@ body {
   margin-top: -35px;
 }
 
+.sprite_btn{
+  width: calc(0.4*239px);
+  height: calc(0.4*106px);
+  image-rendering: smooth;
+  position: absolute;
+  margin-top: -42px;
+  margin-left: 1150px;
+}
 
 /*POENG STUFF UNDER HER*/
 
