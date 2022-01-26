@@ -513,19 +513,35 @@ function change_diff(e){
 
   if (e == "add10"){
     document.getElementById("fortegn").innerHTML = "+";
-    document.getElementById("v_grad").innerHTML = "Pluss I"
+    document.getElementById("v_grad").innerHTML = "Pluss, nivå 1"
   }
   else if (e == "add20"){
     document.getElementById("fortegn").innerHTML = "+";
-    document.getElementById("v_grad").innerHTML = "Pluss II"
+    document.getElementById("v_grad").innerHTML = "Pluss, nivå 2"
+  }
+  else if (e == "add3"){
+    document.getElementById("fortegn").innerHTML = "+";
+    document.getElementById("v_grad").innerHTML = "Pluss, nivå 3"
+  }
+  else if (e == "add4"){
+    document.getElementById("fortegn").innerHTML = "+";
+    document.getElementById("v_grad").innerHTML = "Pluss, nivå 4"
   }
   else if (e == "sub10"){
     document.getElementById("fortegn").innerHTML = "-";
-    document.getElementById("v_grad").innerHTML = "Minus I"
+    document.getElementById("v_grad").innerHTML = "Minus, nivå 1"
   }
   else if (e == "sub20"){
     document.getElementById("fortegn").innerHTML = "-";
-    document.getElementById("v_grad").innerHTML = "Minus II"
+    document.getElementById("v_grad").innerHTML = "Minus, nivå 2"
+  }
+  else if (e == "sub3"){
+    document.getElementById("fortegn").innerHTML = "-";
+    document.getElementById("v_grad").innerHTML = "Minus, nivå 3"
+  }
+  else if (e == "sub4"){
+    document.getElementById("fortegn").innerHTML = "-";
+    document.getElementById("v_grad").innerHTML = "Minus, nivå 4"
   }
   else if (e == "multi1"){
     document.getElementById("fortegn").innerHTML = "*";
@@ -548,7 +564,7 @@ function change_diff(e){
     document.getElementById("v_grad").innerHTML = "Pluss /m tiervenner"
   }
   
-  lag_regnestykke()
+  lag_regnestykke(0)
 }
 
 function add_pokemon(){
@@ -648,7 +664,7 @@ function add_pokemon(){
 }
 
 //Lager 2 tilfeldige tall(0-20) til mattestykket
-function lag_regnestykke(){
+function lag_regnestykke(ee){
   if (pokeball_visible == false){
     let n1 = 0
     let n2 = 0
@@ -657,26 +673,24 @@ function lag_regnestykke(){
 
     //Lag regnestykke men tall mellom 1-10
     if(current_diff == "add10"){
-      n1 = Math.floor(Math.random()*11);
-      n2 = Math.floor(Math.random()*(11-n1));
-      //Gjør om det ene tallet i regnestykket slik at svaret ALDRI blir over 10.
-      if(n1+n2 > 10){
-        for (let i = 0; n1+n2 > 10; i++) {
-          n1 = Math.floor(Math.random()*10+1);
-        }
-      }
+      n1 = Math.floor(Math.random() * 5) + 2
+      n2 = Math.floor(Math.random() * 5) + 2
     }
 
     //Lag regnestykke men tall mellom 1-20
     if(current_diff == "add20"){
-      n1 = Math.floor(Math.random()*21);
-      n2 = Math.floor(Math.random()*(21-n1));
-      //Gjør om det ene tallet i regnestykket slik at svaret ALDRI blir over 10.
-      if(n1+n2 > 20){
-        for (let i = 0; n1+n2 > 20; i++){
-          n1 = Math.floor(Math.random()*10+1);
-        }
-      }
+      n1 = Math.floor(Math.random() * 12) + 3
+      n2 = Math.floor(Math.random() * 7) + 3
+    }
+
+    if(current_diff == "add3"){
+      n1 = Math.floor(Math.random() * 20) + 4
+      n2 = Math.floor(Math.random() * 15) + 4
+    }
+
+    if(current_diff == "add4"){
+      n1 = Math.floor(Math.random() * 80) + 5
+      n2 = Math.floor(Math.random() * 25) + 5
     }
 
     //Lag MINUS regnestykke men tall mellom 1-10
@@ -697,6 +711,25 @@ function lag_regnestykke(){
       if(n1 < n2){
         [n1, n2] = [n2, n1]
         }
+    }
+    //Lag MINUS regnestykke level 3
+    if(current_diff == "sub3"){
+      n1 = Math.floor(Math.random()*40+6);
+      n2 = Math.floor(Math.random()*40+6);
+      //Flytter slik at n1 alltid er større enn n2
+      if(n1 < n2){
+        [n1, n2] = [n2, n1]
+      }
+    }
+
+    //Lag MINUS regnestykke level 4
+    if(current_diff == "sub4"){
+      n1 = Math.floor(Math.random()*80+1);
+      n2 = Math.floor(Math.random()*80+1);
+      //Flytter slik at n1 alltid er større enn n2
+      if(n1 < n2){
+        [n1, n2] = [n2, n1]
+      }
     }
     
     //Lag GANGE regnestykke innen for 1-5 gangetabellen.
@@ -753,11 +786,11 @@ function sjekk_svar(){
    var user_input = document.getElementById("intext2").value;
   
    //Sjekker Minus regnestykker
-   if(current_diff == "sub10" || current_diff == "sub20"){
+   if(current_diff == "sub10" || current_diff == "sub20" || current_diff == "sub3" || current_diff == "sub4"){
     adds= Number(n1) - Number(n2);}
 
     //Sjekker Pluss regnestykker
-   if(current_diff == "add10" || current_diff == "add20" || current_diff == "tiven2"){
+   if(current_diff == "add10" || current_diff == "add20" || current_diff == "add3" || current_diff == "add4" || current_diff == "tiven2"){
       adds= Number(n1) + Number(n2);}
   
    //Sjekker Gange regnestykker
