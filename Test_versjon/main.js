@@ -8,6 +8,8 @@ pokemon_counter = 0 //Antall pokemon du har.
 alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 
 sprites_dir = "Sprites2"
+var audio_rett = new Audio('Bilder\\rett_svar.mp3');
+audio_rett.volume = 0.3;
 
 var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
@@ -813,6 +815,7 @@ function sjekk_svar(){
    //Sjekker om svaret er riktig
    if(user_input == adds){
       document.getElementById("show_answer").innerHTML = "Bra jobba!";
+      audio_rett.play();
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
