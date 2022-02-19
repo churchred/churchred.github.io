@@ -956,7 +956,7 @@ function make_Stars(){
     var img = document.createElement("img");
     img.width = 50
     img.height = 50
-    img.src = '/Bilder/star.png' 
+    img.src = '\\Bilder\\star.png' 
     document.getElementById('star_div').appendChild(img);
   }
   console.log("Made ", reset_counter, " stars.")
