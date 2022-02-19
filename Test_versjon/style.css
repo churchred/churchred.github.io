@@ -13,6 +13,7 @@
 body {
   /*background-image: url("Bilder/bk.png");*/
   background-color: #e9e3e3;
+  width: 1920px;
  }
 
 
@@ -268,7 +269,7 @@ body {
 /*DROPDOWN MENU STUFF UNDER HERE*/
 
 .line_at_the_top{
-  width: 100%;
+  width: 1900px;
   height: 50px;
   align-items: center;
   background: rgb(0, 0, 0);
