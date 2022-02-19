@@ -7,12 +7,16 @@ var current_diff = "add10" //Starter på Addisjon 1-10
 pokemon_counter = 0 //Antall pokemon du har.
 alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 
+reset_button = false
+
 sprites_dir = "Sprites2"
-var audio_rett = new Audio('Bilder\\rett_svar.mp3');
-audio_rett.volume = 0.3;
+//var audio_rett = new Audio('Bilder\\rett_svar.mp3');
+//audio_rett.volume = 0.3;
 
 var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
+var shiny_chance_list = [20, 10, 5, 3, 2, 1]
+var reset_counter = 0
 
 let badges_array_kanto = ['Bilder\\Badges\\Kanto\\box_0.png','Bilder\\Badges\\Kanto\\box_1.png','Bilder\\Badges\\Kanto\\box_2.png',
                           'Bilder\\Badges\\Kanto\\box_3.png','Bilder\\Badges\\Kanto\\box_4.png','Bilder\\Badges\\Kanto\\box_5.png',
@@ -291,6 +295,21 @@ function cookie_load(){
   
   console.log("Johto button:", goto_johto,"  Hoenn button:", goto_hoenn)
   console.log(pokemon_counter + "/" + pokedex_array.length + " pkmn caught")
+  
+  if(reset_button == false || reset_button == null){check_if_finished()}
+
+  reset_button = localStorage.getItem('reset_button')
+
+  if(reset_button == true || reset_button == 'true'){document.getElementById('reset-1').style.visibility = "visible"}
+
+  reset_counter = localStorage.getItem('reset_counter')
+  if(reset_counter == null){reset_counter = 0}else{reset_counter = parseInt(reset_counter)}
+
+  if(reset_counter > shiny_chance_list.length){chance_shiny = shiny_chance_list[shiny_chance_list.length-1]}
+  else{chance_shiny = shiny_chance_list[reset_counter]}
+
+  console.log("Number of resets:", reset_counter)
+  console.log("Shiny chance: 1/", chance_shiny)
 
 }
 
@@ -609,15 +628,15 @@ function add_pokemon(){
 
   //Shiny or no Shiny? Vi bruker random tall til å lage path.
   shinycalc = Math.floor(Math.random()*chance_shiny);
-  if(shinycalc == 1){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + "s" + ".png", console.log("A shiny!")}
-  if(shinycalc != 1){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + ".png"}
+  if(shinycalc == 0){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + "s" + ".png", console.log("A shiny!")}
+  if(shinycalc != 0){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + ".png"}
 
   var img = document.createElement("img");
   img.src = path 
 
   //optionally set a css class on the image
-  if(shinycalc == 1) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block_shiny"; temp_array[rand][3] = 1;} 
-  if(shinycalc != 1) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block";}
+  if(shinycalc == 0) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block_shiny"; temp_array[rand][3] = 1;} 
+  if(shinycalc != 0) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block";}
 
   img.setAttribute("class", class_name_img);
   img.setAttribute("id", rand);
@@ -815,7 +834,7 @@ function sjekk_svar(){
    //Sjekker om svaret er riktig
    if(user_input == adds){
       document.getElementById("show_answer").innerHTML = "Bra jobba!";
-      audio_rett.play();
+      //audio_rett.play();
       counter_completed += 1
       math_completed = true;
       document.getElementById("btn").style.background = "gray";
@@ -879,4 +898,33 @@ function change_sprite(){
     document.getElementById("sprite_btn").src = "Bilder\\sprites_use_pixel.png";
   }
   cookie_load()
+}
+
+function check_if_finished(){
+  var temp_check = 0
+  for(var i=0; i < pokedex_array_hoenn.length; i++){
+    if(pokedex_array_hoenn[i][2] == 1){
+      temp_check += 1
+    }
+  }
+  if(temp_check == pokedex_array_hoenn.length){
+    console.log("Finsihed is True")
+    document.getElementById('reset-1').style.visibility = "visible"
+    reset_button = true
+    localStorage.setItem('reset_button', true)
+  }
+}
+
+function resett_Spillet(e){
+  console.log(e)
+  if(e == 'reset-1'){
+    document.getElementById('reset-1').style.backgroundColor = "gray"
+    document.getElementById('reset-2').style.visibility = "visible"
+  }
+  if(e == 'reset-2'){
+    reset_counter += 1
+    localStorage.clear();
+    localStorage.setItem('reset_counter', reset_counter)
+    location.reload();
+  }
 }

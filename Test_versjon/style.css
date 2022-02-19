@@ -261,7 +261,7 @@ body {
 /*DROPDOWN MENU STUFF UNDER HERE*/
 
 .line_at_the_top{
-  width: 1920px;
+  width: 100%;
   height: 50px;
   align-items: center;
   background: rgb(0, 0, 0);
@@ -380,4 +380,46 @@ body {
   background-color: #fb6868;
   margin-right: 2px;
   border: black solid 1px;
+}
+
+
+.resett_knapp1{
+  width: 175px;
+  height: 50px;
+  position: absolute;
+  margin-left: 1300px;
+  margin-top: 250px;
+  background-color: black;
+  color: #e9e3e3;
+  box-shadow: 1px 1px 0px #999,
+  2px 2px 0px #999,
+  3px 2px 0px #999,
+  4px 4px 0px #999,
+  5px 5px 0px #999;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  visibility: hidden;
+}
+
+.resett_knapp2{
+  width: 175px;
+  height: 90px;
+  position: absolute;
+  margin-left: 1300px;
+  margin-top: 350px;
+  background-color: black;
+  color: #e9e3e3;
+  box-shadow: 1px 1px 0px #999,
+  2px 2px 0px #999,
+  3px 2px 0px #999,
+  4px 4px 0px #999,
+  5px 5px 0px #999;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  visibility: hidden;
+  
 }
