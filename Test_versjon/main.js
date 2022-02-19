@@ -13,7 +13,7 @@ sprites_dir = "Sprites2"
 //var audio_rett = new Audio('Bilder\\rett_svar.mp3');
 //audio_rett.volume = 0.3;
 
-var points_for_pkm = 1; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
+var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 var shiny_chance_list = [20, 10, 5, 3, 2, 1]
 var reset_counter = 0
@@ -235,6 +235,12 @@ function load_all_pokemon_in_order(){
 function load_all_pokemon_normal_way(x){
   for(i=0; i < pokedex_array.length; i++){
     add_pokemon()}
+}
+
+function remove_all_cookies(){
+  console.log("RESET ALL")
+  localStorage.clear();
+  location.reload();
 }
 
 //----------------------------------------------------------------------------
