@@ -258,6 +258,13 @@ body {
   50% { transform: translate(-1px, 2px) rotate(-1deg); }
 }
 
+.star_div{
+ width: 700px;
+ height: 50px;
+ position: absolute;
+ margin-left: 505px;
+}
+
 /*DROPDOWN MENU STUFF UNDER HERE*/
 
 .line_at_the_top{
@@ -404,8 +411,9 @@ body {
 }
 
 .resett_knapp2{
-  width: 175px;
-  height: 90px;
+  white-space: normal;
+  width: 190px;
+  height: 110px;
   position: absolute;
   margin-left: 1300px;
   margin-top: 350px;

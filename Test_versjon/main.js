@@ -13,7 +13,7 @@ sprites_dir = "Sprites2"
 //var audio_rett = new Audio('Bilder\\rett_svar.mp3');
 //audio_rett.volume = 0.3;
 
-var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
+var points_for_pkm = 1; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 var shiny_chance_list = [20, 10, 5, 3, 2, 1]
 var reset_counter = 0
@@ -305,8 +305,10 @@ function cookie_load(){
   reset_counter = localStorage.getItem('reset_counter')
   if(reset_counter == null){reset_counter = 0}else{reset_counter = parseInt(reset_counter)}
 
-  if(reset_counter > shiny_chance_list.length){chance_shiny = shiny_chance_list[shiny_chance_list.length-1]}
+  if(reset_counter > shiny_chance_list.length-1){chance_shiny = shiny_chance_list[shiny_chance_list.length-1]}
   else{chance_shiny = shiny_chance_list[reset_counter]}
+
+  make_Stars() //Make reset stars!
 
   console.log("Number of resets:", reset_counter)
   console.log("Shiny chance: 1/", chance_shiny)
@@ -596,7 +598,6 @@ function change_diff(e){
 }
 
 function add_pokemon(){
-  
   var temp_array = []
   //loader riktig pokedex inn i en temp_array
   if(current_region == "Kanto"){
@@ -860,7 +861,11 @@ function pokeball(){
 
       //Lag en pokeball
       var img = document.createElement("img");
-      img.src = "Bilder\\pokeball.png" 
+      if(reset_counter == 0){img.src = "Bilder\\pokeball.png"}
+      if(reset_counter == 1){img.src = "Bilder\\greatball.png"}
+      if(reset_counter == 2 || reset_counter == 3){img.src = "Bilder\\ultraball.png"}
+      if(reset_counter >= 4){img.src = "Bilder\\masterball.png"}
+      
       //Set a css class on the image
       var class_name = "pkmn_ball";
       img.setAttribute("class", class_name);
@@ -920,6 +925,15 @@ function resett_Spillet(e){
   if(e == 'reset-1'){
     document.getElementById('reset-1').style.backgroundColor = "gray"
     document.getElementById('reset-2').style.visibility = "visible"
+    var temp_var = 0
+    if(reset_counter >= shiny_chance_list.length-1){
+      temp_var = shiny_chance_list.length-1
+      document.getElementById('p_res').textContent = Math.floor(100 / shiny_chance_list[temp_var]) + "% " + " >> " + Math.floor(100 / shiny_chance_list[temp_var]) + "%"
+    }else{
+      temp_var = reset_counter
+      document.getElementById('p_res').textContent = Math.floor(100 / shiny_chance_list[temp_var]) + "% " + " >> " + Math.floor(100 / shiny_chance_list[temp_var+1]) + "%"
+    }
+
   }
   if(e == 'reset-2'){
     reset_counter += 1
@@ -927,4 +941,17 @@ function resett_Spillet(e){
     localStorage.setItem('reset_counter', reset_counter)
     location.reload();
   }
+}
+
+
+function make_Stars(){
+  document.getElementById('star_div').innerHTML = ""
+  for(i=0; i<reset_counter; i++){
+    var img = document.createElement("img");
+    img.width = 50
+    img.height = 50
+    img.src = '/Bilder/star.png' 
+    document.getElementById('star_div').appendChild(img);
+  }
+  console.log("Made ", reset_counter, " stars.")
 }
