@@ -65,15 +65,30 @@ body {
 }
 
 .pokemon_box{ 
-  width: 795px;
+  width: 791;
   height: 100%;
-  background: rgb(190, 192, 192);
+  background-color: red;
   display: grid, inline-grid;
   align-items: center;
   border-radius: 10px;
   border: black 1px solid;
   margin-left: 30px;
   margin-top: 57px;
+}
+
+.pokemon_box2{ 
+  width:791px;
+  height: 100%;
+  background: rgb(190, 192, 192);
+  display: grid, inline-grid;
+  align-items: center;
+  margin-top: -3px;
+  border: black 1px solid;
+  overflow-y:scroll; height:450px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .pkmn_block{
@@ -112,6 +127,14 @@ body {
   width: calc(128*0.8px);
   image-rendering: smooth;
 }
+
+.pkmn_img_gif{ /*original scale: 96x96*/
+  image-rendering: smooth;
+  position: relative;
+  left: 8%;
+  top:10%;
+}
+
 
 .main_game_box{
   width: 400px;

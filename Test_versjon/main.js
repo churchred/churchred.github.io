@@ -9,7 +9,12 @@ alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 
 reset_button = false
 
-sprites_dir = "Sprites2"
+sprites_dir = [["Sprites1", "Bilder\\sprites_use_pixel.png"], ["Sprites2", "Bilder\\sprites_use_3d.png"], 
+               ["Sprites3", "Bilder\\sprites_use_3d.png"]]
+
+sprite_dir_nr = 1
+sprites_type = ['.png', '.gif']
+sprite_type_nr = 0
 //var audio_rett = new Audio('Bilder\\rett_svar.mp3');
 //audio_rett.volume = 0.3;
 
@@ -318,12 +323,12 @@ function cookie_load(){
 
   console.log("Number of resets:", reset_counter)
   console.log("Shiny chance: 1/", chance_shiny)
-
 }
 
+
 function load_spesific_pokemon(y){
-  if(pokedex_array[y][3] == 0){var path = 'Bilder' + "\\" + sprites_dir + "\\" + pokedex_array[y][0] + ".png"}
-  if(pokedex_array[y][3] == 1){var path = 'Bilder' + "\\" + sprites_dir + "\\" + pokedex_array[y][0] + "s" + ".png"}                                
+  if(pokedex_array[y][3] == 0){var path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + pokedex_array[y][0] + sprites_type[sprite_type_nr]}
+  if(pokedex_array[y][3] == 1){var path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + pokedex_array[y][0] + "s" + sprites_type[sprite_type_nr]}                                
   var img = document.createElement("img");
 
   img.src = path 
@@ -345,6 +350,7 @@ function load_spesific_pokemon(y){
   var temp_id = 'block' + pokedex_array[y][0];
   iDiv.id = temp_id
   iDiv.className = class_name_div;
+
   document.getElementById('pokemon_box').appendChild(iDiv);
 
   //Add image
@@ -635,8 +641,8 @@ function add_pokemon(){
 
   //Shiny or no Shiny? Vi bruker random tall til å lage path.
   shinycalc = Math.floor(Math.random()*chance_shiny);
-  if(shinycalc == 0){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + "s" + ".png", console.log("A shiny!")}
-  if(shinycalc != 0){path = 'Bilder' + "\\" + sprites_dir + "\\" + temp_array[rand][0] + ".png"}
+  if(shinycalc == 0){path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + temp_array[rand][0] + "s" + sprites_type[sprite_type_nr], console.log("A shiny!")}
+  if(shinycalc != 0){path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + temp_array[rand][0] + sprites_type[sprite_type_nr]}
 
   var img = document.createElement("img");
   img.src = path 
@@ -646,8 +652,7 @@ function add_pokemon(){
   if(shinycalc != 0) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block";}
 
   img.setAttribute("class", class_name_img);
-  img.setAttribute("id", rand);
-
+  img.setAttribute("id",  temp_array[rand][0]-1);
   temp_array[rand][2] = 1
 
   //console.log("Added:", temp_array[rand][1], "Pokedex:", pokemon_counter, "/", pokedex_array.length)
@@ -679,10 +684,13 @@ function add_pokemon(){
   document.getElementById('pokemon_box').appendChild(iDiv);
 
   //Add image
-  document.getElementById(temp_id).appendChild(img);
+  document.getElementById(iDiv.id).appendChild(img);
+
+  //Scroll to bottom 
+  document.getElementById(iDiv.id).scrollIntoView(false);
 
   //Lager variabel for boksen som pokemon og navn skal inn i
-  var theDiv = document.getElementById(temp_id);
+  var theDiv = document.getElementById(iDiv.id);
 
   //Legger til pokemon navn
   var content = document.createTextNode(temp_array[rand][1]);
@@ -898,16 +906,10 @@ function open_pkball(){
 function change_sprite(){
   clear_pokedex_img(current_region)
   pokemon_counter = 0
-  if(sprites_dir == "Sprites1"){
-    console.log("Changing to Animation!")
-    sprites_dir = "Sprites2";
-    document.getElementById("sprite_btn").src = "Bilder\\sprites_use_3d.png";
-  }
-  else if(sprites_dir == "Sprites2"){
-    console.log("Changing to Sprites!")
-    sprites_dir = "Sprites1"
-    document.getElementById("sprite_btn").src = "Bilder\\sprites_use_pixel.png";
-  }
+  console.log("Changing to Animation!")
+  sprite_dir_nr += 1;
+  if(sprite_dir_nr == 2){sprite_dir_nr = 0}
+  document.getElementById("sprite_btn").src = sprites_dir[sprite_dir_nr][1];
   cookie_load()
 }
 
@@ -961,3 +963,43 @@ function make_Stars(){
   }
   console.log("Made ", reset_counter, " stars.")
 }
+
+function print_name(e){
+  matches = e.match(/\d+/g);
+  for(i = 0; i<pokedex_array.length; i++){
+    if(pokedex_array[i][0] == matches){
+
+      if(pokedex_array[i][3] == 1){
+        console.log("Clicked on: ", "Shiny ", pokedex_array[i][1], parseInt(matches)-1)   
+        var path = 'Bilder' + "\\" + sprites_dir[2][0] + "\\" + pokedex_array[i][0] + "s" + sprites_type[1] 
+        var id_ = document.getElementById(parseInt(matches)-1).src
+        id_ = id_.substr(id_.length - 4); 
+        if (id_ == '.gif'){
+          path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + pokedex_array[i][0] + "s" + sprites_type[sprite_type_nr] 
+        }        
+      }
+
+      else{
+        console.log("Clicked on:", pokedex_array[i][1], parseInt(matches)-1)   
+        var path = 'Bilder' + "\\" + sprites_dir[2][0] + "\\" + pokedex_array[i][0] + sprites_type[1] 
+        var id_ = document.getElementById(parseInt(matches)-1).src
+        id_ = id_.substr(id_.length - 4); 
+        if (id_ == '.gif'){
+          path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + pokedex_array[i][0] + sprites_type[sprite_type_nr] 
+        }        
+      }                     
+      document.getElementById(parseInt(matches)-1).src = path
+    }
+  }
+}
+
+document.addEventListener('click',function(e){
+  eleme = document.getElementById('pokemon_box')
+  for(i=0; i<eleme.children.length; i++){
+    var el = eleme.children[i]
+    if(e.target && e.target.id== el.id){
+      print_name(el.id)
+    }
+  }
+});
+
