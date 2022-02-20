@@ -661,7 +661,7 @@ function add_pokemon(){
   if(shinycalc != 0) {var class_name_img = "pkmn_img"; var class_name_div = "pkmn_block";}
 
   img.setAttribute("class", class_name_img);
-  img.setAttribute("id",  temp_array[rand][0]-1);
+  img.setAttribute("id",  pokedex_array.indexOf(temp_array[rand]));
   temp_array[rand][2] = 1
 
   //console.log("Added:", temp_array[rand][1], "Pokedex:", pokemon_counter, "/", pokedex_array.length)
@@ -682,7 +682,7 @@ function add_pokemon(){
     }
   }
 
-
+  console.log(pokedex_array)
   console.log(temp_array.length + "/" + pokedex_array.length + " pkmn left")
 
   //Lager en Div som bildet og tekst skal legges inn i
@@ -973,82 +973,31 @@ function make_Stars(){
   console.log("Made ", reset_counter, " stars.")
 }
 
-//Work in progress, men målet er å få til bevegelige animasjoner
-function print_name2(e){
-  matches = e.match(/\d+/g);
-  for(i = 0; i<pokedex_array.length; i++){
-    if(pokedex_array[i][0] == matches){
-
-      if(pokedex_array[i][3] == 1){
-        console.log("Clicked on: ", "Shiny ", pokedex_array[i][1], parseInt(matches)-1)   
-        var path = 'Bilder' + "\\" + sprites_dir[2][0] + "\\" + pokedex_array[i][0] + "s" + sprites_type[1] 
-        var id_ = document.getElementById(parseInt(matches)-1).src
-        id_ = id_.substr(id_.length - 4); 
-        if (id_ == '.gif'){
-          path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + pokedex_array[i][0] + "s" + sprites_type[sprite_type_nr] 
-        }        
-      }
-
-      else{
-        console.log("Clicked on:", pokedex_array[i][1], parseInt(matches)-1)   
-        var path = 'Bilder' + "\\" + sprites_dir[2][0] + "\\" + pokedex_array[i][0] + sprites_type[1] 
-        var id_ = document.getElementById(parseInt(matches)-1).src
-        id_ = id_.substr(id_.length - 4); 
-        if (id_ == '.gif'){
-          path = 'Bilder' + "\\" + sprites_dir[sprite_dir_nr][0] + "\\" + pokedex_array[i][0] + sprites_type[sprite_type_nr] 
-        }        
-      }                     
-      document.getElementById(parseInt(matches)-1).src = path
-    }
-  }
-}
-
-
-
-function print_name(e){
-  matches = e.match(/\d+/g);
-  for(i = 0; i<pokedex_array.length; i++){
-    if(pokedex_array[i][0] == matches){
-      if(pokedex_array[i][3] == 1){
-        console.log("Clicked on: ", "Shiny ", pokedex_array[i][1], parseInt(matches)-1)
-        if(current_region == 'Kanto'){var path = "Bilder/Sprites4/" + pokedex_array[i][0] + ".png"}
-        else{var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  }
-        //var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  
-        for(ii=0; ii<pokemon_name_exceptions.length; ii++){
-          if(pokedex_array[i][1] == pokemon_name_exceptions[ii][0]) {
-            console.log(pokedex_array[i][1], "-->", pokemon_name_exceptions[ii][1])
-            path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[ii][1] + ".jpg" 
-          }
-        }
-      }
-
-      else{
-        console.log("Clicked on:", pokedex_array[i][1], parseInt(matches)-1, e)     
-        var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  
-        for(ii=0; ii<pokemon_name_exceptions.length; ii++){
-          if(pokedex_array[i][1] == pokemon_name_exceptions[ii][0]) {
-            console.log(pokedex_array[i][1], "-->", pokemon_name_exceptions[ii][1])
-            path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[ii][1] + ".jpg" 
-          }
-        }
-      } 
-      path = path.toLowerCase()
-      console.log(path)     
-      localStorage.setItem('fav_path', path)     
-      localStorage.setItem('fav_name', pokedex_array[i][1])     
-      document.getElementById("img_frame_sprite").src = path
-      document.getElementById("frame_text").textContent = pokedex_array[i][1]
-    }
-  }
-}
-
 document.addEventListener('click',function(e){
-  eleme = document.getElementById('pokemon_box')
-  for(i=0; i<eleme.children.length; i++){
-    var el = eleme.children[i]
-    if(e.target && e.target.id== el.id){
-      print_name(el.id)
+  if(Number.isInteger(parseInt(e.target.id)) == true){
+    console.log("Clicked on id: ", e.target.id, e.target)
+    if(pokedex_array[e.target.id][3] == 1){
+      if(current_region == 'Kanto'){
+        var path = "Bilder/Sprites4/" + pokedex_array[e.target.id][0] + ".png"
+      }else{
+        var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[e.target.id][1] + ".jpg" 
+        path = path.toLowerCase() 
+      }
+    }else{
+      var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[e.target.id][1] + ".jpg"  
+      path = path.toLowerCase()
     }
+    for(i=0; i<pokemon_name_exceptions.length; i++){
+      if(pokedex_array[e.target.id][1] == pokemon_name_exceptions[i][0]) {
+        console.log(pokedex_array[e.target.id][1], "-->", pokemon_name_exceptions[i][1])
+        path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[i][1] + ".jpg" 
+        path = path.toLowerCase()
+      }
+    }
+    console.log(path)
+    localStorage.setItem('fav_path', path)     
+    localStorage.setItem('fav_name', pokedex_array[e.target.id][1])     
+    document.getElementById("img_frame_sprite").src = path
+    document.getElementById("frame_text").textContent = pokedex_array[e.target.id][1]
   }
 });
-

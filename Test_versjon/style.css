@@ -479,6 +479,8 @@ body {
     position: absolute;
     left: 130px;
     top: 105px;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 .frame_text{
