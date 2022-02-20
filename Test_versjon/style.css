@@ -457,3 +457,31 @@ body {
   font-size: 20px;
   
 }
+
+
+.frame_div{
+  position: absolute;
+  top: 615px;
+  left: 612px;
+  justify-content: center;
+  text-align:center
+}
+
+.img_frame{
+  height: 505px;
+  
+}
+
+.img_frame_sprite{
+    height: calc(548*0.5px);
+    width: calc(485*0.5px);
+    image-rendering: smooth;
+    position: absolute;
+    left: 130px;
+    top: 105px;
+}
+
+.frame_text{
+  font-size: 35px;
+  margin-top: -110px;
+}

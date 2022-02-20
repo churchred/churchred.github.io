@@ -1,3 +1,4 @@
+//LAGET AV KRISTOFFER aka "CHURCHRED"
 
 var counter_completed = 0 //Teller hvor mange riktige du får. Når den er lik points_for_pkm får du pokeball
 var math_completed = true //Er mattestykke ferdig? Denne låser Sjekk-knappen.
@@ -87,7 +88,7 @@ let pokedex_array_johto = [
 [230,'Kingdra',0 ,0], [231,'Phanpy',0 ,0], [232,'Donphan',0 ,0], [233,'Porygon2',0 ,0], [234,'Stantler',0 ,0], [235,'Smeargle',0 ,0],
 [236,'Tyrogue',0 ,0], [237,'Hitmontop',0 ,0], [238,'Smoochum',0 ,0], [239,'Elekid',0 ,0], [240,'Magby',0 ,0], [241,'Miltank',0 ,0],
 [242,'Blissey',0 ,0], [243,'Raikou',0 ,0], [244,'Entei',0 ,0], [245,'Suicune',0 ,0], [246,'Larvitar',0 ,0], [247,'Pupitar',0 ,0],
-[248,'Tyranitar',0 ,0], [249,'Lugia',0 ,0], [250,'Ho_oh',0 ,0], [251,'Celebi',0 ,0]
+[248,'Tyranitar',0 ,0], [249,'Lugia',0 ,0], [250,'Ho-oh',0 ,0], [251,'Celebi',0 ,0]
 ]
 
 let pokedex_array_hoenn = [
@@ -115,6 +116,9 @@ let pokedex_array_hoenn = [
 [378,'Regice',0 ,0], [379,'Registeel',0 ,0], [380,'Latias',0 ,0], [381,'Latios',0 ,0], [382,'Kyogre',0 ,0], [383,'Groudon',0 ,0],
 [384,'Rayquaza',0 ,0], [385,'Jirachi',0 ,0], [386,'Deoxys',0 ,0]
 ]
+
+//Bruker for å lage en favorit pokemon, men noen av navnene i Pokedex må gjøres om..
+let pokemon_name_exceptions = [['Mr.Mime', 'Mr-Mime'], ['Nidoran♀', 'nidoran-f'], ['Nidoran♂', 'nidoran-m']]
 
 let pokedex_array = pokedex_array_kanto
 let badges_array = badges_array_kanto
@@ -320,6 +324,11 @@ function cookie_load(){
   else{chance_shiny = shiny_chance_list[reset_counter]}
 
   make_Stars() //Make reset stars!
+
+  var fav_path = localStorage.getItem('fav_path')    
+  var fav_name = localStorage.getItem('fav_name')       
+  document.getElementById("img_frame_sprite").src = fav_path
+  document.getElementById("frame_text").textContent = fav_name
 
   console.log("Number of resets:", reset_counter)
   console.log("Shiny chance: 1/", chance_shiny)
@@ -964,7 +973,8 @@ function make_Stars(){
   console.log("Made ", reset_counter, " stars.")
 }
 
-function print_name(e){
+//Work in progress, men målet er å få til bevegelige animasjoner
+function print_name2(e){
   matches = e.match(/\d+/g);
   for(i = 0; i<pokedex_array.length; i++){
     if(pokedex_array[i][0] == matches){
@@ -989,6 +999,44 @@ function print_name(e){
         }        
       }                     
       document.getElementById(parseInt(matches)-1).src = path
+    }
+  }
+}
+
+
+
+function print_name(e){
+  matches = e.match(/\d+/g);
+  for(i = 0; i<pokedex_array.length; i++){
+    if(pokedex_array[i][0] == matches){
+      if(pokedex_array[i][3] == 1){
+        console.log("Clicked on: ", "Shiny ", pokedex_array[i][1], parseInt(matches)-1)   
+        //var path = "Bilder/Sprites4/" + pokedex_array[i][0] + ".png" Shiny funker ikke helt ennå
+        var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  
+        for(ii=0; ii<pokemon_name_exceptions.length; ii++){
+          if(pokedex_array[i][1] == pokemon_name_exceptions[ii][0]) {
+            console.log(pokedex_array[i][1], "-->", pokemon_name_exceptions[ii][1])
+            path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[ii][1] + ".jpg" 
+          }
+        }
+      }
+
+      else{
+        console.log("Clicked on:", pokedex_array[i][1], parseInt(matches)-1, e)     
+        var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  
+        for(ii=0; ii<pokemon_name_exceptions.length; ii++){
+          if(pokedex_array[i][1] == pokemon_name_exceptions[ii][0]) {
+            console.log(pokedex_array[i][1], "-->", pokemon_name_exceptions[ii][1])
+            path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[ii][1] + ".jpg" 
+          }
+        }
+      } 
+      path = path.toLowerCase()
+      console.log(path)     
+      localStorage.setItem('fav_path', path)     
+      localStorage.setItem('fav_name', pokedex_array[i][1])     
+      document.getElementById("img_frame_sprite").src = path
+      document.getElementById("frame_text").textContent = pokedex_array[i][1]
     }
   }
 }
