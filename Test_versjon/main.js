@@ -976,7 +976,7 @@ document.addEventListener('click',function(e){
   if(Number.isInteger(parseInt(e.target.id)) == true){
     console.log("Clicked on id: ", e.target.id, e.target)
     if(pokedex_array[e.target.id][3] == 1){
-      if(current_region == 'Kanto'){
+      if(current_region == 'Kanto' || current_region == 'Johto'){
         var path = "Bilder/Sprites4/" + pokedex_array[e.target.id][0] + ".png"
       }else{
         var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[e.target.id][1] + ".jpg" 
