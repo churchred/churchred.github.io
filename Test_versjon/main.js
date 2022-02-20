@@ -1010,9 +1010,10 @@ function print_name(e){
   for(i = 0; i<pokedex_array.length; i++){
     if(pokedex_array[i][0] == matches){
       if(pokedex_array[i][3] == 1){
-        console.log("Clicked on: ", "Shiny ", pokedex_array[i][1], parseInt(matches)-1)   
-        //var path = "Bilder/Sprites4/" + pokedex_array[i][0] + ".png" Shiny funker ikke helt ennå
-        var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  
+        console.log("Clicked on: ", "Shiny ", pokedex_array[i][1], parseInt(matches)-1)
+        if(current_region == 'Kanto'){var path = "Bilder/Sprites4/" + pokedex_array[i][0] + ".png"}
+        else{var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  }
+        //var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[i][1] + ".jpg"  
         for(ii=0; ii<pokemon_name_exceptions.length; ii++){
           if(pokedex_array[i][1] == pokemon_name_exceptions[ii][0]) {
             console.log(pokedex_array[i][1], "-->", pokemon_name_exceptions[ii][1])
