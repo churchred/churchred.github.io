@@ -682,7 +682,6 @@ function add_pokemon(){
     }
   }
 
-  console.log(pokedex_array)
   console.log(temp_array.length + "/" + pokedex_array.length + " pkmn left")
 
   //Lager en Div som bildet og tekst skal legges inn i
