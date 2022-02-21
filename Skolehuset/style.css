@@ -11,6 +11,8 @@
   width: 100%;
   height: 7%;
   position: fixed;
+  border-bottom: solid black 0.1vw;
+  border-top: solid black 0.1vw;
 }
 
 .logo_img{
@@ -18,10 +20,11 @@
   height: auto;
   margin-top: 0.6%;
   border-right: black 0.1vw solid;
+  cursor: pointer;
 }
 
 .page_div{
-  background-color: rgb(250, 245, 219);
+  background-color: rgb(255, 254, 250);
   width: 100%;
   height: 100%;
   justify-content: center;
