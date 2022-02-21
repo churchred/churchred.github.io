@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.line_at_top{
+  background-color: rgb(133, 131, 131);
+  width: 100%;
+  height: 7%;
+  position: fixed;
+}
+
+.logo_img{
+  width: 15%;
+  height: auto;
+  margin-top: 0.6%;
+  border-right: black 0.1vw solid;
+}
+
+.page_div{
+  background-color: rgb(250, 245, 219);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.overskrift{
+  width: auto;
+  height: 10%;
+  position: absolute;
+  margin-top: -29%;
+  font-size: 3.5vw;
+}
+
+.under_text{
+  width: 45%;
+  height: 8%;
+  position: absolute;
+  margin-top: -16%;
+  font-size: 1vw;
+  font-style: italic;
+  text-align: center;
+  border-bottom: black 0.1vw solid;
+  border-top: black 0.1vw solid;
+  padding-top: 1.2%;
+}
+
+
+.fag_holder_div{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.fag_div{
+  background-color: rgb(226, 219, 219);
+  width: 20%;
+  height: 70%;
+  margin-right: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  border: black 1px solid;
+}
+.fag_div:hover{
+  background-color: rgb(100, 129, 104);
+  cursor: pointer;
+}
+
+
+
