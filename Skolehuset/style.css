@@ -24,7 +24,7 @@
 }
 
 .page_div{
-  background-color: rgb(255, 254, 250);
+  background-color: rgb(224, 220, 204);
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -48,8 +48,8 @@
   font-size: 1vw;
   font-style: italic;
   text-align: center;
-  border-bottom: black 0.1vw solid;
-  border-top: black 0.1vw solid;
+  border-bottom: black 1px solid;
+  border-top: black 1px solid;
   padding-top: 1.2%;
 }
 
