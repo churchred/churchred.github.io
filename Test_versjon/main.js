@@ -10,8 +10,7 @@ alle_pokemon = false //Hvis du har alle pokemonene i pokedexen så er denne true
 
 reset_button = false
 
-sprites_dir = [["Sprites1", "Bilder\\sprites_use_pixel.png"], ["Sprites2", "Bilder\\sprites_use_3d.png"], 
-               ["Sprites3", "Bilder\\sprites_use_3d.png"]]
+sprites_dir = [["Sprites1", "Bilder\\sprites_use_pixel.png"], ["Sprites2", "Bilder\\sprites_use_3d.png"]]
 
 sprite_dir_nr = 1
 sprites_type = ['.png', '.gif']
@@ -189,6 +188,8 @@ function switch_region(sent_region){
     counter_completed = 0
     poeng_func() //Resetter lysene
   }
+
+  document.getElementById('pokemon_box').scrollTo(0,0)
 
   if(goto_hoenn == false){document.getElementById("hoenn_btn").style.background = "rgb(66, 64, 64)";}
 }
@@ -916,7 +917,7 @@ function change_sprite(){
   pokemon_counter = 0
   console.log("Changing to Animation!")
   sprite_dir_nr += 1;
-  if(sprite_dir_nr == 2){sprite_dir_nr = 0}
+  if(sprite_dir_nr == sprites_dir.length){sprite_dir_nr = 0}
   document.getElementById("sprite_btn").src = sprites_dir[sprite_dir_nr][1];
   cookie_load()
 }
@@ -976,27 +977,22 @@ document.addEventListener('click',function(e){
   if(Number.isInteger(parseInt(e.target.id)) == true){
     console.log("Clicked on id: ", e.target.id, e.target)
     if(pokedex_array[e.target.id][3] == 1){
-      if(current_region == 'Kanto' || current_region == 'Johto'){
         var path = "Bilder/Sprites4/" + pokedex_array[e.target.id][0] + ".png"
       }else{
-        var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[e.target.id][1] + ".jpg" 
-        path = path.toLowerCase() 
-      }
-    }else{
       var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[e.target.id][1] + ".jpg"  
       path = path.toLowerCase()
-    }
-    for(i=0; i<pokemon_name_exceptions.length; i++){
-      if(pokedex_array[e.target.id][1] == pokemon_name_exceptions[i][0]) {
-        console.log(pokedex_array[e.target.id][1], "-->", pokemon_name_exceptions[i][1])
-        path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[i][1] + ".jpg" 
-        path = path.toLowerCase()
+      for(i=0; i<pokemon_name_exceptions.length; i++){
+        if(pokedex_array[e.target.id][1] == pokemon_name_exceptions[i][0]) {
+          console.log(pokedex_array[e.target.id][1], "-->", pokemon_name_exceptions[i][1])
+          path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[i][1] + ".jpg" 
+          path = path.toLowerCase()
+        }
       }
     }
     console.log(path)
     localStorage.setItem('fav_path', path)     
     localStorage.setItem('fav_name', pokedex_array[e.target.id][1])     
     document.getElementById("img_frame_sprite").src = path
-    document.getElementById("frame_text").textContent = pokedex_array[e.target.id][1]
+    document.getElementById("frame_text").textContent = pokedex_array[e.target.id][1] 
   }
 });
