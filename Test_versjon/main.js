@@ -969,6 +969,7 @@ function make_Stars(){
   document.getElementById('star_div').innerHTML = ""
   for(i=0; i<reset_counter; i++){
     var img = document.createElement("img");
+    img.setAttribute("class", 'star_img');
     img.width = 50
     img.height = 50
     img.src = "Bilder\\star.png"
