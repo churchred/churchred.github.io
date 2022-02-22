@@ -2,19 +2,20 @@
 
 
 .overskrift{
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: underline;
-  margin-top: -700px;
+  top: 80%;
 }
 
 
 .fag_holder_div2{
-  width: 100%;
+  width: 380px;
   height: 80%;
   display: flex;
   margin-top: 100px;
-  margin-left: 30px;
+  margin-left: 45px;
 }
+
 
 .ark_container_div_top{
   background-color: rgb(133, 131, 131);
@@ -34,7 +35,7 @@
 .ark_container_div{
   
   background-color: rgb(219, 219, 205);
-  width: 50%;
+  width: 98%;
   height: 100%;
   margin-right: 50px;
   border: black 2px solid;
@@ -43,14 +44,160 @@
 
 .hefte{
   border: black 2px solid;
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   margin: 5px;
+  background-color: rgb(228, 228, 219);
+  display: flex;
+  text-align: left;
+  font-size: 13px;
 }
 
 .img{
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   cursor: pointer;
-  
+  border-right: black 2px solid;
+  margin-right: 10px;
+}
+
+
+.info_om_hefte{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 700px){
+  .overskrift{
+    font-size: 40px;
+    text-decoration: underline;
+    margin-top: -700px;
+  }
+
+
+  .fag_holder_div2{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+
+  .ark_container_div_top{
+    background-color: rgb(133, 131, 131);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    border: black 2px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: -2px;
+    margin-top: -2px;
+    font-weight: bold;
+  }
+
+  .ark_container_div{
+    
+    background-color: rgb(219, 219, 205);
+    width: 98%;
+    height: 100%;
+    margin-right: 50px;
+    border: black 2px solid;
+    border-radius: 15px;
+  }
+
+  .hefte{
+    border: black 2px solid;
+    width: 400px;
+    height: 300px;
+    margin: 5px;
+    background-color: rgb(228, 228, 219);
+    display: flex;
+    text-align: left;
+  }
+
+  .img{
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+    border-right: black 2px solid;
+    margin-right: 10px;
+  }
+
+
+  .info_om_hefte{
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  .overskrift{
+    font-size: 40px;
+    text-decoration: underline;
+    margin-top: -700px;
+  }
+
+
+  .fag_holder_div2{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+
+  .ark_container_div_top{
+    background-color: rgb(133, 131, 131);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    border: black 2px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: -2px;
+    margin-top: -2px;
+    font-weight: bold;
+  }
+
+  .ark_container_div{
+    
+    background-color: rgb(219, 219, 205);
+    width: 98%;
+    height: 100%;
+    margin-right: 50px;
+    border: black 2px solid;
+    border-radius: 15px;
+  }
+
+  .hefte{
+    border: black 2px solid;
+    width: 400px;
+    height: 300px;
+    margin: 5px;
+    background-color: rgb(228, 228, 219);
+    display: flex;
+    text-align: left;
+  }
+
+  .img{
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+    border-right: black 2px solid;
+    margin-right: 10px;
+  }
+
+
+  .info_om_hefte{
+    margin-top: 20px;
+  }
 }
