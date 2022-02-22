@@ -18,7 +18,7 @@ sprite_type_nr = 0
 //var audio_rett = new Audio('Bilder\\rett_svar.mp3');
 //audio_rett.volume = 0.3;
 
-var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
+var points_for_pkm = 1; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
 var shiny_chance_list = [20, 10, 5, 3, 2, 1]
 var reset_counter = 0
@@ -878,7 +878,9 @@ function pokeball(){
       counter_completed = 0;}
 
     if(pokeball_visible == true){
-      document.getElementById("main_game_box").style.height = "520px"
+      document.getElementById('intext').style.visibility = "hidden"
+      document.getElementById('intext1').style.visibility = "hidden"
+      document.getElementById('intext2').style.visibility = "hidden"
       document.getElementById("btn").style.background = "gray";
       document.getElementById("btn2").style.background = "gray";
 
@@ -902,8 +904,10 @@ function pokeball(){
 }
 
 function open_pkball(){
-  document.getElementById("main_game_box").style.height = "400px";
   document.getElementById("btn2").style.background = "#5da06e";
+  document.getElementById('intext').style.visibility = "visible"
+  document.getElementById('intext1').style.visibility = "visible"
+  document.getElementById('intext2').style.visibility = "visible"
   pokeball_visible = false
   add_pokemon()
   var element = document.getElementById("pokeball_img");
