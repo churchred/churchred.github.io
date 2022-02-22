@@ -15,16 +15,8 @@
   border-top: solid black 0.1vw;
 }
 
-.logo_img{
-  width: 15%;
-  height: auto;
-  margin-top: 0.6%;
-  border-right: black 0.1vw solid;
-  cursor: pointer;
-}
-
 .page_div{
-  background-color: rgb(224, 220, 204);
+  background-color: rgb(255, 254, 250);
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -32,49 +24,6 @@
   display: flex;
 }
 
-.overskrift{
-  width: auto;
-  height: 10%;
-  position: absolute;
-  margin-top: -29%;
-  font-size: 3.5vw;
-}
-
-.under_text{
-  width: 45%;
-  height: 8%;
-  position: absolute;
-  margin-top: -16%;
-  font-size: 1vw;
-  font-style: italic;
-  text-align: center;
-  border-bottom: black 1px solid;
-  border-top: black 1px solid;
-  padding-top: 1.2%;
-}
-
-
-.fag_holder_div{
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  margin-top: 15%;
-}
-
-.fag_div{
-  background-color: rgb(226, 219, 219);
-  width: 20%;
-  height: 70%;
-  margin-right: 2.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5vw;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 10px;
-  border: black 1px solid;
-}
 .fag_div:hover{
   background-color: rgb(100, 129, 104);
   cursor: pointer;
@@ -82,3 +31,171 @@
 
 
 
+
+
+.logo_img{
+width: 300px;
+height: auto;
+margin-top: 1vh;
+border-right: black 1px solid;
+cursor: pointer;
+}
+
+.overskrift{
+width: auto;
+height: 10%;
+position: absolute;
+margin-top: -70vh;
+font-size: 30px;
+}
+
+.under_text{
+width: 80%;
+height: 8vh;
+position: absolute;
+margin-top: -50vh;
+font-size: 1.5vh;
+font-style: italic;
+text-align: center;
+border-bottom: black 1px solid;
+border-top: black 1px solid;
+padding-top: 10px;
+}
+
+.fag_div{
+background-color: rgb(226, 219, 219);
+width: 300px;
+height: 15vh;
+margin-bottom: 40px;
+margin-top: -7px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 4.5vw;
+font-family: Arial, Helvetica, sans-serif;
+border-radius: 10px;
+border: black 1px solid;
+}
+
+.fag_holder_div{
+width: 100%;
+height: 30%;
+display: grid;
+justify-content: center;
+margin-top: 15%;
+}
+
+
+@media only screen and (min-width: 700px){
+
+  .logo_img{
+    width: 400px;
+    height: auto;
+    margin-top: 15px;
+    border-right: black 1px solid;
+    cursor: pointer;
+  }
+
+  .overskrift{
+    width: auto;
+    height: 100px;
+    position: absolute;
+    margin-top: -70vh;
+    font-size: 6vh;
+  }
+  
+  .under_text{
+    width: 600px;
+    height: 80px;
+    position: absolute;
+    margin-top: -530px;
+    font-size: 19px;
+    font-style: italic;
+    text-align: center;
+    border-bottom: black 1px solid;
+    border-top: black 1px solid;
+    padding-top: 10px;
+  }
+
+  .fag_div{
+    background-color: rgb(226, 219, 219);
+    width: 500px;
+    height: 180px;
+    margin-bottom: 60px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border: black 1px solid;
+  }
+
+  .fag_holder_div{
+    width: 100%;
+    height: 30%;
+    display: grid;
+    justify-content: center;
+    margin-top: 160px;
+  }
+
+  
+
+}
+
+@media only screen and (min-width: 1000px){
+
+  .logo_img{
+    width: 290px;
+    height: auto;
+    margin-top: 14px;
+    border-right: black 1px solid;
+    cursor: pointer;
+  }
+  
+  .overskrift{
+    width: auto;
+    height: 80px;
+    position: absolute;
+    margin-top: -580px;
+    font-size: 70px;
+  }
+  
+  .under_text{
+    width: 800px;
+    height: 70px;
+    position: absolute;
+    margin-top: -260px;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    border-bottom: black 1px solid;
+    border-top: black 1px solid;
+    padding-top: 25px;
+  }
+  
+  
+  .fag_holder_div{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 500px;
+  }
+  
+  .fag_div{
+    background-color: rgb(226, 219, 219);
+    width: 400px;
+    height: 180px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border: black 1px solid;
+  }
+
+}
