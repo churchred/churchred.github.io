@@ -1005,23 +1005,23 @@ body {
   .frame_div{
     position: absolute;
     top: 120px;
-    left: 882px;
+    left: 895px;
     justify-content: center;
     text-align:center
   }
   
   .img_frame{
-    height: 505px;
+    height: 400px;
     
   }
   
   .img_frame_sprite{
-      height: calc(548*0.5px);
-      width: calc(485*0.5px);
+      height: calc(548*0.47px);
+      width: calc(485*0.43px);
       image-rendering: smooth;
       position: absolute;
-      left: 130px;
-      top: 105px;
+      left: 90px;
+      top: 83px;
       -webkit-user-drag: none;
       user-select: none;
   }
@@ -1032,6 +1032,7 @@ body {
   }
 
   .juks_knapp1{
+    background-color: green;
     height: 35px;
     width: 50px;
     margin-left: -400px;
@@ -1040,6 +1041,7 @@ body {
   }
   
   .juks_knapp2{
+    background-color: green;
     height: 35px;
     width: 50px;
     margin-right: -400px;
@@ -1049,7 +1051,7 @@ body {
 }
 
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1400px){
   .overskrift{
     width: 350px;
     height: auto;
@@ -1549,6 +1551,7 @@ body {
   }
 
   .juks_knapp1{
+    background-color: purple;
     height: 35px;
     width: 50px;
     margin-left: -400px;
@@ -1557,6 +1560,7 @@ body {
   }
   
   .juks_knapp2{
+    background-color: purple;
     height: 35px;
     width: 50px;
     margin-right: -400px;
