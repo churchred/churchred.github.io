@@ -5,6 +5,21 @@
   font-family: roboto;
 }
 
+.juks_knapp1{
+  background-color: rgb(184, 184, 8);
+  height: 25px;
+  margin-left: -200px;
+  position: absolute;
+}
+
+.juks_knapp2{
+  background-color: rgb(184, 184, 8);
+  height: 25px;
+  margin-right: -210px;
+  position: absolute;
+}
+
+
 .overskrift{
   width: 280px;
   height: 40px;
@@ -537,7 +552,6 @@ body {
     width: 1920px;
    }
   
-  
   .hele_spill_box{
     width: 100%;
     height: 100%;
@@ -1021,5 +1035,21 @@ body {
   .frame_text{
     font-size: 35px;
     margin-top: -114px;
+  }
+
+  .juks_knapp1{
+    height: 35px;
+    width: 50px;
+    margin-left: -400px;
+    position: absolute;
+    font-weight: bold;
+  }
+  
+  .juks_knapp2{
+    height: 35px;
+    width: 50px;
+    margin-right: -400px;
+    position: absolute;
+    font-weight: bold;
   }
 }
