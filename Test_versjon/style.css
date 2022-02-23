@@ -532,12 +532,6 @@ body {
 
 
 
-
-
-
-
-
-
 @media only screen and (min-width: 700px){
   .overskrift{
     width: 350px;
@@ -1055,7 +1049,7 @@ body {
 }
 
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1200px){
   .overskrift{
     width: 350px;
     height: auto;
