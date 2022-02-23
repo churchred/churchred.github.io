@@ -149,7 +149,7 @@
     width: auto;
     height: 80px;
     position: absolute;
-    margin-top: -480px;
+    margin-top: -70vh;
     font-size: 50px;
   }
 
@@ -157,7 +157,7 @@
     width: 800px;
     height: 70px;
     position: absolute;
-    margin-top: -320px;
+    margin-top: -45vh;
     font-size: 18px;
     font-style: italic;
     text-align: center;
