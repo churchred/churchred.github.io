@@ -1,93 +1,87 @@
 *{
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
 }
 
 .body{
-  background-color: antiquewhite;
+  background-color: beige;
 }
+
 
 .line_at_top{
   background-color: rgb(131, 131, 133);
-  width: 100%;
-  height: 40px;
-  position: fixed;
+  width: 100vw;
+  height: 5.5vh;
   border-bottom: solid black 0.1vw;
   border-top: solid black 0.1vw;
-  z-index: 10;
+  position: fixed;
+  top:0px
 }
 
-.page_div{
-  /* background-image: url('Bilder/bk1.jpg'); */
-  background-color: antiquewhite;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+.logo_img{
+  width: 200px;
+  height: auto;
+  margin-top: 5px;
+  border-right: black 1px solid;
+  cursor: pointer;
+  background-color: rgb(131, 131, 133);
 }
 
 .back_button{
   color: blue;
   cursor: pointer;
+  position: absolute;
+  width: 0px;
+  height: 0px;
   font-size: 20px;
-  margin-top: 5px;
-  margin-left: 2px;
   text-decoration: underline;
-  width: 40px;
-  height: 20px;
-}
-
-.logo_img{
-  width: 230px;
-  height: auto;
-  margin-top: 6px;
-  border-right: black 1px solid;
-  cursor: pointer;
-  z-index: 11;
 }
 
 .overskrift{
-  width: 100vw;
-  height: 80px;
-  position: absolute;
-  margin-top: -600px;
-  font-size: 30px;
+  width: 100%;
+  height: 8vh;
+  font-size: 7vw;
   text-align: center;
+  margin-top: 20%;
+}
+
+.undertext_div{
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4%;
 }
 
 .under_text{
-  width: 320px;
-  margin-left: -10px;
-  height: 70px;
-  position: absolute;
-  margin-top: -450px;
+  width: 80%;
+  height: 100%;
   font-size: 12px;
   font-style: italic;
-  text-align: center;
   border-bottom: black 1px solid;
-  border-top: black 1px solid;
-  padding-top: 25px;
+  border-top: black 1px solid;  
 }
 
 
-.fag_holder_div{
-  width: 300px;
-  height: 450px;
-  margin-top: 150px;
-  display: grid, inline-grid;
+.knapp_div_whole{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  margin-top: 10%;
 }
 
+.knapp_div_part{
+  width: 60.5%;
+  height: 100%;
+}
 
-
-.fag_div{
+.knapp{
   background-color: rgb(226, 219, 219);
-  width: 300px;
-  height: 100px;
-  margin-right: 0px;
-  font-size: 20px;
+  width: 60vw;
+  height: 15vh;
+  font-size: 6vw;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -95,10 +89,10 @@
   border-radius: 10px;
   border: black 1px solid;
   float: left;
-  margin-top: 10px;
+  margin-top: 2%;
 }
 
-.fag_div:hover{
+.knapp:hover{
   background-color: rgb(130, 192, 133);
   cursor: pointer;
 }
@@ -106,80 +100,82 @@
 
 
 
-@media only screen and (min-width: 730px){
+@media only screen and (min-width: 700px){
   .line_at_top{
     background-color: rgb(131, 131, 133);
     width: 100%;
-    height: 6%;
-    position: fixed;
+    height: 5%;
     border-bottom: solid black 0.1vw;
     border-top: solid black 0.1vw;
   }
 
-  .page_div{
-    /* background-image: url('Bilder/bk1.jpg'); */
-    background-color: antiquewhite;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  .logo_img{
+    width: 15vw;
+    height: auto;
+    margin-top: 5px;
+    border-right: black 1px solid;
+    cursor: pointer;
+    background-color: rgb(131, 131, 133);
   }
 
   .back_button{
     color: blue;
     cursor: pointer;
+    width: 0px;
+    height: 0px;
     font-size: 20px;
-    margin-top: 18px;
-    margin-left: 12px;
     text-decoration: underline;
-    width: 40px;
-    height: 20px;
-  }
-
-  .logo_img{
-    width: 260px;
-    height: auto;
-    margin-top: 8px;
-    border-right: black 1px solid;
-    cursor: pointer;
   }
 
   .overskrift{
-    width: auto;
+    width: 100%;
     height: 80px;
     position: absolute;
-    margin-top: -70vh;
-    font-size: 50px;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: -3%;
+  }
+
+  .undertext_div{
+    width: 100%;
+    height: 50px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
   }
 
   .under_text{
-    width: 800px;
-    height: 70px;
-    position: absolute;
-    margin-top: -45vh;
-    font-size: 18px;
+    width: 50%;
+    height: 100%;
+    font-size: 15px;
     font-style: italic;
-    text-align: center;
     border-bottom: black 1px solid;
-    border-top: black 1px solid;
-    padding-top: 25px;
+    border-top: black 1px solid;  
+    margin-top: -50px;
+    padding: 10px;
   }
 
 
-  .fag_holder_div{
-    width: 850px;
-    height: 450px;
-    margin-top: 200px;
-    display: grid, inline-grid;
+  .knapp_div_whole{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
   }
 
-  .fag_div{
+  .knapp_div_part{
+    width: 70%;
+    height: 100%;
+  }
+
+  .knapp{
     background-color: rgb(226, 219, 219);
-    width: 250px;
-    height: 140px;
-    margin-right: 30px;
-    font-size: 20px;
+    width: 20vw;
+    height: 20vh;
+    font-size: 2vw;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -187,103 +183,13 @@
     border-radius: 10px;
     border: black 1px solid;
     float: left;
-    margin-top: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
   }
 
   .fag_div:hover{
     background-color: rgb(130, 192, 133);
     cursor: pointer;
   }
-}
-
-
-@media only screen and (min-width: 1200px){
-  .line_at_top{
-    background-color: rgb(131, 131, 133);
-    width: 100%;
-    height: 7%;
-    position: fixed;
-    border-bottom: solid black 0.1vw;
-    border-top: solid black 0.1vw;
-  }
-
-  .page_div{
-    /* background-image: url('Bilder/bk1.jpg'); */
-    background-color: antiquewhite;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-
-  .back_button{
-    color: blue;
-    cursor: pointer;
-    font-size: 20px;
-    margin-top: 18px;
-    margin-left: 12px;
-    text-decoration: underline;
-    width: 40px;
-    height: 20px;
-  }
-
-  .logo_img{
-    width: 290px;
-    height: auto;
-    margin-top: 14px;
-    border-right: black 1px solid;
-    cursor: pointer;
-  }
-
-  .overskrift{
-    width: auto;
-    height: 80px;
-    position: absolute;
-    margin-top: -580px;
-    font-size: 70px;
-  }
-
-  .under_text{
-    width: 800px;
-    height: 70px;
-    position: absolute;
-    margin-top: -260px;
-    font-size: 18px;
-    font-style: italic;
-    text-align: center;
-    border-bottom: black 1px solid;
-    border-top: black 1px solid;
-    padding-top: 25px;
-  }
-
-
-  .fag_holder_div{
-    width: 1400px;
-    height: 450px;
-    margin-top: 300px;
-    display: grid, inline-grid;
-  }
-
-  .fag_div{
-    background-color: rgb(226, 219, 219);
-    width: 400px;
-    height: 180px;
-    margin-right: 60px;
-    font-size: 40px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
-    border: black 1px solid;
-    float: left;
-    margin-top: 50px;
-  }
-
-  .fag_div:hover{
-    background-color: rgb(130, 192, 133);
-    cursor: pointer;
-  }
-
 }

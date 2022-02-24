@@ -1,24 +1,28 @@
 @import "style.css";
 
+
 .overskrift{
-  font-size: 25px;
-  text-decoration: underline;
-  top: 660px;
+  font-size: 30px;
+  margin-bottom: -190px;
 }
 
-.fag_holder_div2{
-  width: 100vw;
-  height: 600px;
-  margin-top: 50px;
-  margin-left: 0px;
-  margin-right: -10px;
-  display: grid, inline-grid;
+.ark_div_whole{
+  width: 100%;
+  height: 100%;
+  margin-top: 200px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
+.ark_div_part{
+  width: 80%;
+  height: 100%;
+}
 
 .ark_container_div_top{
   background-color: rgb(133, 131, 131);
-  width: 96%;
+  width: 100%;
   height: 6%;
   margin: 0,0,0,0;
   text-align: center;
@@ -32,8 +36,8 @@
 
 
 .ark_container_div{
-  background-color: rgb(219, 219, 205);
-  width: 96%;
+  background-color: rgb(209, 209, 209);
+  width: 100%;
   height: 100%;
   margin: 0,0,0,0;
   border: black 2px solid;
@@ -41,8 +45,7 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px; 
   display: grid, inline-grid;
-  align-items: center;
-  overflow-y:scroll; height:640px;
+  overflow-y:scroll; height:470px;
 }
 
 ::-webkit-scrollbar {
@@ -52,7 +55,7 @@
 
 .hefte{
   border: black 2px solid;
-  width: 350px;
+  width: 95%;
   height: 180px;
   margin: 5px;
   background-color: rgb(228, 228, 219);
@@ -64,30 +67,34 @@
 
 .img{
   width: 150px;
-  height: 180px;
+  height: 179px;
   cursor: pointer;
   border-right: black 2px solid;
+  border-bottom: black 2px solid;
   margin-right: 3px;
 }
 
 
 .info_om_hefte{
+  background-color: rgb(228, 228, 219);
   margin-left: 155px;
   margin-top: -180px;
-  width: 200px;
-  height: 50px;
+}
+
+.info_om_hefte h1{
+  background-color: rgb(255, 255, 0);
 }
 
 .iframe {
-  width: 200px !important;
-  height: 120px !important;
+  width: 190px !important;
+  height: 170px !important;
   border-right: 3px black solid;
   }
 
 .music_hefte{
   border: black 2px solid;
-  width: 96%;
-  height: 120px;
+  width: 95%;
+  height: 170px;
   margin: 5px;
   background-color: rgb(228, 228, 219);
   text-align: left;
@@ -96,34 +103,40 @@
 }
 
 .info_om_musikk{
-  margin-left: 210px;
+  margin-left: 195px;
   margin-top: -172px;
-  width: 200px;
-  height: 50px;
-  font-size: 14px;
+
 }
 
-/*810x1080*/
-@media only screen and (min-width: 1000px){
+.musikk_div_part{
+  width: 88.5%;
+  height: 100%;
+}
+
+
+@media only screen and (min-width: 700px){
   .overskrift{
-    font-size: 40px;
-    text-decoration: underline;
-    top: 560px;
+    margin-top: -120px;
+    font-size: 50px;
   }
-
-  .fag_holder_div2{
-    width: 1550px;
-    height: 600px;
-    margin-top: 150px;
-    margin-left: 120px;
-    margin-right: -10px;
-    display: grid, inline-grid;
+  
+  .ark_div_whole{
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
-
-
+  
+  .ark_div_part{
+    width: 63%;
+    height: 100%;
+  }
+  
   .ark_container_div_top{
     background-color: rgb(133, 131, 131);
-    width: 80%;
+    width: 100%;
     height: 6%;
     margin: 0,0,0,0;
     text-align: center;
@@ -134,11 +147,11 @@
     border-top-right-radius: 15px;
     font-weight: bold;
   }
-
-
+  
+  
   .ark_container_div{
-    background-color: rgb(219, 219, 205);
-    width: 80%;
+    background-color: rgb(209, 209, 209);
+    width: 100%;
     height: 100%;
     margin: 0,0,0,0;
     border: black 2px solid;
@@ -146,15 +159,14 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px; 
     display: grid, inline-grid;
-    align-items: center;
     overflow-y:scroll; height:540px;
   }
-
+  
   ::-webkit-scrollbar {
     display: none;
   }
-
-
+  
+  
   .hefte{
     border: black 2px solid;
     width: 350px;
@@ -165,34 +177,40 @@
     font-size: 18px;
     float: left;
   }
-
-
+  
+  
   .img{
     width: 150px;
-    height: 180px;
+    height: 179px;
     cursor: pointer;
     border-right: black 2px solid;
+    border-bottom: black 2px solid;
     margin-right: 3px;
   }
-
-
+  
+  
   .info_om_hefte{
+    background-color: rgb(228, 228, 219);
     margin-left: 155px;
     margin-top: -180px;
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 150px;
   }
-
+  
+  .info_om_hefte h1{
+    background-color: rgb(255, 255, 0);
+  }
+  
   .iframe {
-    width: 200px !important;
-    height: 120px !important;
+    width: 300px !important;
+    height: 170px !important;
     border-right: 3px black solid;
     }
   
   .music_hefte{
     border: black 2px solid;
-    width: 45%;
-    height: 120px;
+    width: 500px;
+    height: 170px;
     margin: 5px;
     background-color: rgb(228, 228, 219);
     text-align: left;
@@ -201,116 +219,14 @@
   }
   
   .info_om_musikk{
-    margin-left: 210px;
+    margin-left: 310px;
     margin-top: -172px;
     width: 200px;
     height: 50px;
-    font-size: 14px;
   }
+  
+  .musikk_div_part{
+    width: 88.5%;
+    height: 100%;
   }
-
-
-@media only screen and (min-width: 1200px)
-{
-.overskrift{
-  font-size: 40px;
-  text-decoration: underline;
-  top: 680px;
-}
-
-.fag_holder_div2{
-  width: 1550px;
-  height: 600px;
-  margin-top: 50px;
-  margin-left: 0px;
-  margin-right: -10px;
-  display: grid, inline-grid;
-}
-
-
-.ark_container_div_top{
-  background-color: rgb(133, 131, 131);
-  width: 100%;
-  height: 6%;
-  margin: 0,0,0,0;
-  text-align: center;
-  text-decoration: underline;
-  font-size: 30px;
-  border: black 2px solid;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  font-weight: bold;
-}
-
-
-.ark_container_div{
-  background-color: rgb(219, 219, 205);
-  width: 100%;
-  height: 100%;
-  margin: 0,0,0,0;
-  border: black 2px solid;
-  border-top: 0px black solid;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; 
-  display: grid, inline-grid;
-  align-items: center;
-  overflow-y:scroll; height:640px;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-
-.hefte{
-  border: black 2px solid;
-  width: 350px;
-  height: 180px;
-  margin: 5px;
-  background-color: rgb(228, 228, 219);
-  text-align: left;
-  font-size: 18px;
-  float: left;
-}
-
-
-.img{
-  width: 150px;
-  height: 180px;
-  cursor: pointer;
-  border-right: black 2px solid;
-  margin-right: 3px;
-}
-
-
-.info_om_hefte{
-  margin-left: 155px;
-  margin-top: -180px;
-  width: 200px;
-  height: 50px;
-}
-
-.iframe {
-  width: 300px !important;
-  height: 170px !important;
-  border-right: 3px black solid;
-  }
-
-.music_hefte{
-  border: black 2px solid;
-  width: 500px;
-  height: 170px;
-  margin: 5px;
-  background-color: rgb(228, 228, 219);
-  text-align: left;
-  font-size: 18px;
-  float: left;
-}
-
-.info_om_musikk{
-  margin-left: 310px;
-  margin-top: -172px;
-  width: 200px;
-  height: 50px;
-}
 }
