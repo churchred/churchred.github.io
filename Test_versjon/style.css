@@ -26,6 +26,7 @@
   margin-left: 50px;
   margin-top: -19px;
   position: absolute;
+  -webkit-user-drag: none;
 }
 
 body {
@@ -56,6 +57,7 @@ body {
 .badges_number_img{
   width: 110px;
   height: 60px;
+  -webkit-user-drag: none;
 }
 
 .trophy{
@@ -64,6 +66,7 @@ body {
   margin-left: -175px;
   margin-top: -20px;
   position: absolute;
+  -webkit-user-drag: none;
 }
 
 .badges_box_div{
@@ -154,6 +157,7 @@ body {
   height: calc(128*0.6px);
   width: calc(128*0.6px);
   image-rendering: smooth;
+  -webkit-user-drag: none;
 }
 
 .main_game_box{
@@ -322,6 +326,7 @@ body {
 .star_img{
   width: 30px;
   height: 30px;
+  -webkit-user-drag: none;
 }
 
 /*DROPDOWN MENU STUFF UNDER HERE*/
@@ -398,6 +403,7 @@ body {
   position: absolute;
   margin-top: -26px;
   margin-left: 296px;
+  -webkit-user-drag: none;
 }
 
 /*POENG STUFF UNDER HER*/
@@ -456,11 +462,11 @@ body {
 
 
 .resett_knapp1{
-  width: 50px;
+  width: 100px;
   height: 50px;
   position: absolute;
-  margin-left: 310px;
-  margin-top: 70px;
+  margin-left: 250px;
+  margin-top: 120px;
   background-color: black;
   color: #e9e3e3;
   box-shadow: 1px 1px 0px #999,
@@ -477,12 +483,11 @@ body {
 }
 
 .resett_knapp2{
-  white-space: normal;
-  width: 50px;
-  height: 170px;
+  width: 100px;
+  height: 110px;
   position: absolute;
-  margin-left: 310px;
-  margin-top: 40px;
+  margin-left: 250px;
+  margin-top: 100px;
   background-color: black;
   color: #e9e3e3;
   box-shadow: 1px 1px 0px #999,
@@ -511,7 +516,7 @@ body {
 .img_frame{
   height: 120px;
   width: auto;
-
+  -webkit-user-drag: none;
 }
 
 .img_frame_sprite{
@@ -567,20 +572,21 @@ body {
   .trophy{
     width: 150px;
     height: 250px;
-    margin-left: -190px;
-    margin-top: 140px;
+    margin-left: 54px;
+    margin-top: 0px;
+    -webkit-user-drag: none;
   }
   
   .badges_box_div{
     width: 400px;
     height: 300px;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 410px;
     position: absolute;
   }
   
   .badges_number_img{
-    width: auto;
+    width: 240px;
     height: auto;
   }
   
@@ -1012,6 +1018,7 @@ body {
   
   .img_frame{
     height: 400px;
+    -webkit-user-drag: none;
     
   }
   
@@ -1078,7 +1085,7 @@ body {
   
   .badges_box{
     width: 239px;
-    height: 135px;
+    height: 235px;
     margin-left: 75px;
     margin-top: 8px;
   }
@@ -1086,8 +1093,8 @@ body {
   .trophy{
     width: 150px;
     height: 250px;
-    margin-left: -190px;
-    margin-top: 140px;
+    margin-left: 54px;
+    margin-top: 0px;
   }
   
   .badges_box_div{
@@ -1099,7 +1106,7 @@ body {
   }
   
   .badges_number_img{
-    width: auto;
+    width: 240px;
     height: auto;
   }
   
@@ -1181,6 +1188,7 @@ body {
     height: calc(128*0.8px);
     width: calc(128*0.8px);
     image-rendering: smooth;
+    -webkit-user-drag: none;
   }
   
   .pkmn_img_gif{ /*original scale: 96x96*/
@@ -1420,6 +1428,7 @@ body {
     position: absolute;
     margin-top: -39px;
     margin-left: 1050px;
+    -webkit-user-drag: none;
   }
   
   /*POENG STUFF UNDER HER*/
