@@ -957,6 +957,7 @@ function resett_Spillet(e){
 
   }
   if(e == 'reset-2'){
+    document.getElementById('reset-2').style.visibility = "hidden"
     reset_counter += 1
     localStorage.clear();
     localStorage.setItem('reset_counter', reset_counter)
