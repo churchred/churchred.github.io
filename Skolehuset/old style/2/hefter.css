@@ -130,8 +130,8 @@
   }
   
   .ark_div_part{
-    width: 1095px;
-    height: 600px;
+    width: 63%;
+    height: 100%;
   }
   
   .ark_container_div_top{
@@ -169,7 +169,7 @@
   
   .hefte{
     border: black 2px solid;
-    width: 350px;
+    width: 20vw;
     height: 180px;
     margin: 5px;
     background-color: rgb(228, 228, 219);
@@ -193,8 +193,8 @@
     background-color: rgb(228, 228, 219);
     margin-left: 155px;
     margin-top: -180px;
-    width: 190px;
-    height: 160px;
+    width: 8vw;
+    height: 150px;
   }
   
   .info_om_hefte h1{
