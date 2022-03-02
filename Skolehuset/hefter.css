@@ -177,11 +177,10 @@
     font-size: 18px;
     float: left;
   }
-  
-  
+
   .img{
     width: 150px;
-    height: 179px;
+    height: 100%;
     cursor: pointer;
     border-right: black 2px solid;
     border-bottom: black 2px solid;
@@ -192,9 +191,9 @@
   .info_om_hefte{
     background-color: rgb(228, 228, 219);
     margin-left: 155px;
-    margin-top: -180px;
+    margin-top: -50%;
     width: 190px;
-    height: 160px;
+    height: 60px;
   }
   
   .info_om_hefte h1{
