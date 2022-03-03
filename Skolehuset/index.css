@@ -1,0 +1,197 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  background-color: rgb(255, 255, 255);
+  /*background-image: url("Bilder/bk3.jpg");*/
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+
+
+/* --------------------  BANNER  ----------------------------- */
+
+.banner{
+ background-color: rgb(27, 27, 27);
+ width: 100%;
+ height: 50px;
+ align-items: center;
+ display: flex;
+}
+
+.banner img{
+  width: 300px;
+  cursor: pointer;
+  border-right: 2px solid rgb(170, 170, 170);
+  -webkit-user-drag: none;
+}
+
+
+
+/* --------------------  OVERSKRIFT TING  ----------------------------- */
+
+.header_stuff{
+  width: 872px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 42px;
+  text-align: center;
+}
+
+.header_stuff h1{
+  font-size: 70px;
+  margin-top: -40px;
+  padding-bottom: 20px;
+  
+}
+
+.header_stuff p{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-style: italic;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+.bk_img{
+  width: 900px;
+  height: auto;
+  position: absolute;
+  z-index:-1;
+  left: 970px;
+  top: 190px;
+  -webkit-user-drag: none;
+}
+
+/* --------------------  BUTTONS  ----------------------------- */
+.button_div{
+  margin-top: 305px;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 892px;
+}
+
+.button{
+  width: 200px;
+  height: 200px;
+  border: solid 2px black;
+  border-radius: 10%;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.button img{
+  width: 50px;
+  height: 45px;
+  margin-top: 25px;
+  -webkit-user-drag: none;
+}
+
+.button h1{
+  color: white;
+  font-size: 45px;
+}
+
+
+#btn1{
+  background-color: rgb(255, 85, 85);
+}
+#btn1:hover{
+  background-color: rgb(248, 105, 105);
+}
+
+
+#btn2{
+  background-color: rgb(63, 134, 240);
+}
+#btn2 h1{
+  font-size: 35px;
+}
+#btn2:hover{
+  background-color: rgb(63, 154, 260);
+}
+
+
+#btn3{
+  background-color: rgb(204, 195, 76);
+}
+#btn3:hover{
+  background-color: rgb(204, 215, 96);
+}
+
+
+#btn4{
+  background-color: rgb(168, 88, 233);
+}
+#btn4:hover{
+  background-color: rgb(168, 108, 253);
+}
+
+
+#btn5{
+  background-color: rgb(240, 143, 79);
+}
+#btn5:hover{
+  background-color: rgb(240, 163, 99);
+}
+
+
+#btn6{
+  background-color: rgb(50, 192, 85);
+}
+#btn6:hover{
+  background-color: rgb(50, 212, 105);
+}
+
+
+#btn7{
+  background-color: rgb(226, 43, 217);
+}
+#btn7:hover{
+  background-color: rgb(226, 63, 237);
+}
+
+
+#btn8{
+  background-color: rgb(48, 84, 245);
+}
+#btn8:hover{
+  background-color: rgb(48, 104, 265);
+}
+
+@media only screen and (max-width: 1500px){
+  .banner{
+    background-color: rgb(0, 0, 0);
+  }
+
+  .button{
+    width: 185px;
+    height: 185px;
+  }
+  
+  .button h1{
+    font-size: 35px;
+  }
+
+  #btn2 h1{
+    font-size: 30px;
+  }
+
+  .bk_img{
+    width: 550px;
+    height: 500px;
+    left: 880px;
+    top: 245px;
+  }
+
+  .header_stuff{
+    width: 800px;
+  }
+}

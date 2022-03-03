@@ -7,24 +7,31 @@
 
   <title>Skolehuset - Hjem</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
 
 </head>
 <body class="body">
-  <div class="line_at_top">
-    <img src="Bilder/logo.png" alt="Logo" class="logo_img" onclick="location.href='index.html';">
+  <div class="banner">
+    <img src="Bilder/logo.png" alt="Logo" onclick="location.href='index.html';">
   </div>
-    <h1 class="overskrift">Velkommen til Skolehuset</h1>
-    <div class="undertext_div"><p class="under_text">Dette er en nettside jeg lagde slik at jeg kan ha alle greiene mine på et sted. Det kommer nok ikke til å ligge så mye greier her inne, men ta gjerne en titt.</p></div>
-    <div class="knapp_div_whole">
-      <div class="knapp_div_part">
-        <div class="knapp"  onclick="location.href='norsk/norsk.html';">Norsk</div>
-        <div class="knapp"  onclick="location.href='matematikk/matematikk.html';">Matematikk</div>
-        <div class="knapp" style="background-color: rgb(204, 204, 183);">Engelsk</div>
-        <div class="knapp" onclick="location.href='kunstoghandverk/kogh.html';">Kunst og Håndverk</div>
-        <div class="knapp"  onclick="location.href='musikk/musikk.html';">Musikk</div>
-        <div class="knapp" style="background-color: rgb(204, 204, 183);">Gym</div>
-      </div>
-    </div>
+
+  <article class="header_stuff">
+    <h1>Velkommen til Skolehuset!</h1>
+    <p>Dette er et nettside jeg lagde slik at jeg kunne ha alle greiene mine lett tilgjenglig. Det er ikke så mye her, men ta gjerne en titt. Noen av tingene har jeg laget selv, mens andre har jeg funnet på nettet.</p>
+  </article>
+
+  <img src="Bilder/bk4.jpg" class="bk_img">
+
+  <div class="button_div">
+    <button class="button" id="btn1" onclick="location.href='norsk/norsk.html';"> <h1>Norsk</h1> <img src="Bilder/book.png"></button>
+    <button class="button" id="btn2" onclick="location.href='matematikk/matematikk.html';"> <h1>Matematikk</h1> <img src="Bilder/calc.png" alt=""></button>
+    <button class="button" id="btn3"> <h1>Engelsk</h1> <img src="Bilder/speech.png" alt=""></button>
+    <button class="button" id="btn4" onclick="location.href='musikk/musikk.html';"> <h1>Musikk</h1> <img src="Bilder/note.png" alt=""></button>
+    <button class="button" id="btn5" onclick="location.href='kunstoghandverk/kogh.html';"> <h1>K & H</h1> <img src="Bilder/scissor.png" alt=""></button>
+    <button class="button" id="btn6"> <h1>Naturfag</h1> <img src="Bilder/paws.png" alt=""></button>
+    <button class="button" id="btn7"> <h1>KRLE</h1> <img src="Bilder/cross.png" alt=""></button>
+    <button class="button" id="btn8"> <h1>Gym</h1> <img src="Bilder/ball.png" alt=""></button>
+  </div>
+    
 </body>
 </html>
