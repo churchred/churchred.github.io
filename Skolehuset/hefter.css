@@ -7,15 +7,26 @@
 }
 
 .folder #top_btn2{
-  background-color: rgb(68, 45, 3);
+  background-color: rgb(202, 136, 14);
   margin-left: 150px;
   cursor: pointer;
-
 }
 
 .folder #top_btn3{
   background-color: rgb(202, 136, 14);
   margin-left: 302px;
+  cursor: pointer;
+}
+
+.folder #top_btn4{
+  background-color: rgb(202, 136, 14);
+  margin-left: 454px;
+  cursor: pointer;
+}
+
+.folder #top_btn5{
+  background-color: rgb(202, 136, 14);
+  margin-left: 606px;
   cursor: pointer;
 }
 
@@ -73,6 +84,7 @@
 .hefte_normal img{
   width: 160px;
   height: 100%;
+  border-right: 2px black solid;
   -webkit-user-drag: none;
 }
 

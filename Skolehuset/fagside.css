@@ -87,3 +87,21 @@
   margin-top: 10px;
   height: 50%;
 }
+
+#norsk{background-color: rgb(255, 85, 85);}
+#matte{background-color: rgb(63, 134, 240);}
+#engelsk{background-color: rgb(204, 195, 76);}
+#musikk{background-color: rgb(168, 88, 233)}
+#kogh{background-color: rgb(240, 143, 79);}
+#natur{background-color: rgb(50, 192, 85);}
+#krle{background-color: rgb(226, 43, 217);}
+#gym{background-color: rgb(48, 84, 245);}
+
+#norsk:hover{background-color: rgb(255, 105, 105);}
+#matte:hover{background-color: rgb(63, 154, 260);}
+#engelsk:hover{background-color: rgb(204, 215, 96);}
+#musikk:hover{background-color: rgb(168, 108, 253)}
+#kogh:hover{background-color: rgb(240, 163, 99);}
+#natur:hover{background-color: rgb(50, 212, 105);}
+#krle:hover{background-color: rgb(226, 63, 237);}
+#gym:hover{background-color: rgb(48, 104, 265);}
