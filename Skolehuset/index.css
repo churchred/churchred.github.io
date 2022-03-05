@@ -245,7 +245,8 @@ li.dropdown {
   }
 
   .banner img{
-    width: 200px;
+    width: 100px;
+    visibility: hidden;
   }
 
   .banner li{
@@ -253,7 +254,7 @@ li.dropdown {
   }
 
   .banner ul{
-    margin-left: 0px;
+    margin-left: -75px;
   }
 
   .header_img{

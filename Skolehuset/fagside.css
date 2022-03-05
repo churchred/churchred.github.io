@@ -60,6 +60,11 @@
   -webkit-user-drag: none;
   border-radius: 20px;
   border: 2px solid black;
+  overflow-y:scroll; height:85%;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .fag_button button{
@@ -105,3 +110,29 @@
 #natur:hover{background-color: rgb(50, 212, 105);}
 #krle:hover{background-color: rgb(226, 63, 237);}
 #gym:hover{background-color: rgb(48, 104, 265);}
+
+@media only screen and (max-width: 550px){
+
+  .folder{
+    margin-left: 10px;
+    margin-top: 60px;
+    width: 90%;
+    height: 500px;
+  }
+
+  .fag_button{
+    height: 92%;
+    margin-top: 10px;
+  }
+
+  .top_btn{
+    width:75px;
+    font-size: 15px;
+  }
+
+  
+  .folder #top_btn2{
+    margin-left: 75px;
+  }
+
+}

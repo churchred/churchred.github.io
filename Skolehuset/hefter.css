@@ -106,3 +106,42 @@
   -webkit-user-drag: none;
 }
 
+@media only screen and (max-width: 550px){
+
+  .folder #top_btn1{
+    background-color: rgb(68, 45, 3);
+    cursor: pointer;
+  }
+  
+  .folder #top_btn2{
+    margin-left: 75px;
+  }
+  
+  .folder #top_btn3{
+    margin-left: 152px;
+  }
+  
+  .folder #top_btn4{
+    margin-left: 327px;
+  }
+  
+  .hefte_small{
+    margin-left: 5px;
+  }
+
+  .hefte_stor{
+    margin-left: 5px;
+  }
+
+  .hefte_normal{
+    margin-left: 5px;
+  }
+
+  .ark_div{
+    margin-left: 5px;
+    margin-top: 25px;
+    height: 92%;
+  }
+
+
+}
