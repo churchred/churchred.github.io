@@ -92,6 +92,7 @@
   padding-top: 10px;
   margin-top: 70px;
   background-image: url("Bilder/paper.jpg");
+  background-repeat: round;
   -webkit-user-drag: none;
   border-radius: 20px;
   border: 2px solid black;
@@ -165,9 +166,19 @@
     font-size: 15px;
   }
 
-  
-  .folder #top_btn2{
+  .folder #top_btn2_no{
     margin-left: 75px;
   }
 
+  .folder #top_btn3_no{
+    margin-left: 152px;
+  }
+
+  .folder #top_btn2_yes{
+    margin-left: 75px;
+  }
+
+  .folder #top_btn3_yes{
+    margin-left: 152px;
+  }
 }
