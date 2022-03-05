@@ -109,7 +109,6 @@ li.dropdown {
   background-image: url("Bilder/header2.jpg");
   background-position: bottom;
   filter: drop-shadow(.75em .35em .7em);
-
 }
 
 .header_color_line{
@@ -238,3 +237,62 @@ li.dropdown {
   background-color: rgb(48, 104, 265);
 }
 
+
+@media only screen and (max-width: 550px){
+  .banner{
+    background-color: red;
+    height: 30px;
+  }
+
+  .banner img{
+    width: 200px;
+  }
+
+  .banner li{
+    font-size: 10px;
+  }
+
+  .banner ul{
+    margin-left: 0px;
+  }
+
+  .header_img{
+    width: 80%;
+    height: 250px;
+    margin-top: -130px;
+  }
+
+  .button{
+    width: 150px;
+    height: 150px;
+  }
+
+  .button img{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    -webkit-user-drag: none;
+  }
+  
+  .button h1{
+    color: white;
+    font-size: 30px;
+  }
+
+  #btn2 h1{
+    font-size: 25px;
+  }
+
+  .button_div{
+    width: 50%;
+    margin-top: -80px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .button_div_row{
+    justify-content: left;
+    display: grid;
+  }
+}
