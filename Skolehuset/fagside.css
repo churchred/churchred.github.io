@@ -23,7 +23,10 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
+  filter: drop-shadow(.75em .35em .7em);
+
 }
+
 
 .top_btn{
   width: 150px;
@@ -112,6 +115,7 @@
   margin-left: 20px;
   margin-bottom: 20px;
   cursor: pointer;
+  
 }
 
 .fag_button button:hover{

@@ -105,7 +105,7 @@ li.dropdown {
 
 .header_img{
   width: 70%;
-  height: 400px;
+  height: 350px;
   background-image: url("Bilder/header2.jpg");
   background-position: bottom;
   filter: drop-shadow(.75em .35em .7em);
@@ -131,7 +131,7 @@ li.dropdown {
 
 .button_div{
   width: 50%;
-  margin-top: 40px;
+  margin-top: 30px;
   align-items: center;
   justify-content: center;
   display: inline-grid;
