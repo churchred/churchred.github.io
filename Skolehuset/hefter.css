@@ -1,36 +1,6 @@
 @import "index.css";
 @import "fagside.css";
 
-.folder #top_btn1{
-  background-color: rgb(68, 45, 3);
-  cursor: pointer;
-}
-
-.folder #top_btn2{
-  background-color: rgb(202, 136, 14);
-  margin-left: 150px;
-  cursor: pointer;
-}
-
-.folder #top_btn3{
-  background-color: rgb(202, 136, 14);
-  margin-left: 302px;
-  cursor: pointer;
-}
-
-.folder #top_btn4{
-  background-color: rgb(202, 136, 14);
-  margin-left: 454px;
-  cursor: pointer;
-}
-
-.folder #top_btn5{
-  background-color: rgb(202, 136, 14);
-  margin-left: 606px;
-  cursor: pointer;
-}
-
-
 .ark_div{
   background-color: rgb(134, 134, 134);
   width: 95%;
@@ -109,7 +79,7 @@
 @media only screen and (max-width: 550px){
 
   .folder #top_btn1{
-    background-color: rgb(68, 45, 3);
+    background-color: rgb(114, 77, 7);
     cursor: pointer;
   }
   

@@ -40,15 +40,50 @@
   border-top-left-radius: 10px;
 }
 
-.folder #top_btn1{
-  background-color: rgb(68, 45, 3);
+/* -----FOLDER TITLE LOGIC------------ */
+.folder #top_btn1_no{
+  background-color: rgb(129, 86, 7);
   cursor: pointer;
 }
 
-.folder #top_btn2{
-  background-color: rgb(202, 136, 14);
+.folder #top_btn2_no{
+  background-color: rgb(129, 86, 7);
+  cursor: pointer;
   margin-left: 150px;
 }
+
+.folder #top_btn3_no{
+  background-color: rgb(129, 86, 7);
+  cursor: pointer;
+  margin-left: 302px;
+}
+
+.folder #top_btn4_no{
+  background-color: rgb(129, 86, 7);
+  cursor: pointer;
+  margin-left: 453px;
+}
+
+.folder #top_btn1_yes{
+  background-color: rgb(129, 86, 7);
+  margin-left: 0px;
+}
+
+.folder #top_btn2_yes{
+  background-color: rgb(202, 136, 14);
+  margin-left: 151px;
+}
+
+.folder #top_btn3_yes{
+  background-color: rgb(202, 136, 14);
+  margin-left: 302px;
+}
+
+.folder #top_btn4_yes{
+  background-color: rgb(202, 136, 14);
+  margin-left: 453px;
+}
+/* ------------------------------------------------------------ */
 
 .fag_button{
   width: 95%;
