@@ -76,6 +76,13 @@
   -webkit-user-drag: none;
 }
 
+@media only screen and (max-height: 800px){
+  .folder{
+    height: 500px;
+  }
+}
+
+
 @media only screen and (max-width: 550px){
 
   .folder #top_btn1{
