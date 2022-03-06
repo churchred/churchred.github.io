@@ -20,7 +20,7 @@ sprite_type_nr = 0
 
 var points_for_pkm = 5; //Hvor mange riktige du trenger før du får pokemon  - orginal: 5
 var chance_shiny = 20;  //Sjanse for Shiny  - orginal: 20
-var shiny_chance_list = [20, 10, 5, 3, 2, 1]
+var shiny_chance_list = [1, 10, 5, 3, 2, 1]
 var reset_counter = 0
 
 let badges_array_kanto = ['Bilder\\Badges\\Kanto\\box_0.png','Bilder\\Badges\\Kanto\\box_1.png','Bilder\\Badges\\Kanto\\box_2.png',
