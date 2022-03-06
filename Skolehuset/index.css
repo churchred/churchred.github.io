@@ -148,6 +148,8 @@ li.dropdown {
 
 .footer img{
   width: 120px;
+  -webkit-user-drag: none;
+
 }
 
 .footer p{
