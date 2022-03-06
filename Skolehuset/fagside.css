@@ -151,6 +151,17 @@
 #krle:hover{background-color: rgb(226, 63, 237);}
 #gym:hover{background-color: rgb(48, 104, 265);}
 
+
+@media only screen and (max-height: 800px){
+  .folder{
+    height: 500px;
+  }
+
+  .fag_button{
+    margin-top: 40px;
+  }
+}
+
 @media only screen and (max-width: 550px){
 
   .folder{
