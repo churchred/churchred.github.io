@@ -184,3 +184,48 @@
   height: 130px;
   border-bottom: 1px solid black;
 }
+
+
+
+/*Avlange bilder ANDRESIDER*/
+
+.post_6{
+  width: 220px;
+  height: 180px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid;
+  text-align: center;
+}
+
+.post_6 p{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.post_6:hover{
+  transform: scale(1.05);
+}
+
+.post_6 img{
+  width: 100%;
+  height: 130px;
+  border-bottom: 1px solid black;
+
+}
+
+.post_6 button{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 132, 36);
+  border: 1px solid black;
+  margin: auto;
+}
+
+.post_6 button:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
