@@ -121,6 +121,7 @@
 .post_4 p{  
   margin-left: 5px;
   height: 72px;
+  
 }
 
 .post_4 img{
@@ -135,6 +136,7 @@
   background-color: rgb(235, 132, 36);
   border: 1px solid black;
   margin: auto;
+  margin-bottom: -7px;
 }
 
 
