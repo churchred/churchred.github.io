@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   margin-top: 50px;
+  
 }
 
 .post_2{
@@ -15,11 +16,13 @@
   margin-bottom: 20px;
   border: 1px solid black;
   display: grid;
+  filter: drop-shadow(.35em .35em .7em);
 
 }
 
 .post_2:hover{
   transform: scale(1.05);
+  filter: drop-shadow(.65em .65em .7em);
 }
 
 .post_2 img{
@@ -61,7 +64,6 @@
   margin-bottom: 20px;
   border: 1px solid black;
   display: grid;
-
 }
 
 .post_3:hover{
@@ -95,6 +97,7 @@
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   margin-top: 50px;
+  filter: drop-shadow(.15em .15em .3em);
 }
 
 .post_4{
@@ -104,6 +107,7 @@
   margin-bottom: 20px;
   border: 1px solid black;
   display: grid;
+  background-color: white;
 }
 
 .post_4:hover{
@@ -120,6 +124,7 @@
 .post_4 p{  
   margin-left: 5px;
   height: 72px;
+  
   
 }
 
@@ -155,6 +160,7 @@
   margin-bottom: 20px;
   border: 1px solid black;
   display: grid;
+  background-color: white;
 }
 
 .iframe {
@@ -199,6 +205,8 @@
   border: 1px solid black;
   display: grid;
   text-align: center;
+  background-color: white;
+  
 }
 
 .post_6 p{
@@ -206,6 +214,7 @@
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 3px;
+  
 }
 
 .post_6:hover{
@@ -230,6 +239,7 @@
 .post_6 button:hover{
   background-color: rgb(255, 144, 40);
   cursor: pointer;
+  filter: drop-shadow(.35em .35em .8em);
 }
 
 
@@ -238,6 +248,7 @@
   display: grid;
   grid-template-columns: 50% 50%;
   margin-top: 50px;
+  filter: drop-shadow(.35em .35em .7em);
 }
 
 .post_7{
@@ -247,10 +258,12 @@
   margin-bottom: 20px;
   border: 1px solid black;
   display: grid;
+  background-color: white;
 }
 
 .post_7:hover{
   transform: scale(1.05);
+  filter: drop-shadow(.25em .25em .3em);
 }
 
 .post_7 p{  
