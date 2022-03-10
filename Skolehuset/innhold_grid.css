@@ -1,0 +1,316 @@
+@import "index.css";
+@import "innhold.css";
+
+
+.grid_innhold{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 50px;
+}
+
+.post_2{
+  width: 150px;
+  height: 230px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid;
+
+}
+
+.post_2:hover{
+  transform: scale(1.05);
+}
+
+.post_2 img{
+  width: 150px;
+  height: 200px;
+}
+
+.post_2 button{
+  width: 150px;
+  height: 30px;
+  background-color: rgb(235, 132, 36);
+  border: 1px solid black;
+  margin: auto;
+}
+
+
+.post_2 button:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*Avlange bilder*/
+
+.grid_innhold2{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  margin-top: 50px;
+}
+
+.post_3{
+  width: 220px;
+  height: 160px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid;
+
+}
+
+.post_3:hover{
+  transform: scale(1.05);
+}
+
+.post_3 img{
+  width: 100%;
+  height: 130px;
+}
+
+.post_3 button{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 132, 36);
+  border: 1px solid black;
+  margin: auto;
+}
+
+
+.post_3 button:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
+
+
+
+
+/*SPSING bilder*/
+.grid_innhold2{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  margin-top: 50px;
+}
+
+.post_4{
+  width: 220px;
+  height: 270px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid;
+}
+
+.post_4:hover{
+  transform: scale(1.05);
+}
+
+.post_4 h1{
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 3px;
+
+}
+
+.post_4 p{  
+  margin-left: 5px;
+  height: 72px;
+  
+}
+
+.post_4 img{
+  width: 100%;
+  height: 130px;
+  border-bottom: 1px solid black;
+}
+
+.post_4 button{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 132, 36);
+  border: 1px solid black;
+  margin: auto;
+  margin-bottom: -7px;
+  margin-top: 1px;
+}
+
+
+.post_4 button:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
+
+
+/*VIDEOER bilder*/
+
+.post_5{
+  width: 220px;
+  height: 220px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid;
+}
+
+.iframe {
+  width: 100% !important;
+  height: 150px !important;
+  }
+
+
+.post_5:hover{
+  transform: scale(1.05);
+}
+
+.post_5 h1{
+  font-size: 18px;
+  text-align: center;
+  margin-top: -7px;
+
+}
+
+.post_5 p{  
+  margin-left: 5px;
+  height: 26px;
+  text-align: center;
+  font-style: italic;
+}
+
+.post_5 img{
+  width: 100%;
+  height: 130px;
+  border-bottom: 1px solid black;
+}
+
+
+
+/*Avlange bilder ANDRESIDER*/
+
+.post_6{
+  width: 220px;
+  height: 182px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid;
+  text-align: center;
+}
+
+.post_6 p{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.post_6:hover{
+  transform: scale(1.05);
+}
+
+.post_6 img{
+  width: 100%;
+  height: 130px;
+  border-bottom: 1px solid black;
+
+}
+
+.post_6 button{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 132, 36);
+  border: 1px solid black;
+  margin: auto;
+}
+
+.post_6 button:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
+
+
+/*Bokstaver bilder*/
+.grid_innhold3{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 50px;
+}
+
+.post_7{
+  width: 170px;
+  height: 290px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid;
+}
+
+.post_7:hover{
+  transform: scale(1.05);
+}
+
+.post_7 p{  
+  height: 25px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: -3px;
+}
+
+.post_7 img{
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid black;
+}
+
+.word_btn{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 132, 36);
+  border: 1px solid black;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+}
+
+.pdf_btn{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(235, 132, 36);
+  border: 1px solid black;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+
+}
+
+.word_btn img{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.pdf_btn img{
+  width: 18px;
+  height: 25px;
+  margin-left: 12px;
+}
+
+
+.pdf_btn:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
+
+.word_btn:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
