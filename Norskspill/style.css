@@ -81,7 +81,7 @@ html, body{
   width: 220px;
   height: 280px;
   margin: auto;
-  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 /*Xp-bar*/
