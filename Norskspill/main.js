@@ -3,7 +3,7 @@
 let ord_database = [
   'tre', 'fisk', 'katt', 'krone', 'hund', 'blomst', 'is', 'hus', 'løve', 'bjørn', 'bil', 'fly',
   'ugle', 'båt', 'eple', 'banan', 'bok', 'blå', 'rød', 'grønn', 'gul', 'elg', 'kake', 'ost', 'sol',
-  'mus', 'piano']
+  'mus', 'piano', 'høne', 'sko', 'jakke', 'elefant', 'rev']
 
 
 let temp_database = ord_database.slice(0)
