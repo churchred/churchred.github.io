@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Css Link -->
+   <link rel="stylesheet" href="style.css">
+
+   <!--Script Links-->
+   <script src="main.js"></script>
+
+   <!--Snarvei icon-->
+   <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
+
+  <!--Fane  tittel-->
+  <title>Norsk - Stavespill</title>
+
+</head>
+<body onload="change_img()">
+  
+  <div class="whole_page">
+    <div class="game_box">
+      <div class="content" id="content">
+        <div class="oppg_img_div" id="oppg_img_div">
+          <img src="" id="oppg_img" alt="Noe gikk galt..">
+        </div>
+        <input class="svar_input" id="svar_input" type="text" maxlength="7" autocomplete="off">
+        <button class="check_btn" id="check_btn" onclick="check_answer()">Sjekk Svar</button>
+      </div>
+      <div class="xpbar_max">
+        <div class="xpbar" id="xpbar"></div>
+      </div>
+    </div>
+    <div class="whole_prize_box">
+      <div class="top_prize_box"><p id="antall_stamps">0/25</p></div>
+      <div class="prize_box" id="prize_box">
+    </div>
+    
+    </div>
+  </div>
+  
+</body>
+</html>
