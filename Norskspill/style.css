@@ -6,7 +6,7 @@
 html, body{
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom right, rgb(160, 211, 240) , rgb(38, 106, 158));
+  background-color: rgb(159, 225, 245);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -36,7 +36,7 @@ html, body{
 .content{
   width: 500px;
   height: 600px;
-  background-color: rgb(12, 145, 34);
+  background-color: rgb(245, 146, 33);
   margin: auto;
   display: grid;
   border-radius: 5%;
@@ -105,19 +105,20 @@ html, body{
 
 /*Hele prize box*/
 .whole_prize_box{
-  width: 650px;
+  width: 490px;
   height: 553px;
   margin: auto;
   display: grid;
   filter: drop-shadow(.65em .65em .7em);
-  margin-top: 125px;
+  margin-top: 90px;
+  margin-left: -120px;
 
 }
 
 .top_prize_box{
   width: 100%;
   height: 50px;
-  background-color: rgb(12, 145, 34);
+  background-color: rgb(245, 146, 33);
   border: 1px black solid;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
