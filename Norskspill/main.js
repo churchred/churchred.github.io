@@ -37,7 +37,7 @@ audio_open.volume = 0.5;
 
 var max_xp = 100; //Hvor mye xp før du får levlet opp MÅ være 100
 var curr_xp = 0; //Current xp
-var xp_gained = 50; //Hvor mye xp du får per level (bør være delbar av 100)
+var xp_gained = 25; //Hvor mye xp du får per level (bør være delbar av 100)
 var timeout = 1500
 var timeout_gift_open = 1000
 
