@@ -36,14 +36,14 @@ html, body{
 
 /*Hele spill boksen*/
 .game_box{
-  width: 1000px;
+  width: 900px;
   height: 600px;
   background-color: rgb(245, 146, 33);
   margin: auto;
   display: grid;
   border-radius: 5%;
   border: solid 3px black;
-  grid-template-columns: 45% 50%;
+  grid-template-columns: 41% 50%;
 
 }
 
@@ -56,7 +56,7 @@ html, body{
 
 .left_side{
   display: grid;
-  width:  100%;
+  width:  520px;
   height: 600px;    
   margin: auto;
   grid-template-columns: 100%;
@@ -102,7 +102,7 @@ html, body{
 
 .input_stuff{
   display: grid;
-  width: 410px;
+  width: 100%;
   margin: auto;
 }
 
@@ -131,7 +131,7 @@ html, body{
 /*Hele prize box*/
 .whole_prize_box{
   width: 500px;
-  height: 400px;
+  height: 380px;
   margin: auto;
   display: grid;
 }
@@ -191,7 +191,7 @@ html, body{
   -webkit-user-drag: none;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 850px){
   .game_box{
     width: 550px;
     height: 1200px;
