@@ -49,6 +49,7 @@ function check_answer(){
     user_answer = user_answer.toLowerCase() //Gjør om til små bokstaver
     if(user_answer == current_word){
       audio_rett.play()
+      document.activeElement.blur()
       remove_item_database()
       get_xp()
     }else{
