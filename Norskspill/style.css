@@ -28,6 +28,8 @@ html, body{
   margin: auto;
   display: grid;
   filter: drop-shadow(.65em .65em .7em);
+  margin-top: 75px;
+
 }
 
 
@@ -41,7 +43,7 @@ html, body{
   display: grid;
   border-radius: 5%;
   border: solid 3px black;
-  
+
 }
 
 
@@ -106,9 +108,10 @@ html, body{
   width: 650px;
   height: 553px;
   margin: auto;
-  margin-left: -100px;
   display: grid;
   filter: drop-shadow(.65em .65em .7em);
+  margin-top: 125px;
+
 }
 
 .top_prize_box{
@@ -184,10 +187,14 @@ html, body{
   80% { transform: translate(1px, -1px) rotate(1deg); }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1450px){
+@media only screen and (min-width: 900px) and (max-width: 1300px){
 
   .whole_prize_box{
-    width: 480px;
+    margin: auto;
+    width: 550px;
+    margin-right: 150px;
+  }
+  .game_box{
     margin: auto;
   }
 }
@@ -198,7 +205,16 @@ html, body{
     grid-template-columns: 100%;
   }
 
+  .game_box{
+    margin: auto;
+  }
+
   .whole_prize_box{
     margin: auto;
+  }
+
+  html, body{
+    background-image: none;
+    background-color: rgb(43, 42, 42);
   }
 }
