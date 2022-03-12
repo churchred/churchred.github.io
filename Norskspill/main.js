@@ -32,10 +32,14 @@ var current_word = ''
 var audio_rett = new Audio('Bilder/lyder/correct.mp3');
 audio_rett.volume = 0.5;
 
+var audio_open = new Audio('Bilder/lyder/gift_open.mp3');
+audio_open.volume = 0.5;
+
 var max_xp = 100; //Hvor mye xp før du får levlet opp MÅ være 100
 var curr_xp = 0; //Current xp
-var xp_gained = 20; //Hvor mye xp du får per level (bør være delbar av 100)
+var xp_gained = 50; //Hvor mye xp du får per level (bør være delbar av 100)
 var timeout = 1500
+var timeout_gift_open = 1000
 
 //Sjekker om svaret er riktig
 function check_answer(){
@@ -67,9 +71,9 @@ function change_img(){
 
 //Resetter html ting før neste bilde kommer
 function clear(){
-  document.getElementById('oppg_img_div').style.visibility = 'visible'
-  document.getElementById('svar_input').style.visibility = 'visible'
-  document.getElementById('check_btn').style.visibility = 'visible'
+  document.getElementById('oppg_img').style.visibility = 'visible'
+  document.getElementById("svar_input").disabled = false;
+  document.getElementById("check_btn").disabled = false;
   document.getElementById('svar_input').value = ''
   document.getElementById("oppg_img").src = ''
   document.getElementById('svar_input').style.color = 'black'
@@ -107,9 +111,9 @@ function get_xp(){
 //Hva som skjer når du får en premie
 function get_prize(){
   if(prize_database.length > 0){
-    document.getElementById('oppg_img_div').style.visibility = 'hidden'
-    document.getElementById('svar_input').style.visibility = 'hidden'
-    document.getElementById('check_btn').style.visibility = 'hidden'
+    document.getElementById('oppg_img').style.visibility = 'hidden'
+    document.getElementById("svar_input").disabled = true;
+    document.getElementById("check_btn").disabled = true;
 
     //Make random stamp
     random_number = Math.floor(Math.random()*prize_database.length);
@@ -123,36 +127,37 @@ function get_prize(){
     img.src = "Bilder/gift.png"
 
     //Add the image
-    document.getElementById("content").appendChild(img);
+    document.getElementById("right_side").appendChild(img);
   }else{setTimeout(() => {change_img()}, timeout)}
 }
 
 function open_prize(){
-  clear()
-  var temp = document.getElementById("gift_img");
-  document.getElementById("content").removeChild(temp);
-  
-  //Lager bilde
-  var img = document.createElement("img");
-  img.src = 'Bilder/prizes/' + prize_database[random_number] 
-  img.setAttribute("class", 'prize_img');
-  img.setAttribute("id",  'prize_img' + prize_database[random_number]);
+  audio_open.play()
+  setTimeout(() => {
+    clear()
+    var temp = document.getElementById("gift_img");
+    document.getElementById("right_side").removeChild(temp);
+    
+    //Lager bilde
+    var img = document.createElement("img");
+    img.src = 'Bilder/prizes/' + prize_database[random_number] 
+    img.setAttribute("class", 'prize_img');
+    img.setAttribute("id",  'prize_img' + prize_database[random_number]);
 
-  //Lager en Div som bildet
-  var iDiv = document.createElement('div');
-  iDiv.id = prize_database[random_number];
-  iDiv.className = 'stamp_block';
-  document.getElementById('prize_box').appendChild(iDiv);
+    //Lager en Div som bildet
+    var iDiv = document.createElement('div');
+    iDiv.id = prize_database[random_number];
+    iDiv.className = 'stamp_block';
+    document.getElementById('prize_box').appendChild(iDiv);
 
-  //Add image
-  document.getElementById(iDiv.id).appendChild(img);
+    //Add image
+    document.getElementById(iDiv.id).appendChild(img);
 
-  const index = prize_database.indexOf(prize_database[random_number])
-  prize_database.splice(index, 1)
+    const index = prize_database.indexOf(prize_database[random_number])
+    prize_database.splice(index, 1)
 
-  document.getElementById('antall_stamps').innerText = (max_antall_stamps-prize_database.length) + '/' + max_antall_stamps
-  document.getElementById(iDiv.id).scrollIntoView(false);
-  change_img()
+    document.getElementById(iDiv.id).scrollIntoView(false);
+    change_img()}, timeout_gift_open)
 }
 
 
