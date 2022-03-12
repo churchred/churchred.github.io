@@ -216,3 +216,15 @@ html, body{
     margin-top: 50px;
   }
 }
+
+@media only screen and (max-width: 550px){
+  .game_box{
+    transform: scale(0.6);
+    margin-top: -170px;
+  }
+
+  .whole_page{
+    display: flex;
+    justify-content: center;
+  }
+}
