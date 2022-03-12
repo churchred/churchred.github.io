@@ -16,7 +16,7 @@ let prize_database = [
   'cat.PNG', 'fox.PNG', 'spiderman.PNG', 'superman.PNG', 'dog.PNG', 'cupcake.PNG', 'formel1.PNG',
   'pikachu.PNG', 'rose.PNG', 'boat.PNG', 'cookie.PNG', 'books.PNG', 'fotball.PNG', 'boat2.PNG', 'donaldduck.PNG',
   'eevee.PNG', 'mario.PNG', 'luigi.PNG', 'rosalina.PNG', 'wolf.PNG', 'pokemon.PNG', 'pokemon2.PNG', 'ironman.PNG',
-  'fox2.PNG', 'crystal.PNG'
+  'fox2.PNG', 'crystal.PNG', 'frozen.PNG'
 ]
 
 console.log("Mulige ord:", ord_database.length)
@@ -34,7 +34,7 @@ audio_rett.volume = 0.5;
 
 var max_xp = 100; //Hvor mye xp før du får levlet opp MÅ være 100
 var curr_xp = 0; //Current xp
-var xp_gained = 100; //Hvor mye xp du får per level (bør være delbar av 100)
+var xp_gained = 20; //Hvor mye xp du får per level (bør være delbar av 100)
 var timeout = 1500
 
 //Sjekker om svaret er riktig
