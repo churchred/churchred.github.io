@@ -2,15 +2,16 @@
 
 let ord_database = [
   'tre', 'fisk', 'katt', 'krone', 'hund', 'blomst', 'is', 'hus', 'løve', 'bjørn', 'bil', 'fly',
-  'ugle', 'båt', 'eple', 'banan', 'bok', 'blå', 'rød', 'grønn', 'gul']
+  'ugle', 'båt', 'eple', 'banan', 'bok', 'blå', 'rød', 'grønn', 'gul', 'elg', 'kake', 'ost', 'sol',
+  'mus', 'piano']
 
 
 let temp_database = ord_database.slice(0)
 
 let prize_database = [
-  'cat.png', 'fox.png', 'spiderman.png', 'superman.png', 'dog.png', 'cupcake.png', 'formel1.png',
-  'pikachu.png', 'rose.png', 'boat.png', 'cookie.png', 'books.png', 'fotball.png', 'boat2.png', 'donaldduck.png',
-  'eevee.png', 'mario.png', 'luigi.png', 'rosalina.png', 'wolf.png']
+  'cat.PNG', 'fox.PNG', 'spiderman.PNG', 'superman.PNG', 'dog.PNG', 'cupcake.PNG', 'formel1.PNG',
+  'pikachu.PNG', 'rose.PNG', 'boat.PNG', 'cookie.PNG', 'books.PNG', 'fotball.PNG', 'boat2.PNG', 'donaldduck.PNG',
+  'eevee.PNG', 'mario.PNG', 'luigi.PNG', 'rosalina.PNG', 'wolf.PNG', 'pokemon.PNG']
 
 
 
