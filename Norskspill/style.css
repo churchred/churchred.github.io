@@ -21,7 +21,6 @@ html, body{
  
  .banner img{
    width: 250px;
-   cursor: pointer;
    padding-right: 4px;
    -webkit-user-drag: none;
  }
@@ -121,7 +120,7 @@ html, body{
 
 /*Hele prize box*/
 .whole_prize_box{
-  width: 490px;
+  width: 645px;
   height: 553px;
   margin: auto;
   display: grid;
@@ -209,8 +208,9 @@ html, body{
 
   .whole_prize_box{
     margin: auto;
-    width: 550px;
+    width: 490px;
     margin-right: 150px;
+    margin-top: 15px;
   }
   .game_box{
     margin: auto;
