@@ -1,10 +1,19 @@
 
 
-let ord_database = ['tre', 'fisk', 'katt', 'krone', 'hund', 'blomst', 'is', 'hus', 'løve', 'bjørn', 'bil', 'fly']
+let ord_database = [
+  'tre', 'fisk', 'katt', 'krone', 'hund', 'blomst', 'is', 'hus', 'løve', 'bjørn', 'bil', 'fly',
+  'ugle', 'båt', 'eple', 'banan', 'bok', 'blå', 'rød', 'grønn', 'gul']
+
+
 let temp_database = ord_database.slice(0)
 
-let prize_database = ['cat.png', 'fox.png', 'spiderman.png', 'superman.png', 'dog.png', 'cupcake.png', 'formel1.png',
-                      'pikachu.png', 'rose.png', 'boat.png', 'cookie.png', 'books.png', 'fotball.png']
+let prize_database = [
+  'cat.png', 'fox.png', 'spiderman.png', 'superman.png', 'dog.png', 'cupcake.png', 'formel1.png',
+  'pikachu.png', 'rose.png', 'boat.png', 'cookie.png', 'books.png', 'fotball.png', 'boat2.png', 'donaldduck.png',
+  'eevee.png', 'mario.png', 'luigi.png', 'rosalina.png', 'wolf.png']
+
+
+
 const max_antall_stamps = prize_database.length
 
 clicked = false
@@ -15,7 +24,7 @@ audio_rett.volume = 0.5;
 
 var max_xp = 100; //Hvor mye xp før du får levlet opp MÅ være 100
 var curr_xp = 0; //Current xp
-var xp_gained = 25; //Hvor mye xp du får per level (bør være delbar av 100)
+var xp_gained = 100; //Hvor mye xp du får per level (bør være delbar av 100)
 var timeout = 1500
 
 //Sjekker om svaret er riktig
@@ -132,7 +141,7 @@ function open_prize(){
   prize_database.splice(index, 1)
 
   document.getElementById('antall_stamps').innerText = (max_antall_stamps-prize_database.length) + '/' + max_antall_stamps
-
+  document.getElementById(iDiv.id).scrollIntoView(false);
   change_img()
 }
 
