@@ -5,7 +5,8 @@ let ord_database = [
   'ugle', 'båt', 'eple', 'banan', 'bok', 'blå', 'rød', 'grønn', 'gul', 'elg', 'kake', 'ost', 'sol',
   'mus', 'piano', 'høne', 'sko', 'jakke', 'elefant', 'rev','lue', 'blyant', 'melk', 'sverd', 'seng',
   'sofa', 'ape', 'badekar', 'måke', 'gris', 'druer', 'hest', 'gitar', 'sykkel', 'snømann', 'briller',
-  'saks'
+  'saks', 'bøtte', 'mais', 'robot', 'drage', 'stol', 'ku', 'pære', 'nøkkel', 'egg', 'vaffel', 'sau',
+  'spade', 'vindu', 'hammer'
 ]
 
 
@@ -16,7 +17,7 @@ let prize_database = [
   'cat.PNG', 'fox.PNG', 'spiderman.PNG', 'superman.PNG', 'dog.PNG', 'cupcake.PNG', 'formel1.PNG',
   'pikachu.PNG', 'rose.PNG', 'boat.PNG', 'cookie.PNG', 'books.PNG', 'fotball.PNG', 'boat2.PNG', 'donaldduck.PNG',
   'eevee.PNG', 'mario.PNG', 'luigi.PNG', 'rosalina.PNG', 'wolf.PNG', 'pokemon.PNG', 'pokemon2.PNG', 'ironman.PNG',
-  'fox2.PNG', 'crystal.PNG', 'frozen.PNG'
+  'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG'
 ]
 
 console.log("Mulige ord:", ord_database.length)
@@ -168,7 +169,7 @@ addEventListener('keyup', ({key}) =>{
   if(key == "Enter"){
     check_answer()
   }
-  if(key == " "){
-    change_img()
-  }
+  //if(key == " "){
+  //change_img()
+  //}
 })
