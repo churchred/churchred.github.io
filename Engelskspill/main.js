@@ -18,6 +18,38 @@ let ord_database = [
   [['coffee'],['kaffe']],
   [['tea'],['te']],
   [['candy', 'sweets', 'lollies'],['godteri']],
+
+  [['arm'],['arm']],
+  [['leg'],['ben']],
+  [['head'],['hode']],
+  [['nose'],['nese']],
+  [['teeth'],['tenner']],
+  [['foot'],['fot']],
+  [['feet'],['føtter']],
+  [['hair'],['hår']],
+
+  [['dog'],['hund']],
+  [['cat'],['katt']],
+  [['horse'],['hest']],
+  [['sheep'],['sau']],
+  [['fish'],['fisk']],
+  [['moose'],['elg']],
+  [['chicken'],['høne']],
+  [['cow'],['ku']],
+  [['elephant'],['elefant']],
+  [['fox'],['rev']],
+  [['lion'],['løve']],
+
+  [['house'],['hus']],
+  [['bathroom'],['bad']],
+  [['kitchen'],['kjøkken']],
+  [['window'],['vindu']],
+  [['grass'],['gress']],
+
+  [['chair'],['stol']],
+  [['books'],['bøker']],
+  [['table'],['bord']],
+  [['door'],['dør']]
 ]
 
 

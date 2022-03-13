@@ -6,7 +6,7 @@
 html, body{
   width: 100%;
   height: 100%;
-  background-color: rgb(206, 176, 230);  
+  background-color: rgb(119, 165, 109);  
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -52,7 +52,7 @@ html, body{
 .game_box{
   width: 900px;
   height: 600px;
-  background-color: rgb(40, 149, 168);
+  background-color: rgb(85, 111, 196);
   margin: auto;
   display: grid;
   border-radius: 5%;
