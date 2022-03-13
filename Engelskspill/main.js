@@ -262,7 +262,7 @@ function bytt_spraak(){
       document.getElementById('chg_btn').innerHTML = '<b>Du må skrive på [ENGELSK]</b> </br> <i>Trykk her for å bytte til [NORSK]</i>'
       document.getElementById("chg_btn").disabled = true;
       document.getElementById("chg_btn").style.backgroundColor = 'grey';
-      spraak = 1
+      spraak = 0
     } 
     can_change = false
     if(spraak == 0){
