@@ -6,11 +6,11 @@ let ord_database = [
   'mus', 'piano', 'høne', 'sko', 'jakke', 'elefant', 'rev','lue', 'blyant', 'melk', 'sverd', 'seng',
   'sofa', 'ape', 'badekar', 'måke', 'gris', 'druer', 'hest', 'gitar', 'sykkel', 'snømann', 'briller',
   'saks', 'bøtte', 'mais', 'robot', 'drage', 'stol', 'ku', 'pære', 'nøkkel', 'egg', 'vaffel', 'sau',
-  'spade', 'vindu', 'hammer'
+  'spade', 'vindu', 'hammer', 'konge', 'vann', 'gaffel', 'ekorn', 'kniv', 'hår', 'vei'
 ]
 
 
-let temp_database = ord_database.slice(0)
+let temp_database = ord_database.slice(0) //Kopierer ord_database
 
 
 let prize_database = [
@@ -30,6 +30,8 @@ const max_antall_stamps = prize_database.length
 clicked = false
 
 var current_word = ''
+var written_word = ''
+
 var audio_rett = new Audio('Bilder/lyder/correct.mp3');
 audio_rett.volume = 0.5;
 
@@ -38,9 +40,12 @@ audio_open.volume = 0.5;
 
 var max_xp = 100; //Hvor mye xp før du får levlet opp MÅ være 100
 var curr_xp = 0; //Current xp
-var xp_gained = 25; //Hvor mye xp du får per level (bør være delbar av 100)
+var xp_gained = 20; //Hvor mye xp du får per level (bør kunne ganges opp til 100)
 var timeout = 1500
 var timeout_gift_open = 1000
+
+
+let gift_sprites = ['gift1.png', 'gift2.png', 'gift3.png', 'gift4.png']
 
 //Sjekker om svaret er riktig
 function check_answer(){
@@ -126,7 +131,11 @@ function get_prize(){
     img.setAttribute("class", 'gift_img');
     img.setAttribute("id", "gift_img");
     img.setAttribute("onclick", "open_prize()")
-    img.src = "Bilder/gift.png"
+
+
+    //Get random gift-img fra array
+    rand = Math.floor(Math.random()*gift_sprites.length);
+    img.src = "Bilder/gaver/" + gift_sprites[rand]
 
     //Add the image
     document.getElementById("right_side").appendChild(img);
@@ -169,6 +178,7 @@ addEventListener('keyup', ({key}) =>{
   if(key == "Enter"){
     check_answer()
   }
+
   //if(key == " "){
   //change_img()
   //}
