@@ -10,7 +10,7 @@ let ord_database = [
   [['milk'],['melk']], 
   [['apple'],['eple']], 
   [['chocolate'],['sjokolade']], 
-  [['ham'],['sinke']],
+  [['ham'],['skinke']],
   [['bread'],['brød']],
   [['tomato'],['tomat']],
   [['potato'],['potet']],
