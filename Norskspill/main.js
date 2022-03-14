@@ -1,16 +1,28 @@
 
 
-let ord_database = [
-  'tre', 'fisk', 'katt', 'krone', 'hund', 'blomst', 'is', 'hus', 'løve', 'bjørn', 'bil', 'fly',
-  'ugle', 'båt', 'eple', 'banan', 'bok', 'blå', 'rød', 'grønn', 'gul', 'elg', 'kake', 'ost', 'sol',
-  'mus', 'piano', 'høne', 'sko', 'jakke', 'elefant', 'rev','lue', 'blyant', 'melk', 'sverd', 'seng',
-  'sofa', 'ape', 'badekar', 'måke', 'gris', 'druer', 'hest', 'gitar', 'sykkel', 'snømann', 'briller',
-  'saks', 'bøtte', 'mais', 'robot', 'drage', 'stol', 'ku', 'pære', 'nøkkel', 'egg', 'vaffel', 'sau',
-  'spade', 'vindu', 'hammer', 'konge', 'vann', 'gaffel', 'ekorn', 'kniv', 'hår', 'vei'
+let ord_database_lett = [
+  'tre', 'gitar', 'piano', 'fisk', 'tre', 'krone', 'is', 'løve', 'bil', 'fly',
+  'båt', 'bok', 'kake', 'hår', 'stol', 'ku', 'måke', 'sko', 'mus', 'ape', 'sol',
+  'ost', 'blå', 'lue', 'hus', 'gul', 'melk', 'pære', 'eple', 'rev', 'drage', 'hest',
+  'gris', 'elg', 'banan', 'ugle', 'kniv',  'vei'
+]
+
+let ord_database_middels = [
+  'tre', 'gitar', 'piano', 'fisk', 'tre', 'krone', 'is', 'løve', 'bil', 'fly',
+  'båt', 'bok', 'kake', 'hår', 'stol', 'ku', 'måke', 'sko', 'mus', 'ape', 'sol',
+  'ost', 'blå', 'lue', 'hus', 'gul', 'melk', 'pære', 'eple', 'rev', 'drage', 'hest',
+  'gris', 'elg', 'banan', 'ugle', 'kniv',  'vei',
+
+
+  'katt', 'hund', 'blomst',  'bjørn', 'rød', 'grønn', 'piano', 'høne', 'jakke', 
+  'elefant',  'blyant',  'sverd', 'seng', 'sofa', 'badekar', 'druer', 'gitar', 
+  'sykkel', 'snømann', 'briller', 'saks', 'bøtte', 'mais', 'robot', 'nøkkel', 
+  'egg', 'vaffel', 'sau', 'spade', 'vindu', 'hammer', 'konge', 'vann', 'gaffel', 
+  'ekorn'
 ]
 
 
-let temp_database = ord_database.slice(0) //Kopierer ord_database
+let main_database = []
 
 
 let prize_database = [
@@ -20,17 +32,13 @@ let prize_database = [
   'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG'
 ]
 
-console.log("Mulige ord:", ord_database.length)
-console.log("Mulige stickers:", prize_database.length)
-console.log("Game loaded!")
-console.log("---------------")
+
 
 const max_antall_stamps = prize_database.length
 
 clicked = false
 
 var current_word = ''
-var written_word = ''
 
 var audio_rett = new Audio('Bilder/lyder/correct.mp3');
 audio_rett.volume = 0.5;
@@ -41,62 +49,112 @@ audio_open.volume = 0.5;
 var max_xp = 100; //Hvor mye xp før du får levlet opp MÅ være 100
 var curr_xp = 0; //Current xp
 var xp_gained = 20; //Hvor mye xp du får per level (bør kunne ganges opp til 100)
-var timeout = 1500
-var timeout_gift_open = 1000
 
 
+//Timeout tid
+var timeout = 1500;
+var timeout_gift_open = 1000;
+
+//Vanskelighets nivå
+var level = 1;
+
+//Mulig utseende på gaver
 let gift_sprites = ['gift1.png', 'gift2.png', 'gift3.png', 'gift4.png']
 
-//Sjekker om svaret er riktig
-function check_answer(){
-  if(clicked == false){
-    clicked = true
-    var user_answer = document.getElementById('svar_input').value //Sjekker hva som står i Input Boksen
-    user_answer = user_answer.toLowerCase() //Gjør om til små bokstaver
-    if(user_answer == current_word){
-      audio_rett.play()
-      document.activeElement.blur()
-      remove_item_database()
-      get_xp()
-    }else{
-      document.getElementById('svar_input').style.color = 'red'
-      clicked = false
-    }
+
+
+//Denne kjører når vi starter opp siden
+function start_up(){
+
+  //Sjekker hvilke level vi er på og lager en ny database
+  check_level()
+
+
+  //Printer ut info
+  console.log("Mulige ord:", main_database.length)
+  console.log("Mulige stickers:", prize_database.length)
+  console.log("Game loaded!")
+  console.log("---------------")
+
+  change_img()
+}
+
+
+//Sjekker hvilke level vi er på og lager en ny database
+function check_level(){
+  if(level == 1){
+    main_database = ord_database_lett.slice(0) //Kopierer ord_database
   }
+  if(level == 2){
+    main_database = ord_database_middels.slice(0) //Kopierer ord_database
+  }
+  document.getElementById('lvl_btn_id1').innerHTML = "Nivå " + level
 }
 
-//Bytter til nytt ord og bilde
-function change_img(){
-  clear()
-  random_number = Math.floor(Math.random()*temp_database.length); //Lager et random tall for å velge random ord i databasen
-  document.getElementById("oppg_img").src = "Bilder/spill_img/" + temp_database[random_number] + ".png" //Ny bildelink
-  current_word = temp_database[random_number]
-  console.log("Nytt ord:", current_word)
-  clicked = false
+//Bytter vanskelighetsgrad 
+function bytt_level(){
+  if(level == 1){
+    level = 2
+  }
+  else if(level == 2){
+    level = 1
+  }
+  console.log("Nivå:", level)
+  start_up()
 }
-
 
 //Resetter html ting før neste bilde kommer
 function clear(){
   document.getElementById('oppg_img').style.visibility = 'visible'
   document.getElementById("svar_input").disabled = false;
   document.getElementById("check_btn").disabled = false;
-  document.getElementById('svar_input').value = ''
-  document.getElementById("oppg_img").src = ''
   document.getElementById('svar_input').style.color = 'black'
 }
 
+//Bytter til nytt ord og bilde
+function change_img(){
+  current_word = Math.floor(Math.random()*main_database.length); //Lager et random tall for å velge random ord i databasen
+  document.getElementById("oppg_img").src = "Bilder/spill_img/" + main_database[current_word] + ".png" //Ny bildelink
+  console.log("Nytt ord:", main_database[current_word])
+  document.getElementById('svar_input').value = null
+  clicked = false
+}
+
+//Sjekker om svaret er riktig
+function check_answer(){
+  if(clicked == true){return}
+  clicked = true
+  var user_answer = document.getElementById('svar_input').value //Sjekker hva som står i Input Boksen
+  user_answer = user_answer.toLowerCase() //Gjør om til små bokstaver
+  if(user_answer == main_database[current_word]){
+    audio_rett.play()
+    document.activeElement.blur()
+    remove_item_database()
+    get_xp()
+    clicked = false
+    
+  }else{
+    document.getElementById('svar_input').style.color = 'red'
+    clicked = false
+  }
+}
 
 //Fjerner bildet du akkurat hadde fra databasen slik at du ALLTID får et nytt bilde.
 function remove_item_database(){
-  const index = temp_database.indexOf(current_word)
-  temp_database.splice(index, 1)
-  console.log(temp_database.length, "/", ord_database.length)
-  if(temp_database.length == 0){
-    temp_database = ord_database.slice(0)
-    console.log("RESETTT")
+  //Fjerner ordet fra databasen
+  main_database.splice(current_word, 1)
+
+  //Resetter databasen hvis den er tomn
+  if(main_database.length == 0){
+    console.log("Resetter database..")
+    check_level()
   }
+
+  if(level == 1){console.log(main_database.length + "/" + ord_database_lett.length + " ord igjen")}
+  if(level == 2){console.log(main_database.length + "/" + ord_database_middels.length + " ord igjen")}
+  console.log("---------------")
 }
+
 
 //Hva som skjer når du får xp ved riktig svar
 function get_xp(){
@@ -105,7 +163,7 @@ function get_xp(){
   if(prize_database.length>0){
     if(curr_xp >= max_xp){
       curr_xp = 0
-      get_prize()
+      get_gift()
     }else{setTimeout(() => {change_img()}, timeout)}
     var new_size = 'width:'+ curr_xp + '%'
     document.getElementById('xpbar').setAttribute("style",new_size);
@@ -115,39 +173,31 @@ function get_xp(){
   }
 }
 
+
 //Hva som skjer når du får en premie
-function get_prize(){
+function get_gift(){
   if(prize_database.length > 0){
     document.getElementById('oppg_img').style.visibility = 'hidden'
     document.getElementById("svar_input").disabled = true;
     document.getElementById("check_btn").disabled = true;
-
-    //Make random stamp
-    random_number = Math.floor(Math.random()*prize_database.length);
-
-
-    //Lager bilde variabel og setter på all info
-    var img = document.createElement("img");
-    img.setAttribute("class", 'gift_img');
-    img.setAttribute("id", "gift_img");
-    img.setAttribute("onclick", "open_prize()")
-
+    document.getElementById('gift_img').style.visibility = 'visible'
 
     //Get random gift-img fra array
-    rand = Math.floor(Math.random()*gift_sprites.length);
-    img.src = "Bilder/gaver/" + gift_sprites[rand]
+    var rand = Math.floor(Math.random()*gift_sprites.length);
+    document.getElementById('gift_img').src = "Bilder/gaver/" + gift_sprites[rand]
 
-    //Add the image
-    document.getElementById("right_side").appendChild(img);
   }else{setTimeout(() => {change_img()}, timeout)}
 }
 
-function open_prize(){
+
+function open_gift(){
   audio_open.play()
+
   setTimeout(() => {
     clear()
-    var temp = document.getElementById("gift_img");
-    document.getElementById("right_side").removeChild(temp);
+    document.getElementById("gift_img").style.visibility = 'hidden';
+
+    var random_number = Math.floor(Math.random()*prize_database.length);
     
     //Lager bilde
     var img = document.createElement("img");
@@ -164,8 +214,7 @@ function open_prize(){
     //Add image
     document.getElementById(iDiv.id).appendChild(img);
 
-    const index = prize_database.indexOf(prize_database[random_number])
-    prize_database.splice(index, 1)
+    prize_database.splice(random_number, 1)
 
     document.getElementById(iDiv.id).scrollIntoView(false);
     change_img()}, timeout_gift_open)
@@ -173,13 +222,11 @@ function open_prize(){
 
 
 addEventListener('keyup', ({key}) =>{
+
   document.getElementById('svar_input').style.color = 'black'
+
   //Sjekker om vi trykker på enterknappen
   if(key == "Enter"){
     check_answer()
   }
-
-  //if(key == " "){
-  //change_img()
-  //}
 })

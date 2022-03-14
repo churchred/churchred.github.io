@@ -25,6 +25,18 @@ html, body{
    padding-right: 4px;
    -webkit-user-drag: none;
  }
+
+ .lvl_btn{
+   background-color: rgb(22, 109, 22);
+   border: 1px black solid;
+   width: 100px;
+   height: 30px;
+   font-size: 20px;
+   font-weight: bold;
+   color: white;
+   margin-left: 20px;
+   cursor: pointer;
+ }
  
 
 /* Div som fyller hele siden*/
@@ -77,7 +89,7 @@ html, body{
 }
 
 /*Oppgavebildet*/
-.oppg_img_div img{
+.oppg_img{
   width: 220px;
   height: 280px;
   margin: auto;
@@ -159,7 +171,8 @@ html, body{
   cursor: pointer;
   -webkit-user-drag: none;
   margin-left: -5px;
-  margin-top: 30px;
+  margin-top: 0px;
+  visibility: hidden;
 }
 
 @keyframes shake {
