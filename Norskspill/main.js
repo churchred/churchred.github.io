@@ -1,25 +1,30 @@
 
 
 let ord_database_lett = [
-  'tre', 'gitar', 'piano', 'fisk', 'tre', 'krone', 'is', 'løve', 'bil', 'fly',
-  'båt', 'bok', 'kake', 'hår', 'stol', 'ku', 'måke', 'sko', 'mus', 'ape', 'sol',
-  'ost', 'blå', 'lue', 'hus', 'gul', 'melk', 'pære', 'eple', 'rev', 'drage', 'hest',
-  'gris', 'elg', 'banan', 'ugle', 'kniv',  'vei'
+  'ape', 'banan', 'bil', 'blå', 'bok', 'båt', 'drage', 'elg', 'eple', 'fisk',
+  'fly', 'gitar', 'gris', 'gul', 'hest', 'hus', 'hår', 'is', 'kake', 'kniv',
+  'krone', 'ku', 'lue', 'løve', 'melk', 'mus', 'måke', 'ost', 'piano', 'pære', 
+  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle', 'vei'       
 ]
+
 
 let ord_database_middels = [
-  'tre', 'gitar', 'piano', 'fisk', 'tre', 'krone', 'is', 'løve', 'bil', 'fly',
-  'båt', 'bok', 'kake', 'hår', 'stol', 'ku', 'måke', 'sko', 'mus', 'ape', 'sol',
-  'ost', 'blå', 'lue', 'hus', 'gul', 'melk', 'pære', 'eple', 'rev', 'drage', 'hest',
-  'gris', 'elg', 'banan', 'ugle', 'kniv',  'vei',
+  'ape', 'banan', 'bil', 'blå', 'bok', 'båt', 'drage', 'elg', 'eple', 'fisk',
+  'fly', 'gitar', 'gris', 'gul', 'hest', 'hus', 'hår', 'is', 'kake', 'kniv',
+  'krone', 'ku', 'lue', 'løve', 'melk', 'mus', 'måke', 'ost', 'piano', 'pære', 
+  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle', 'vei',
 
-
-  'katt', 'hund', 'blomst',  'bjørn', 'rød', 'grønn', 'piano', 'høne', 'jakke', 
-  'elefant',  'blyant',  'sverd', 'seng', 'sofa', 'badekar', 'druer', 'gitar', 
-  'sykkel', 'snømann', 'briller', 'saks', 'bøtte', 'mais', 'robot', 'nøkkel', 
-  'egg', 'vaffel', 'sau', 'spade', 'vindu', 'hammer', 'konge', 'vann', 'gaffel', 
-  'ekorn'
+  'badekar', 'bjørn', 'blomst', 'blyant', 'briller', 'bøtte', 'druer', 'egg',
+  'ekorn', 'elefant', 'gaffel', 'grønn', 'hammer', 'hund', 'høne', 'jakke',
+  'katt', 'konge', 'mais', 'nøkkel', 'robot', 'rød', 'saks', 'sau', 'seng',
+  'snømann', 'sofa', 'spade', 'sverd', 'sykkel', 'vaffel', 'vann', 'vindu'
 ]
+
+
+         
+        
+       
+     
 
 
 let main_database = []
