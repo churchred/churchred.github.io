@@ -96,6 +96,13 @@ html, body{
   pointer-events: none;
 }
 
+.rett_svar{
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  visibility: hidden;
+}
+
 /*Xp-bar*/
 .xpbar_max{
   width: 325px;

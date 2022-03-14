@@ -21,12 +21,6 @@ let ord_database_middels = [
 ]
 
 
-         
-        
-       
-     
-
-
 let main_database = []
 
 
@@ -55,6 +49,9 @@ var max_xp = 100; //Hvor mye xp før du får levlet opp MÅ være 100
 var curr_xp = 0; //Current xp
 var xp_gained = 20; //Hvor mye xp du får per level (bør kunne ganges opp til 100)
 
+
+var antall_feil = 0
+var mulige_feil = 3
 
 //Timeout tid
 var timeout = 1500;
@@ -137,10 +134,19 @@ function check_answer(){
     remove_item_database()
     get_xp()
     clicked = false
+    document.getElementById('rett_svar').style.visibility = 'hidden'
+    antall_feil = 0
     
   }else{
     document.getElementById('svar_input').style.color = 'red'
     clicked = false
+    antall_feil += 1
+    console.log("Antall feil: " + antall_feil + "/" + mulige_feil)
+    if(antall_feil >= mulige_feil){
+      antall_feil = 0
+      document.getElementById('rett_svar').style.visibility = 'visible'
+      document.getElementById('rett_svar').innerHTML = main_database[current_word]
+    }
   }
 }
 
@@ -185,18 +191,21 @@ function get_gift(){
     document.getElementById('oppg_img').style.visibility = 'hidden'
     document.getElementById("svar_input").disabled = true;
     document.getElementById("check_btn").disabled = true;
-    document.getElementById('gift_img').style.visibility = 'visible'
-
+    
     //Get random gift-img fra array
     var rand = Math.floor(Math.random()*gift_sprites.length);
     document.getElementById('gift_img').src = "Bilder/gaver/" + gift_sprites[rand]
+    document.getElementById('gift_img').style.visibility = 'visible'
 
   }else{setTimeout(() => {change_img()}, timeout)}
 }
 
 
 function open_gift(){
+  if(clicked == true){return}
+  clicked = true
   audio_open.play()
+  console.log("Opening gift..")
 
   setTimeout(() => {
     clear()
