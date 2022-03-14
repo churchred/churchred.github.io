@@ -189,6 +189,7 @@ function get_xp(){
 function get_gift(){
   if(prize_database.length > 0){
     document.getElementById('oppg_img').style.visibility = 'hidden'
+    document.getElementById('oppg_img').src = ''
     document.getElementById("svar_input").disabled = true;
     document.getElementById("check_btn").disabled = true;
     
