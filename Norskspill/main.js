@@ -4,7 +4,7 @@ let ord_database_lett = [
   'ape', 'banan', 'bil', 'blå', 'bok', 'båt', 'drage', 'elg', 'eple', 'fisk',
   'fly', 'gitar', 'gris', 'gul', 'hest', 'hus', 'hår', 'is', 'kake', 'kniv',
   'krone', 'ku', 'lue', 'løve', 'melk', 'mus', 'måke', 'ost', 'piano', 'pære', 
-  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle', 'vei'       
+  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle'       
 ]
 
 
@@ -12,12 +12,13 @@ let ord_database_middels = [
   'ape', 'banan', 'bil', 'blå', 'bok', 'båt', 'drage', 'elg', 'eple', 'fisk',
   'fly', 'gitar', 'gris', 'gul', 'hest', 'hus', 'hår', 'is', 'kake', 'kniv',
   'krone', 'ku', 'lue', 'løve', 'melk', 'mus', 'måke', 'ost', 'piano', 'pære', 
-  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle', 'vei',
+  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle',
 
   'badekar', 'bjørn', 'blomst', 'blyant', 'briller', 'bøtte', 'druer', 'egg',
   'ekorn', 'elefant', 'gaffel', 'grønn', 'hammer', 'hund', 'høne', 'jakke',
   'katt', 'konge', 'mais', 'nøkkel', 'robot', 'rød', 'saks', 'sau', 'seng',
-  'snømann', 'sofa', 'spade', 'sverd', 'sykkel', 'vaffel', 'vann', 'vindu'
+  'snømann', 'sofa', 'spade', 'sverd', 'sykkel', 'vaffel', 'vann',  'vei', 
+  'vindu'
 ]
 
 
@@ -70,6 +71,8 @@ function start_up(){
 
   //Sjekker hvilke level vi er på og lager en ny database
   check_level()
+
+  document.getElementById('rett_svar').style.visibility = 'hidden'
 
 
   //Printer ut info
@@ -139,6 +142,7 @@ function check_answer(){
     
   }else{
     document.getElementById('svar_input').style.color = 'red'
+    document.activeElement.blur()
     clicked = false
     antall_feil += 1
     console.log("Antall feil: " + antall_feil + "/" + mulige_feil)
