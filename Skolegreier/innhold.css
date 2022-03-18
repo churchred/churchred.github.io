@@ -1,6 +1,8 @@
 @import "index.css";
 
 
+
+
 .page_box{
   background-color: rgb(255, 255, 255);
   min-height: 100vh;
@@ -166,7 +168,7 @@
   margin-top: 35px;
   background-color: rgb(255, 255, 255);
   display: grid;
-  grid-template-columns: 16% 63.5% 20%;
+  grid-template-columns: 16% 71% 12.5%;
   border: solid 1px black;
   filter: drop-shadow(.35em .35em .7em);
 }
@@ -209,3 +211,9 @@
   background-color: rgb(255, 144, 40);
   cursor: pointer;
 }
+
+
+.Text_info p{
+  font-size: 15px;
+}
+
