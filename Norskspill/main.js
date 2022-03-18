@@ -192,14 +192,16 @@ function get_xp(){
 //Hva som skjer når du får en premie
 function get_gift(){
   if(prize_database.length > 0){
+
+    //Get random gift-img fra array
+    var rand = Math.floor(Math.random()*gift_sprites.length);
+    document.getElementById('gift_img').src = "Bilder/gaver/" + gift_sprites[rand]
+
     document.getElementById('oppg_img').style.visibility = 'hidden'
     document.getElementById('oppg_img').src = ''
     document.getElementById("svar_input").disabled = true;
     document.getElementById("check_btn").disabled = true;
-    
-    //Get random gift-img fra array
-    var rand = Math.floor(Math.random()*gift_sprites.length);
-    document.getElementById('gift_img').src = "Bilder/gaver/" + gift_sprites[rand]
+
     document.getElementById('gift_img').style.visibility = 'visible'
 
   }else{setTimeout(() => {change_img()}, timeout)}

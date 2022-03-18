@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="style.css">
 
    <!--Script Links-->
-   <script src="main.js"></script>
+   <script src="main_new.js"></script>
 
    <!--Snarvei icon-->
    <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
@@ -19,11 +19,17 @@
   <title>Engelsk - Gloser</title>
 
 </head>
-<body onload="change_img()">
+<body onload="start_up()">
   
   <header class="banner">
     <div></div>
-    <button id="chg_btn" onclick="bytt_spraak()"><b>Du må skrive på [ENGELSK]</b> </br> <i>Trykk her for å bytte til [NORSK]</i></button>
+    <button class="chg_btn" id="chg_btn" onclick="bytt_spraak()"><b>Du må skrive på [ENGELSK]</b> </br> <i>Trykk her for å bytte til [NORSK]</i></button>
+    <button class="tema_btn" style="background-color: rgb(125, 241, 114);" id="tema_btn0" onclick="bytt_tema(0)"><b>TEMA: FOOD</b></button>
+    <button class="tema_btn" id="tema_btn1" onclick="bytt_tema(1)"><b>TEMA: MY BODY</b></button>
+    <button class="tema_btn" id="tema_btn2" onclick="bytt_tema(2)"><b>TEMA: THE ANIMALS</b></button>
+    <button class="tema_btn" id="tema_btn3" onclick="bytt_tema(3)"><b>TEMA: HOUSE</b></button>
+
+      
   </header>
 
 
@@ -33,7 +39,8 @@
       <div class="right_side" id="right_side">
 
         <div class="oppg_img_div" id="oppg_img_div">
-          <img src="" id="oppg_img" alt="Noe gikk galt..">
+          <img src="Bilder/gaver/gift1.png" class="gift_img" id="gift_img" onclick="open_gift()">
+          <img src="" class="oppg_img" id="oppg_img" alt="Noe gikk galt..">
           <p id="shown_word">----</p>
         </div>
 
