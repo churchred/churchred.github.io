@@ -254,7 +254,7 @@ function open_gift(){
 
     //Resetter språk bytte knapp
     document.getElementById("chg_btn").disabled = false;
-    document.getElementById("chg_btn").style.backgroundColor = '#59a4eb;';
+    document.getElementById("chg_btn").style.backgroundColor = 'rgb(93, 174, 240)';
     can_change = true
 
     var random_number = Math.floor(Math.random()*prize_database.length);
