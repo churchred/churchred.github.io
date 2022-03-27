@@ -179,7 +179,6 @@ html, body{
   -webkit-user-drag: none;
   margin-left: -5px;
   margin-top: 0px;
-  visibility: hidden;
 }
 
 @keyframes shake {

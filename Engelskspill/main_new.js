@@ -37,7 +37,7 @@ let animal_database = [
   [['sheep'],['sau']],
   [['fish'],['fisk']],
   [['moose'],['elg']],
-  [['chicken'],['høne']],
+  [['hen'],['høne']],
   [['cow'],['ku']],
   [['elephant'],['elefant']],
   [['fox'],['rev']],
@@ -119,7 +119,6 @@ function start_up(){
 
   change_img()
 }
-
 
 function check_tema(){
   if(tema == 0){//FOOD
@@ -217,18 +216,26 @@ function get_xp(){
 function get_gift(){
   if(prize_database.length > 0){
     clicked = false
-    //Get random gift-img fra array
-    var rand = Math.floor(Math.random()*gift_sprites.length);
-    document.getElementById('gift_img').src = "Bilder/gaver/" + gift_sprites[rand]
-
     document.getElementById('oppg_img').style.visibility = 'hidden'
     document.getElementById('oppg_img').src = ''
     document.getElementById("svar_input").disabled = true;
     document.getElementById("check_btn").disabled = true;
-
     document.getElementById('shown_word').style.visibility = 'hidden'
 
-    document.getElementById('gift_img').style.visibility = 'visible'
+
+    //Lager bilde variabel og setter på all info
+    var img = document.createElement("img");
+    img.setAttribute("class", 'gift_img');
+    img.setAttribute("id", "gift_img");
+    img.setAttribute("onclick", "open_gift()")
+
+
+    //Get random gift-img fra array
+    rand = Math.floor(Math.random()*gift_sprites.length);
+    img.src = "Bilder/gaver/" + gift_sprites[rand]
+
+    //Add the image
+    document.getElementById("oppg_img_div").appendChild(img);
 
   }else{setTimeout(() => {change_img()}, timeout)}
 }
@@ -242,11 +249,12 @@ function open_gift(){
 
   setTimeout(() => {
     clear()
-    document.getElementById("gift_img").style.visibility = 'hidden';
+    var temp = document.getElementById("gift_img");
+    document.getElementById("oppg_img_div").removeChild(temp);
 
     //Resetter språk bytte knapp
     document.getElementById("chg_btn").disabled = false;
-    document.getElementById("chg_btn").style.backgroundColor = 'rgb(236, 90, 90)';
+    document.getElementById("chg_btn").style.backgroundColor = '#59a4eb;';
     can_change = true
 
     var random_number = Math.floor(Math.random()*prize_database.length);
