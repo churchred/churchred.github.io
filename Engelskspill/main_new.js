@@ -32,7 +32,8 @@ let body_database = [
   [['ear'],['øre']],
   [['chin'],['hake']],
   [['eyes'],['øyne', 'øyer']],
-  [['hair'],['hår']]
+  [['hair'],['hår']],
+  [['finger'],['finger']]
 ]
 
 let animal_database = [
