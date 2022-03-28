@@ -16,6 +16,8 @@ let food_database = [
   [['cucumber'],['agurk']],
   [['coffee'],['kaffe']],
   [['tea'],['te']],
+  [['jam'],['syltetøy']],
+  [['banana'],['banan']],
   [['candy', 'sweets', 'lollies'],['godteri']]
 ]
 
@@ -27,7 +29,10 @@ let body_database = [
   [['teeth'],['tenner']],
   [['foot'],['fot']],
   [['feet'],['føtter']],
-  [['hair'],['hår']],
+  [['ear'],['øre']],
+  [['chin'],['hake']],
+  [['eyes'],['øyne', 'øyer']],
+  [['hair'],['hår']]
 ]
 
 let animal_database = [
@@ -41,7 +46,12 @@ let animal_database = [
   [['cow'],['ku']],
   [['elephant'],['elefant']],
   [['fox'],['rev']],
+  [['bull', 'ox'],['okse']],
   [['lion'],['løve']],
+  [['puppy'],['valp']],
+  [['kitten'],['kattunge']],
+  [['shark'],['hai']],
+  [['jellyfish'],['manet']]
 ]
 
 let house_database = [
@@ -50,6 +60,12 @@ let house_database = [
   [['kitchen'],['kjøkken']],
   [['window'],['vindu']],
   [['grass'],['gress']],
+
+  [['bed'],['seng']],
+  [['sink'],['vask']],
+  [['couch'],['sofa']],
+  [['mirror'],['speil']],
+  [['cupboard'],['skap', 'kott']],
 
   [['chair'],['stol']],
   [['books'],['bøker']],
