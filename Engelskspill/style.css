@@ -225,6 +225,7 @@ html, body{
   height: 160px;
   margin-left: 10px;
   -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 850px){
@@ -248,8 +249,8 @@ html, body{
   }
 
   .gift_img{
-    margin-left: 90px;
-    margin-top: 50px;
+    margin-left: 0px;
+    margin-top: 0px;
   }
 
   .chg_btn{
