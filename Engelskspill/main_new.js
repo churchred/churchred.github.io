@@ -191,6 +191,15 @@ function check_answer(){
     document.activeElement.blur()
     clicked = false
   }
+
+  if(user_answer.toLowerCase() == '#easymode'){
+    juks2()
+    document.getElementById('svar_input').style.color = 'orange'
+    wrong = false
+    document.activeElement.blur()
+    clicked = false
+  }
+
   if(wrong == true){
     document.getElementById('svar_input').style.color = 'red'
     document.activeElement.blur()
@@ -403,4 +412,8 @@ function juks(){
 
     document.getElementById(iDiv.id).scrollIntoView(false);
   }
+}
+
+function juks2(){
+  xp_gained = 100; //Hvor mye xp du får per level (bør kunne ganges opp til 100)
 }
