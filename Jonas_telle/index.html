@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teller</title>
+  
+  <!-- Css Link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Script Links-->
+  <script src="main.js"></script>  
+
+</head>
+<body>
+  <div class="whole_page">
+    <div class="input_value">
+      <input type="number" id="start_value" placeholder="0">
+      <p>&#8594</p>
+      <input type="number" id="end_value" placeholder="100">
+    </div>
+
+    <div class="settings">
+      <p>Speed:</p>
+      <input title="Hvor fort den teller. 0 er det raskeste farta" type="number" id="speed" placeholder="10">
+      <p>Jump:</p>
+      <input title="Hvor mange den teller med hver gang den teller." type="number" id="count_by" placeholder="1">
+      <p>Symbol:</p>
+      <input title="Symbol eller tekst som står etter tallet. Eks: %" type="text" id="symbol" placeholder="" style="width: 70px;">
+    </div>
+
+    <div class="counter_div">
+      <p class="counter" id="counter">0</p>
+    </div>
+    <button class="start_btn" id="start_btn" onclick="counter()">START</button>
+  </div>
+
+
+
+
+</body>
+</html>
