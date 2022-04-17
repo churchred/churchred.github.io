@@ -14,13 +14,14 @@ var des_nr = 0 //Hvor mange tall bak komma skal vises?
 
 var symbol = "" //Skal det stå noe etter tallet?
 
-var done = false
+var btn_value = 'start' //start, stopp eller resett
+var stopp = false
 
 //Sjekker om veridene vi får er brukbare
 function check_values(){
-  done = true
-  start_value = parseInt(document.getElementById('start_value').value)
-  end_value = parseInt(document.getElementById('end_value').value)
+  start_value = parseFloat(document.getElementById('start_value').value)
+  end_value = parseFloat(document.getElementById('end_value').value)
+
   counting_speed = parseInt(document.getElementById('speed').value)
   counter_value = parseFloat(document.getElementById('count_by').value)
   symbol = document.getElementById('symbol').value
@@ -48,9 +49,13 @@ function check_values(){
     count_dir = "UP"
   }
 
-  des_nr = check_decimal(counter_value)
+  let array = [check_decimal(counter_value), check_decimal(start_value), check_decimal(end_value)]
+  array.sort()
+  array.reverse()
+  des_nr = array[0]
+
   display_value = start_value
-  document.getElementById('counter').innerText = (display_value.toFixed(des_nr) + symbol)
+  document.getElementById('counter').innerText = (make_space(display_value.toFixed(des_nr)) + symbol)
 
   console.log("----------------")
   console.log("Start:", start_value)
@@ -58,47 +63,66 @@ function check_values(){
   console.log("Speed:", counting_speed)
   console.log("Count by:", counter_value)
   console.log("Counting:", count_dir)
+  console.log(array)
 }
 
+//Button press
+function btn_press(){
+  if(btn_value == 'start'){
+    stopp = false
+    document.getElementById('start_btn').innerText = 'STOPP'
+    btn_value = 'stopp'
+    dis_enable(true)
+    counter()
+  }
+  else if(btn_value == 'resett'){
+    display_value = start_value
+    document.getElementById('counter').innerHTML = (display_value.toFixed(des_nr) + symbol)
+    btn_value = 'start'
+    document.getElementById('start_btn').innerText = 'START'
+    dis_enable(false)
+  }
+  else if(btn_value == 'stopp'){
+    stopp = true
+    document.getElementById('start_btn').innerText = 'RESETT'
+    btn_value = 'resett'
+  }
+}
 
 //Teller opp
 function counter(){
-  if(done == true){
-    resett()
+  if(stopp == true){
     return
   }
   if(count_dir == "UP"){
     display_value += counter_value
     if(display_value > end_value){display_value = end_value}
-    document.getElementById('counter').innerHTML = (display_value.toFixed(des_nr) + symbol)
+    
+    document.getElementById('counter').innerHTML = (make_space(display_value.toFixed(des_nr)) + symbol)
     if(display_value < end_value){
       setTimeout(() => {counter()}, counting_speed)
     }
     if(display_value >= end_value){
       display_value = 0;
-      done = true
+      btn_value = 'resett'
+      document.getElementById('start_btn').innerText = 'RESETT'
     }
   }
 
   if(count_dir == "DOWN"){
     display_value -= counter_value
     if(display_value < end_value){display_value = end_value}
-    document.getElementById('counter').innerHTML = (display_value.toFixed(des_nr) + symbol)
+    document.getElementById('counter').innerHTML = (make_space(display_value.toFixed(des_nr)) + symbol)
     if(display_value > end_value){
       setTimeout(() => {counter()}, counting_speed)
     }
     if(display_value <= end_value){
       display_value = end_value;
-      done = true
+      btn_value = 'resett'
+      document.getElementById('start_btn').innerText = 'RESETT'
     }
   }
 
-}
-
-
-function resett(){
-  done = false
-  display_value = start_value
 }
 
 //sjekker hvor mange plasser bak komma
@@ -108,8 +132,24 @@ function check_decimal(num){
   return index == -1 ? 0 : (text.length - index - 1);
 }
 
+//Skrur av og på settings input boksene
+function dis_enable(value){
+  document.getElementById('start_value').disabled = value
+  document.getElementById('end_value').disabled = value
+  document.getElementById('speed').disabled = value
+  document.getElementById('count_by').disabled = value
+  document.getElementById('symbol').disabled = value
+}
+
+//Lager punktum eller mellomrom i store tall
+function make_space(x){
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  return parts.join(".");
+}
+
 
 //Sjekker om keyboard blir trykket på
 addEventListener('keyup', ({event}) =>{
-  check_values()
+  if(btn_value == 'start'){check_values()}
 })
