@@ -148,6 +148,9 @@ function make_space(x){
   return parts.join(".");
 }
 
+function change_color(col){
+  document.getElementById('body').style.backgroundColor = col
+}
 
 //Sjekker om keyboard blir trykket på
 addEventListener('keyup', ({event}) =>{

@@ -1,20 +1,36 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: rgb(77, 168, 224);
 }
 
 .whole_page{
   display: grid;
 }
 
+.body{
+  background-color: rgb(77, 168, 224);;
+}
 
+.color_div{
+  display: flex;
+  width: 200px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.color_div button{
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border: 3px solid white;
+}
 
 .input_value{
   margin: auto;
   width: 500px;
   display: flex;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .counter_div{
@@ -38,7 +54,8 @@
   border: 3px white solid;
   font-size: 30px;
   text-align: center;
-  color:white
+  color:white;
+  background-color: transparent;
 }
 
 .settings{
@@ -63,6 +80,7 @@
   text-align: center;
   margin: auto;
   color: white;
+  background-color: transparent;
 }
 
 *:focus {
@@ -86,6 +104,7 @@
   cursor: pointer;
   margin: auto;
   margin-top: 150px;
+  background-color: transparent;
 }
 
 .start_btn:hover{
