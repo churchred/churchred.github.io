@@ -6,9 +6,8 @@
 
 .content{
   width: 100vw;
-  height: 94.7vh;
+  height: 800px;
   display: grid;
-  background-color: rgb(253, 193, 114);
 }
 
 .banner{
@@ -71,7 +70,7 @@
 
 .roll_btn{
   margin: auto;
-  margin-top: -100px;
+  margin-top: 00px;
   height: 50px;
   width: 150px;
   background-color: green;
