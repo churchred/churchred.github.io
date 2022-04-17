@@ -1,0 +1,112 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+
+.content{
+  width: 100vw;
+  height: 94.7vh;
+  display: grid;
+  background-color: rgb(253, 193, 114);
+}
+
+.banner{
+  background-color: rgb(27, 27, 27);
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  display: flex;
+}
+ 
+.banner img{
+  width: 250px;
+  padding-right: 4px;
+  -webkit-user-drag: none;
+}
+
+
+.dice_div{
+  width: 70%;
+  height: 500px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.dice_img{
+  margin: auto;
+  -webkit-user-drag: none;
+  filter: drop-shadow(.25em .45em .4em);
+}
+
+@keyframes MoveUpDown{
+  0% {
+    transform: translateY(100%);
+  }
+
+  10% {
+    transform: translateY(-100%);
+  }
+  20%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes shake{
+  0% {
+    transform: translateX(15%);
+  }
+
+  5% {
+    transform: translateX(-15%);
+  }
+  10%{
+    transform: translateX(15%);
+  }
+}
+
+
+
+.roll_btn{
+  margin: auto;
+  margin-top: -100px;
+  height: 50px;
+  width: 150px;
+  background-color: green;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.roll_btn:hover{
+  background-color: rgb(89, 194, 89);
+}
+
+.dice_nr_div{
+  width: 380px;
+  display: flex;
+  border: white 1px solid;
+  margin-left: 20px;
+}
+
+.header_text{
+  font-size: 20px;
+  color: white;
+  margin: auto;
+}
+
+.nr_dice_btn{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px darkgreen solid;
+  background-color: rgb(180, 255, 180);
+  margin: auto;
+  cursor: pointer;
+}
+
+.nr_dice_btn:hover{
+  background-color: rgb(18, 219, 18); 
+}

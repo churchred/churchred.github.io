@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>  
+
+  <title>Terninger</title>
+</head>
+
+<body onload="add_dice(1)">
+
+
+<header class="banner">
+  <img src="Bilder/logo.png" alt="Logo">
+  <div class="dice_nr_div">
+    <p class="header_text">Antall Terninger:</p>
+    <button class="nr_dice_btn" id="btn_1" onclick="add_dice_btn(1)" style="background-color: rgb(18, 219, 18);">1</button>
+    <button class="nr_dice_btn" id="btn_2" onclick="add_dice_btn(2)">2</button>
+    <button class="nr_dice_btn" id="btn_3" onclick="add_dice_btn(3)">3</button>
+    <button class="nr_dice_btn" id="btn_4" onclick="add_dice_btn(4)">4</button>
+    <button class="nr_dice_btn" id="btn_5" onclick="add_dice_btn(5)">5</button>
+    <button class="nr_dice_btn" id="btn_6" onclick="add_dice_btn(6)">6</button>
+  </div>
+
+  <div class="dice_nr_div" style="width: 200px;">
+    <p class="header_text">Antall sider:</p>
+    <button class="nr_dice_btn" id="btn2_1" onclick="change_dice(6)" style="background-color: rgb(18, 219, 18);">6</button>
+    <button class="nr_dice_btn" id="btn2_2" onclick="change_dice(10)">10</button>
+    <button class="nr_dice_btn" id="btn2_3" onclick="change_dice(12)">12</button>
+  </div>
+</header>
+
+<div class="content">
+
+  <div class="dice_div" id="dice_div">
+
+  </div>
+
+  <button class="roll_btn" onclick="roll_dice()">Kast</button>
+
+</div> 
+
+
+
+  
+</body>
+</html>
