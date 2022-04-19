@@ -169,7 +169,7 @@ li.dropdown {
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-top: 40px;
+  margin-top: -40px;
   padding-bottom: 100px;
 }
 
