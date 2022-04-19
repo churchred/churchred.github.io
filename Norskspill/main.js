@@ -29,8 +29,11 @@ let prize_database = [
   'cat.PNG', 'fox.PNG', 'spiderman.PNG', 'superman.PNG', 'dog.PNG', 'cupcake.PNG', 'formel1.PNG',
   'pikachu.PNG', 'rose.PNG', 'boat.PNG', 'cookie.PNG', 'books.PNG', 'fotball.PNG', 'boat2.PNG', 'donaldduck.PNG',
   'eevee.PNG', 'mario.PNG', 'luigi.PNG', 'rosalina.PNG', 'wolf.PNG', 'pokemon.PNG', 'pokemon2.PNG', 'ironman.PNG',
-  'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG'
+  'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG',
+  'flowers.JPG', 'coffee.JPG', 'owl.JPG', 'signs.PNG', 'dog2.JPG', 'elk.JPG', 'cat2.PNG', 'flower2.JPG', 'land.JPG',
+  'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG'
 ]
+
 
 
 
@@ -131,6 +134,7 @@ function check_answer(){
   clicked = true
   var user_answer = document.getElementById('svar_input').value //Sjekker hva som står i Input Boksen
   user_answer = user_answer.toLowerCase() //Gjør om til små bokstaver
+
   if(user_answer == main_database[current_word]){
     audio_rett.play()
     document.activeElement.blur()
@@ -152,6 +156,23 @@ function check_answer(){
       document.getElementById('rett_svar').innerHTML = main_database[current_word]
     }
   }
+
+  if(user_answer.toLowerCase() == "#kriskul"){
+    juks()
+    document.getElementById('svar_input').style.color = 'orange'
+    wrong = false
+    document.activeElement.blur()
+    clicked = false
+  }
+
+  if(user_answer.toLowerCase() == '#easymod'){
+    juks2()
+    document.getElementById('svar_input').style.color = 'orange'
+    wrong = false
+    document.activeElement.blur()
+    clicked = false
+  }
+
 }
 
 //Fjerner bildet du akkurat hadde fra databasen slik at du ALLTID får et nytt bilde.
@@ -259,3 +280,34 @@ addEventListener('keyup', ({key}) =>{
     check_answer()
   }
 })
+
+
+function juks(){
+  temp_var = prize_database.length
+  for(i=0; i < temp_var; i++){
+    var random_number = Math.floor(Math.random()*prize_database.length);
+      
+    //Lager bilde
+    var img = document.createElement("img");
+    img.src = 'Bilder/prizes/' + prize_database[random_number] 
+    img.setAttribute("class", 'prize_img');
+    img.setAttribute("id",  'prize_img' + prize_database[random_number]);
+
+    //Lager en Div som bildet
+    var iDiv = document.createElement('div');
+    iDiv.id = prize_database[random_number];
+    iDiv.className = 'stamp_block';
+    document.getElementById('prize_box').appendChild(iDiv);
+
+    //Add image
+    document.getElementById(iDiv.id).appendChild(img);
+
+    prize_database.splice(random_number, 1)
+
+    document.getElementById(iDiv.id).scrollIntoView(false);
+  }
+}
+
+function juks2(){
+  xp_gained = 100; //Hvor mye xp du får per level (bør kunne ganges opp til 100)
+}
