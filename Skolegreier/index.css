@@ -170,7 +170,7 @@ li.dropdown {
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-top: -40px;
+  margin-top: 40px;
   padding-bottom: 100px;
 }
 
@@ -291,6 +291,10 @@ li.dropdown {
     margin-top: -120px;
     background-repeat: no-repeat;
     height: 300px;
+  }
+
+  .whole_button_div{
+    margin-top: -80px;
   }
 
   .button_div{
