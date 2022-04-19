@@ -241,6 +241,10 @@ html, body{
   .game_box{
     margin-top: 10px;
   }
+
+  .whole_page{
+    height: 500px;
+  }
 }
 
 @media only screen and (max-width: 550px){
