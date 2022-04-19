@@ -1,13 +1,101 @@
+//Preloads terning med 6 sider
+six_dice_1 = new Image()
+six_dice_1.src = 'Bilder/dice/six_sides/1.png'
+
+six_dice_2 = new Image()
+six_dice_2.src = 'Bilder/dice/six_sides/2.png'
+
+six_dice_3 = new Image()
+six_dice_3.src = 'Bilder/dice/six_sides/3.png'
+
+six_dice_4 = new Image()
+six_dice_4.src = 'Bilder/dice/six_sides/4.png'
+
+six_dice_5 = new Image()
+six_dice_5.src = 'Bilder/dice/six_sides/5.png'
+
+six_dice_6 = new Image()
+six_dice_6.src = 'Bilder/dice/six_sides/6.png'
+
+//Preloads terning med 10 sider
+ten_dice_1 = new Image()
+ten_dice_1.src = 'Bilder/dice/ten_sides/1.png'
+
+ten_dice_2 = new Image()
+ten_dice_2.src = 'Bilder/dice/ten_sides/2.png'
+
+ten_dice_3 = new Image()
+ten_dice_3.src = 'Bilder/dice/ten_sides/3.png'
+
+ten_dice_4 = new Image()
+ten_dice_4.src = 'Bilder/dice/ten_sides/4.png'
+
+ten_dice_5 = new Image()
+ten_dice_5.src = 'Bilder/dice/ten_sides/5.png'
+
+ten_dice_6 = new Image()
+ten_dice_6.src = 'Bilder/dice/ten_sides/6.png'
+
+ten_dice_7 = new Image()
+ten_dice_7.src = 'Bilder/dice/ten_sides/7.png'
+
+ten_dice_8 = new Image()
+ten_dice_8.src = 'Bilder/dice/ten_sides/8.png'
+
+ten_dice_9 = new Image()
+ten_dice_9.src = 'Bilder/dice/ten_sides/9.png'
+
+ten_dice_10 = new Image()
+ten_dice_10.src = 'Bilder/dice/ten_sides/10.png'
+
+//Preloads terning med 12 sider
+twelve_dice_1 = new Image()
+twelve_dice_1.src = 'Bilder/dice/twelve_sides/1.png'
+
+twelve_dice_2 = new Image()
+twelve_dice_2.src = 'Bilder/dice/twelve_sides/2.png'
+
+twelve_dice_3 = new Image()
+twelve_dice_3.src = 'Bilder/dice/twelve_sides/3.png'
+
+twelve_dice_4 = new Image()
+twelve_dice_4.src = 'Bilder/dice/twelve_sides/4.png'
+
+twelve_dice_5 = new Image()
+twelve_dice_5.src = 'Bilder/dice/twelve_sides/5.png'
+
+twelve_dice_6 = new Image()
+twelve_dice_6.src = 'Bilder/dice/twelve_sides/6.png'
+
+twelve_dice_7 = new Image()
+twelve_dice_7.src = 'Bilder/dice/twelve_sides/7.png'
+
+twelve_dice_8 = new Image()
+twelve_dice_8.src = 'Bilder/dice/twelve_sides/8.png'
+
+twelve_dice_9 = new Image()
+twelve_dice_9.src = 'Bilder/dice/twelve_sides/9.png'
+
+twelve_dice_10 = new Image()
+twelve_dice_10.src = 'Bilder/dice/twelve_sides/10.png'
+
+twelve_dice_11 = new Image()
+twelve_dice_11.src = 'Bilder/dice/twelve_sides/11.png'
+
+twelve_dice_12 = new Image()
+twelve_dice_12.src = 'Bilder/dice/twelve_sides/12.png'
 
 
-dice_color = "red"
-
+//---------------------------------------------
 number_of_dice = 1
 
 dice_sides = 6
 
 var sound = new Audio('Bilder/dice.mp3');
 sound.volume = 0.5;
+
+var sixdice_1 = new Image()
+
 
 function add_dice_btn(nr){
   if(number_of_dice != 0){remove_dice()}
