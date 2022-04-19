@@ -10,7 +10,7 @@
 
 .content{
   width: 100vw;
-  height: 700px;
+  height: 600px;
   display: grid;
 }
 
@@ -26,6 +26,7 @@
   width: 250px;
   padding-right: 4px;
   -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 
@@ -61,7 +62,7 @@
 
 .roll_btn{
   margin: auto;
-  margin-top: 0px;
+  margin-top: 50px;
   height: 75px;
   width: 150px;
   cursor: pointer;
