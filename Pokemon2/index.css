@@ -1,0 +1,46 @@
+@import "header.css";
+@import "matte_boks.css";
+@import "pokedex.css";
+@import "favoritt.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  user-select: none;
+}
+
+.whole_page{
+  width: 100vw;
+  height: 80vh;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+}
+
+
+.whole_game{
+  width: 1400px;
+  display: grid;
+  grid-template-columns: 33% 33% 40%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 700px){
+  .whole_game{
+    width: 100vw;
+    grid-template-columns: 100%;
+    row-gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .whole_game{
+    transform: scale(0.7);
+    width: 100vw;
+    margin: auto;
+    margin-top: -200px;
+  }
+}
+
+

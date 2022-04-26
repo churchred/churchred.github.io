@@ -1,0 +1,85 @@
+
+
+.pokedex_box{
+  width: 550px;
+  height: 500px;
+  margin: auto;
+  background: #d3d3d3;
+  border: 2px black solid;
+  border-radius: 30px;
+  display: grid;
+}
+
+
+.pokedex_topp{
+  width: 100%;
+  height: 50px;
+  background: #fb6868;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  border-bottom: solid 2px black;
+  display: flex;
+}
+
+.pokedex_topp p{
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  margin: auto;
+}
+
+
+.juske_knapp{
+  width: 120px;
+  height: 30px;
+  margin: auto;
+  background-color: rgb(221, 205, 61);
+  visibility: hidden;
+}
+
+
+.pokedex{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 5px;
+  overflow-y:scroll; height:448px;
+  border-radius: 30px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.pkmn_div{
+  height: calc(1*144px);
+  width:  calc(1*128px);
+  background-color: white;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1px;
+  display: grid;
+  text-align:center;
+}
+
+.pkmn_div_shiny{
+  height: calc(1*144px);
+  width:  calc(1*128px);
+  background-color: rgb(240, 234, 202);
+  border: 1px solid rgb(243, 155, 73);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1px;
+  display: grid;
+  text-align:center;
+}
+
+.pkmn_img{ /*original scale: 96x96*/
+  height: calc(128*0.8px);
+  width: calc(128*0.8px);
+  image-rendering: smooth;
+  margin: auto;
+}

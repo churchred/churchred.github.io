@@ -1,0 +1,42 @@
+
+
+.fav_div{
+  display: grid;
+  margin: auto;
+  height: 450px;
+}
+
+.frame_div{
+  margin: auto;
+  width: 300px;
+  height: 380px;
+  background-image:url('Bilder/frame.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: grid;
+  margin-top: -40px;
+}
+
+.fav_img{
+  height: calc(548*0.4px);
+  width: calc(485*0.4px);
+  image-rendering: smooth;
+  margin: auto;
+  margin-top: 80px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.fav_div p{
+  font-size: 35px;
+  text-align: center;
+  margin: auto;
+  margin-top: -20px;
+}
+
+.badge_img{
+  width: 239px;
+  height: 135px;
+  margin: auto;
+  margin-top: 3px;
+}

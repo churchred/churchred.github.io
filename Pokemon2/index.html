@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <META NAME="robots" CONTENT="noindex,nofollow">
+  <title>Pokemon Versjon 2</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="main.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body onload="load_game()">
+
+  <header class="banner">
+    <img src="Bilder/logo.png" alt="Logo" class="logo_img">
+    <select id ="dropdown" style="font-size:18px"; name="dropdown" class="droppdown" onchange="change_difficulty(this.value);">
+      <option value="pluss_level_1">Pluss, nivå 1</option>
+      <option value="pluss_level_2">Pluss, nivå 2</option>
+      <option value="pluss_level_3">Pluss, nivå 3</option>
+      <option value="pluss_level_4">Pluss, nivå 4</option>
+      <option value="" disabled>---------------</option>
+      <option value="minus_level_1">Minus, nivå 1</option>
+      <option value="minus_level_2">Minus, nivå 2</option>
+      <option value="minus_level_3">Minus, nivå 3</option>
+      <option value="minus_level_4">Minus, nivå 4</option>
+      <option value="" disabled>---------------</option>
+      <option value="multi_level_1">Multiplikasjon 1-5</option>
+      <option value="multi_level_2">Multiplikasjon 1-10</option>
+      <option value="" disabled>---------------</option>
+      <option value="divisjon_level_1">Divisjon I</option>
+      <option value="divisjon_level_1">Divisjon II</option>
+      <option value="" disabled>---------------</option>
+      <option value="tiervenn_level_1">Pluss 1-100(Tiervenner)</option>
+    </select>
+    <div class="region_btn_div">
+      <p>Region:</p>
+      <button class="region_btn" id="Kanto_btn" title="Reis til regionen Kanto!" onclick="change_region(0)"><img id="Kanto_btn_img" src="Bilder/Knapper/kanto_starters.png" alt=""></button>
+      <button class="region_btn" id="Johto_btn" title="Reis til regionen Johto!" onclick="change_region(1)"><img id="Johto_btn_img" src="Bilder/Knapper/johto_starters.png" alt=""></button>
+      <button class="region_btn" id="Hoenn_btn" title="Reis til regionen Hoenn!" onclick="change_region(2)"><img id="Hoenn_btn_img" src="Bilder/Knapper/hoenn_starters.png" alt=""></button>
+    </div>
+
+    <button class="settings_btn" onclick="open_settings()"><img src="Bilder/settings.png"></button>
+
+  </header>
+
+  <div class="settings_page" id="settings_page">
+    <h1>Settings:</h1>
+    <div class="sprites_change">
+      <p>Bytt mellom Pokemon 3d modeller og pixelerte bilder av pokemon</p>
+      <img src="Bilder/Knapper/sprites_use_3d.png" id="sprites_change" onclick="change_sprites()">
+    </div>
+
+    <div class="sprites_change2">
+      <p>Skru av og på lyd</p>
+      <img src="Bilder/Knapper/music.png" id="sound_btn" onclick="sound()">
+    </div>
+
+  </div>
+
+  <div class="whole_page">
+    <div class="whole_game">
+      <div class="math_box">
+        <div class="math_topp"><p id="math_topp"></p></div>
+        <div class="numbers_box">
+          <div class="number" id="number1"></div>
+          <div class="math_symbol" id="symbol"></div>
+          <div class="number" id="number2"></div>
+          <img src="Bilder/Pokeballs/pokeball.png" class="pokeball_img" id='pokeball_img' onclick="open_pokeball()">
+        </div>
+        <input type="tel" pattern="[0-9]*" novalidate id="input" autocomplete="off" onkeydown="if(event.keyCode == 13)document.getElementById('check_btn').click()">
+        <div class="button_div">
+          <button class="check_btn" id="check_btn" onclick="check_answer()">Sjekk svar</button> 
+          <button class="new_btn" id="new_btn" onclick="make_math()">Ny oppgave</button>
+        </div>
+        <div class="poeng_div">
+          <div class="poeng" id="poeng_1"></div>
+          <div class="poeng" id="poeng_2"></div>
+          <div class="poeng" id="poeng_3"></div>
+          <div class="poeng" id="poeng_4"></div>
+          <div class="poeng" id="poeng_5"></div>
+      </div>
+      </div>
+
+      <div class="pokedex_box">
+        <div class="pokedex_topp">
+          <button class="juske_knapp" onclick="cheats('get')">ADD POKEMON</button>
+          <p id="pokedex_nr">POKEDEX 0/*</p>
+          <button class="juske_knapp" onclick="cheats('resett')">RESETT</button>
+        </div>
+        <div class="pokedex" id="pokedex"></div>
+      </div>
+
+      <div class="fav_div">
+        <div class="frame_div">
+          <img src="" alt="Legg til din favoritt Pokemon ved å trykke på den." id="fav_img" class="fav_img">
+          <p id="fav_text" class="fav_text">-</p>
+        </div>
+        <img src="Bilder/Badges/Kanto/box_0.png" alt="" class="badge_img" id="badge_img">
+      </div>
+
+    </div>
+  </div>
+  
+</body>
+</html>
