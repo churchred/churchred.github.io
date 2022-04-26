@@ -70,12 +70,13 @@
   font-size: 40px;
   font-weight: bold;
   background-color: transparent;
+  background-color: rgb(89, 194, 89);
   color:white;
   border: 3px white solid;
 }
 
 .roll_btn:hover{
-  background-color: rgb(89, 194, 89);
+  background-color: rgb(70, 141, 70);
 }
 
 .dice_nr_div{
