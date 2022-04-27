@@ -18,7 +18,7 @@
 }
 
 .whole_game{
-  width: 1400px;
+  width: 100%;
   display: flex;
   margin: auto;
   margin-top: 30px;
