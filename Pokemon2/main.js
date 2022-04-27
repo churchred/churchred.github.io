@@ -67,7 +67,24 @@ let pokedex_array = [
   [366,'Clamperl',0 ,0], [367,'Huntail',0 ,0], [368,'Gorebyss',0 ,0], [369,'Relicanth',0 ,0], [370,'Luvdisc',0 ,0], [371,'Bagon',0 ,0], 
   [372,'Shelgon',0 ,0], [373,'Salamence',0 ,0], [374,'Beldum',0 ,0], [375,'Metang',0 ,0], [376,'Metagross',0 ,0], [377,'Regirock',0 ,0], 
   [378,'Regice',0 ,0], [379,'Registeel',0 ,0], [380,'Latias',0 ,0], [381,'Latios',0 ,0], [382,'Kyogre',0 ,0], [383,'Groudon',0 ,0],
-  [384,'Rayquaza',0 ,0], [385,'Jirachi',0 ,0], [386,'Deoxys',0 ,0]
+  [384,'Rayquaza',0 ,0], [385,'Jirachi',0 ,0], [386,'Deoxys',0 ,0], [387,'Turtwig',0 ,0], [388,'Grotle',0 ,0], [389,'Torterra',0 ,0], [390,'Chimchar',0 ,0], [391,'Monferno',0 ,0], [392,'Infernape',0 ,0],
+  [393,'Piplup',0 ,0], [394,'Prinplup',0 ,0], [395,'Empoleon',0 ,0], [396,'Starly',0 ,0], [397,'Staravia',0 ,0], [398,'Staraptor',0 ,0],
+  [399,'Bidoof',0 ,0], [400,'Bibarel',0 ,0], [401,'Kricketot',0 ,0], [402,'Kricketune',0 ,0], [403,'Shinx',0 ,0], [404,'Luxio',0 ,0],
+  [405,'Luxray',0 ,0], [406,'Budew',0 ,0], [407,'Roserade',0 ,0], [408,'Cranidos',0 ,0], [409,'Rampardos',0 ,0], [410,'Shieldon',0 ,0],
+  [411,'Bastiodon',0 ,0], [412,'Burmy',0 ,0], [413,'Wormadam',0 ,0], [414,'Mothim',0 ,0], [415,'Combee',0 ,0], [416,'Vespiquen',0 ,0],
+  [417,'Pachirisu',0 ,0], [418,'Buizel',0 ,0], [419,'Floatzel',0 ,0], [420,'Cherubi',0 ,0], [421,'Cherrim',0 ,0], [422,'Shellos',0 ,0],
+  [423,'Gastrodon',0 ,0], [424,'Ambipom',0 ,0], [425,'Drifloon',0 ,0], [426,'Drifblim',0 ,0], [427,'Buneary',0 ,0], [428,'Lopunny',0 ,0],
+  [429,'Mismagius',0 ,0], [430,'Honchkrow',0 ,0], [431,'Glameow',0 ,0], [432,'Purugly',0 ,0], [433,'Chingling',0 ,0], [434,'Stunky',0 ,0],
+  [435,'Skuntank',0 ,0], [436,'Bronzor',0 ,0], [437,'Bronzong',0 ,0], [438,'Bonsly',0 ,0], [439,'Mime Jr.',0 ,0], [440,'Happiny',0 ,0],
+  [441,'Chatot',0 ,0], [442,'Spiritomb',0 ,0], [443,'Gible',0 ,0], [444,'Gabite',0 ,0], [445,'Garchomp',0 ,0], [446,'Munchlax',0 ,0],
+  [447,'Riolu',0 ,0], [448,'Lucario',0 ,0], [449,'Hippopotas',0 ,0], [450,'Hippowdon',0 ,0], [451,'Skorupi',0 ,0], [452,'Drapion',0 ,0],
+  [453,'Croagunk',0 ,0], [454,'Toxicroak',0 ,0], [455,'Carnivine',0 ,0], [456,'Finneon',0 ,0], [457,'Lumineon',0 ,0], [458,'Mantyke',0 ,0],
+  [459,'Snover',0 ,0], [460,'Abomasnow',0 ,0], [461,'Weavile',0 ,0], [462,'Magnezone',0 ,0], [463,'Lickilicky',0 ,0], [464,'Rhyperior',0 ,0],
+  [465,'Tangrowth',0 ,0], [466,'Electivire',0 ,0], [467,'Magmortar',0 ,0], [468,'Togekiss',0 ,0], [469,'Yanmega',0 ,0], [470,'Leafeon',0 ,0],
+  [471,'Glaceon',0 ,0], [472,'Gliscor',0 ,0], [473,'Mamoswine',0 ,0], [474,'Porygon-Z',0 ,0], [475,'Gallade',0 ,0], [476,'Probopass',0 ,0],
+  [477,'Dusknoir',0 ,0], [478,'Froslass',0 ,0], [479,'Rotom',0 ,0], [480,'Uxie',0 ,0], [481,'Mesprit',0 ,0], [482,'Azelf',0 ,0],
+  [483,'Dialga',0 ,0], [484,'Palkia',0 ,0], [485,'Heatran',0 ,0], [486,'Regigigas',0 ,0], [487,'Giratina',0 ,0], [488,'Cresselia',0 ,0],
+  [489,'Phione',0 ,0], [490,'Manaphy',0 ,0], [491,'Darkrai',0 ,0], [492,'Shaymin',0 ,0], [493,'Arceus',0 ,0]
 ]
 
 //SoneNr, Navn, Antall pkmn, Startindex, Sluttindex
@@ -75,13 +92,15 @@ let regions = [
   ['1', 'Kanto', '151', '0', '151', 'unlocked'],
   ['2', 'Johto', '100', '151', '251', 'locked'],
   ['3', 'Hoenn', '135', '251', '386', 'locked'],
+  ['4', 'Sinnoh', '107', '386', '493', 'locked']
 ]
 
 //Badge bilder
 var badge_info = [
   ["Kanto", 0, 10, 25, 50, 75, 100, 120, 140, 151],
   ["Johto", 0, 10, 20, 40, 50, 60, 80, 90, 100],
-  ["Hoenn", 0, 10, 25, 50, 75, 100, 110, 125, 135]
+  ["Hoenn", 0, 10, 25, 50, 75, 100, 110, 125, 135],
+  ["Sinnoh", 0, 10, 20, 40, 50, 75, 80, 90, 107]
 ]
 
 
@@ -119,7 +138,7 @@ var sprites_dir = [['Bilder/Knapper/sprites_use_2d.png', 'Bilder/Sprites/Sprites
 ]
 
 //Skrur lyd av og på
-var sound_volume = 0
+var sound_volume = 1
 var sound_dir = [["OFF", "Bilder/Knapper/music2.png"], ["ON", "Bilder/Knapper/music.png"]]
 
 //Kan man jukse med koder?
@@ -243,6 +262,7 @@ function load_game(){
   console.log("      -", regions[0][1], regions[0][5])
   console.log("      -", regions[1][1], regions[1][5])
   console.log("      -", regions[2][1], regions[2][5])
+  console.log("      -", regions[3][1], regions[3][5])
   console.log("Pokedex:", antall_pokemon, "/", regions[current_region][2])
   console.log("Favorite Pokemon:", fav_name)
   console.log("Sprite-type:", sprites_dir[sprite_dir_nr][2])
@@ -506,7 +526,7 @@ function get_pokemon(ct){
 
   //Sjekker om vi er ferdig med regionen
   if(antall_pokemon == regions[current_region][2]){
-    if(current_region != 2){
+    if(current_region != 3){
     //console.log(parseInt(current_region)+1)
     regions[parseInt(current_region)+1][5] = 'unlocked'
     localStorage.setItem('region_lock', regions)

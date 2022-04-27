@@ -16,7 +16,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 </head>
-<body onload="load_game()">
+<body onload="load_game()" class="body">
 
   <header class="banner">
     <img src="Bilder/logo.png" alt="Logo" class="logo_img">
@@ -39,15 +39,9 @@
       <option value="" disabled>---------------</option>
       <option value="tiervenn_level_1">Pluss 1-100(Tiervenner)</option>
     </select>
-    <div class="region_btn_div">
-      <p>Region:</p>
-      <button class="region_btn" id="Kanto_btn" title="Reis til regionen Kanto!" onclick="change_region(0)"><img id="Kanto_btn_img" src="Bilder/Knapper/kanto_starters.png" alt=""></button>
-      <button class="region_btn" id="Johto_btn" title="Reis til regionen Johto!" onclick="change_region(1)"><img id="Johto_btn_img" src="Bilder/Knapper/johto_starters.png" alt=""></button>
-      <button class="region_btn" id="Hoenn_btn" title="Reis til regionen Hoenn!" onclick="change_region(2)"><img id="Hoenn_btn_img" src="Bilder/Knapper/hoenn_starters.png" alt=""></button>
-    </div>
+
 
     <button class="settings_btn" onclick="open_settings()"><img src="Bilder/settings.png"></button>
-
   </header>
 
   <div class="settings_page" id="settings_page">
@@ -61,7 +55,6 @@
       <p>Skru av og på lyd</p>
       <img src="Bilder/Knapper/music.png" id="sound_btn" onclick="sound()">
     </div>
-
   </div>
 
   <div class="whole_page">
@@ -104,7 +97,33 @@
         </div>
         <img src="Bilder/Badges/Kanto/box_0.png" alt="" class="badge_img" id="badge_img">
       </div>
+    </div>
+    
+    <div class="region_btn_div">
+      <h1>Reis til nytt område med nye Pokemon!</h1>
+      <div>
 
+        <button class="region_btn" id="Kanto_btn" title="Reis til regionen Kanto!" onclick="change_region(0)">
+          <img id="Kanto_btn_img" src="Bilder/Knapper/kanto_starters.png" alt="">
+          <p>Kanto</p>
+        </button>
+
+        <button class="region_btn" id="Johto_btn" title="Reis til regionen Johto!" onclick="change_region(1)">
+          <img id="Johto_btn_img" src="Bilder/Knapper/johto_starters.png" alt="">
+          <p>Johto</p>
+        </button>
+
+        <button class="region_btn" id="Hoenn_btn" title="Reis til regionen Hoenn!" onclick="change_region(2)">
+          <img id="Hoenn_btn_img" src="Bilder/Knapper/hoenn_starters.png" alt="">
+          <p>Hoenn</p>
+        </button>
+
+        <button class="region_btn" id="Sinnoh_btn" title="Reis til regionen Sinnoh!" onclick="change_region(3)">
+          <img id="Sinnoh_btn_img" src="Bilder/Knapper/sinnoh_starters.png" alt="">
+          <p>Sinnoh</p>
+        </button>
+
+      </div>
     </div>
   </div>
   

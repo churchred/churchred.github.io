@@ -19,42 +19,59 @@
   height: 40px;
   margin: auto;
   margin-left: 10px;
-  margin-right: 50px;
 }
 
 .region_btn_div{
-  width: 300px;
+  width: 100%;
   height: 45px;
   margin: auto;
-  margin-left: 0px;
-  display: flex;
-  border: white 1px solid;
+  display: grid;
+  grid-template-columns: 32% 78% ;
+  margin-top: -85px;
 }
 
-.region_btn_div p{
-  font-size: 30px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
+.region_btn_div h1{
+  width: 250px;
+  height: 115px;
+  text-align: center;
   margin: auto;
+  margin-right: 0;
+  margin-top: 40px;
+  border: 2px solid black;
+  background-color: #fb6868;
+}
+
+.region_btn_div div{
+  margin: auto;
+  width: 1000px;
+  display: flex;
+  margin-left: 0;
 }
 
 .region_btn{
-  width: 50px;
-  height: 100%;
-  border-radius: 40%;
+  width: 200px;
+  height: 200px;
+  border-radius: 45%;
   margin: auto;
   cursor: pointer;
   background-color: rgb(95, 95, 95);
   border: 2px solid rgb(255, 0, 0);
 }
 
+.region_btn:hover{
+  transform: scale(1.1)
+}
+
 .region_btn img{
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   image-rendering: smooth;
   opacity: 20%;
+}
 
+.region_btn p{
+  font-size: 30px;
+  margin-top: 15px;
 }
 
 
@@ -77,6 +94,8 @@
 }
 
 
+
+
 .settings_page{
   position: absolute;
   align-self: right;
@@ -84,8 +103,9 @@
   height: 233px;
   right: 0px;
   background-color: rgb(90, 90, 90);
-  visibility: hidden;
   border-left: 1px black solid;
+  visibility: hidden;
+  z-index: 2;
 }
 
 .settings_page h1{
@@ -138,29 +158,43 @@
   margin-left: 30px;
 }
 
+@media only screen and (max-width: 1200px){
+  .region_btn_div{
+    transform: scale(0.7);
+    margin-top: -50px;
+    margin-left: -100px;
+  }
+}
+
 @media only screen and (max-width: 700px){
   .banner{
     display: flex;
   }
 
-  .logo_img{
-    visibility: hidden;
-    position: absolute;
-  }
-
   .banner select{
-    width: 100px;
+    width: 120px;
     margin: auto;
     margin-left: 3px;
   }
 
   .region_btn_div{
-    width: 180px;
-    border: none;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: -200px;
   }
 
-  .region_btn_div p{
-    visibility: hidden;
-    position: absolute;
+  .region_btn_div div{
+    display: flex;
+    transform: scale(0.5);
+    margin: auto;
+    margin-top: -50px;
+    background-color: aqua;
   }
+
+  .region_btn_div h1{
+    margin: auto;
+    margin-bottom: 10px;
+    visibility: hidden;
+  }
+
 }
