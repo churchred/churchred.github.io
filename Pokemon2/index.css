@@ -2,6 +2,7 @@
 @import "matte_boks.css";
 @import "pokedex.css";
 @import "favoritt.css";
+@import "regions.css";
 
 *{
   margin: 0;
@@ -14,37 +15,14 @@
   width: 100vw;
   height: 80vh;
   background-color: rgb(255, 255, 255);
-  display: grid;
 }
-
 
 .whole_game{
   width: 1400px;
-  display: grid;
-  grid-template-columns: 33% 33% 40%;
+  display: flex;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
-@media only screen and (max-width: 1200px){
-  .whole_game{
-    transform: scale(0.9);
-  }
-}
-@media only screen and (max-width: 700px){
-  .whole_game{
-    width: 100vw;
-    grid-template-columns: 100%;
-    row-gap: 50px;
-    margin-left: 0;
-  }
-}
-
-@media only screen and (max-width: 500px){
-  .whole_game{
-    transform: scale(0.7);
-    margin-top: -200px;
-  }
-}
 
 

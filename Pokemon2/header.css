@@ -21,58 +21,6 @@
   margin-left: 10px;
 }
 
-.region_btn_div{
-  width: 100%;
-  height: 45px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 32% 78% ;
-  margin-top: -85px;
-}
-
-.region_btn_div h1{
-  width: 250px;
-  height: 115px;
-  text-align: center;
-  margin: auto;
-  margin-right: 0;
-  margin-top: 40px;
-  border: 2px solid black;
-  background-color: #fb6868;
-}
-
-.region_btn_div div{
-  margin: auto;
-  width: 1000px;
-  display: flex;
-  margin-left: 0;
-}
-
-.region_btn{
-  width: 200px;
-  height: 200px;
-  border-radius: 45%;
-  margin: auto;
-  cursor: pointer;
-  background-color: rgb(95, 95, 95);
-  border: 2px solid rgb(255, 0, 0);
-}
-
-.region_btn:hover{
-  transform: scale(1.1)
-}
-
-.region_btn img{
-  width: 90%;
-  height: 90%;
-  image-rendering: smooth;
-  opacity: 20%;
-}
-
-.region_btn p{
-  font-size: 30px;
-  margin-top: 15px;
-}
 
 
 .settings_btn{
@@ -93,9 +41,6 @@
   margin: auto;
 }
 
-
-
-
 .settings_page{
   position: absolute;
   align-self: right;
@@ -113,7 +58,6 @@
   text-align: center;
   margin-top: 5px;
 }
-
 
 .sprites_change{
   width: 100%;
@@ -158,43 +102,3 @@
   margin-left: 30px;
 }
 
-@media only screen and (max-width: 1200px){
-  .region_btn_div{
-    transform: scale(0.7);
-    margin-top: -50px;
-    margin-left: -100px;
-  }
-}
-
-@media only screen and (max-width: 700px){
-  .banner{
-    display: flex;
-  }
-
-  .banner select{
-    width: 120px;
-    margin: auto;
-    margin-left: 3px;
-  }
-
-  .region_btn_div{
-    display: grid;
-    grid-template-columns: 100%;
-    margin-left: -200px;
-  }
-
-  .region_btn_div div{
-    display: flex;
-    transform: scale(0.5);
-    margin: auto;
-    margin-top: -50px;
-    background-color: aqua;
-  }
-
-  .region_btn_div h1{
-    margin: auto;
-    margin-bottom: 10px;
-    visibility: hidden;
-  }
-
-}

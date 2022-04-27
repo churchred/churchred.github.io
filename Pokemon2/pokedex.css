@@ -1,7 +1,7 @@
 
 
 .pokedex_box{
-  width: 550px;
+  width: 485px;
   height: 500px;
   margin: auto;
   background: #d3d3d3;
@@ -22,10 +22,12 @@
 }
 
 .pokedex_topp p{
+  width: 100%;
   font-size: 30px;
   color: black;
   font-weight: bold;
   margin: auto;
+  text-align: center;
 }
 
 
@@ -54,8 +56,8 @@
 }
 
 .pkmn_div{
-  height: calc(1*144px);
-  width:  calc(1*128px);
+  height: calc(0.9*144px);
+  width:  calc(0.9*128px);
   background-color: white;
   border: 1px solid black;
   margin-left: auto;
@@ -66,8 +68,8 @@
 }
 
 .pkmn_div_shiny{
-  height: calc(1*144px);
-  width:  calc(1*128px);
+  height: calc(0.9*144px);
+  width:  calc(0.9*128px);
   background-color: rgb(240, 234, 202);
   border: 1px solid rgb(243, 155, 73);
   margin-left: auto;
