@@ -3,6 +3,7 @@
 .fav_div{
   display: grid;
   margin: auto;
+  margin-left: 0px;
   height: 450px;
 }
 
