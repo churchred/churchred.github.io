@@ -61,4 +61,13 @@
 }
 
 
+@media only screen and (max-width: 500px){
+  .whole_page{
+    transform: scale(0.7);
+    height: 500px;
+  }
 
+  .whole_game{
+    margin-top: -40px;
+  }
+}
