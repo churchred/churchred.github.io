@@ -5,11 +5,12 @@
   margin: auto;
   margin-left: 0px;
   height: 450px;
+  width: 310px;
 }
 
 .frame_div{
   margin: auto;
-  width: 300px;
+  width: 290px;
   height: 380px;
   background-image:url('Bilder/frame.png');
   background-size: contain;

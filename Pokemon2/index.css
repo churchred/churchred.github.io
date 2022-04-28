@@ -4,11 +4,16 @@
 @import "favoritt.css";
 @import "regions.css";
 
+
 *{
   margin: 0;
   padding: 0;
   font-family: roboto;
   user-select: none;
+}
+
+* img{
+  -webkit-user-drag: none;
 }
 
 .body{
@@ -61,6 +66,8 @@
 }
 
 
+
+
 @media only screen and (max-width: 500px){
   .whole_page{
     transform: scale(0.7);
@@ -70,4 +77,12 @@
   .whole_game{
     margin-top: -40px;
   }
+
+
+  .banner select{
+    width: 100px;
+    margin: auto;
+    margin-left: 3px;
+  }
+  
 }

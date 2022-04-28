@@ -111,3 +111,9 @@
   margin-left: 30px;
 }
 
+.dex_btn{
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  cursor: pointer;
+}

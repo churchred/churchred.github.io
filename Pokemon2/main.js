@@ -275,8 +275,8 @@ function change_difficulty(diff){
   localStorage.setItem('difficulty', diff)
   difficulty = diff
   var sym = ""
-  if(diff == "pluss_level_1" || diff == "pluss_level_2" || diff == "pluss_level_3" || diff == "pluss_level_4"){sym = "+"}
-  if(diff == "minus_level_1" || diff == "minus_level_2" || diff == "minus_level_3" || diff == "minus_level_4"){sym = "-"}
+  if(diff == "pluss_level_1" || diff == "pluss_level_2" || diff == "pluss_level_3" || diff == "pluss_level_4" || diff == "pluss_level_5"){sym = "+"}
+  if(diff == "minus_level_1" || diff == "minus_level_2" || diff == "minus_level_3" || diff == "minus_level_4" || diff == "minus_level_5"){sym = "-"}
   if(diff == "multi_level_1" || diff == "multi_level_2"){sym = "*"}
   if(diff == "divisjon_level_1" || diff == "divisjon_level_2"){sym = ":"}
   document.getElementById("symbol").innerHTML = sym
@@ -296,8 +296,8 @@ function make_math(){
 
   //Lag regnestykke men tall mellom 1-20
   if(difficulty == "pluss_level_2"){
-    n1 = Math.floor(Math.random() * 12) + 3
-    n2 = Math.floor(Math.random() * 7) + 3
+    n1 = Math.floor(Math.random() * 10) + 2
+    n2 = Math.floor(Math.random() * 10) + 2
   }
 
   if(difficulty == "pluss_level_3"){
@@ -308,6 +308,11 @@ function make_math(){
   if(difficulty == "pluss_level_4"){
     n1 = Math.floor(Math.random() * 80) + 5
     n2 = Math.floor(Math.random() * 25) + 5
+  }
+
+  if(difficulty == "pluss_level_5"){
+    n1 = Math.floor(Math.random() * 500) + 200
+    n2 = Math.floor(Math.random() * 500) + 100
   }
 
   //Lag MINUS regnestykke men tall mellom 1-10
@@ -341,8 +346,18 @@ function make_math(){
 
   //Lag MINUS regnestykke level 4
   if(difficulty == "minus_level_4"){
-    n1 = Math.floor(Math.random()*80+1);
-    n2 = Math.floor(Math.random()*80+1);
+    n1 = Math.floor(Math.random()*80)+1;
+    n2 = Math.floor(Math.random()*80)+1;
+    //Flytter slik at n1 alltid er større enn n2
+    if(n1 < n2){
+      [n1, n2] = [n2, n1]
+    }
+  }
+
+  //Lag MINUS regnestykke level 5
+  if(difficulty == "minus_level_5"){
+    n1 = Math.floor(Math.random()*1000)+1;
+    n2 = Math.floor(Math.random()*1000)+1;
     //Flytter slik at n1 alltid er større enn n2
     if(n1 < n2){
       [n1, n2] = [n2, n1]
@@ -722,6 +737,7 @@ function sound(){
   document.getElementById("sound_btn").src = sound_dir[sound_volume][1]
 
 }
+
 
 //Gammel kode for å lukke/åpne settings
 /*
