@@ -35,10 +35,19 @@
   background-color: rgb(90, 90, 90);
 }
 
-.settings_btn img{
+.cog_img{
   width: 100%;
   height: 100%;
   margin: auto;
+}
+
+
+.settings_btn:hover .settings_page{
+  visibility: visible;
+}
+
+.settings_page:hover{
+  visibility: visible;
 }
 
 .settings_page{
@@ -49,8 +58,8 @@
   right: 0px;
   background-color: rgb(90, 90, 90);
   border-left: 1px black solid;
-  visibility: hidden;
   z-index: 2;
+  visibility: hidden;
 }
 
 .settings_page h1{

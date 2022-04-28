@@ -97,10 +97,10 @@ let regions = [
 
 //Badge bilder
 var badge_info = [
-  ["Kanto", 0, 10, 25, 50, 75, 100, 120, 140, 151],
-  ["Johto", 0, 10, 20, 40, 50, 60, 80, 90, 100],
-  ["Hoenn", 0, 10, 25, 50, 75, 100, 110, 125, 135],
-  ["Sinnoh", 0, 10, 20, 40, 50, 75, 85, 100, 107]
+  ["Kanto", 0, 10, 25, 50, 75, 100, 120, 140, 151,'#fb6868'],
+  ["Johto", 0, 10, 20, 40, 50, 60, 80, 90, 100, '#3981df'],
+  ["Hoenn", 0, 10, 25, 50, 75, 100, 110, 125, 135,'#dd6b3f'],
+  ["Sinnoh", 0, 10, 20, 40, 50, 75, 85, 100, 107,'#9f56ff']
 ]
 
 
@@ -652,7 +652,7 @@ function change_region(x){
   current_region = x;
   localStorage.setItem('region', current_region)
   load_game()
-  document.getElementById('pokedex').scrollTop = 0;;
+  document.getElementById('pokedex').scrollTop = 0;
 }
 
 //Gjør om på utseende til region bytteknappene og skrur de av og på basert om dehar unlocked dem.
@@ -670,11 +670,12 @@ function change_region_btn(){
     if(regions[i][5] == 'locked'){
       document.getElementById(temp_id).disabled = true;
       document.getElementById(temp_id).style.cursor = "default"
-      console.log("LOCKED", temp_id)
+      //console.log("LOCKED", temp_id)
     }
 
     if(regions[current_region][0] == regions[i][0]){
       document.getElementById(temp_id).style.backgroundColor = "rgb(158, 221, 133)"
+      document.getElementById('pokedex_topp').style.backgroundColor = badge_info[current_region][10]
     }
   }
 }
@@ -722,6 +723,8 @@ function sound(){
 
 }
 
+//Gammel kode for å lukke/åpne settings
+/*
 function open_settings(){
   div = document.getElementById('settings_page')
   if(settings == false){
@@ -734,7 +737,7 @@ function open_settings(){
     div.style.visibility = "hidden"
     console.log("Closed settings..")
   }
-}
+}*/
 
 //Fjerner alt som ligger i pokedexen når vi skal bytte region
 function clear_pokedex(){
@@ -824,12 +827,24 @@ function cheats(jk){
   }
 
   if(new_jk[0] == '#get'){
-    for(i=0; i<pokedex_array.length; i++){
-      if(pokedex_array[i][1] == new_jk[1]){
-        console.log(pokedex_array[i][1])
-        pokedex_array[i][2] = 1
-        add_pokemon(i, 1)
+    for(d=0; d<pokedex_array.length; d++){
+      if(pokedex_array[d][1] == new_jk[1]){
+        console.log(pokedex_array[d][1])
+        pokedex_array[d][2] = 1
         localStorage.setItem("pokedex", pokedex_array)
+        add_pokemon(d, 1)
+      }
+    }
+  }
+
+  if(new_jk[0] == '#getshiny'){
+    for(d=0; d<pokedex_array.length; d++){
+      if(pokedex_array[d][1] == new_jk[1]){
+        console.log(pokedex_array[d][1])
+        pokedex_array[d][2] = 1
+        pokedex_array[d][3] = 1
+        localStorage.setItem("pokedex", pokedex_array)
+        add_pokemon(d, 0)
       }
     }
   }

@@ -11,10 +11,13 @@
   user-select: none;
 }
 
+.body{
+  background-color: rgb(233, 233, 233);
+}
+
 .whole_page{
   width: 100vw;
-  height: 80vh;
-  background-color: rgb(255, 255, 255);
+  height: auto;
 }
 
 .whole_game{
@@ -22,6 +25,39 @@
   display: flex;
   margin: auto;
   margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 1000px){
+  .whole_game{
+    display: grid;
+  }
+
+  .math_box{
+    margin: auto;
+  }
+
+  .pokedex_box{
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+
+  .fav_div{
+    margin: auto;
+  }
+
+  .region_btn_div{
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  
+  .region_btn_div div{
+    width: 410px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 35px;
+  }
 }
 
 
