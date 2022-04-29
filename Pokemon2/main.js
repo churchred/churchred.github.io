@@ -668,8 +668,6 @@ function change_region(x){
   localStorage.setItem('region', current_region)
   load_game()
   document.getElementById('pokedex').scrollTop = 0;
-  hidden_box = false
-  show_regions()
 }
 
 //Gjør om på utseende til region bytteknappene og skrur de av og på basert om dehar unlocked dem.
@@ -790,6 +788,12 @@ document.addEventListener('click',function(e){
     localStorage.setItem('fav_name', pokedex_array[e.target.id][1])     
     document.getElementById("fav_img").src = path
     document.getElementById("fav_text").textContent = pokedex_array[e.target.id][1] 
+  }
+  //Sjekker om vi trykker utonfor Region Div og lukker den
+  if(e.target.id != 'show_region_btn' && e.target.id != 'region_btn_div' && e.target.id != 'Kanto_btn_img'
+     && e.target.id != 'Johto_btn_img' && e.target.id != 'Hoenn_btn_img' && e.target.id != 'Sinnoh_btn_img'
+     && hidden_box == false){
+    show_regions()
   }
 });
 
@@ -958,18 +962,30 @@ function load_dex(){
 var hidden_box = true
 function show_regions(){
   var div = document.getElementById("region_btn_div");
-
-  console.log(div.style.visibility)
+  var btn = document.getElementById('show_region_btn');
 
   if(hidden_box == true){
+    //Gjør Div synlig
     div.style.display = 'grid'
     div.style.visibility = 'visible'
     hidden_box = false
+
+    //Gjør om på knappen
+    btn.innerText = "Dra til et nytt sted:"
+    btn.style.backgroundColor = "rgb(209, 161, 89)"
+    btn.style.borderBottom = "none"
+    btn.style.height = "53px"
   }else{
-    console.log('else')
+    //Gjør Div usynlig
     div.style.display = 'none'
     div.style.visibility = 'hidden'
     hidden_box = true
+
+    //Gjør om på knappen tilbake
+    btn.innerText = "Regioner"
+    btn.style.backgroundColor = ""
+    btn.style.border = "2px white solid"
+    btn.style.height = "40px"
   }
 
 }

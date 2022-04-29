@@ -23,18 +23,24 @@
 
 .whole_page{
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .whole_game{
-  width: 100%;
+  width: 1300px;
   display: flex;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1250px){
+  .whole_game{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1065px){
   .whole_game{
     display: grid;
   }
@@ -54,23 +60,26 @@
   }
 
   .region_btn_div{
-    margin-top: 30px;
+    margin-top: 0px;
     font-size: 13px;
   }
-  
-  .region_btn_div div{
-    width: 410px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    row-gap: 35px;
+
+  .region_btn{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .logo_img{
+    visibility: collapse;
+    display: none;
   }
 }
 
 
-
-
-@media only screen and (max-width: 500px){
-  .whole_page{
+@media only screen and (max-width: 550px){
+  .whole_game{
     transform: scale(0.7);
     height: 500px;
   }
@@ -85,5 +94,21 @@
     margin: auto;
     margin-left: 3px;
   }
-  
+
+  .region_btn_div{
+    height: 150px;
+  }
+
+  .region_btn{
+    width: 100px;
+    height: 100px;
+  }
+
+  .region_btn p{
+    font-size: 18px;
+  }
+
+  .banner_btn{
+    font-size: 13px;
+  }
 }

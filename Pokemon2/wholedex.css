@@ -6,7 +6,7 @@
   height: 100vh;
   display: grid;
   background-image: url('Bilder/bk.png');
-  background-size: contain;
+  background-size: cover;
 }
 
 .wholepokedex{

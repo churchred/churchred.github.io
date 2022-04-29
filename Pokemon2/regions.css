@@ -7,25 +7,10 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   border: 3px black solid;
-  background-color: rgb(184, 184, 184);
+  background-color: rgb(209, 161, 89);
   visibility: hidden;
   display: none;
   overflow: hidden;
-}
-
-.banner_btn{
-  width: 150px;
-  height: 40px;
-  background-color: transparent;
-  color: white;
-  border: 2px white solid;
-  font-size: 18px;
-  margin: auto;
-  cursor: pointer;
-}
-
-.banner_btn:hover{
-  background-color: rgb(104, 168, 104);
 }
 
 

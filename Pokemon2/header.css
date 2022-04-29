@@ -19,9 +19,8 @@
   height: 40px;
   margin: auto;
   margin-left: 10px;
+  margin-right: 5vw;
 }
-
-
 
 .settings_btn{
   width: 45px;
@@ -32,7 +31,8 @@
   border-radius: 40px;
   float: right;
   cursor: pointer;
-  background-color: rgb(90, 90, 90);
+  background-color: transparent;
+  border: 2px white solid;
 }
 
 .cog_img{
@@ -113,7 +113,24 @@
 
 .banner_btn_div{
   margin: auto;
+  margin-left: 0;
   width: 400px;
   display: flex;
 }
 
+.banner_btn{
+  width: auto;
+  height: 40px;
+  background-color: transparent;
+  color: white;
+  border: 2px white solid;
+  font-size: 18px;
+  margin: auto;
+  cursor: pointer;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.banner_btn:hover{
+  background-color: rgb(209, 161, 89);
+}
