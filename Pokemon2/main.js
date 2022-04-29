@@ -663,11 +663,13 @@ function enable_button(btn){
 function change_region(x){
   if(current_region == x){return}
   console.log("Traveling to:", regions[x][1])
-  clear_pokedex()
+  clear_pokedex('pokedex')
   current_region = x;
   localStorage.setItem('region', current_region)
   load_game()
   document.getElementById('pokedex').scrollTop = 0;
+  hidden_box = false
+  show_regions()
 }
 
 //Gjør om på utseende til region bytteknappene og skrur de av og på basert om dehar unlocked dem.
@@ -711,7 +713,7 @@ function add_badges(){
 }
 
 //Bytter Sprites
-function change_sprites(){
+function change_sprites(x){
   console.log("Changed sprites!")
   if(sprite_dir_nr == 0){
     sprite_dir_nr = 1
@@ -723,8 +725,15 @@ function change_sprites(){
   document.getElementById('sprites_change').src = sprites_dir[sprite_dir_nr][0]
 
   localStorage.setItem('sprites', sprite_dir_nr)
-  clear_pokedex()
-  load_game()
+
+  if(x == 1){
+    clear_pokedex('whole_dex')
+    load_dex()
+  }else{
+    clear_pokedex('pokedex')
+    load_game()
+  }
+
 }
 
 //Skrur av og på lyd
@@ -737,7 +746,6 @@ function sound(){
   document.getElementById("sound_btn").src = sound_dir[sound_volume][1]
 
 }
-
 
 //Gammel kode for å lukke/åpne settings
 /*
@@ -756,15 +764,8 @@ function open_settings(){
 }*/
 
 //Fjerner alt som ligger i pokedexen når vi skal bytte region
-function clear_pokedex(){
-  for(i=regions[current_region][3]; i < regions[current_region][4]; i++){
-    if(pokedex_array[i][2] == 1){
-      var elemt_delete_path = 'block' + pokedex_array[i][0];
-      var elemt_delete = document.getElementById(elemt_delete_path);
-      elemt_delete.remove()
-      //console.log("Deleting: ", pokedex_array[i][1], "(", elemt_delete, ")")
-    }
-  }
+function clear_pokedex(x){
+  document.getElementById(x).innerHTML = ""
 }
 
 //Sjekker om vi trykker på et bilde
@@ -882,4 +883,95 @@ function cheats(jk){
 
   document.getElementById('input').value = '#'
 }
+
+//Load National Pokedex
+function load_dex(){
+  //Loader riktig sprite type
+  sprite_dir_nr = localStorage.getItem('sprites')
+  document.getElementById('sprites_change').src = sprites_dir[sprite_dir_nr][0]
+  
+  //Load Pokemon
+  var temp = localStorage.getItem("pokedex")
+  
+  var temp = temp.split(",")
+  var count = 0
+  let new_array = []
+  
+  //Gjør save-data om til en liste
+  for(i=0; i<pokedex_array.length; i++){
+    var temp_row = []
+    for(ii=0; ii<4; ii++){
+      if(ii == 0 || ii == 2 || ii == 3){temp_row.push(parseInt(temp[count]))}
+      else{temp_row.push(temp[count])}
+      count += 1
+    }
+    new_array.push(temp_row)
+  }
+  
+  //Oppdaterer main array
+  pokedex_array = new_array.slice(0)
+  
+  var how_many_pokemon = 0
+  
+    for(i=0; i<pokedex_array.length; i++){
+  
+      //Skal vi bruke Shiny box eller ikke?
+      if(pokedex_array[i][3] == 1){var class_name_div = "pkmn_div_shiny";} 
+      if(pokedex_array[i][3] == 0) {var class_name_div = "pkmn_div";}
+  
+      //Lager en Div som bildet og tekst skal legges inn i
+      var iDiv = document.createElement('div');
+      var temp_id = 'block' + pokedex_array[i][0];
+      iDiv.id = temp_id
+      iDiv.className = class_name_div;
+      document.getElementById('whole_dex').appendChild(iDiv);
+  
+  
+      //Lager variabel for boksen som pokemon og navn skal inn i
+      var theDiv = document.getElementById(iDiv.id);
+  
+  
+      //Vi lager bildet variablet
+      var img = document.createElement("img");
+      if(pokedex_array[i][3] == 1){path = sprites_dir[sprite_dir_nr][1] + "/" + pokedex_array[i][0] + "s" + '.png'}
+      if(pokedex_array[i][3] == 0){path = sprites_dir[sprite_dir_nr][1] + "/" + pokedex_array[i][0] + '.png'}
+      img.src = path 
+  
+      //Add image
+      document.getElementById(iDiv.id).appendChild(img);
+  
+      if(pokedex_array[i][2] == 0){img.setAttribute("class", 'pkmn_img_none');}
+      if(pokedex_array[i][2] == 1){
+        img.setAttribute("class", 'pkmn_img');
+        //Legger til pokemon navn
+        var content = document.createTextNode(pokedex_array[i][1]);
+        theDiv.appendChild(content);
+        how_many_pokemon += 1
+      }
+  
+      img.setAttribute("id",  (pokedex_array[i][0]-1));
+      document.getElementById('nat_dex_nr').innerHTML = "National Pokedex:" + '[' + how_many_pokemon + '/' + pokedex_array.length + ']'
+    }
+}
+
+//Få frem region Div
+var hidden_box = true
+function show_regions(){
+  var div = document.getElementById("region_btn_div");
+
+  console.log(div.style.visibility)
+
+  if(hidden_box == true){
+    div.style.display = 'grid'
+    div.style.visibility = 'visible'
+    hidden_box = false
+  }else{
+    console.log('else')
+    div.style.display = 'none'
+    div.style.visibility = 'hidden'
+    hidden_box = true
+  }
+
+}
+
 

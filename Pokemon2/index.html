@@ -41,26 +41,56 @@
       <option value="" disabled>---------------</option>
       <option value="tiervenn_level_1">Pluss 1-100(Tiervenner)</option>
     </select>
-    
-  <button class="settings_btn">
-      <img src="Bilder/settings.png" class="cog_img">
-      <div class="settings_page" id="settings_page">
-        <h1>SETTINGS:</h1>
-        <div class="sprites_change">
-          <p>Bytt mellom 3d modeller og pixelerte bilder av pokemon</p>
-          <img src="Bilder/Knapper/sprites_use_3d.png" id="sprites_change" onclick="change_sprites()">
+
+    <div class="banner_btn_div">
+      <button class="banner_btn" onclick="show_regions()">Dra til en nytt sted!</button>
+      <button class="banner_btn" onclick="location.href='pokedex.html';">National Pokedex</button>
+    </div>
+
+
+    <button class="settings_btn">
+        <img src="Bilder/settings.png" class="cog_img">
+        <div class="settings_page" id="settings_page">
+          <h1>SETTINGS:</h1>
+          <div class="sprites_change">
+            <p>Bytt mellom 3d modeller og pixelerte bilder av pokemon</p>
+            <img src="Bilder/Knapper/sprites_use_3d.png" id="sprites_change" onclick="change_sprites()">
+          </div>
+      
+          <div class="sprites_change2">
+            <p>Skru av og på lyd</p>
+            <img src="Bilder/Knapper/music.png" id="sound_btn" onclick="sound()">
+          </div>
         </div>
-    
-        <div class="sprites_change2">
-          <p>Skru av og på lyd</p>
-          <img src="Bilder/Knapper/music.png" id="sound_btn" onclick="sound()">
-        </div>
-      </div></button>
+      </button>
   </header>
 
 
 
+
   <div class="whole_page">
+    <div class="region_btn_div" id="region_btn_div">
+        <button class="region_btn" id="Kanto_btn" title="Reis til regionen Kanto!" onclick="change_region(0)">
+          <img id="Kanto_btn_img" src="Bilder/Knapper/kanto_starters.png" class="region_img">
+          <p>Kanto</p>
+        </button>
+  
+        <button class="region_btn" id="Johto_btn" title="Reis til regionen Johto!" onclick="change_region(1)">
+          <img id="Johto_btn_img" src="Bilder/Knapper/johto_starters.png" class="region_img">
+          <p>Johto</p>
+        </button>
+  
+        <button class="region_btn" id="Hoenn_btn" title="Reis til regionen Hoenn!" onclick="change_region(2)">
+          <img id="Hoenn_btn_img" src="Bilder/Knapper/hoenn_starters.png" class="region_img">
+          <p>Hoenn</p>
+        </button>
+  
+        <button class="region_btn" id="Sinnoh_btn" title="Reis til regionen Sinnoh!" onclick="change_region(3)">
+          <img id="Sinnoh_btn_img" src="Bilder/Knapper/sinnoh_starters.png" class="region_img">
+          <p>Sinnoh</p>
+        </button>
+    </div>
+
     <div class="whole_game">
       <div class="math_box">
         <div class="math_topp"><p id="math_topp"></p></div>
@@ -102,31 +132,7 @@
       </div>
     </div>
     
-    <div class="region_btn_div">
-      <h1>Reis til nytt område med nye Pokemon!</h1>
-      <div>
-        <button class="region_btn" id="Kanto_btn" title="Reis til regionen Kanto!" onclick="change_region(0)">
-          <img id="Kanto_btn_img" src="Bilder/Knapper/kanto_starters.png" class="region_img">
-          <p>Kanto</p>
-        </button>
 
-        <button class="region_btn" id="Johto_btn" title="Reis til regionen Johto!" onclick="change_region(1)">
-          <img id="Johto_btn_img" src="Bilder/Knapper/johto_starters.png" class="region_img">
-          <p>Johto</p>
-        </button>
-
-        <button class="region_btn" id="Hoenn_btn" title="Reis til regionen Hoenn!" onclick="change_region(2)">
-          <img id="Hoenn_btn_img" src="Bilder/Knapper/hoenn_starters.png" class="region_img">
-          <p>Hoenn</p>
-        </button>
-
-        <button class="region_btn" id="Sinnoh_btn" title="Reis til regionen Sinnoh!" onclick="change_region(3)">
-          <img id="Sinnoh_btn_img" src="Bilder/Knapper/sinnoh_starters.png" class="region_img">
-          <p>Sinnoh</p>
-        </button>
-
-      </div>
-    </div>
   </div>
   
 </body>

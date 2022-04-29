@@ -1,0 +1,38 @@
+
+
+
+.whole_page2{
+  width: 100vw;
+  height: auto;
+  display: grid;
+}
+
+.wholepokedex{
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 12.5% 12.5% 12.5%  12.5% 12.5% 12.5%  12.5% 12.5%;
+  row-gap: 10px;
+  margin: auto;
+  margin-top: 40px;
+  border: 5px solid #fb6868;
+  background: #d3d3d3;
+}
+
+
+.pkmn_img_none{ /*original scale: 96x96*/
+  height: calc(128*0.8px);
+  width: calc(128*0.8px);
+  image-rendering: smooth;
+  margin: auto;
+  filter: contrast(0) sepia(100%) hue-rotate(0deg) saturate(0%) brightness(30%);
+}
+
+.nat_dex_nr{
+  text-align: center;
+  font-size: 50px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+

@@ -2,22 +2,37 @@
 
 .region_btn_div{
   width: 100%;
-  height: 100%;
+  height: 270px;
   margin: auto;
   display: grid;
-  margin-top: 10px;
+  grid-template-columns: 25% 25% 25% 25%;
+  border: 3px black solid;
+  background-color: rgb(184, 184, 184);
+  visibility: hidden;
+  display: none;
+  overflow: hidden;
 }
 
-.region_btn_div h1{
-  text-align: center;
+.banner_btn{
+  width: 150px;
+  height: 40px;
+  background-color: transparent;
+  color: white;
+  border: 2px white solid;
+  font-size: 18px;
   margin: auto;
-  margin-top: 10px;
-  border-bottom: 2px solid black;
+  cursor: pointer;
 }
+
+.banner_btn:hover{
+  background-color: rgb(104, 168, 104);
+}
+
 
 .region_btn_div div{
   margin: auto;
-  width: 1000px;
+  width: auto;
+  height: 250px;
   display: flex;
   margin-top: 15px;
 }
@@ -55,7 +70,7 @@
 
 .region_btn p{
   font-size: 30px;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 

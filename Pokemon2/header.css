@@ -111,9 +111,9 @@
   margin-left: 30px;
 }
 
-.dex_btn{
-  width: 100px;
-  height: 40px;
+.banner_btn_div{
   margin: auto;
-  cursor: pointer;
+  width: 400px;
+  display: flex;
 }
+

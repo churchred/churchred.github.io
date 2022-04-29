@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <META NAME="robots" CONTENT="noindex,nofollow">
+  <title>Pokemon Matte</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="main.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body onload="load_dex()" class="body">
+
+  <header class="banner">
+    <img src="Bilder/logo.png" alt="Logo" class="logo_img">
+
+    <button class="banner_btn" onclick="location.href='index.html';">Tilbake til Spillet</button>
+    
+    <button class="settings_btn">
+        <img src="Bilder/settings.png" class="cog_img">
+        <div class="settings_page" id="settings_page">
+          <h1>SETTINGS:</h1>
+          <div class="sprites_change">
+            <p>Bytt mellom 3d modeller og pixelerte bilder av pokemon</p>
+            <img src="Bilder/Knapper/sprites_use_3d.png" id="sprites_change" onclick="change_sprites(1)">
+          </div>
+      
+          <div class="sprites_change2">
+            <p>Skru av og på lyd</p>
+            <img src="Bilder/Knapper/music.png" id="sound_btn" onclick="sound()">
+          </div>
+        </div>
+      </button>
+  </header>
+
+
+
+  <div class="whole_page2">
+    <h1 class="nat_dex_nr" id="nat_dex_nr">National Pokedex: [-/-]</h1>
+    <div class="wholepokedex" id="whole_dex">
+    </div>
+  </div>
+  
+</body>
+</html>

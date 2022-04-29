@@ -3,6 +3,7 @@
 @import "pokedex.css";
 @import "favoritt.css";
 @import "regions.css";
+@import "wholedex.css";
 
 
 *{
@@ -22,7 +23,7 @@
 
 .whole_page{
   width: 100vw;
-  height: auto;
+  height: 100vh;
 }
 
 .whole_game{
