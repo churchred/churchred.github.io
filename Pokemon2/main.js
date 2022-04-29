@@ -90,9 +90,9 @@ let pokedex_array = [
 //SoneNr, Navn, Antall pkmn, Startindex, Sluttindex
 let regions = [
   ['1', 'Kanto', '151', '0', '151', 'unlocked'],
-  ['2', 'Johto', '100', '151', '251', 'locked'],
-  ['3', 'Hoenn', '135', '251', '386', 'locked'],
-  ['4', 'Sinnoh', '107', '386', '493', 'locked']
+  ['2', 'Johto', '100', '151', '251', 'unlocked'],
+  ['3', 'Hoenn', '135', '251', '386', 'unlocked'],
+  ['4', 'Sinnoh', '107', '386', '493', 'unlocked']
 ]
 
 //Badge bilder
@@ -169,6 +169,12 @@ function first_time_load(){
 
   //Sound volume
   localStorage.setItem('volume', sound_volume)
+
+  //Badges
+  localStorage.setItem('Kanto_badges', 0)
+  localStorage.setItem('Johto_badges', 0)
+  localStorage.setItem('Hoenn_badges', 0)
+  localStorage.setItem('Sinnoh_badges', 0)
 }
 
 function load_game(){
@@ -254,17 +260,28 @@ function load_game(){
   audio_rett.volume = sound_volume
   document.getElementById("sound_btn").src = sound_dir[sound_volume][1]
 
+  //Badges
+  var bad1 = localStorage.getItem('Kanto_badges')
+  var bad2 = localStorage.getItem('Johto_badges')
+  var bad3 = localStorage.getItem('Hoenn_badges')
+  var bad4 = localStorage.getItem('Sinnoh_badges')
+
 
   console.log("--------------------------")
   console.log("Difficulty:", difficulty)
   console.log("Current Region:", regions[current_region][1])
+  console.log("Pokedex:", antall_pokemon, "/", regions[current_region][2])
+  console.log("Favorite Pokemon:", fav_name)
   console.log("Unlocked Regions:")
   console.log("      -", regions[0][1], regions[0][5])
   console.log("      -", regions[1][1], regions[1][5])
   console.log("      -", regions[2][1], regions[2][5])
   console.log("      -", regions[3][1], regions[3][5])
-  console.log("Pokedex:", antall_pokemon, "/", regions[current_region][2])
-  console.log("Favorite Pokemon:", fav_name)
+  console.log("Number of Badges:")
+  console.log("      -", bad1)
+  console.log("      -", bad2)
+  console.log("      -", bad3)
+  console.log("      -", bad4)
   console.log("Sprite-type:", sprites_dir[sprite_dir_nr][2])
   console.log("Volume:",  sound_dir[sound_volume][0])
   console.log("--------------------------")
@@ -703,6 +720,7 @@ function add_badges(){
         if(antall_pokemon >= badge_info[i][ii]){
           path = 'Bilder/Badges/' + badge_info[i][0] + '/box_'+ parseInt(ii-1) + '.png'
           //console.log(path)
+          localStorage.setItem((badge_info[i][0] + "_badges"), parseInt(ii-1))
         }
       }
     }
@@ -914,49 +932,63 @@ function load_dex(){
   
   //Oppdaterer main array
   pokedex_array = new_array.slice(0)
-  
+
   var how_many_pokemon = 0
   
-    for(i=0; i<pokedex_array.length; i++){
-  
-      //Skal vi bruke Shiny box eller ikke?
-      if(pokedex_array[i][3] == 1){var class_name_div = "pkmn_div_shiny";} 
-      if(pokedex_array[i][3] == 0) {var class_name_div = "pkmn_div";}
-  
-      //Lager en Div som bildet og tekst skal legges inn i
-      var iDiv = document.createElement('div');
-      var temp_id = 'block' + pokedex_array[i][0];
-      iDiv.id = temp_id
-      iDiv.className = class_name_div;
-      document.getElementById('whole_dex').appendChild(iDiv);
-  
-  
-      //Lager variabel for boksen som pokemon og navn skal inn i
-      var theDiv = document.getElementById(iDiv.id);
-  
-  
-      //Vi lager bildet variablet
-      var img = document.createElement("img");
-      if(pokedex_array[i][3] == 1){path = sprites_dir[sprite_dir_nr][1] + "/" + pokedex_array[i][0] + "s" + '.png'}
-      if(pokedex_array[i][3] == 0){path = sprites_dir[sprite_dir_nr][1] + "/" + pokedex_array[i][0] + '.png'}
-      img.src = path 
-  
-      //Add image
-      document.getElementById(iDiv.id).appendChild(img);
-  
-      if(pokedex_array[i][2] == 0){img.setAttribute("class", 'pkmn_img_none');}
-      if(pokedex_array[i][2] == 1){
-        img.setAttribute("class", 'pkmn_img');
-        //Legger til pokemon navn
-        var content = document.createTextNode(pokedex_array[i][1]);
-        theDiv.appendChild(content);
-        how_many_pokemon += 1
-      }
-  
-      img.setAttribute("id",  (pokedex_array[i][0]-1));
-      document.getElementById('nat_dex_nr').innerHTML = "National Pokedex:" + '[' + how_many_pokemon + '/' + pokedex_array.length + ']'
+  for(i=0; i<pokedex_array.length; i++){
+
+    //Skal vi bruke Shiny box eller ikke?
+    if(pokedex_array[i][3] == 1){var class_name_div = "pkmn_div_shiny";} 
+    if(pokedex_array[i][3] == 0) {var class_name_div = "pkmn_div";}
+
+    //Lager en Div som bildet og tekst skal legges inn i
+    var iDiv = document.createElement('div');
+    var temp_id = 'block' + pokedex_array[i][0];
+    iDiv.id = temp_id
+    iDiv.className = class_name_div;
+    document.getElementById('whole_dex').appendChild(iDiv);
+
+
+    //Lager variabel for boksen som pokemon og navn skal inn i
+    var theDiv = document.getElementById(iDiv.id);
+
+
+    //Vi lager bildet variablet
+    var img = document.createElement("img");
+    if(pokedex_array[i][3] == 1){path = sprites_dir[sprite_dir_nr][1] + "/" + pokedex_array[i][0] + "s" + '.png'}
+    if(pokedex_array[i][3] == 0){path = sprites_dir[sprite_dir_nr][1] + "/" + pokedex_array[i][0] + '.png'}
+    img.src = path 
+
+    //Add image
+    document.getElementById(iDiv.id).appendChild(img);
+
+    if(pokedex_array[i][2] == 0){img.setAttribute("class", 'pkmn_img_none');}
+    if(pokedex_array[i][2] == 1){
+      img.setAttribute("class", 'pkmn_img');
+      //Legger til pokemon navn
+      var content = document.createTextNode(pokedex_array[i][1]);
+      theDiv.appendChild(content);
+      how_many_pokemon += 1
     }
+
+    img.setAttribute("id",  (pokedex_array[i][0]-1));
+    document.getElementById('nat_dex_nr').innerHTML = "National Pokedex:" + '[' + how_many_pokemon + '/' + pokedex_array.length + ']'
+  }
+  load_dex_badges()
 }
+
+function load_dex_badges(){
+  //Load Badges
+  var bad1 = localStorage.getItem('Kanto_badges')
+  var bad2 = localStorage.getItem('Johto_badges')
+  var bad3 = localStorage.getItem('Hoenn_badges')
+  var bad4 = localStorage.getItem('Sinnoh_badges')
+  document.getElementById('Kanto_medal').src = 'Bilder/Badges/Kanto/box_'+ bad1 + '.png'
+  document.getElementById('Johto_medal').src = 'Bilder/Badges/Johto/box_'+ bad2 + '.png'
+  document.getElementById('Hoenn_medal').src = 'Bilder/Badges/Hoenn/box_'+ bad3 + '.png'
+  document.getElementById('Sinnoh_medal').src = 'Bilder/Badges/Sinnoh/box_'+ bad4 + '.png'
+}
+
 
 //Få frem region Div
 var hidden_box = true
