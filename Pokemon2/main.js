@@ -125,7 +125,8 @@ var audio_rett = new Audio('Sounds/correct.mp3');
 var antall_pokemon = 0
 
 //Noen navn er litt annerledes nå vi skriver og ser de
-let pokemon_name_exceptions = [['Mr.Mime', 'Mr-Mime'], ['Nidoran♀', 'nidoran-f'], ['Nidoran♂', 'nidoran-m']]
+let pokemon_name_exceptions = [['Mr.Mime', 'Mr-Mime'], ['Nidoran♀', 'nidoran-f'], ['Nidoran♂', 'nidoran-m'], 
+                               ['Mime Jr.', 'mime-jr'], ['Giratina', 'giratina-altered'], ['Shaymin', 'shaymin-land']]
 
 
 //Om settings er synlig eller ikke
@@ -558,7 +559,7 @@ function get_pokemon(ct){
 
   //Sjekker om vi er ferdig med regionen
   if(antall_pokemon == regions[current_region][2]){
-    if(current_region != 3){
+    if(current_region != 3  && regions[parseInt(current_region)+1][5] == 'locked'){
     //console.log(parseInt(current_region)+1)
     regions[parseInt(current_region)+1][5] = 'unlocked'
     localStorage.setItem('region_lock', regions)
@@ -786,6 +787,7 @@ function clear_pokedex(x){
 
 //Sjekker om vi trykker på et bilde
 document.addEventListener('click',function(e){
+  if(natdex == true){return}
   if(Number.isInteger(parseInt(e.target.id)) == true){
     console.log("Clicked on:", pokedex_array[e.target.id][1], " Id:", e.target.id, " PokedexNr:", pokedex_array[e.target.id][0])
     if(pokedex_array[e.target.id][3] == 1){
@@ -810,9 +812,7 @@ document.addEventListener('click',function(e){
   //Sjekker om vi trykker utonfor Region Div og lukker den
   if(e.target.id != 'show_region_btn' && e.target.id != 'region_btn_div' && e.target.id != 'Kanto_btn_img'
      && e.target.id != 'Johto_btn_img' && e.target.id != 'Hoenn_btn_img' && e.target.id != 'Sinnoh_btn_img'
-     && hidden_box == false){
-    show_regions()
-  }
+     && document.getElementById("region_btn_div").style.maxHeight){show_regions()}
 });
 
 //Hva jukseknappene gjør
@@ -907,7 +907,10 @@ function cheats(jk){
 }
 
 //Load National Pokedex
+var natdex = false;
 function load_dex(){
+  natdex = true
+
   //Loader riktig sprite type
   sprite_dir_nr = localStorage.getItem('sprites')
   document.getElementById('sprites_change').src = sprites_dir[sprite_dir_nr][0]
@@ -990,36 +993,33 @@ function load_dex_badges(){
 }
 
 
+
 //Få frem region Div
-var hidden_box = true
 function show_regions(){
-  var div = document.getElementById("region_btn_div");
+  var content = document.getElementById("region_btn_div");
   var btn = document.getElementById('show_region_btn');
 
-  if(hidden_box == true){
-    //Gjør Div synlig
-    div.style.display = 'grid'
-    div.style.visibility = 'visible'
-    hidden_box = false
-
-    //Gjør om på knappen
-    btn.innerText = "Dra til et nytt sted:"
-    btn.style.backgroundColor = "rgb(209, 161, 89)"
-    btn.style.borderBottom = "none"
-    btn.style.height = "53px"
-  }else{
+  if (content.style.maxHeight){
     //Gjør Div usynlig
-    div.style.display = 'none'
-    div.style.visibility = 'hidden'
-    hidden_box = true
-
+    content.style.maxHeight = null;
+    content.style.border = null
     //Gjør om på knappen tilbake
-    btn.innerText = "Regioner"
     btn.style.backgroundColor = ""
     btn.style.border = "2px white solid"
     btn.style.height = "40px"
-  }
+  } else {
+    //Gjør Div synlig
+    content.style.maxHeight = content.scrollHeight + "px";
+    content.style.borderBottom = '3px black solid'
 
+    //Gjør om på knappen
+    btn.style.backgroundColor = "rgb(209, 161, 89)"
+    btn.style.borderBottom = "none"
+    btn.style.height = "50px"
+  } 
+  
+  
 }
+
 
 
