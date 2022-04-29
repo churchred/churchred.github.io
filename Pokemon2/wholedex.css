@@ -3,22 +3,27 @@
 
 .whole_page2{
   width: 100vw;
-  height: auto;
+  height: 100vh;
   display: grid;
+  background-image: url('Bilder/bk.png');
+  background-size: contain;
 }
 
 .wholepokedex{
-  width: 90%;
+  width: 1000px;
   height: 100%;
   display: grid;
   grid-template-columns: 12.5% 12.5% 12.5%  12.5% 12.5% 12.5%  12.5% 12.5%;
   row-gap: 10px;
   margin: auto;
-  margin-top: 40px;
-  border: 5px solid #fb6868;
+  margin-top: -85px;
+  border: 5px solid #000000;
   background: #d3d3d3;
+  overflow-y:scroll; height:80vh;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 
 .pkmn_img_none{ /*original scale: 96x96*/
   height: calc(128*0.8px);
@@ -33,6 +38,10 @@
   font-size: 50px;
   margin: auto;
   margin-top: 20px;
+  border: 5px solid black;
+  width: 1000px;
+  padding-bottom: 10px;
+  background: #e77070;
 }
 
 
