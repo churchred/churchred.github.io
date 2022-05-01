@@ -443,12 +443,14 @@ function check_answer(){
   //Fjerner tastaturet på skjermen
   document.activeElement.blur();
 
-  if(difficulty == "pluss_level_1" || difficulty == "pluss_level_2" || difficulty == "pluss_level_3" || difficulty == "pluss_level_4" || difficulty == "tiervenn_level_1"){
+  if(difficulty == "pluss_level_1" || difficulty == "pluss_level_2" || difficulty == "pluss_level_3" || 
+     difficulty == "pluss_level_4" || difficulty == "pluss_level_5" || difficulty == "tiervenn_level_1"){
     if(user_answer == n1+n2){
       answer_is('correct')
     }else{answer_is('wrong')}
   }
-  if(difficulty == "minus_level_1" || difficulty == "minus_level_2" || difficulty == "minus_level_3" || difficulty == "minus_level_4"){
+  if(difficulty == "minus_level_1" || difficulty == "minus_level_2" || difficulty == "minus_level_3" || 
+     difficulty == "minus_level_4" || difficulty == "minus_level_5"){
     if(user_answer == n1-n2){
       answer_is('correct')
     }else{answer_is('wrong')}
