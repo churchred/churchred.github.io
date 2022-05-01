@@ -810,9 +810,7 @@ document.addEventListener('click',function(e){
     document.getElementById("fav_text").textContent = pokedex_array[e.target.id][1] 
   }
   //Sjekker om vi trykker utonfor Region Div og lukker den
-  if(e.target.id != 'show_region_btn' && e.target.id != 'region_btn_div' && e.target.id != 'Kanto_btn_img'
-     && e.target.id != 'Johto_btn_img' && e.target.id != 'Hoenn_btn_img' && e.target.id != 'Sinnoh_btn_img'
-     && document.getElementById("region_btn_div").style.maxHeight){show_regions()}
+  if(e.target.id != 'show_region_btn' && document.getElementById("region_btn_div").style.maxHeight){show_regions()}
 });
 
 //Hva jukseknappene gjør

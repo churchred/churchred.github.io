@@ -1,8 +1,8 @@
 
 
 .pokedex_box{
-  width: 485px;
-  height: 500px;
+  width: 480px;
+  height: 450px;
   margin: auto;
   background: #d3d3d3;
   border: 2px black solid;
@@ -30,23 +30,13 @@
   text-align: center;
 }
 
-
-.juske_knapp{
-  width: 120px;
-  height: 30px;
-  margin: auto;
-  background-color: rgb(221, 205, 61);
-  visibility: hidden;
-}
-
-
 .pokedex{
   width: 100%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 5px;
-  overflow-y:scroll; height:448px;
+  overflow-y:scroll; height:100%;
   border-radius: 30px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
