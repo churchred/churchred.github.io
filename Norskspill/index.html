@@ -16,14 +16,17 @@
    <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
 
   <!--Fane  tittel-->
-  <title>Norsk - Stavespill (ver 2.1)</title>
+  <title>Norsk - Stavespill (ver 2.2)</title>
 
 </head>
 <body onload="start_up()">
   
   <header class="banner">
     <img src="Bilder/logo7.png" alt="Logo">
-    <button class="lvl_btn" id="lvl_btn_id1" onclick="bytt_level()">Nivå 1</button>
+    <select id ="dropdown" style="font-size:18px"; name="dropdown" class="droppdown" onchange="bytt_level(this.value);">
+         <option value="1">Nivå 1 - Lydrette ord</option>
+         <option value="2">Nivå 2 - Ikke lydrette ord</option>
+     </select>
   </header>
 
 

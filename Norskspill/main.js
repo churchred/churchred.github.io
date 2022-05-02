@@ -4,21 +4,17 @@ let ord_database_lett = [
   'ape', 'banan', 'bil', 'blå', 'bok', 'båt', 'drage', 'elg', 'eple', 'fisk',
   'fly', 'gitar', 'gris', 'gul', 'hest', 'hus', 'hår', 'is', 'kake', 'kniv',
   'krone', 'ku', 'lue', 'løve', 'melk', 'mus', 'måke', 'ost', 'piano', 'pære', 
-  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle'       
+  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle', 'arm', 'vindu', 'tomat', 'bie',
+  'stige', 'en', 'to', 'fem', 'ni', 'øre', 'lampe', 'måne', 'dør', 'fot', 'potet',
+  'nese'
 ]
 
 
 let ord_database_middels = [
-  'ape', 'banan', 'bil', 'blå', 'bok', 'båt', 'drage', 'elg', 'eple', 'fisk',
-  'fly', 'gitar', 'gris', 'gul', 'hest', 'hus', 'hår', 'is', 'kake', 'kniv',
-  'krone', 'ku', 'lue', 'løve', 'melk', 'mus', 'måke', 'ost', 'piano', 'pære', 
-  'rev', 'sko', 'sol', 'stol', 'tre', 'ugle',
-
   'badekar', 'bjørn', 'blomst', 'blyant', 'briller', 'bøtte', 'druer', 'egg',
   'ekorn', 'elefant', 'gaffel', 'grønn', 'hammer', 'hund', 'høne', 'jakke',
   'katt', 'konge', 'mais', 'nøkkel', 'robot', 'rød', 'saks', 'sau', 'seng',
-  'snømann', 'sofa', 'spade', 'sverd', 'sykkel', 'vaffel', 'vann',  'vei', 
-  'vindu'
+  'snømann', 'sofa', 'spade', 'sverd', 'sykkel', 'vaffel', 'vann',  'vei'
 ]
 
 
@@ -31,7 +27,8 @@ let prize_database = [
   'eevee.PNG', 'mario.PNG', 'luigi.PNG', 'rosalina.PNG', 'wolf.PNG', 'pokemon.PNG', 'pokemon2.PNG', 'ironman.PNG',
   'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG',
   'flowers.JPG', 'coffee.JPG', 'owl.JPG', 'signs.PNG', 'dog2.JPG', 'elk.JPG', 'cat2.PNG', 'flower2.JPG', 'land.JPG',
-  'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG'
+  'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG', 'heart.jpg',
+  'chill.jpg', 'city.PNG', 'flower4.PNG', 'fotball2.jpg'
 ]
 
 
@@ -96,17 +93,11 @@ function check_level(){
   if(level == 2){
     main_database = ord_database_middels.slice(0) //Kopierer ord_database
   }
-  document.getElementById('lvl_btn_id1').innerHTML = "Nivå " + level
 }
 
 //Bytter vanskelighetsgrad 
-function bytt_level(){
-  if(level == 1){
-    level = 2
-  }
-  else if(level == 2){
-    level = 1
-  }
+function bytt_level(x){
+  level = parseInt(x)
   console.log("Nivå:", level)
   start_up()
 }
@@ -157,7 +148,7 @@ function check_answer(){
     }
   }
 
-  if(user_answer.toLowerCase() == "#kriskul"){
+  if(user_answer.toLowerCase() == "#getall"){
     juks()
     document.getElementById('svar_input').style.color = 'orange'
     wrong = false
@@ -180,7 +171,7 @@ function remove_item_database(){
   //Fjerner ordet fra databasen
   main_database.splice(current_word, 1)
 
-  //Resetter databasen hvis den er tomn
+  //Resetter databasen hvis den er tom
   if(main_database.length == 0){
     console.log("Resetter database..")
     check_level()
