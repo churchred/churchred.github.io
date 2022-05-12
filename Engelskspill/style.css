@@ -14,7 +14,7 @@ html, body{
 
 .banner{
   background-color: rgb(27, 27, 27);
-  width: 100%;
+  width: 100vw;
   height: 50px;
   align-items: center;
   display: flex;
@@ -28,14 +28,23 @@ html, body{
    pointer-events: none;
  }
 
+ .banner select{
+    width: 240px;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+    margin-left: 0px;
+
+  }
+
  .chg_btn{
-   width: 290px;
+   width: 100px;
    height: 40px;
-   font-size: 15px;
-   background-color: rgb(93, 174, 240); 
    margin: auto;
-   margin-left: 20px;
-   margin-right: 0px;
+   margin-left: 10px;
+   margin-right: 10px;
+   font-size: 15px;
+   background-color: rgb(255, 255, 255); 
    cursor: pointer;
  }
 

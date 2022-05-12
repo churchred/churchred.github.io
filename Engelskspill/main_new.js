@@ -74,6 +74,22 @@ let house_database = [
   [['door'],['dør']]
 ]
 
+let umbrella_database = [
+  [['winter'],['vinter']],
+  [['summer'],['sommer']],
+  [['spring'],['vår']],
+  [['autumn', 'fall'],['høst']],
+  [['weather'],['vær']],
+
+  [['rainy', 'rain'],['regn']],
+  [['sunny', 'sun'],['sol']],
+  [['foggy'],['tåkete']],
+  [['raincoat'],['regnjakke']],
+  [['umbrella'],['paraply']],
+
+  [['hot'],['varmt']],
+  [['cold'],['kaldt']]
+]
 
 
 let main_database = []
@@ -84,7 +100,9 @@ let prize_database = [
   'eevee.PNG', 'mario.PNG', 'luigi.PNG', 'rosalina.PNG', 'wolf.PNG', 'pokemon.PNG', 'pokemon2.PNG', 'ironman.PNG',
   'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG',
   'flowers.JPG', 'coffee.JPG', 'owl.JPG', 'signs.PNG', 'dog2.JPG', 'elk.JPG', 'cat2.PNG', 'flower2.JPG', 'land.JPG',
-  'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG'
+  'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG', 'heart.jpg',
+  'chill.jpg', 'city.PNG', 'flower4.PNG', 'fotball2.jpg', 'animals.PNG', 'art2.PNG', 'balloon.JPG', 'dog3.PNG',
+  'dinosaur.PNG', 'dog4.JPG'
 ]
 
 const max_antall_stamps = prize_database.length
@@ -152,6 +170,9 @@ function check_tema(){
   if(tema == 3){//HOUSE
     main_database = house_database.slice(0) //Kopierer ord_database
   }
+  if(tema == 4){//UMBRELLA
+    main_database = umbrella_database.slice(0) //Kopierer ord_database
+  }
 }
 
 function change_img(){
@@ -184,7 +205,7 @@ function check_answer(){
       break
     }
   }
-  if(user_answer.toLowerCase() == 'krisskul:)'){
+  if(user_answer.toLowerCase() == '#getall'){
     juks()
     document.getElementById('svar_input').style.color = 'orange'
     wrong = false
@@ -335,47 +356,20 @@ addEventListener('keyup', ({key}) =>{
 })
 
 function bytt_tema(id){
-  if(id == 0){
-    document.getElementById('tema_btn0').style.backgroundColor = 'rgb(125, 241, 114)'
-    document.getElementById('tema_btn1').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn2').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn3').style.backgroundColor = 'rgb(179, 179, 179)'
-    tema = id
-  }
-  if(id == 1){
-    document.getElementById('tema_btn0').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn1').style.backgroundColor = 'rgb(125, 241, 114)'
-    document.getElementById('tema_btn2').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn3').style.backgroundColor = 'rgb(179, 179, 179)'
-    tema = id
-  }
-  if(id == 2){
-    document.getElementById('tema_btn0').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn1').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn2').style.backgroundColor = 'rgb(125, 241, 114)'
-    document.getElementById('tema_btn3').style.backgroundColor = 'rgb(179, 179, 179)'
-    tema = id
-  }
-  if(id == 3){
-    document.getElementById('tema_btn0').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn1').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn2').style.backgroundColor = 'rgb(179, 179, 179)'
-    document.getElementById('tema_btn3').style.backgroundColor = 'rgb(125, 241, 114)'
-    tema = id
-  }
+  tema = id
   start_up()
 }
 
 function bytt_spraak(){
   if(can_change == true){
     if(spraak == 0){
-      document.getElementById('chg_btn').innerHTML = '<b>Du må skrive på [NORSK]</b> </br> <i>Trykk her for å bytte til [ENGELSK]</i>'
+      document.getElementById('chg_btn').innerHTML = '<b>Svar på NORSK</b>'
       document.getElementById("chg_btn").disabled = true;
       document.getElementById("chg_btn").style.backgroundColor = 'grey';
       spraak = 1
     }
     else if(spraak == 1){
-      document.getElementById('chg_btn').innerHTML = '<b>Du må skrive på [ENGELSK]</b> </br> <i>Trykk her for å bytte til [NORSK]</i>'
+      document.getElementById('chg_btn').innerHTML = '<b>Svar på ENGELSK</b>'
       document.getElementById("chg_btn").disabled = true;
       document.getElementById("chg_btn").style.backgroundColor = 'grey';
       spraak = 0

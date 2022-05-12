@@ -16,19 +16,21 @@
    <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
 
   <!--Fane  tittel-->
-  <title>Engelsk - Gloser (ver 2.5)</title>
+  <title>Engelsk - Gloser (ver 2.6)</title>
 
 </head>
 <body onload="start_up()">
   
   <header class="banner">
     <img src="Bilder/logo7.png" alt="Logo" class="banner_img">
-    <button class="chg_btn" id="chg_btn" onclick="bytt_spraak()"><b>Du må skrive på [ENGELSK]</b> </br> <i>Trykk her for å bytte til [NORSK]</i></button>
-    <button class="tema_btn" style="background-color: rgb(125, 241, 114);" id="tema_btn0" onclick="bytt_tema(0)"><b>TEMA: FOOD</b></button>
-    <button class="tema_btn" id="tema_btn1" onclick="bytt_tema(1)"><b>TEMA: MY BODY</b></button>
-    <button class="tema_btn" id="tema_btn2" onclick="bytt_tema(2)"><b>TEMA: THE ANIMALS</b></button>
-    <button class="tema_btn" id="tema_btn3" onclick="bytt_tema(3)"><b>TEMA: HOUSE</b></button>
-
+    <button class="chg_btn" id="chg_btn" onclick="bytt_spraak()"><b>Svar på ENGELSK</button>
+    <select id ="dropdown" style="font-size:18px"; name="dropdown" class="droppdown" onchange="bytt_tema(this.value);">
+      <option value="0">Tema: Food</option>
+      <option value="1">Tema: My body</option>
+      <option value="2">Tema: The animals</option>
+      <option value="3">Tema: House</option>
+      <option value="4">Tema: Under my umbrella</option>
+  </select>
       
   </header>
 

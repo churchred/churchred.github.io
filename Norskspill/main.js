@@ -28,8 +28,10 @@ let prize_database = [
   'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG',
   'flowers.JPG', 'coffee.JPG', 'owl.JPG', 'signs.PNG', 'dog2.JPG', 'elk.JPG', 'cat2.PNG', 'flower2.JPG', 'land.JPG',
   'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG', 'heart.jpg',
-  'chill.jpg', 'city.PNG', 'flower4.PNG', 'fotball2.jpg'
+  'chill.jpg', 'city.PNG', 'flower4.PNG', 'fotball2.jpg', 'animals.PNG', 'art2.PNG', 'balloon.JPG', 'dog3.PNG',
+  'dinosaur.PNG', 'dog4.JPG'
 ]
+
 
 
 
