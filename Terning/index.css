@@ -1,3 +1,5 @@
+@import "banner.css";
+
 *{
   padding: 0;
   margin: 0;
@@ -15,21 +17,6 @@
   display: grid;
 }
 
-.banner{
-  background-color: rgb(27, 27, 27);
-  width: 100%;
-  height: 50px;
-  align-items: center;
-  display: flex;
-}
- 
-.banner img{
-  width: 250px;
-  padding-right: 4px;
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-
 
 .dice_div{
   width: 500px;
@@ -42,18 +29,24 @@
 
 .dice_img{
   margin: auto;
+  width: 150px;
+  height: 150px;
   -webkit-user-drag: none;
   filter: drop-shadow(.25em .45em .4em);
-  pointer-events: none;
+}
+
+.shake{
+  -webkit-animation: MoveUpDown 1s;
+  animation: MoveUpDown 1s;
 }
 
 @keyframes MoveUpDown{
   0% {
-    transform: translateY(100%);
+    transform: translateY(30%);
   }
 
   10% {
-    transform: translateY(-100%);
+    transform: translateY(-30%);
   }
   20%{
     transform: translateY(0%);
@@ -79,29 +72,5 @@
   background-color: rgb(70, 141, 70);
 }
 
-.dice_nr_div{
-  width: 380px;
-  display: flex;
-  border: white 1px solid;
-  margin-left: 20px;
-}
 
-.header_text{
-  font-size: 20px;
-  color: white;
-  margin: auto;
-}
 
-.nr_dice_btn{
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px darkgreen solid;
-  background-color: rgb(180, 255, 180);
-  margin: auto;
-  cursor: pointer;
-}
-
-.nr_dice_btn:hover{
-  background-color: rgb(18, 219, 18); 
-}

@@ -1,0 +1,163 @@
+.banner{
+  background-color: rgb(27, 27, 27);
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  display: flex;
+}
+ 
+.banner img{
+  width: 250px;
+  padding-right: 4px;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.header_text{
+  font-size: 20px;
+  color: white;
+  margin: auto;
+}
+
+.dice_nr_div{
+  width: 160px;
+  display: flex;
+  margin-left: 20px;
+  text-align: center;
+  border: 2px rgb(255, 255, 255) solid;
+
+}
+
+.nr_dice_btn{
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: rgb(76, 207, 76);
+  margin: auto;
+  cursor: pointer;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+
+#min_btn{
+  background-color: rgb(238, 99, 99);
+}
+#min_btn p{
+  margin-top: -2.5px;
+}
+#min_btn:hover{
+  background-color: rgb(224, 124, 124);
+}
+
+
+
+#plus_btn{
+  background-color: rgb(102, 231, 102);
+}
+#plus_btn p{
+  margin-top: -1px;
+}
+#plus_btn:hover{
+  background-color: rgb(135, 224, 135);
+}
+
+
+.farger{
+  width: 100px;
+  margin-left: 40px;
+  display: flex;
+}
+
+.farger button{
+  width: 75px;
+  height: 35px;
+  background-color: transparent;
+  border: white 2px solid;
+  margin: auto;
+  margin-top: 0px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+
+.farger button:hover{
+  color: rgb(146, 146, 146);
+  border: 1px rgb(146, 146, 146) solid;
+}
+
+
+.col_menu{
+  width: 300px;
+  max-height: 0px;
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  margin: auto;
+  margin-left: 405px;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  border-bottom: none;
+  position: absolute;
+}
+
+.col_menu button{
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  cursor: pointer;
+}
+
+
+.dices{
+  width: 100px;
+  margin-left: 40px;
+  display: flex;
+}
+
+.dices button{
+  width: 75px;
+  height: 35px;
+  background-color: transparent;
+  border: white 2px solid;
+  margin: auto;
+  margin-top: 0px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+
+.dices button:hover{
+  color: rgb(146, 146, 146);
+  border: 1px rgb(146, 146, 146) solid;
+}
+
+.dice_menu{
+  width: 300px;
+  max-height: 0px;
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  margin: auto;
+  margin-left: 515px;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  border-bottom: none;
+  position: absolute;
+}
+
+.dice_menu button{
+  width: 32px;
+  height: 32px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  border: 1px white solid;
+  font-size: 18px;
+}
+
+.dice_menu button:hover{
+  color: rgb(146, 146, 146);
+  border: 1px rgb(146, 146, 146) solid;
+}
