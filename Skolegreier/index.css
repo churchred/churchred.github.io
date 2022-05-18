@@ -196,6 +196,11 @@
     line-height: 50px;
   }
 
+  .button_div{
+    width: 400px;
+    grid-template-columns: 50% 50%;
+  }
+
   .content_box{
     width: 450px;
     margin: auto;
