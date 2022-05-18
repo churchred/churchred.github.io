@@ -180,3 +180,34 @@
   }
 }  
 
+@media only screen and (max-width: 850px){
+
+  .banner img{
+    display: none;
+  }
+
+  .banner ul{
+    width: 100vw;
+    margin-left: 0px;
+  }
+
+  .banner li{
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  .content_box{
+    width: 450px;
+    margin: auto;
+    background-color: red;
+  }
+
+  .grid_25{
+    grid-template-columns: 50% 50%;
+  }
+
+  .grid_33{
+    grid-template-columns: 50% 50%;
+  }
+
+}  
