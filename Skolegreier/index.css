@@ -1,13 +1,13 @@
-@import "_andresider.css";
-@import "_innhold.css";
-@import "_ark.css";
-@import "_spising.css";
-@import "_videoer.css";
-@import "_banner.css";
-@import "_spill.css";
-@import "_jegser.css";
-@import "_koghdiv.css";
-@import "_ark_info.css";
+@import "andresider.css";
+@import "innhold.css";
+@import "ark.css";
+@import "spising.css";
+@import "videoer.css";
+@import "banner.css";
+@import "spill.css";
+@import "jegser.css";
+@import "koghdiv.css";
+@import "ark_info.css";
 
 *{
   margin: 0;
