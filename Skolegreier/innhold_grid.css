@@ -1,12 +1,9 @@
-@import "index.css";
-@import "innhold.css";
 
 
 .grid_innhold{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   margin-top: 50px;
-  
 }
 
 .post_2{

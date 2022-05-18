@@ -1,0 +1,42 @@
+.post_ark{
+  width: 150px;
+  height: 230px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  display: grid, inline;
+  cursor: pointer;
+  border-radius:10px;
+}
+
+.post_ark:hover{
+  transform: scale(1.05);
+}
+
+.post_ark img{
+  width: 150px;
+  height: 200px;
+  border-bottom: 1px solid black;
+  display: block;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+}
+
+.post_ark div{
+  width: 100%;
+  height: 29px;
+  background-color: rgb(235, 132, 36);
+  text-align: center;
+  line-height: 29px;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+}
+
+
+.post_ark button:hover{
+  background-color: rgb(255, 144, 40);
+  cursor: pointer;
+}
+
+
+

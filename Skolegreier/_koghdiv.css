@@ -1,0 +1,56 @@
+/*-------------------------POST-------------------------------*/
+.post{
+  width: 665px;
+  margin: auto;
+  margin-top: 35px;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 16% 71% 12.5%;
+  border: solid 1px black;
+  filter: drop-shadow(.35em .35em .7em);
+  display: flex;
+  border-radius: 11px;
+}
+
+.post:hover{
+  transform: scale(1.01);
+  filter: drop-shadow(.65em .65em .7em);
+}
+
+.post img{
+  height: 150px;
+  width: 100px;
+  border-right: 1px black solid;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+}
+
+.post div{
+  width: 564px;
+  border-bottom-right-radius:10px;
+  border-top-right-radius:10px;
+}
+
+.post div h1{
+  font-size: 30px;
+  background-color: rgb(235, 132, 36);
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-top-right-radius:10px;
+}
+
+.post div h2{
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.post div p{
+  font-size: 15px;
+  margin-left: 3px
+}
+
+
+
+
+
+

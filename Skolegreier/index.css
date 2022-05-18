@@ -1,3 +1,14 @@
+@import "_andresider.css";
+@import "_innhold.css";
+@import "_ark.css";
+@import "_spising.css";
+@import "_videoer.css";
+@import "_banner.css";
+@import "_spill.css";
+@import "_jegser.css";
+@import "_koghdiv.css";
+@import "_ark_info.css";
+
 *{
   margin: 0;
   padding: 0;
@@ -8,107 +19,17 @@
   width: 100%;
   height: 100%;
   overscroll-behavior-y: none;
-  /*background-image: url("Bilder/bk2.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom;*/
 }
 
 .whole_site{
   width: 100%;
   height: 100%;
-}
-
-/* --------------------  BANNER  ----------------------------- */
-
-.banner{
- background-color: rgb(27, 27, 27);
- width: 100%;
- height: 50px;
- align-items: center;
- display: flex;
-}
-
-.banner img{
-  width: 250px;
-  cursor: pointer;
-  padding-right: 4px;
-  -webkit-user-drag: none;
-}
-
-.banner ul{
-  list-style-type: none;
-  margin-left: 40px;
-  color: white;
-  display: flex;
-  width: 65%;
-  
-}
-
-.banner li{  
-  margin: auto;
-  font-size: 20px;
-  padding: 12px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.banner li:hover{
-  background-color: rgb(175, 100, 29);
+  display: grid;
 }
 
 
-li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
+/* --------------------  Forsiden ----------------------------- */
 
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(175, 100, 29);
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #000000;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: rgb(175, 100, 29);}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* --------------------  OVERSKRIFT TING  ----------------------------- */
-
-.header{
-  width: 100%;
-  height: 300px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 65px;
-  margin-bottom: 10px;
-}
 
 .header_img{
   width: 70%;
@@ -116,78 +37,23 @@ li.dropdown {
   background-image: url("Bilder/header2.jpg");
   background-position: bottom;
   filter: drop-shadow(.75em .35em .7em);
-}
-
-.header_color_line{
-  width: 100%;
-  height: 150px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-.footer{
-  width: 100%;
-  height: 150px;
-  background-color: rgb(36, 34, 34);
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-.footer div{
-  width: 300px;
-  height: 120px;
-  display: flex;
-  margin-left: 100px;
-  border: rgb(255, 255, 255) 4px dotted;
-  text-align: center;
-  align-items: center;
   margin: auto;
-}
-
-#footer_div{
-  width: 70%;
-  border: 0;
-}
-
-.footer img{
-  width: 100px;
-  -webkit-user-drag: none;
-
-}
-
-.footer p{
-   color: white;
+  margin-top: 30px;
 }
 
 /* --------------------  BUTTONS  ----------------------------- */
-
-.whole_button_div{
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin-top: 40px;
-  padding-bottom: 100px;
-}
-
 .button_div{
-  width: 50%;
-  align-items: center;
+  width: 1100px;
+  margin: auto;
   justify-content: center;
-  display: inline-grid;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 20px;
+  padding-bottom: 60px;
 }
 
-.button_div_row{
-  justify-content: left;
-  display: flex;
-  
-}
-
-.button{
+.button_div button{
   width: 200px;
   height: 200px;
   border: solid 2px black;
@@ -199,19 +65,19 @@ li.dropdown {
 
 }
 
-.button img{
+.button_div button img{
   width: 70px;
   height: 70px;
   margin-top: 25px;
   -webkit-user-drag: none;
 }
 
-.button h1{
+.button_div button h1{
   color: white;
   font-size: 40px;
 }
 
-.button:hover{
+.button_div button:hover{
   filter: drop-shadow(.75em .75em .7em);
   transform: scale(1.02);
 
@@ -284,29 +150,27 @@ li.dropdown {
   background-color: rgb(48, 104, 265);
 }
 
-@media only screen and (max-width: 1100px){
+
+@media only screen and (max-width: 1500px){
+
   .header_img{
     width: 700px;
     background-size: 90%;
-    margin-top: -180px;
     background-repeat: no-repeat;
     height: 220px;
   }
 
-  .whole_button_div{
-    margin-top: -70px;
-  }
-
   .button_div{
-    margin-top: -60px;
+    width: 900px;
   }
 
-  .button{
+
+  .button_div button{
     width: 180px;
-    height: 180px;
+    height: 180px; 
   }
 
-  .button h1{
+  .button_div button h1{
     color: white;
     font-size: 35px;
   }
@@ -314,80 +178,5 @@ li.dropdown {
   #btn2 h1{
     font-size: 30px;
   }
-}
-
-@media only screen and (max-width: 550px){
-  .banner{
-    background-color: rgb(0, 0, 0);
-    height: 30px;
-  }
-
-  .banner img{
-    width: 100px;
-    visibility: hidden;
-  }
-
-  .banner li{
-    font-size: 10px;
-  }
-
-  .banner ul{
-    margin-left: -75px;
-  }
-
-  .header_img{
-    width: 400px;
-    height: 160px;
-    margin-top: -210px;
-  }
-
-  .button{
-    width: 150px;
-    height: 150px;
-  }
-
-  .button img{
-    width: 40px;
-    height: 40px;
-    margin-top: 15px;
-    -webkit-user-drag: none;
-  }
-  
-  .button h1{
-    color: white;
-    font-size: 30px;
-  }
-
-  #btn2 h1{
-    font-size: 25px;
-  }
-
-  .button_div{
-    width: 50%;
-    margin-top: -140px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-  
-  .button_div_row{
-    justify-content: left;
-    display: grid;
-  }
-
-  .footer{
-    position: relative;
-    display:grid;
-  }
-  .footer div{
-    width: 250px;
-    height: 120px;
-  }
-  .footer p{
-    font-size: 12px;
-  }
-  .footer img{
-    width: 100px
-  }
-}
+}  
 
