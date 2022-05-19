@@ -3,8 +3,8 @@
 .fav_div{
   display: grid;
   margin: auto;
-  height: 410px;
-  width: 270px;
+  height: 400px;
+  width: 250px;
 }
 
 .frame_div{
@@ -19,11 +19,11 @@
 }
 
 .fav_img{
-  height: 200px;
-  width: 200px;
+  height: 185px;
+  width: 185px;
   image-rendering: smooth;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 60px;
   font-size: 20px;
   text-align: center;
 }
@@ -32,12 +32,12 @@
   font-size: 35px;
   text-align: center;
   margin: auto;
-  margin-top: -80px;
+  margin-top: -60px;
 }
 
 .badge_img{
   width: 239px;
   height: 135px;
   margin: auto;
-  margin-top: 75px;
+  margin-top: 90px;
 }

@@ -40,7 +40,17 @@
   }
 }
 
-@media only screen and (max-width: 1065px){
+@media only screen and (max-width: 1000px){
+  .pokedex_box{
+    width: 400px;
+  }
+  .pokedex{
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+
+@media only screen and (max-width: 850px){
   .whole_game{
     display: grid;
   }
@@ -51,8 +61,13 @@
 
   .pokedex_box{
     margin: auto;
+    width: 500px;
     margin-top: 15px;
     margin-bottom: 50px;
+  }
+
+  .pokedex{
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .fav_div{
@@ -70,7 +85,7 @@
   }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 700px){
   .logo_img{
     visibility: collapse;
     display: none;
