@@ -303,7 +303,7 @@
 
 
   .overskrift{
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: -30px;
   }
 
@@ -357,11 +357,15 @@
     width: 100%;
   }
   .post_spising h1{
-    font-size: 15px;
+    font-size: 13px;
+  }
+  .post_spising p{
+    font-size: 13px;
   }
 
   .ark_info{
     width: 170px;
+    height: 330px;
   }
   .ark_info p{
     font-size: 12px;
