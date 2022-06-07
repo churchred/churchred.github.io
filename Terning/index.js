@@ -7,18 +7,21 @@ var max_dice_count = 6
 
 //Antall sider på terning
 var dice_sides = [[4, '4_sides'], [6, '6_sides'], [8, '8_sides'], [10, '10_sides'], [12, '12_sides'], [20, '20_sides']]
-var dice_sides_nr = 1
+var dice_sides_nr = 1 //6
 
 //Farge variabler
 let dice_color = ['Blue', 'Green', 'Grey', 'Orange', 'Purple', 'Red', 'White', 'Yellow']
-var dice_color_nr = 5
+var dice_color_nr = 5 //Red
 
 //Lyd Variabler
 var sound = new Audio('Bilder/dice.mp3');
 sound.volume = 0.5;
 
+function load(){
+  add_dice()
+}
 
-function add_dice(nr){
+function add_dice(){
   if(dice_array.length == max_dice_count){return}
   //Lager bilde variabel
   var img = document.createElement("img");
