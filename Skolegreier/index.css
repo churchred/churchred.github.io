@@ -12,6 +12,7 @@
 *{
   margin: 0;
   padding: 0;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .html, body{
@@ -151,6 +152,7 @@
 }
 
 
+/*LITEN PC SKJERM (STANDARD LAPTOP*/
 @media only screen and (max-width: 1500px){
 
   .header_img{
@@ -179,6 +181,7 @@
     font-size: 30px;
   }
 }  
+
 
 @media only screen and (max-width: 850px){
 
@@ -212,6 +215,171 @@
 
   .grid_33{
     grid-template-columns: 50% 50%;
+  }
+
+}  
+
+/*TELEFON*/
+@media only screen and (max-width: 550px){
+
+  .banner img{
+    display: none;
+  }
+
+  .banner ul{
+    width: 100vw;
+    margin-left: 0px;
+  }
+
+  .banner li{
+    font-size: 16px;
+    line-height: 50px;
+    font-size: 13px;
+  }
+
+  .button_div{
+    width: 70%;
+    height: 520px;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+  }
+
+  .button_div button{
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 20px;
+
+  }
+
+  .button_div button img{    
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top: 14px;
+  }
+
+  .button_div button h1{    
+    font-size: 25px;
+    margin: auto;
+  }
+
+  #btn2 h1{    
+    font-size: 20px;
+    margin: auto;
+  }
+
+  .header_img{
+    width: 360px;
+    height: 120px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  
+  .footer{
+    width: 100vw;
+  }
+
+  #footer_div{
+    width: 100vw;
+    margin: auto;
+  }
+
+  .footer p{
+    font-size: 11px;
+  }
+
+  .footer div{
+    width: 150px;
+    height: 110px;
+    margin: auto;
+  }
+
+  .footer div img{
+    height: 100%;
+    margin: auto;
+  }
+
+
+
+
+
+  .content_box{
+    width: 100vw;
+    margin: auto;
+  }
+
+  .buttons_tema{
+    width: 100vw;
+  }
+
+  .grid_25{
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+  }
+
+  .grid_33{
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+  }
+
+
+  .post_jegser{
+    width: 180px;
+  }
+
+  .post_andresider{
+    width: 180px;
+  }
+  .post_andresider img{
+    width: 100%;
+  }
+  .post_andresider h1{
+    font-size: 15px;
+  }
+  #big_title{
+    font-size: 12px;
+  }
+
+  .post_spising{
+    width: 190px;
+    height: 250px;
+  }
+  .post_spising img{
+    width: 100%;
+  }
+  .post_spising h1{
+    font-size: 15px;
+  }
+
+
+  .post_video{
+    width: 190px;
+  }
+  .post_video h1{
+    font-size: 13px;
+  }
+
+
+  .post{
+    width: 330px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .post .Text_info h1{
+    font-size: 20px;
+  }
+  .post .Text_info h2{
+    font-size: 14px;
+  }
+  .post .Text_info p{
+    font-size: 11px;
+  }
+
+  .post_spill{
+    width: 95%;
+    height: 370px;
   }
 
 }  
