@@ -1,0 +1,84 @@
+
+
+.banner{
+  width: 100vw;
+  height: 50px;
+  background-color: rgb(64, 78, 97);
+  display: flex;
+}
+
+
+
+
+.overskrift{
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  font-family: 'Gabriola';
+  margin: auto;
+  line-height: 55px;
+}
+
+
+
+
+.meny{
+  margin: auto;
+}
+
+  .meny ul{
+    display: flex;
+    margin: auto;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    width: 500px;
+    height: 25px;
+    border-radius: 30px;
+  }
+
+    .meny li{  
+      margin: auto;
+      font-size: 18px;
+      padding: 2px;
+      cursor: pointer;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+      .meny li a{
+        text-decoration: none;
+        color: white;
+      }
+
+    .meny li:hover{
+      text-decoration: underline;
+    }
+
+
+
+
+.contact{
+  margin: auto;
+  width: 200px;
+  display: flex;
+}
+
+  .contact button{
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    display: grid;
+  }
+
+
+    .contact button img{
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      margin: auto;
+    }

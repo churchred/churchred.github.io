@@ -1,7 +1,7 @@
 
 
 .content_1{
-  background-color: whitesmoke(255, 255, 255);
+  background-color: lightblue;
   width: 100vw;
   min-height: 100vh;
   justify-content: center;
@@ -12,14 +12,22 @@
 .content_1 h1{
   font-size: 60px;
   margin: auto;
+  color: rgb(0, 0, 0);
 }
 
-.content_1 p{
-  font-size: 20px;
+.text{
   width: 50vw;
+  min-height: 160px;
   margin: auto;
+  display: flex;
+}
+
+.text p{
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
-  margin-top: -50px;
+  color: rgb(0, 0, 0);
 }
 
 .content_1 .line{
@@ -34,7 +42,7 @@
   width: 95vw;
   display: flex;
   flex-flow: row wrap;
-  margin-top: -150px;
+  margin-top: 0;
 }
 
 .content_1 img{
@@ -50,7 +58,7 @@
   transform: scale(1.02);
 }
 
-.content_1 button{
+.main_button{
   width: 150px;
   height: 55px;
   margin: auto;
@@ -61,14 +69,74 @@
   text-align: center;
   border: none;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 .content_1 button:hover{
   background-color: #da2a73;
 }
 
+.content_1 .dikt_link{
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: -30px;
+}
 
 .content_2{
   width: 100vw;
+  height: 100vh;
+  display: grid;
+}
+
+.content_2 .info_text{
+  margin: auto;
+  width: 500px;
+  height: 60%;
+  display: grid;
+  margin-top: 100px;
+}
+
+.content_2 .info_text h1{
+  margin: auto;
+  font-size: 90px;
+  margin-top: 0;
+}
+
+.content_2 .info_text p{
+  margin: auto;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.content_2 .all{
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  display: flex;
+}
+
+.content_2 img{
+  margin: auto;
+  height: 500px;
+}
+
+.content_2 .line{
+  width: 350px;
+  height: 5px;
+  margin: auto;
+  background-color: #db0b62;
+  margin-top: 0px;
+}
+
+
+
+
+
+.content_3{
+  width: 100vw;
   height: 90vh;
-  display: none;
+  display: flex;
+}
+
+.content_3 h1{
+  margin: auto;
 }

@@ -1,0 +1,121 @@
+
+.blog_content{
+  display: grid;
+  margin-top: 80px;
+}
+
+.blog_card{
+  width: 700px;
+  height: 350px;
+  border: 1px solid black;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.85);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+  .blog_card .right_side{
+    height: 100%;
+  }
+
+    .right_side .header{
+      display: grid;
+      margin: auto;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+      .right_side .header .author{
+        display: flex;
+        margin: auto;
+        margin-left: 0;
+        margin-top: 3px;
+        width: 115px;
+        height: 30px;
+        border-radius: 25px;
+        background-color: lightblue;
+      }
+        .right_side .header .author img{
+          width: 20px;
+          height: 25px;
+          border-radius: 25px;
+          margin: auto;
+        }
+        .right_side .header .author p{
+          font-size: 15px;
+          margin: auto;
+          font-weight: bold;
+          font-family: 'Times New Roman', Times, serif;
+        }
+
+    .right_side .line{
+      width: 200px;
+      height: 2px;
+      background-color: rgb(94, 94, 94);
+      margin: auto;
+      margin-top: 5px;
+      opacity: 0.4;
+    }
+
+    .right_side .the_text{
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      width: 200px;
+      min-height: 200px;
+      margin: auto;
+      margin-top: 10px;
+      display: grid;
+    }
+      .the_text p{
+        margin: auto;
+      }
+
+
+
+
+
+  .blog_card .left_side{
+    height: 100%;
+    display: grid;
+  }
+    .left_side img{
+      height: 250px;
+      margin: auto;
+      margin-top: -50px;
+      box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+    }
+
+    .left_side .dates{
+      width: 120px;
+      margin-left: 15px;
+      display: flex;
+    }
+      .left_side .dates div{
+        display: grid;
+      }
+        .left_side .dates h1{
+          color: rgb(94, 94, 94);
+          font-size: 90px;
+          font-family:Arial, Helvetica, sans-serif;
+          opacity: 0.4;
+          margin: auto;
+        }
+        .left_side .dates h2{
+          color: rgb(94, 94, 94);
+          font-size: 35px;
+          font-family:Arial, Helvetica, sans-serif;
+          opacity: 0.4;
+          margin: auto;
+          margin-top: -23px;
+        }
+      .left_side .dates h3{
+        color: rgb(94, 94, 94);
+        font-size: 120px;
+        font-family:Arial, Helvetica, sans-serif;
+        opacity: 0.4;
+        margin: auto;
+        margin-top: 0px;
+        margin-left: 30px;
+      }

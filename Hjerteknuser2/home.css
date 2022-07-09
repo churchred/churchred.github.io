@@ -1,0 +1,130 @@
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-height: 90vh;
+}
+
+
+.text_sum{
+  margin: auto;
+  width: 600px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 30px;
+}
+
+  .uke_dikt{
+    margin: auto;
+    display: grid;
+  }
+
+  .uke_dikt div{
+    width: 580px;
+    height: 580px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .uke_dikt img{
+    width: 280px;
+    margin: auto;
+    box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.35);
+
+  }
+    .uke_dikt img:hover{
+      transform: scale(1.04);
+    }
+  .uke_dikt h1{
+    margin: auto;
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: 100;
+    width:98%;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(64, 78, 97);
+    color: white;
+    border: 1px solid black;
+  }
+
+
+
+  .text_sum h1{
+    font-size: 100px;
+    color: rgb(175, 5, 5);
+    font-family: 'Gabriola';
+  }
+
+  .text_sum p{
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(175, 5, 5);
+    font-family: 'Gabriola';
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .line_red{
+    width: 80%;
+    margin: auto;
+    height: 3px;
+    background-color: rgb(175, 5, 5);
+  }
+
+
+  .btn_div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .btn_div button{
+    width: 130px;
+    height: 50px;
+    margin: auto;
+    background-color: transparent;
+    border: 3px solid rgb(175, 5, 5);
+    color: rgb(175, 5, 5);
+    cursor: pointer;
+  }
+  .btn_div button:hover{
+    background-color: rgb(175, 5, 5);
+    color: white;
+  }
+
+  .teddy{
+    max-width: 100vw;
+    height: 80vh;
+  }
+
+    .teddy .bear_1{
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      left: 0;
+      top: 50px;
+    }
+    .teddy .bear_2{
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      right: 0;
+      top: 50px;
+    }
+    .teddy .bear_3{
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      left: 0;
+      bottom: 0;
+    }
+    .teddy .bear_4{
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      right: 0;
+      bottom: 0;
+    }
+

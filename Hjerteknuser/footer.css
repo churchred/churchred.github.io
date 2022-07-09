@@ -18,6 +18,7 @@
   cursor: pointer;
   user-select: none;
   -webkit-user-drag: none;
+  border: none;
 }
 
 .footer button img{
