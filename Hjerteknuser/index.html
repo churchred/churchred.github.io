@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tittel på side -->
+  <title>Hjerteknuser</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Snarvei icon-->
+  <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
+
+</head>
+<body>
+
+  <section class="banner">
+    <div class="banner_img">
+    </div>
+    <svg class="waves" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+    </svg>
+
+
+    <div class="meny">
+      <ul>
+        <li id="here">Hjem</li>
+        <li onclick="location.href='dikt.html'">Dikt</li>
+        <li>Om meg</li>
+        <li>Støtt siden</li>
+      </ul>
+    </div>
+
+    <div class="overskrift">
+      <h1>Hjerteknuser</h1>
+      <div class="line"></div>
+      <h2>En resie igjennom natur og sinn.</h2>
+      <button onClick="document.getElementById('content_1').scrollIntoView();">Se mer</button>
+    </div>
+
+  </section>
+
+
+
+  <div class="content_1" id="content_1">
+    <h1>Dikt og lærdom</h1>
+    <div class="line"></div>
+    <p>Det er i tankene våre verden skapes. Naturen er full av under og utroligheter. Bli med meg å utforske vår verden igjennom diktene mine. Kanskje du kommer ut av det klokere enn før? Kanskje du ser verden på en ny måte? Kasnkje du finner ro i sjelen<p>
+    <div class="dikt_container">    
+      <img src="Bilder/Dikt/14.jpg">
+      <img src="Bilder/Dikt/6.jpg">
+      <img src="Bilder/Dikt/19.jpg">
+      <img src="Bilder/Dikt/18.jpg">
+    </div>
+    <button id="reverse" onclick="location.href='dikt.html'">Flere dikt</button>
+  </div>
+
+  <div class="content_2" id="content_2"></div>
+
+  <div class="footer">
+    <div>
+      <button>
+        <img src="Bilder/insta_icon.jpg" alt="instagram icon">
+        <p>Instagram</p>
+      </button>
+      <button>
+        <img src="Bilder/face_icon.jpg" alt="instagram icon">
+        <p>Facebook</p>
+      </button>
+      <button>
+        <img src="Bilder/mail_icon.jpg" alt="instagram icon">
+        <p>E-post</p>
+      </button>
+    </div>
+  </div>
+  
+</body>
+</html>
