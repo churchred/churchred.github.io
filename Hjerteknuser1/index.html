@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tittel på side -->
+  <title>Hjerteknuser</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="main.js"></script>
+
+  <!--Snarvei icon-->
+  <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
+
+</head>
+<body>
+
+  <section class="banner">
+    <h1 class="overskrift">Hjerteknuser</h1>
+    <div class="meny">
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="blogg.html">Arkiv</a></li>
+        <li><a href="about.html">Om meg</a></li>      
+      </ul>
+    </div>
+    <div class="contact">
+      <button onclick="location.href='https://www.instagram.com/annegrethekirkerod/';"><img src="Bilder/insta_logo.png" alt="">Instagram</button>
+      <button><img src="Bilder/face_logo.png" alt="">Facebook</button>
+      <button><img src="Bilder/email_icon.png" alt="">E-post</button>
+    </div>
+  </section>
+
+
+  <section class="main">
+
+    <div class="intro_text">
+      <h1>Hjerteknuser</h1>
+      <div class="line_red"></div>
+      <p>
+        Ønsker dere alle en nydelig dag med nydelig innhold. Håper mine dikt vil gi deg en personlig betydning, en refleksjon eller en inspirasjon i ditt liv og at mine dikt i seg selv vil utgjøre en stor forskjell
+      </p>
+      <div class="line_red"></div>
+    </div>
+
+
+    <div class="blog_content">
+
+      <div class="post">
+        <h1>Ut på tur aldri sur</h1>
+        <p class="dato">5. July 2022</p>
+        <div class="line"></div>
+        <img src="Bilder/bk_2.jpg" class="big">
+
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="Bilder/ag.jpeg" class="small">
+        <p class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="img_slider">
+          <div class="slides">
+            <!--Checkbox(radio) knapper-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+    
+            <!--Bildene i slideren-->
+            <div class="slide first"><img src="Bilder/Uke dikt/1.jpg"></div>
+            <div class="slide"><img src="Bilder/Uke dikt/2.jpg"></div>
+            <div class="slide"><img src="Bilder/Uke dikt/3.jpg"></div>
+            <div class="slide"><img src="Bilder/Uke dikt/4.jpg"></div>
+    
+            <!--Navigasjon auto-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+          </div>
+    
+          <!--Navigasjon manual-->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    
+  </section>
+
+
+  <div class="footer">
+
+  </div>
+
+  
+</body>
+</html>

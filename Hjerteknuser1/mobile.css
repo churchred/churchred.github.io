@@ -1,0 +1,44 @@
+  
+  
+@media only screen and (max-width: 800px){  
+  /*Banner*/
+  .overskrift{
+    display: none;
+  }
+
+  .meny ul{
+    width: 250px;
+  }
+
+
+  /*Om meg*/
+  .container h1{
+    font-size: 30px;
+  }
+  
+  .container h2{
+    font-size: 23px;
+  }
+  
+  .container p{
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .container img{
+    width: 300px;
+  }
+
+
+  /*Blogg*/
+  .blog_content{
+    width: 100px;
+    margin: auto;
+  }
+
+  /*Overskrift*/
+  .intro_text{
+    width: 100%
+  }
+}
