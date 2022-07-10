@@ -3,7 +3,41 @@
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
-  min-height: 90vh;
+  height: 90vh;
+}
+
+.uke_dikt{
+  margin: auto;
+  display: grid;
+}
+
+.uke_dikt div{
+  width: 580px;
+  height: 580px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.uke_dikt img{
+  width: 280px;
+  margin: auto;
+  box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.35);
+
+}
+  .uke_dikt img:hover{
+    transform: scale(1.04);
+  }
+.uke_dikt h1{
+  margin: auto;
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 100;
+  width:98%;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(64, 78, 97);
+  color: white;
+  border: 1px solid black;
 }
 
 
@@ -14,42 +48,6 @@
   font-size: 15px;
   border-radius: 30px;
 }
-
-  .uke_dikt{
-    margin: auto;
-    display: grid;
-  }
-
-  .uke_dikt div{
-    width: 580px;
-    height: 580px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-  .uke_dikt img{
-    width: 280px;
-    margin: auto;
-    box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.35);
-
-  }
-    .uke_dikt img:hover{
-      transform: scale(1.04);
-    }
-  .uke_dikt h1{
-    margin: auto;
-    margin-top: 5px;
-    font-size: 25px;
-    font-weight: 100;
-    width:98%;
-    text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(64, 78, 97);
-    color: white;
-    border: 1px solid black;
-  }
-
-
 
   .text_sum h1{
     font-size: 100px;

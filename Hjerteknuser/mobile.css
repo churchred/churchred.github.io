@@ -1,0 +1,132 @@
+@media only screen and (max-width: 800px){
+
+
+  /*Home screen*/
+  .teddy{
+    display: none;
+  }
+  .text_sum{
+    width: 93%;
+  }
+  .text_sum h1{
+    font-size: 70px;
+  }
+
+  .text_sum p{
+    font-size: 22px;
+  }
+
+  .contact{
+    display: none;
+  }
+
+
+
+
+  /*Ukens Dikt*/
+  .uke_dikt{
+    width: 303px;
+    margin-top: 50px;
+  }
+  .uke_dikt div{
+    width: 303px;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .uke_dikt img{
+    width: 297px;
+    padding: 3px;
+  }
+
+
+
+
+  /*Banner*/
+  .overskrift{
+    display: none;
+  }
+
+  .meny ul{
+    width: 250px;
+  }
+
+
+
+
+  /*Blogg*/
+  .blog_content{
+    width: 100%;
+  }
+
+  .blog_card{
+    grid-template-columns: 100%;
+    width: 95%;
+    height: auto;
+  }
+
+  .left_side .dates{
+    width: 120px;
+    margin: auto;
+    margin-top:10px;
+  }
+
+  .left_side .dates div{
+    display: flex;
+    width: 80px;
+  }
+
+  .left_side .dates h1, .left_side .dates h2, .left_side .dates h3{
+    font-size: 20px;
+  }
+  .left_side .dates h2{
+    margin: auto;
+  }
+  .left_side .dates h3{
+    margin:auto;
+    margin-left: 1px;
+  }
+
+  .left_side img{
+    max-width: 300px;
+  }
+
+
+  .right_side .header .author{
+    display: none;
+  }    
+  .right_side .header h1{
+    margin: auto;
+  }
+
+  .right_side .the_text{
+    font-size: 15px;
+    width: 90%;
+  }
+
+  .up_btn{
+    right: 0%;
+    bottom: 0%;
+  }
+
+
+
+  /*Om meg*/
+
+  .container h1{
+    font-size: 30px;
+  }
+  
+  .container h2{
+    font-size: 23px;
+  }
+  
+  .container p{
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .container img{
+    width: 80%;
+  }
+}

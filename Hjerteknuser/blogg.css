@@ -2,6 +2,8 @@
 .blog_content{
   display: grid;
   margin-top: 80px;
+  width: 100%;
+  min-height: 80vh;
 }
 
 .blog_card{
@@ -119,3 +121,23 @@
         margin-top: 0px;
         margin-left: 30px;
       }
+
+
+.up_btn{
+  width: 35px;
+  height: 35px;
+  border-radius:50%;
+  background-color: rgb(121, 121, 121);
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  position:fixed ;
+  opacity: 0.5;
+  right: 25%;
+  bottom: 1%;
+  cursor: pointer;;
+}
+.up_btn:hover{
+  background-color: rgb(161, 161, 161);
+  opacity: 0.3;
+}

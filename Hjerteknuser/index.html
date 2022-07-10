@@ -18,89 +18,61 @@
 <body>
 
   <section class="banner">
-    <img src="Bilder/bamse_red.png" class="bamse_1">
-    <img src="Bilder/bamse_green.png" class="bamse_2">
-    <img src="Bilder/bamse_blue.png" class="bamse_3">
-    <img src="Bilder/bamse_purple.png" class="bamse_4">
-
-
+    <h1 class="overskrift">Hjerteknuser</h1>
     <div class="meny">
       <ul>
-        <li id="here">Hjem</li>
-        <li onClick="document.getElementById('content_1').scrollIntoView();">Dikt</li>
-        <li onClick="document.getElementById('content_2').scrollIntoView();">Om meg</li>
-        <li onClick="document.getElementById('content_3').scrollIntoView();">Kontakt</li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="blogg.html">Blogg</a></li>
+        <li><a href="about.html">Om meg</a></li>      
       </ul>
     </div>
+    <div class="contact">
+      <button onclick="location.href='https://www.instagram.com/annegrethekirkerod/';"><img src="Bilder/insta_logo.png" alt="">Instagram</button>
+      <button><img src="Bilder/face_logo.png" alt="">Facebook</button>
+      <button><img src="Bilder/email_icon.png" alt="">E-post</button>
+    </div>
+  </section>
 
-    <div class="overskrift">
+
+  <section class="main">
+    <div class="teddy">
+      <img src="Bilder/bamse_red.png" class="bear_1">
+      <img src="Bilder/bamse_blue.png" class="bear_2">
+      <img src="Bilder/bamse_green.png" class="bear_3">
+      <img src="Bilder/bamse_purple.png" class="bear_4">
+    </div>
+
+
+    <div class="text_sum">
       <h1>Hjerteknuser</h1>
-      <div class="line"></div>
+      <div class="line_red"></div>
+      <p>
+        Ønsker dere alle en nydelig dag med nydelig innhold. Håper mine dikt vil gi deg en personlig betydning, en refleksjon eller en inspirasjon i ditt liv og at mine dikt i seg selv vil utgjøre en stor forskjell
+      </p>
+      <div class="line_red"></div>
+
+      <div class="btn_div">
+        <button onclick="location.href='blogg.html';">Les bloggen min</button>
+      </div>
     </div>
 
-    <div class="nytt">
-      <img src="Bilder/ag_2.png">
-      <article>
-        <h1>Overskrift</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
+    <div class="uke_dikt">
+      <h1>~ ~ ~ Nye Dikt ~ ~ ~</h1>
+      <div>
+        <img src="Bilder/Dikt/1.jpg">
+        <img src="Bilder/Dikt/2.jpg">
+        <img src="Bilder/Dikt/3.jpg">
+        <img src="Bilder/Dikt/4.jpg">
+      </div>
     </div>
 
-    <button onClick="document.getElementById('content_1').scrollIntoView();"class="main_button">Ukas dikt 	&#8595</button>
 
-
+    
   </section>
 
 
 
-  <div class="content_1" id="content_1">
-    <h1>Ukas dikt</h1>
-    <div class="line"></div>
-    <div class="text"><p>
-      Ønsker dere alle en nydelig dag med nydelig innhold.
-      Håper mine dikt vil gi deg en personlig betydning, en refleksjon eller en inspirasjon i ditt liv og at mine dikt i seg selv vil utgjøre en stor forskjell</p></div>
-    <a href="dikt.html" class="dikt_link">Se alle diktene mine</a>
-    <div class="dikt_container">    
-      <img src="Bilder/Dikt/14.jpg">
-      <img src="Bilder/Dikt/6.jpg">
-      <img src="Bilder/Dikt/19.jpg">
-    </div>
-    <button onClick="document.getElementById('content_2').scrollIntoView();"class="main_button">Om meg 	&#8595</button>
-  </div>
 
-  <div class="content_2" id="content_2">
-    <div class="all">
-      <div class="info_text">
-        <h1>Om meg</h1>
-        <div class="line"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <img src="Bilder/ag.jpeg">
-    </div>
-    <button onClick="document.getElementById('content_3').scrollIntoView();" class="main_button">Støtt meg 	&#8595</button>
-  </div>
-
-
-  <div class="content_3" id="content_3">
-    <h1>Støtt meg</h1>
-  </div>
-
-  <div class="footer">
-    <div>
-      <button onclick="location.href='https://www.instagram.com/annegrethekirkerod/';">
-        <img src="Bilder/insta_icon.jpg" alt="instagram icon">
-        <p>Instagram</p>
-      </button>
-      <button>
-        <img src="Bilder/face_icon.jpg" alt="instagram icon">
-        <p>Facebook</p>
-      </button>
-      <button>
-        <img src="Bilder/mail_icon.jpg" alt="instagram icon">
-        <p>E-post</p>
-      </button>
-    </div>
-  </div>
   
 </body>
 </html>

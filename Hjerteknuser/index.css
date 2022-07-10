@@ -1,24 +1,15 @@
-@import "banner.css";
-@import "footer.css";
-@import "content.css";
-@import "dikt.css";
-
+@import "header.css";
+@import "blogg.css";
+@import "home.css";
+@import "about.css";
+@import "mobile.css";
 
 *{
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  max-width:100%;
   image-rendering: -webkit-optimize-contrast;
   -webkit-user-drag: none;
 }
 
-.body{
-  background-color: black;
-}
 
-#here{
-  color: #db0b62;
-  cursor: default;
-  text-decoration: none;
-}
