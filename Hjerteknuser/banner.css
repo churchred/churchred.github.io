@@ -46,6 +46,8 @@ nav ul li{
   list-style: none;
   display: inline-block;
   margin: auto;
+  color: white;
+  font-size: 20px;
 }
 
 nav ul li a{
@@ -66,7 +68,7 @@ nav ul ul li a:hover{
 }
 nav ul ul{
   position: absolute;
-  top: 60px;
+  top: 40px;
   width: 90px;
   display: none;
   left: -40px;
@@ -74,6 +76,9 @@ nav ul ul{
 }
 
 nav ul li:hover > ul{
+  display: block;
+}
+nav ul li:focus > ul{
   display: block;
 }
 
@@ -86,7 +91,7 @@ nav ul ul li{
 
 nav ul ul ul li{
   position: relative;
-  top: -60px;
+  top: -20px;
   margin-left: 190px;
   width: 120px;
   text-align: center;
