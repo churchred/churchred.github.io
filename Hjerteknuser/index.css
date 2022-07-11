@@ -1,8 +1,11 @@
-@import "header.css";
-@import "blogg.css";
-@import "home.css";
+@import "banner.css";
+@import "footer.css";
 @import "about.css";
+@import "slider.css";
+@import "blogg.css";
 @import "mobile.css";
+
+
 
 *{
   padding: 0;
@@ -10,6 +13,13 @@
   scroll-behavior: smooth;
   image-rendering: -webkit-optimize-contrast;
   -webkit-user-drag: none;
+}
+
+
+.main{
+  max-width: 100vw;
+  min-height: 90vh;
+  display: grid;
 }
 
 

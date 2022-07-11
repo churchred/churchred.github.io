@@ -9,69 +9,84 @@
   <title>Hjerteknuser</title>
 
   <!-- Css Link -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./index.css">
 
   <!--Snarvei icon-->
-  <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="./Bilder/favicon.ico">
 
 </head>
 <body>
 
-  <section class="banner">
-    <h1 class="overskrift">Hjerteknuser</h1>
-    <div class="meny">
-      <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="blogg.html">Blogg</a></li>
-        <li><a href="about.html">Om meg</a></li>      
-      </ul>
-    </div>
-    <div class="contact">
-      <button onclick="location.href='https://www.instagram.com/annegrethekirkerod/';"><img src="Bilder/insta_logo.png" alt="">Instagram</button>
-      <button><img src="Bilder/face_logo.png" alt="">Facebook</button>
-      <button><img src="Bilder/email_icon.png" alt="">E-post</button>
-    </div>
+  <section class="meny">
+    <nav>
+      <h1 class="overskrift_logo">Hjerteknuser</h1>
+      <div class="dropdown">
+        <ul class="first_ul">
+          <li><a href="">Hjem</a></li>  
+          <li><a href="">Arkiv</a>
+            <ul>
+              <li><a>2022</a>
+                <ul>
+                  <li><a href="index.html">Juli</a></li>  
+                </ul>
+              </li>  
+            </ul>
+            <li><a href="./about.html">Om meg</a></li>  
+          </li>  
+        </ul>
+      </div>
+      <div class="contact_top">
+        <button onclick="location.href='https://www.instagram.com/annegrethekirkerod/';"><img src="./Bilder/Ikoner/insta_logo.png" alt="">Instagram</button>
+
+        <button onclick="location.href='https://nb-no.facebook.com/people/Anne-Grethe-Kirker%C3%B8d/100012223355195/';"><img src="./Bilder/Ikoner/face_logo.png">Facebook</button>
+
+      </div>
+    </nav>
   </section>
 
 
   <section class="main">
-    <div class="teddy">
-      <img src="Bilder/bamse_red.png" class="bear_1">
-      <img src="Bilder/bamse_blue.png" class="bear_2">
-      <img src="Bilder/bamse_green.png" class="bear_3">
-      <img src="Bilder/bamse_purple.png" class="bear_4">
-    </div>
 
-
-    <div class="text_sum">
+    <div class="intro_text">
       <h1>Hjerteknuser</h1>
+      
       <div class="line_red"></div>
       <p>
-        Ønsker dere alle en nydelig dag med nydelig innhold. Håper mine dikt vil gi deg en personlig betydning, en refleksjon eller en inspirasjon i ditt liv og at mine dikt i seg selv vil utgjøre en stor forskjell
+        Ønsker deg en en nydelig dag med nydelig innhold. Håper mine dikt vil gi deg en personlig betydning, en refleksjon eller en inspirasjon i ditt liv og at mine dikt i seg selv vil utgjøre en stor forskjell
       </p>
       <div class="line_red"></div>
-
-      <div class="btn_div">
-        <button onclick="location.href='blogg.html';">Les bloggen min</button>
-      </div>
+      <img src="./Bilder/Ikoner/logo.png">
     </div>
 
-    <div class="uke_dikt">
-      <h1>~ ~ ~ Nye Dikt ~ ~ ~</h1>
-      <div>
-        <img src="Bilder/Dikt/1.jpg">
-        <img src="Bilder/Dikt/2.jpg">
-        <img src="Bilder/Dikt/3.jpg">
-        <img src="Bilder/Dikt/4.jpg">
-      </div>
-    </div>
 
+    <div class="blog_content">
+
+      <div class="post">
+        <h1>Et eventyr av en reise</h1>
+        <p class="dato">11. Juli 2022</p>
+        <div class="line"></div>
+        <img src="./Bilder/Innlegg bilder/huske dikt.jpg" class="medium">
+
+        <p class="text">
+          To uker i Kypros, Bogaz, i leiligheten til min superherlige venninne Line Raae, og det blir det dikt av.
+          Uforglemmelig.
+        </p>
+
+        
+      </div>
+
+    </div>
 
     
   </section>
 
 
-
+  <div class="footer">
+    <div class="contact_bottom">
+      <button onclick="location.href='https://www.instagram.com/annegrethekirkerod/';"><img src="./Bilder/Ikoner/insta_logo.png" alt="">Instagram</button>
+      <button><img src="./Bilder/Ikoner/face_logo.png" alt="">Facebook</button>
+    </div>
+  </div>
 
   
 </body>
