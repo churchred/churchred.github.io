@@ -1,4 +1,4 @@
-active = false
+active = true
 
 
 var counter = 1 //Hvilket bilde som byttes til

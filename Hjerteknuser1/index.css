@@ -1,9 +1,9 @@
 @import "banner.css";
 @import "footer.css";
 @import "about.css";
-@import "mobile.css";
 @import "slider.css";
 @import "blogg.css";
+@import "mobile.css";
 
 
 
@@ -23,34 +23,3 @@
 }
 
 
-.intro_text{
-  margin: auto;
-  width: 800px;
-  text-align: center;
-  font-size: 15px;
-  border-radius: 30px;
-}
-
-  .intro_text h1{
-    font-size: 100px;
-    color: rgb(175, 5, 5);
-    font-family: 'Gabriola';
-  }
-
-  .intro_text p{
-    font-size: 24px;
-    font-weight: 400;
-    color: rgb(175, 5, 5);
-    font-family:'Goudy Old Style';
-    padding-top: 12px;
-    padding-bottom: 12px;
-    width: 90%;
-    margin: auto;
-  }
-
-  .line_red{
-    width: 90%;
-    margin: auto;
-    height: 3px;
-    background-color: rgb(175, 5, 5);
-  }

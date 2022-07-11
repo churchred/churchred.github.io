@@ -11,6 +11,9 @@
   <!-- Css Link -->
   <link rel="stylesheet" href="index.css">
 
+  <!--Script Links-->
+  <script src="main.js"></script>
+
   <!--Snarvei icon-->
   <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
 
@@ -37,10 +40,47 @@
   <div class="container">
     <h1>Anne-grethe Kirkerød</h1>
     <h2>Dikter, blogger</h2>
-    <img src="Bilder/profile_2.png">
+
+
+
+    <div class="img_slider">
+      <div class="slides">
+        <!--Checkbox(radio) knapper-->
+        <input type="radio" name="radio-btn" id="radio1" checked="checked">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+
+        <!--Bildene i slideren-->
+        <div class="slide first"><img src="Bilder/Om meg/1.jpg"></div>
+        <div class="slide"><img src="Bilder/Om meg/2.jpg"></div>
+        <div class="slide"><img src="Bilder/Om meg/3.jpg"></div>
+        <div class="slide"><img src="Bilder/Om meg/4.jpg"></div>
+
+        <!--Navigasjon auto-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+
+      <!--Navigasjon manual-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+
     <p>
       Jeg er en hyggelig dame fra fredrikstad. En positiv holdning er mitt motto.
     </p>
+
+
   </div>
 
 </body>

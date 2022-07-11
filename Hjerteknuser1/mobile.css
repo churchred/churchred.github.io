@@ -2,26 +2,39 @@
   
 @media only screen and (max-width: 800px){  
   /*Banner*/
-  .overskrift{
+  .overskrift_logo{
     display: none;
   }
 
-  .meny ul{
-    width: 250px;
+  nav ul{
+    display: flex;
+    width: 100vw;
+  }
+  
+  nav ul li{
+    margin: auto;
+    padding: 0;
+  }
+
+  .contact_top{
+    display: none;
+  }
+  .contact_bottom{
+    display: flex;
   }
 
 
   /*Om meg*/
   .container h1{
-    font-size: 30px;
+    font-size: 35px;
   }
   
   .container h2{
-    font-size: 23px;
+    font-size: 25px;
   }
   
   .container p{
-    font-size: 20px;
+    font-size: 23px;
     width: 80%;
     text-align: center;
   }
@@ -31,14 +44,58 @@
   }
 
 
+  /*Slider*/
+  .img_slider{
+    width: 300px;
+    height: 300px;
+  }
+  .slides{
+    height: 300px;
+  }
+  .slide img{
+    width: 300px;
+    height: 300px;
+  }
+  .navigation-manual{
+    width: 300px;
+    margin-top: -50px;
+  }
+  .navigation-auto{
+    width: 300px;
+    margin-top: 250px;
+  }
+
+
   /*Blogg*/
   .blog_content{
-    width: 100px;
+    width: 95%;
     margin: auto;
   }
 
+  .post .text{
+    font-size: 20px;
+  }
+
+
+
+
   /*Overskrift*/
   .intro_text{
-    width: 100%
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .intro_text h1{
+    font-size: 70px;
+  }
+  .intro_text p{
+    font-size: 16px;
+    width: 80%;
+  }
+  .intro_text .line_red{
+    width: 80%;
+  }
+  .intro_text img{
+    width: 300px;
+    margin-top: 20px;
   }
 }

@@ -5,4 +5,33 @@
   height: 100px;
   background-color: rgb(64, 78, 97);
   margin-top: 60px;
+  display: flex;
 }
+
+
+.contact_bottom{
+  margin: auto;
+  width: 200px;
+  display: none;
+}
+
+  .contact_bottom button{
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    display: grid;
+  }
+
+
+    .contact_bottom button img{
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      margin: auto;
+    }
