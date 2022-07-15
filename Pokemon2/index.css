@@ -40,12 +40,15 @@
   }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1030px){
   .pokedex_box{
-    width: 400px;
+    width: 373px;
   }
   .pokedex{
     grid-template-columns: 33% 33% 33%;
+  }
+  .banner_btn_div{
+    width: 300px;
   }
 }
 
@@ -101,6 +104,7 @@
 
   .whole_game{
     margin-top: -40px;
+    margin-left: -40px;
   }
 
 

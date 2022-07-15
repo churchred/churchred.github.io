@@ -56,9 +56,8 @@
 .all_badge_div{
   display: grid;
   width: 100%;
-  height: 400px;
+  height: 80%;
   margin: auto;
-  row-gap: 100px;
 }
 
 .all_badge_div img{
@@ -91,5 +90,24 @@
 
   .dex_div{
     width: 550px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .nat_dex_nr{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .dex_div{
+    width: 90vw;
+  }
+  
+  
+  .wholepokedex{
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    overflow-y:scroll; height:75vh;
   }
 }

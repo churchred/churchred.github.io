@@ -29,7 +29,9 @@ let pokedex_array = [
   [133, 'Eevee',0 ,0], [134, 'Vaporeon',0 ,0], [135, 'Jolteon',0 ,0], [136, 'Flareon',0 ,0], [137, 'Porygon',0 ,0], [138, 'Omanyte',0 ,0],
   [139, 'Omastar',0 ,0], [140, 'Kabuto',0 ,0], [141, 'Kabutops',0 ,0], [142, 'Aerodactyl',0 ,0], [143, 'Snorlax',0 ,0], [144, 'Articuno',0 ,0],
   [145, 'Zapdos',0 ,0], [146, 'Moltres',0 ,0], [147, 'Dratini',0 ,0], [148, 'Dragonair',0 ,0], [149, 'Dragonite',0 ,0], [150, 'Mewtwo',0 ,0],
-  [151, 'Mew',0 ,0], [152,'Chikorita',0 ,0], [153,'Bayleef',0 ,0], [154,'Meganium',0 ,0], [155,'Cyndaquil',0 ,0], [156,'Quilava',0 ,0], [157,'Typhlosion',0 ,0], 
+  [151, 'Mew',0 ,0], 
+  
+  [152,'Chikorita',0 ,0], [153,'Bayleef',0 ,0], [154,'Meganium',0 ,0], [155,'Cyndaquil',0 ,0], [156,'Quilava',0 ,0], [157,'Typhlosion',0 ,0], 
   [158,'Totodile',0 ,0], [159,'Croconaw',0 ,0], [160,'Feraligatr',0 ,0], [161,'Sentret',0 ,0], [162,'Furret',0 ,0], [163,'Hoothoot',0 ,0], 
   [164,'Noctowl',0 ,0], [165,'Ledyba',0 ,0], [166,'Ledian',0 ,0], [167,'Spinarak',0 ,0], [168,'Ariados',0 ,0], [169,'Crobat',0 ,0], 
   [170,'Chinchou',0 ,0], [171,'Lanturn',0 ,0], [172,'Pichu',0 ,0], [173,'Cleffa',0 ,0], [174,'Igglybuff',0 ,0], [175,'Togepi',0 ,0], 
@@ -45,7 +47,9 @@ let pokedex_array = [
   [230,'Kingdra',0 ,0], [231,'Phanpy',0 ,0], [232,'Donphan',0 ,0], [233,'Porygon2',0 ,0], [234,'Stantler',0 ,0], [235,'Smeargle',0 ,0],
   [236,'Tyrogue',0 ,0], [237,'Hitmontop',0 ,0], [238,'Smoochum',0 ,0], [239,'Elekid',0 ,0], [240,'Magby',0 ,0], [241,'Miltank',0 ,0],
   [242,'Blissey',0 ,0], [243,'Raikou',0 ,0], [244,'Entei',0 ,0], [245,'Suicune',0 ,0], [246,'Larvitar',0 ,0], [247,'Pupitar',0 ,0],
-  [248,'Tyranitar',0 ,0], [249,'Lugia',0 ,0], [250,'Ho-oh',0 ,0], [251,'Celebi',0 ,0], [252,'Treecko',0 ,0], [253,'Grovyle',0 ,0], [254,'Sceptile',0 ,0], [255,'Torchic',0 ,0], [256,'Combusken',0 ,0], [257,'Blaziken',0 ,0], 
+  [248,'Tyranitar',0 ,0], [249,'Lugia',0 ,0], [250,'Ho-oh',0 ,0], [251,'Celebi',0 ,0], 
+  
+  [252,'Treecko',0 ,0], [253,'Grovyle',0 ,0], [254,'Sceptile',0 ,0], [255,'Torchic',0 ,0], [256,'Combusken',0 ,0], [257,'Blaziken',0 ,0], 
   [258,'Mudkip',0 ,0], [259,'Marshtomp',0 ,0], [260,'Swampert',0 ,0], [261,'Poochyena',0 ,0], [262,'Mightyena',0 ,0], [263,'Zigzagoon',0 ,0], 
   [264,'Linoone',0 ,0], [265,'Wurmple',0 ,0], [266,'Silcoon',0 ,0], [267,'Beautifly',0 ,0], [268,'Cascoon',0 ,0], [269,'Dustox',0 ,0], 
   [270,'Lotad',0 ,0], [271,'Lombre',0 ,0], [272,'Ludicolo',0 ,0], [273,'Seedot',0 ,0], [274,'Nuzleaf',0 ,0], [275,'Shiftry',0 ,0], 
@@ -67,42 +71,83 @@ let pokedex_array = [
   [366,'Clamperl',0 ,0], [367,'Huntail',0 ,0], [368,'Gorebyss',0 ,0], [369,'Relicanth',0 ,0], [370,'Luvdisc',0 ,0], [371,'Bagon',0 ,0], 
   [372,'Shelgon',0 ,0], [373,'Salamence',0 ,0], [374,'Beldum',0 ,0], [375,'Metang',0 ,0], [376,'Metagross',0 ,0], [377,'Regirock',0 ,0], 
   [378,'Regice',0 ,0], [379,'Registeel',0 ,0], [380,'Latias',0 ,0], [381,'Latios',0 ,0], [382,'Kyogre',0 ,0], [383,'Groudon',0 ,0],
-  [384,'Rayquaza',0 ,0], [385,'Jirachi',0 ,0], [386,'Deoxys',0 ,0], [387,'Turtwig',0 ,0], [388,'Grotle',0 ,0], [389,'Torterra',0 ,0], [390,'Chimchar',0 ,0], [391,'Monferno',0 ,0], [392,'Infernape',0 ,0],
-  [393,'Piplup',0 ,0], [394,'Prinplup',0 ,0], [395,'Empoleon',0 ,0], [396,'Starly',0 ,0], [397,'Staravia',0 ,0], [398,'Staraptor',0 ,0],
-  [399,'Bidoof',0 ,0], [400,'Bibarel',0 ,0], [401,'Kricketot',0 ,0], [402,'Kricketune',0 ,0], [403,'Shinx',0 ,0], [404,'Luxio',0 ,0],
-  [405,'Luxray',0 ,0], [406,'Budew',0 ,0], [407,'Roserade',0 ,0], [408,'Cranidos',0 ,0], [409,'Rampardos',0 ,0], [410,'Shieldon',0 ,0],
-  [411,'Bastiodon',0 ,0], [412,'Burmy',0 ,0], [413,'Wormadam',0 ,0], [414,'Mothim',0 ,0], [415,'Combee',0 ,0], [416,'Vespiquen',0 ,0],
-  [417,'Pachirisu',0 ,0], [418,'Buizel',0 ,0], [419,'Floatzel',0 ,0], [420,'Cherubi',0 ,0], [421,'Cherrim',0 ,0], [422,'Shellos',0 ,0],
-  [423,'Gastrodon',0 ,0], [424,'Ambipom',0 ,0], [425,'Drifloon',0 ,0], [426,'Drifblim',0 ,0], [427,'Buneary',0 ,0], [428,'Lopunny',0 ,0],
-  [429,'Mismagius',0 ,0], [430,'Honchkrow',0 ,0], [431,'Glameow',0 ,0], [432,'Purugly',0 ,0], [433,'Chingling',0 ,0], [434,'Stunky',0 ,0],
-  [435,'Skuntank',0 ,0], [436,'Bronzor',0 ,0], [437,'Bronzong',0 ,0], [438,'Bonsly',0 ,0], [439,'Mime Jr.',0 ,0], [440,'Happiny',0 ,0],
-  [441,'Chatot',0 ,0], [442,'Spiritomb',0 ,0], [443,'Gible',0 ,0], [444,'Gabite',0 ,0], [445,'Garchomp',0 ,0], [446,'Munchlax',0 ,0],
-  [447,'Riolu',0 ,0], [448,'Lucario',0 ,0], [449,'Hippopotas',0 ,0], [450,'Hippowdon',0 ,0], [451,'Skorupi',0 ,0], [452,'Drapion',0 ,0],
-  [453,'Croagunk',0 ,0], [454,'Toxicroak',0 ,0], [455,'Carnivine',0 ,0], [456,'Finneon',0 ,0], [457,'Lumineon',0 ,0], [458,'Mantyke',0 ,0],
-  [459,'Snover',0 ,0], [460,'Abomasnow',0 ,0], [461,'Weavile',0 ,0], [462,'Magnezone',0 ,0], [463,'Lickilicky',0 ,0], [464,'Rhyperior',0 ,0],
-  [465,'Tangrowth',0 ,0], [466,'Electivire',0 ,0], [467,'Magmortar',0 ,0], [468,'Togekiss',0 ,0], [469,'Yanmega',0 ,0], [470,'Leafeon',0 ,0],
-  [471,'Glaceon',0 ,0], [472,'Gliscor',0 ,0], [473,'Mamoswine',0 ,0], [474,'Porygon-Z',0 ,0], [475,'Gallade',0 ,0], [476,'Probopass',0 ,0],
-  [477,'Dusknoir',0 ,0], [478,'Froslass',0 ,0], [479,'Rotom',0 ,0], [480,'Uxie',0 ,0], [481,'Mesprit',0 ,0], [482,'Azelf',0 ,0],
-  [483,'Dialga',0 ,0], [484,'Palkia',0 ,0], [485,'Heatran',0 ,0], [486,'Regigigas',0 ,0], [487,'Giratina',0 ,0], [488,'Cresselia',0 ,0],
-  [489,'Phione',0 ,0], [490,'Manaphy',0 ,0], [491,'Darkrai',0 ,0], [492,'Shaymin',0 ,0], [493,'Arceus',0 ,0]
+  [384,'Rayquaza',0 ,0], [385,'Jirachi',0 ,0], [386,'Deoxys',0 ,0], 
+  
+  [387,'Turtwig',0 ,0], [388,'Grotle',0 ,0], [389,'Torterra',0 ,0], 
+  [390,'Chimchar',0 ,0], [391,'Monferno',0 ,0], [392,'Infernape',0 ,0], [393,'Piplup',0 ,0], [394,'Prinplup',0 ,0], [395,'Empoleon',0 ,0], 
+  [396,'Starly',0 ,0], [397,'Staravia',0 ,0], [398,'Staraptor',0 ,0], [399,'Bidoof',0 ,0], [400,'Bibarel',0 ,0], [401,'Kricketot',0 ,0], 
+  [402,'Kricketune',0 ,0], [403,'Shinx',0 ,0], [404,'Luxio',0 ,0], [405,'Luxray',0 ,0], [406,'Budew',0 ,0], [407,'Roserade',0 ,0], 
+  [408,'Cranidos',0 ,0], [409,'Rampardos',0 ,0], [410,'Shieldon',0 ,0], [411,'Bastiodon',0 ,0], [412,'Burmy',0 ,0], [413,'Wormadam',0 ,0], 
+  [414,'Mothim',0 ,0], [415,'Combee',0 ,0], [416,'Vespiquen',0 ,0], [417,'Pachirisu',0 ,0], [418,'Buizel',0 ,0], [419,'Floatzel',0 ,0], 
+  [420,'Cherubi',0 ,0], [421,'Cherrim',0 ,0], [422,'Shellos',0 ,0], [423,'Gastrodon',0 ,0], [424,'Ambipom',0 ,0], [425,'Drifloon',0 ,0], 
+  [426,'Drifblim',0 ,0], [427,'Buneary',0 ,0], [428,'Lopunny',0 ,0], [429,'Mismagius',0 ,0], [430,'Honchkrow',0 ,0], [431,'Glameow',0 ,0], 
+  [432,'Purugly',0 ,0], [433,'Chingling',0 ,0], [434,'Stunky',0 ,0], [435,'Skuntank',0 ,0], [436,'Bronzor',0 ,0], [437,'Bronzong',0 ,0], 
+  [438,'Bonsly',0 ,0], [439,'Mime Jr.',0 ,0], [440,'Happiny',0 ,0], [441,'Chatot',0 ,0], [442,'Spiritomb',0 ,0], [443,'Gible',0 ,0], 
+  [444,'Gabite',0 ,0], [445,'Garchomp',0 ,0], [446,'Munchlax',0 ,0], [447,'Riolu',0 ,0], [448,'Lucario',0 ,0], [449,'Hippopotas',0 ,0], 
+  [450,'Hippowdon',0 ,0], [451,'Skorupi',0 ,0], [452,'Drapion',0 ,0], [453,'Croagunk',0 ,0], [454,'Toxicroak',0 ,0], [455,'Carnivine',0 ,0], 
+  [456,'Finneon',0 ,0], [457,'Lumineon',0 ,0], [458,'Mantyke',0 ,0], [459,'Snover',0 ,0], [460,'Abomasnow',0 ,0], [461,'Weavile',0 ,0], 
+  [462,'Magnezone',0 ,0], [463,'Lickilicky',0 ,0], [464,'Rhyperior',0 ,0], [465,'Tangrowth',0 ,0], [466,'Electivire',0 ,0], [467,'Magmortar',0 ,0], 
+  [468,'Togekiss',0 ,0], [469,'Yanmega',0 ,0], [470,'Leafeon',0 ,0], [471,'Glaceon',0 ,0], [472,'Gliscor',0 ,0], [473,'Mamoswine',0 ,0], 
+  [474,'Porygon-Z',0 ,0], [475,'Gallade',0 ,0], [476,'Probopass',0 ,0], [477,'Dusknoir',0 ,0], [478,'Froslass',0 ,0], [479,'Rotom',0 ,0], 
+  [480,'Uxie',0 ,0], [481,'Mesprit',0 ,0], [482,'Azelf',0 ,0], [483,'Dialga',0 ,0], [484,'Palkia',0 ,0], [485,'Heatran',0 ,0], 
+  [486,'Regigigas',0 ,0], [487,'Giratina',0 ,0], [488,'Cresselia',0 ,0], [489,'Phione',0 ,0], [490,'Manaphy',0 ,0], [491,'Darkrai',0 ,0], 
+  [492,'Shaymin',0 ,0], [493,'Arceus',0 ,0], 
+  
+  
+  [494,'Victini',0 ,0], [495,'Snivy',0 ,0], [496,'Servine',0 ,0], [497,'Serperior',0 ,0], [498,'Tepig',0 ,0],
+  [499,'Pignite',0 ,0], [500,'Emboar',0 ,0], [501,'Oshawott',0 ,0], [502,'Dewott',0 ,0], [503,'Samurott',0 ,0],
+  [504,'Patrat',0 ,0], [505,'Watchog',0 ,0], [506,'Lillipup',0 ,0], [507,'Herdier',0 ,0], [508,'Stoutland',0 ,0],
+  [509,'Purrloin',0 ,0], [510,'Liepard',0 ,0], [511,'Pansage',0 ,0], [512,'Simisage',0 ,0], [513,'Pansear',0 ,0],
+  [514,'Simisear',0 ,0], [515,'Panpour',0 ,0], [516,'Simipour',0 ,0], [517,'Munna',0 ,0], [518,'Musharna',0 ,0],
+  [519,'Pidove',0 ,0], [520,'Tranquill',0 ,0], [521,'Unfezant',0 ,0], [522,'Blitzle',0 ,0], [523,'Zebstrika',0 ,0],
+  [524,'Roggenrola',0 ,0], [525,'Boldore',0 ,0], [526,'Gigalith',0 ,0], [527,'Woobat',0 ,0], [528,'Swoobat',0 ,0],
+  [529,'Drilbur',0 ,0], [530,'Excadrill',0 ,0], [531,'Audino',0 ,0], [532,'Timburr',0 ,0], [533,'Gurdurr',0 ,0],
+  [534,'Conkeldurr',0 ,0], [535,'Tympole',0 ,0], [536,'Palpitoad',0 ,0], [537,'Seismitoad',0 ,0], [538,'Throh',0 ,0],
+  [539,'Sawk',0 ,0], [540,'Sewaddle',0 ,0], [541,'Swadloon',0 ,0], [542,'Leavanny',0 ,0], [543,'Venipede',0 ,0],
+  [544,'Whirlipede',0 ,0], [545,'Scolipede',0 ,0], [546,'Cottonee',0 ,0], [547,'Whimsicott',0 ,0], [548,'Petilil',0 ,0],
+  [549,'Lilligant',0 ,0], [550,'Basculin',0 ,0], [551,'Sandile',0 ,0], [552,'Krokorok',0 ,0], [553,'Krookodile',0 ,0],
+  [554,'Darumaka',0 ,0], [555,'Darmanitan',0 ,0], [556,'Maractus',0 ,0], [557,'Dwebble',0 ,0], [558,'Crustle',0 ,0],
+  [559,'Scraggy',0 ,0], [560,'Scrafty',0 ,0], [561,'Sigilyph',0 ,0], [562,'Yamask',0 ,0], [563,'Cofagrigus',0 ,0],
+  [564,'Tirtouga',0 ,0], [565,'Carracosta',0 ,0], [566,'Archen',0 ,0], [567,'Archeops',0 ,0], [568,'Trubbish',0 ,0],
+  [569,'Garbodor',0 ,0], [570,'Zorua',0 ,0], [571,'Zoroark',0 ,0], [572,'Minccino',0 ,0], [573,'Cinccino',0 ,0],
+  [574,'Gothita',0 ,0], [575,'Gothorita',0 ,0], [576,'Gothitelle',0 ,0], [577,'Solosis',0 ,0], [578,'Duosion',0 ,0],
+  [579,'Reuniclus',0 ,0], [580,'Ducklett',0 ,0], [581,'Swanna',0 ,0], [582,'Vanillite',0 ,0], [583,'Vanillish',0 ,0],
+  [584,'Vanilluxe',0 ,0], [585,'Deerling',0 ,0], [586,'Sawsbuck',0 ,0], [587,'Emolga',0 ,0], [588,'Karrablast',0 ,0],
+  [589,'Escavalier',0 ,0], [590,'Foongus',0 ,0], [591,'Amoonguss',0 ,0], [592,'Frillish',0 ,0], [593,'Jellicent',0 ,0],
+  [594,'Alomomola',0 ,0], [595,'Joltik',0 ,0], [596,'Galvantula',0 ,0], [597,'Ferroseed',0 ,0], [598,'Ferrothorn',0 ,0],
+  [599,'Klink',0 ,0], [600,'Klang',0 ,0], [601,'Klinklang',0 ,0], [602,'Tynamo',0 ,0], [603,'Eelektrik',0 ,0],
+  [604,'Eelektross',0 ,0], [605,'Elgyem',0 ,0], [606,'Beheeyem',0 ,0], [607,'Litwick',0 ,0], [608,'Lampent',0 ,0],
+  [609,'Chandelure',0 ,0], [610,'Axew',0 ,0], [611,'Fraxure',0 ,0], [612,'Haxorus',0 ,0], [613,'Cubchoo',0 ,0],
+  [614,'Beartic',0 ,0], [615,'Cryogonal',0 ,0], [616,'Shelmet',0 ,0], [617,'Accelgor',0 ,0], [618,'Stunfisk',0 ,0],
+  [619,'Mienfoo',0 ,0], [620,'Mienshao',0 ,0], [621,'Druddigon',0 ,0], [622,'Golett',0 ,0], [623,'Golurk',0 ,0],
+  [624,'Pawniard',0 ,0], [625,'Bisharp',0 ,0], [626,'Bouffalant',0 ,0], [627,'Rufflet',0 ,0], [628,'Braviary',0 ,0],
+  [629,'Vullaby',0 ,0], [630,'Mandibuzz',0 ,0], [631,'Heatmor',0 ,0], [632,'Durant',0 ,0], [633,'Deino',0 ,0],
+  [634,'Zweilous',0 ,0], [635,'Hydreigon',0 ,0], [636,'Larvesta',0 ,0], [637,'Volcarona',0 ,0], [638,'Cobalion',0 ,0],
+  [639,'Terrakion',0 ,0], [640,'Virizion',0 ,0], [641,'Tornadus',0 ,0], [642,'Thundurus',0 ,0], [643,'Reshiram',0 ,0],
+  [644,'Zekrom',0 ,0], [645,'Landorus',0 ,0], [646,'Kyurem',0 ,0], [647,'Keldeo',0 ,0], [648,'Meloetta',0 ,0],
+  [649,'Genesect',0 ,0]
+
+
+  
 ]
 
 //SoneNr, Navn, Antall pkmn, Startindex, Sluttindex
 let regions = [
   ['1', 'Kanto', '151', '0', '151', 'unlocked'],
-  ['2', 'Johto', '100', '151', '251', 'unlocked'],
-  ['3', 'Hoenn', '135', '251', '386', 'unlocked'],
-  ['4', 'Sinnoh', '107', '386', '493', 'unlocked']
+  ['2', 'Johto', '100', '151', '251', 'locked'],
+  ['3', 'Hoenn', '135', '251', '386', 'locked'],
+  ['4', 'Sinnoh', '107', '386', '493', 'locked'],
+  ['5', 'Unova', '156', '493', '649', 'locked']
 ]
 
 //Badge bilder
 var badge_info = [
   ["Kanto", 0, 10, 25, 50, 75, 100, 120, 140, 151,'#fb6868'],
-  ["Johto", 0, 10, 20, 40, 50, 60, 80, 90, 100, '#3981df'],
+  ["Johto", 0, 10, 20, 40, 50, 60, 80, 90, 100, '#77B65C'],
   ["Hoenn", 0, 10, 25, 50, 75, 100, 110, 125, 135,'#dd6b3f'],
-  ["Sinnoh", 0, 10, 20, 40, 50, 75, 85, 100, 107,'#9f56ff']
+  ["Sinnoh", 0, 10, 20, 40, 50, 75, 85, 100, 107,'#9f56ff'],
+  ["Unova", 0, 10, 25, 50, 75, 100, 120, 140, 156,'#394da7']
 ]
-
 
 //Hvor er vi? Kanto, Johto eller Hoenn? 0,1,2?
 var current_region = 0
@@ -139,11 +184,15 @@ var sprites_dir = [['Bilder/Knapper/sprites_use_2d.png', 'Bilder/Sprites/Sprites
 ]
 
 //Skrur lyd av og på
-var sound_volume = 1
+var sound_volume = 0
 var sound_dir = [["OFF", "Bilder/Knapper/music2.png"], ["ON", "Bilder/Knapper/music.png"]]
 
 //Kan man jukse med koder?
 var cheating = false
+
+//Slik at du ikke scroller ned til bunn av pokedex når du loader inn alle pokemonene
+var loading = true 
+
 
 //-----------------------------------------------------------------------------------------------
 function first_time_load(){
@@ -176,6 +225,7 @@ function first_time_load(){
   localStorage.setItem('Johto_badges', 0)
   localStorage.setItem('Hoenn_badges', 0)
   localStorage.setItem('Sinnoh_badges', 0)
+  localStorage.setItem('Unova_badges', 0)
 }
 
 function load_game(){
@@ -192,6 +242,7 @@ function load_game(){
   sprite_dir_nr = localStorage.getItem('sprites')
   document.getElementById('sprites_change').src = sprites_dir[sprite_dir_nr][0]
 
+  
 
   //Load Pokemon
   var temp = localStorage.getItem("pokedex")
@@ -266,23 +317,28 @@ function load_game(){
   var bad2 = localStorage.getItem('Johto_badges')
   var bad3 = localStorage.getItem('Hoenn_badges')
   var bad4 = localStorage.getItem('Sinnoh_badges')
+  var bad5 = localStorage.getItem('Unova_badges')
 
+  loading = false //Loading ferdig
 
   console.log("--------------------------")
   console.log("Difficulty:", difficulty)
   console.log("Current Region:", regions[current_region][1])
   console.log("Pokedex:", antall_pokemon, "/", regions[current_region][2])
+  console.log("All Pokemon:", pokedex_array.length)
   console.log("Favorite Pokemon:", fav_name)
   console.log("Unlocked Regions:")
   console.log("      -", regions[0][1], regions[0][5])
   console.log("      -", regions[1][1], regions[1][5])
   console.log("      -", regions[2][1], regions[2][5])
   console.log("      -", regions[3][1], regions[3][5])
+  console.log("      -", regions[4][1], regions[4][5])
   console.log("Number of Badges:")
-  console.log("      -", bad1)
-  console.log("      -", bad2)
-  console.log("      -", bad3)
-  console.log("      -", bad4)
+  console.log("      - Kanto:", bad1)
+  console.log("      - Johto:", bad2)
+  console.log("      - Hoenn:", bad3)
+  console.log("      - Shinnoh:", bad4)
+  console.log("      - Unova:", bad5)
   console.log("Sprite-type:", sprites_dir[sprite_dir_nr][2])
   console.log("Volume:",  sound_dir[sound_volume][0])
   console.log("--------------------------")
@@ -293,7 +349,8 @@ function change_difficulty(diff){
   localStorage.setItem('difficulty', diff)
   difficulty = diff
   var sym = ""
-  if(diff == "pluss_level_1" || diff == "pluss_level_2" || diff == "pluss_level_3" || diff == "pluss_level_4" || diff == "pluss_level_5"){sym = "+"}
+  if(diff == "pluss_level_1" || diff == "pluss_level_2" || diff == "pluss_level_3" || diff == "pluss_level_4" || 
+  diff == "pluss_level_5" || diff == 'tiervenn_level_1'){sym = "+"}
   if(diff == "minus_level_1" || diff == "minus_level_2" || diff == "minus_level_3" || diff == "minus_level_4" || diff == "minus_level_5"){sym = "-"}
   if(diff == "multi_level_1" || diff == "multi_level_2"){sym = "*"}
   if(diff == "divisjon_level_1" || diff == "divisjon_level_2"){sym = ":"}
@@ -560,8 +617,9 @@ function get_pokemon(ct){
   add_badges()
 
   //Sjekker om vi er ferdig med regionen
-  if(antall_pokemon == regions[current_region][2]){
-    if(current_region != 3  && regions[parseInt(current_region)+1][5] == 'locked'){
+  //if(){}
+  if(antall_pokemon == badge_info[current_region][5]){
+    if(current_region != 4  && regions[parseInt(current_region)+1][5] == 'locked'){
     //console.log(parseInt(current_region)+1)
     regions[parseInt(current_region)+1][5] = 'unlocked'
     localStorage.setItem('region_lock', regions)
@@ -633,9 +691,8 @@ function add_pokemon(nr, shiny){
   theDiv.appendChild(content);
 
   //Scroll to bottom 
-  document.getElementById(iDiv.id).scrollIntoView(false);
-
-
+  if(loading == false){document.getElementById(iDiv.id).scrollIntoView(false);}
+  
   img.setAttribute("class", 'pkmn_img');
   img.setAttribute("id",  (pokedex_array[nr][0]-1));
 }
@@ -701,10 +758,12 @@ function change_region_btn(){
       document.getElementById(temp_id).style.cursor = "pointer"
       document.getElementById(temp_id2).style.opacity = "100%"
       document.getElementById(temp_id).disabled = false
+      document.getElementById(temp_id2).src = ("Bilder/Knapper/" + regions[i][1].toLowerCase() + "_starters.png")
     }
     if(regions[i][5] == 'locked'){
       document.getElementById(temp_id).disabled = true;
       document.getElementById(temp_id).style.cursor = "default"
+      document.getElementById(temp_id2).src = ("Bilder/Knapper/" + regions[i][1].toLowerCase() + "_starters_locked.png")
       //console.log("LOCKED", temp_id)
     }
 

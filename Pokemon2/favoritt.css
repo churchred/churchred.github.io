@@ -20,7 +20,7 @@
 
 .fav_img{
   height: 185px;
-  width: 185px;
+  max-width: 185px;
   image-rendering: smooth;
   margin: auto;
   margin-top: 60px;

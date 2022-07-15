@@ -113,6 +113,14 @@
   pointer-events: none;
 }
 
+.footer .info_about{
+  display: none;
+}
+
 .footer p{
    color: white;
+}
+
+.footer .info_about2{
+  width: 400px;
 }

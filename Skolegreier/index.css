@@ -220,7 +220,7 @@
 }  
 
 /*TELEFON*/
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 600px){
 
   .banner img{
     display: none;
