@@ -1,7 +1,8 @@
 /*Mine spill*/
 .post_spill{
   width: 500px;
-  height: 350px;
+  min-height: 350px;
+  max-height: auto;
   margin: auto;
   margin-bottom: 20px;
   border: 1px solid black;

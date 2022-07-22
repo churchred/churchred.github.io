@@ -152,6 +152,14 @@
 }
 
 
+#big_title{
+  font-size: 15px;
+}
+
+.big_title{
+  font-size: 15px;
+}
+
 /*LITEN PC SKJERM (STANDARD LAPTOP*/
 @media only screen and (max-width: 1500px){
 
@@ -215,6 +223,10 @@
 
   .grid_33{
     grid-template-columns: 50% 50%;
+  }
+
+  #big_title{
+    font-size: 14px;
   }
 
 }  
@@ -402,7 +414,6 @@
   .post_spill p{
     font-size: 15px;
   }
-
 
 
 }  

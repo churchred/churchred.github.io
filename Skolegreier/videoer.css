@@ -46,3 +46,7 @@
   height: 130px;
   border-bottom: 1px solid black;
 }
+
+.big_title{
+  font-size: 11px;
+}
