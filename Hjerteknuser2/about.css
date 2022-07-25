@@ -1,0 +1,39 @@
+
+
+.bkground{
+  height: 100vh;
+  background-image: url("Bilder/Om meg/lys_bk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+  width: 100vw;
+  height: 90%;
+  display: grid;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container h1{
+  color: #ffffff;
+  font-size: 4rem;
+  margin: auto;
+  font-weight: 300;
+  font-family: Lucida Bright;
+}
+
+.container h2{
+  color: rgb(255, 255, 255);
+  margin: auto;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-top: -1s0px;
+}
+
+.container p{
+  color: rgb(255, 255, 255);
+  margin: auto;
+  font-size: 2rem;
+  margin-top: 20px;
+  text-align: center;
+}

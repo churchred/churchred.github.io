@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tittel på side -->
+  <title>Hjerteknuser</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>
+
+  <!--Snarvei icon-->
+  <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
+
+</head>
+<body class="bkground">
+
+  <section class="meny">
+    <nav>
+      <h1 class="overskrift_logo" onclick="location.href='index.html';">Hjerteknuser</h1>
+      <div class="dropdown" id="dropdown">
+        <ul class="first_ul" id="first_ul">
+          <li><a href="index.html">Hjem</a></li>  
+          <li><a href="blog.html">Blogg</a></li>  
+          <li><a href="dikt.html">Dikt</a></li> 
+          <li><a href="./about.html">Om meg</a></li>   
+        </ul>
+      </div>
+      <div class="contact_top">
+        <button onclick="location.href='https://www.instagram.com/annegrethekirkerod/';"><img src="./Bilder/Ikoner/insta_logo.png" alt="">Instagram</button>
+
+        <button onclick="location.href='https://nb-no.facebook.com/people/Anne-Grethe-Kirker%C3%B8d/100012223355195/';"><img src="./Bilder/Ikoner/face_logo.png">Facebook</button>
+
+      </div>
+      <button class="menu_btn" id="menu_btn"  onclick="click_btn()" ><img src="Bilder/Ikoner/menu.png"></button>
+
+    </nav>
+  </section>
+
+
+
+  <div class="container">
+    <h1>Anne-Grethe Kirkerød</h1>
+    <h2>Finn lysglimt i livet.</h2>
+
+
+    <div class="img_slider">
+      <div class="slides">
+        <!--Checkbox(radio) knapper-->
+        <input type="radio" name="radio-btn" id="radio1" checked="checked">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+
+        <!--Bildene i slideren-->
+        <div class="slide first"><img src="Bilder/Om meg/1.jpg"></div>
+        <div class="slide"><img src="Bilder/Om meg/2.jpg"></div>
+        <div class="slide"><img src="Bilder/Om meg/3.jpg"></div>
+        <div class="slide"><img src="Bilder/Om meg/4.jpg"></div>
+
+        <!--Navigasjon auto-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+
+      <!--Navigasjon manual-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+
+    <p>
+      Ei positiv dame som elsker livet. Livet byr på både godt å vondt, og det handler om å se 
+      de små og store lysglimt i livet. </br> The Power Of Love! </br>The Power Of Light!
+    </p>
+
+
+  </div>
+
+</body>
+</html>
