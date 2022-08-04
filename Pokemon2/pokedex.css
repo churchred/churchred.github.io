@@ -46,28 +46,28 @@
 }
 
 .pkmn_div{
-  height: calc(0.9*144px);
-  width:  calc(0.9*128px);
+  height: 130px;
+  width:  112px;
   background-color: white;
   border: 1px solid black;
   margin: auto;
-  display: grid;
+  display: block;
   text-align:center;
 }
 
 .pkmn_div_shiny{
-  height: calc(0.9*144px);
-  width:  calc(0.9*128px);
+  height: 130px;
+  width:  112px;
   background-color: rgb(240, 234, 202);
   border: 1px solid rgb(243, 155, 73);
   margin:auto;
-  display: grid;
+  display: block;
   text-align:center;
 }
 
 .pkmn_img{ /*original scale: 96x96*/
-  height: calc(128*0.8px);
-  width: calc(128*0.8px);
+  height: 102px;
+  width: 102px;
   image-rendering: smooth;
   margin: auto;
 }
