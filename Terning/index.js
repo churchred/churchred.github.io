@@ -17,6 +17,9 @@ var dice_color_nr = 5 //Red
 var sound = new Audio('Bilder/dice.mp3');
 sound.volume = 0.5;
 
+//Pre-loader alle røde terninger
+load_all_img()
+
 function load(){
   add_dice()
 }
@@ -137,4 +140,140 @@ function close_all_menu(){
     old2.style.maxHeight = null;
     old2.style.border = null
   }
+}
+
+
+function load_all_img(){
+  console.log("Load all RED dice")
+  //Load 4-sided dice red
+  var four_red = new Image()
+  four_red.src = 'Bilder/dice/4_sides/Red/1.png'
+  var four_red = new Image()
+  four_red.src = 'Bilder/dice/4_sides/Red/2.png'
+  var four_red = new Image()
+  four_red.src = 'Bilder/dice/4_sides/Red/3.png'
+  var four_red = new Image()
+  four_red.src = 'Bilder/dice/4_sides/Red/4.png'
+
+  //Load 6-sided dice red
+  var six_red = new Image()
+  six_red.src = 'Bilder/dice/6_sides/Red/1.png'
+  var six_red = new Image()
+  six_red.src = 'Bilder/dice/6_sides/Red/2.png'
+  var six_red = new Image()
+  six_red.src = 'Bilder/dice/6_sides/Red/3.png'
+  var six_red = new Image()
+  six_red.src = 'Bilder/dice/6_sides/Red/4.png'
+  var six_red = new Image()
+  six_red.src = 'Bilder/dice/6_sides/Red/5.png'
+  var six_red = new Image()
+  six_red.src = 'Bilder/dice/6_sides/Red/6.png'
+
+  //Load 8-sided dice red
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/1.png'
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/2.png'
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/3.png'
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/4.png'
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/5.png'
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/6.png'
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/7.png'
+  var atte_red = new Image()
+  atte_red.src = 'Bilder/dice/8_sides/Red/8.png'
+
+  //Load 10-sided dice red
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/1.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/2.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/3.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/4.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/5.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/6.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/7.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/8.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/9.png'
+  var ten_red = new Image()
+  ten_red.src = 'Bilder/dice/10_sides/Red/10.png'
+
+  //Load 12-sided dice red
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/1.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/2.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/3.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/4.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/5.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/6.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/7.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/8.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/9.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/10.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/11.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/12_sides/Red/12.png'
+
+  //Load 20-sided dice red
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/1.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/2.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/3.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/4.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/5.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/6.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/7.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/8.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/9.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/10.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/11.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/12.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/13.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/14.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/15.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/16.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/17.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/18.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/19.png'
+  var twelve_red = new Image()
+  twelve_red.src = 'Bilder/dice/20_sides/Red/20.png'
 }
