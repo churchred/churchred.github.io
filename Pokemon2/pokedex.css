@@ -50,9 +50,7 @@
   width:  calc(0.9*128px);
   background-color: white;
   border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1px;
+  margin: auto;
   display: grid;
   text-align:center;
 }
@@ -62,9 +60,7 @@
   width:  calc(0.9*128px);
   background-color: rgb(240, 234, 202);
   border: 1px solid rgb(243, 155, 73);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1px;
+  margin:auto;
   display: grid;
   text-align:center;
 }
