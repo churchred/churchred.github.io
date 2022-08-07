@@ -1,27 +1,67 @@
-  
+@media only screen and (max-width: 1000px){
+    /*Dikt*/
+    .dikt_content{
+      width: 100%;
+      justify-content:space-around;
+    } 
+}  
   
 @media only screen and (max-width: 800px){  
   /*Banner*/
-  .overskrift_logo{
-    display: none;
+
+
+  .menu_btn{
+    display: flex;
   }
 
-  nav ul{
-    display: flex;
-    width: 100vw;
+  .overskrift_logo{
+    margin-left: 10px;
   }
-  
-  nav ul li{
-    margin: auto;
-    padding: 0;
-  }
+
 
   .contact_top{
     display: none;
   }
-  .contact_bottom{
-    display: flex;
+
+  .dropdown{
+    display: none;
   }
+
+  .dropdown.active{
+    display: flex;
+    width: 100vw;
+  }
+
+
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .first_ul li{
+    width: 100vw;
+  }
+
+  nav ul{
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+  }
+
+  nav ul li a{
+    line-height: 40px;
+    height: 40px;
+  }
+
+
+
+
+
+
+
+
+
+
 
 
   /*Om meg*/
@@ -78,6 +118,10 @@
     margin: auto;
   }
 
+  .blogg_topp{
+    margin-bottom: 50px;
+  }
+
   .post .text{
     font-size: 20px;
   }
@@ -85,27 +129,78 @@
   .post h1{
     font-size: 30px;
   }
+}
 
+@media only screen and (max-width: 650px){  
+  .big_dikt img{
+    width: 95vw;
+    height: auto;
+  }
 
-
-
-  /*Overskrift*/
-  .intro_text{
+  /*Forside*/
+  .content{
+    width: 90vw;
+    margin: auto;
+  }
+  .div_row1{
+    margin: auto;
     width: 100%;
-    margin-bottom: 30px;
   }
-  .intro_text h1{
-    font-size: 55px;
+  .div_row1 a img{
+    height: auto;
   }
-  .intro_text p{
-    font-size: 16px;
-    width: 80%;
+  .div_row1 a p{
+    background: rgba(59, 59, 59, 0.7);
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -53px;
+    font-size: 1.1rem;
+    user-select: none;
+    transition: 0.2s;
   }
-  .intro_text .line_red{
-    width: 80%;
+  .div_row1 a:hover p{
+    height: 80px;
+    line-height: 80px;
+    margin-top: -83px;
+    font-size: 1.4rem;
+    transition: 0.2s;
   }
-  .intro_text img{
-    width: 300px;
-    margin-top: 20px;
+  .div_row2{
+    display: grid;
+    margin: auto;
+    justify-content:space-around;
+    width: 100%;
+  }
+  .div_row2 a{
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+  }
+
+  .div_row3{
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+  .div_row3 h3{
+    display: none;
+  }
+  .div_row3 button{
+    margin: auto;
+    height: 40px;
   }
 }
+
+@media only screen and (max-width: 450px){
+    .div_overskrift h1{
+      font-size: 3rem;
+      font-weight: normal;
+    }
+    .div_overskrift p{
+      font-size: 0.8rem;
+      color: rgb(172, 172, 172);
+      text-transform: uppercase;
+    }
+}  

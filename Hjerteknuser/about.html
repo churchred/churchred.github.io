@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="index.css">
 
   <!--Script Links-->
-  <script src="main.js"></script>
+  <script src="index.js"></script>
 
   <!--Snarvei icon-->
   <link rel="shortcut icon" type="image/x-icon" href="Bilder/favicon.ico">
@@ -22,20 +22,13 @@
 
   <section class="meny">
     <nav>
-      <h1 class="overskrift_logo">Hjerteknuser</h1>
-      <div class="dropdown">
-        <ul class="first_ul">
+      <h1 class="overskrift_logo" onclick="location.href='index.html';">Hjerteknuser</h1>
+      <div class="dropdown" id="dropdown">
+        <ul class="first_ul" id="first_ul">
           <li><a href="index.html">Hjem</a></li>  
-          <li><a href="">Arkiv</a>
-            <ul>
-              <li><a>2022</a>
-                <ul>
-                  <li><a href="index.html">Juli</a></li>  
-                </ul>
-              </li>  
-            </ul>
-            <li><a href="./about.html">Om meg</a></li>  
-          </li>  
+          <li><a href="blog.html">Blogg</a></li>  
+          <li><a href="dikt.html">Dikt</a></li> 
+          <li><a href="./about.html">Om meg</a></li>   
         </ul>
       </div>
       <div class="contact_top">
@@ -44,8 +37,11 @@
         <button onclick="location.href='https://nb-no.facebook.com/people/Anne-Grethe-Kirker%C3%B8d/100012223355195/';"><img src="./Bilder/Ikoner/face_logo.png">Facebook</button>
 
       </div>
+      <button class="menu_btn" id="menu_btn"  onclick="click_btn()" ><img src="Bilder/Ikoner/menu.png"></button>
+
     </nav>
   </section>
+
 
 
   <div class="container">
