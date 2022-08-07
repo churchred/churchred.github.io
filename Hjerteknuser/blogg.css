@@ -2,6 +2,7 @@
 
 .blogg_topp{
   margin: auto;
+  display: none;
 }
 .blogg_topp h1{
   margin: auto;
