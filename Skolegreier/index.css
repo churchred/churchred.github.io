@@ -38,7 +38,7 @@
   height: 350px;
   background-image: url("Bilder/header2.jpg");
   background-position: bottom;
-  filter: drop-shadow(.75em .35em .7em);
+  filter: drop-shadow(.25em .45em .4em);
   margin: auto;
   margin-top: 30px;
 }
@@ -63,8 +63,7 @@
   cursor: pointer;
   margin: 25px;
   margin-bottom: 0;
-  filter: drop-shadow(.35em .35em .7em);
-
+  filter: drop-shadow(.25em .45em .4em);
 }
 
 .button_div button img{
@@ -148,6 +147,7 @@
 #btn8{
   background-color: rgb(48, 84, 245);
 }
+
 #btn8:hover{
   background-color: rgb(48, 104, 265);
 }
