@@ -309,9 +309,9 @@ function open_gift(){
     document.getElementById("oppg_img_div").removeChild(temp);
 
     //Resetter språk bytte knapp
-    document.getElementById("chg_btn").disabled = false;
+    /*document.getElementById("chg_btn").disabled = false;
     document.getElementById("chg_btn").style.backgroundColor = 'rgb(93, 174, 240)';
-    can_change = true
+    can_change = true*/
 
     var random_number = Math.floor(Math.random()*prize_database.length);
     
@@ -360,6 +360,7 @@ function bytt_tema(id){
   start_up()
 }
 
+/* 
 function bytt_spraak(){
   if(can_change == true){
     if(spraak == 0){
@@ -380,7 +381,7 @@ function bytt_spraak(){
     }else{document.getElementById('shown_word').innerHTML = main_database[current_word][0][0]}
   }
 }
-
+*/
 
 function juks(){
   temp_var = prize_database.length
