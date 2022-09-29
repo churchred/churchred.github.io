@@ -2,7 +2,7 @@
 
 //---------------------Variabler----------------------------
 
-//Liste med Pokemon
+//Liste med Pokemon   Id, Name, Got it?, Got it in shiny?
 let pokedex_array = [  
   [1, 'Bulbasaur',0 ,0], [2, 'Ivysaur',0 ,0], [3, 'Venusaur',0 ,0], [4, 'Charmander',0 ,0], [5, 'Charmeleon',0 ,0], [6, 'Charizard',0 ,0],
   [7, 'Squirtle',0 ,0], [8, 'Wartortle',0 ,0], [9, 'Blastoise',0 ,0], [10, 'Caterpie',0 ,0], [11, 'Metapod',0 ,0], [12, 'Butterfree',0 ,0],
@@ -159,8 +159,13 @@ var difficulty = 'pluss_level_1'
 var max_points = 5
 var current_points = 0
 
+//Hvor mange resets vi har
+var resets = 0
+
 //Sjansen for en Shiny Pokemon
-let chance_shiny = 20
+let chance_shiny_array = [20, 4, 2, 1]
+let chance_shiny = chance_shiny_array[resets]
+
 
 //Lyd variabler
 var audio_rett = new Audio('Sounds/correct.mp3');
@@ -171,7 +176,15 @@ var antall_pokemon = 0
 
 //Noen navn er litt annerledes nå vi skriver og ser de
 let pokemon_name_exceptions = [['Mr.Mime', 'Mr-Mime'], ['Nidoran♀', 'nidoran-f'], ['Nidoran♂', 'nidoran-m'], 
-                               ['Mime Jr.', 'mime-jr'], ['Giratina', 'giratina-altered'], ['Shaymin', 'shaymin-land']]
+                               ['Mime Jr.', 'mime-jr'], ['Giratina', 'giratina-altered'], ['Shaymin', 'shaymin-land']
+]
+
+
+//Hvilke typer pokeball-bilder vi har
+let pokeball_img_array = ["Bilder/Pokeballs/pokeball.png", "Bilder/Pokeballs/greatball.png", 
+                          "Bilder/Pokeballs/ultraball.png", "Bilder/Pokeballs/masterball.png"
+]
+
 
 
 //Om settings er synlig eller ikke
@@ -192,6 +205,7 @@ var cheating = false
 
 //Slik at du ikke scroller ned til bunn av pokedex når du loader inn alle pokemonene
 var loading = true 
+
 
 
 //-----------------------------------------------------------------------------------------------
@@ -242,7 +256,11 @@ function load_game(){
   sprite_dir_nr = localStorage.getItem('sprites')
   document.getElementById('sprites_change').src = sprites_dir[sprite_dir_nr][0]
 
-  
+  //Loader hvor mange resets vi har
+  resets = localStorage.getItem('resets')
+  if(resets == null){resets = 0}
+  resets = parseInt(resets)
+  make_stars()
 
   //Load Pokemon
   var temp = localStorage.getItem("pokedex")
@@ -321,10 +339,16 @@ function load_game(){
 
   loading = false //Loading ferdig
 
+  //Sjekker hvor mange pokemon vi har totalt, har vi alle? 
+  if(total_pkmn_check() == pokedex_array.length && resets != 3){
+    document.getElementById('reset_btn').style.visibility = "visible"
+  }
+  
   console.log("--------------------------")
   console.log("Difficulty:", difficulty)
   console.log("Current Region:", regions[current_region][1])
   console.log("Pokedex:", antall_pokemon, "/", regions[current_region][2])
+  console.log("National Pokedex:", total_pkmn_check(), "/", pokedex_array.length)
   console.log("All Pokemon:", pokedex_array.length)
   console.log("Favorite Pokemon:", fav_name)
   console.log("Unlocked Regions:")
@@ -341,6 +365,8 @@ function load_game(){
   console.log("      - Unova:", bad5)
   console.log("Sprite-type:", sprites_dir[sprite_dir_nr][2])
   console.log("Volume:",  sound_dir[sound_volume][0])
+  console.log("Number of resets:", resets)
+  console.log("Shiny chance:", 100/chance_shiny_array[resets] + "%")
   console.log("--------------------------")
 }
 
@@ -825,21 +851,30 @@ function sound(){
 
 }
 
-//Gammel kode for å lukke/åpne settings
-/*
-function open_settings(){
-  div = document.getElementById('settings_page')
-  if(settings == false){
-    settings = true
-    div.style.visibility = "visible"
-    console.log("Opened settings..")
+//Ordner alt som har med antall resets og bonuser
+function make_stars(){
+  if(resets > 0){
+    document.getElementById('stars').style.visibility = "visible"
+    chance_shiny = chance_shiny_array[resets]
+    document.getElementById("pokeball_img").src = pokeball_img_array[resets]
+    document.getElementById('reset_score').innerHTML = resets
   }
-  else if(settings == true){
-    settings = false
-    div.style.visibility = "hidden"
-    console.log("Closed settings..")
+  if(resets == 1){
+    max_points = 4
+    document.getElementById('poeng_5').style.backgroundColor = 'gray'
   }
-}*/
+  if(resets == 2){
+    max_points = 3
+    document.getElementById('poeng_5').style.backgroundColor = 'gray'
+    document.getElementById('poeng_4').style.backgroundColor = 'gray'
+  }
+  if(resets == 3){
+    max_points = 2
+    document.getElementById('poeng_5').style.backgroundColor = 'gray'
+    document.getElementById('poeng_4').style.backgroundColor = 'gray'
+    document.getElementById('poeng_3').style.backgroundColor = 'gray'
+  }
+}
 
 //Fjerner alt som ligger i pokedexen når vi skal bytte region
 function clear_pokedex(x){
@@ -903,18 +938,17 @@ function cheats(jk){
     location.reload();
   }
 
-  if(jk == "#unlock"){
-    for(i=0; i<regions.length; i++){
-      regions[i][5] = 'unlocked'
-    }
-    change_region_btn()
+  if(jk == "#new"){
+    resets += 1
+    localStorage.setItem("resets", resets)
+    make_stars()
   }
 
-  if(jk == "#get"){
+  if(jk == "#get" || jk == "#add"){
     get_pokemon()
   }
 
-  if(jk == "#getshiny"){
+  if(jk == "#getshiny" || jk == "#addshiny"){
     get_pokemon(1)
   }
 
@@ -961,6 +995,7 @@ function cheats(jk){
       get_pokemon(1)
     }
   }
+
 
   document.getElementById('input').value = '#'
 }
@@ -1051,7 +1086,24 @@ function load_dex_badges(){
   document.getElementById('Sinnoh_medal').src = 'Bilder/Badges/Sinnoh/box_'+ bad4 + '.png'
 }
 
+//SJekker hvor mange pokemon vi har totalt
+function total_pkmn_check(){
+  var counter = 0
+  for(i=0; i<pokedex_array.length; i++){
+    if(pokedex_array[i][2] == 1){
+      counter += 1
+    }
+  }
+  return counter
+}
 
+//Resetter spillet og gir bonuser
+function reset_game(){
+  localStorage.clear()
+  resets += 1
+  localStorage.setItem('resets', resets)
+  location.reload()
+}
 
 //Få frem region Div
 function show_regions(){

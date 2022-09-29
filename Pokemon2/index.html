@@ -44,10 +44,16 @@
 
     <div class="banner_btn_div">
       <button class="banner_btn" id="show_region_btn" onclick="show_regions()">Regioner</button>
-      <button class="banner_btn" onclick="location.href='pokedex.html';">Alle dine Pokedex</button>
+      <button class="banner_btn" onclick="location.href='pokedex.html';">Alle dine Pokemon</button>
+      <button class="banner_btn" id="reset_btn" style="visibility:hidden;" onclick="reset_game()">Reset spillet</button>
     </div>
 
+    <div class="star" id="stars">
+      <img src="Bilder/star.png">
+      <p id="reset_score">1</p>
+    </div>
 
+    
     <button class="settings_btn">
         <img src="Bilder/settings.png" class="cog_img">
         <div class="settings_page" id="settings_page">
@@ -63,6 +69,8 @@
           </div>
         </div>
       </button>
+
+
   </header>
 
 

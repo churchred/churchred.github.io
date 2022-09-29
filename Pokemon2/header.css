@@ -140,3 +140,25 @@
 .banner_btn:hover{
   background-color: rgb(209, 161, 89);
 }
+
+
+.star{
+  height: 100%;
+  width: 100px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  visibility: hidden;
+}
+
+.star p{
+  color: white;
+  margin-left: 2px;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.star img{
+  height: 100%;
+  width: auto;
+}

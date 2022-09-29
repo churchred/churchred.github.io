@@ -11,6 +11,7 @@
   padding: 0;
   font-family: roboto;
   user-select: none;
+  scrollbar-width: none; /* Firefox 64 */
 }
 
 * img{
@@ -48,7 +49,7 @@
     grid-template-columns: 33% 33% 33%;
   }
   .banner_btn_div{
-    width: 300px;
+    width: 350px;
   }
 }
 

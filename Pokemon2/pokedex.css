@@ -7,7 +7,9 @@
   background: #d3d3d3;
   border: 2px black solid;
   border-radius: 30px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
 }
 
 
@@ -33,14 +35,13 @@
 .pokedex{
   width: 100%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 5px;
-  overflow-y:scroll; height:100%;
-  border-radius: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y:scroll; max-height:400px;
+  
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -50,9 +51,10 @@
   width:  112px;
   background-color: white;
   border: 1px solid black;
-  margin: auto;
   display: block;
   text-align:center;
+  margin: auto;
+  margin-top: 5px;
 }
 
 .pkmn_div_shiny{
@@ -60,12 +62,13 @@
   width:  112px;
   background-color: rgb(240, 234, 202);
   border: 1px solid rgb(243, 155, 73);
-  margin:auto;
   display: block;
   text-align:center;
+  margin: auto;
+  margin-top: 5px;
 }
 
-.pkmn_img{ /*original scale: 96x96*/
+.pkmn_img{ /*original scale: 128x128 for 3d og 96x96 for 2d*/
   height: 102px;
   width: 102px;
   image-rendering: smooth;
