@@ -92,6 +92,17 @@ let umbrella_database = [
 ]
 
 
+let halloween_database = [
+  [['witch'],['heks']],
+  [['pumpkin'],['gresskar']],
+  [['wizard'],['trollmann']],
+  [['dragon'],['drage']],
+  [['castle'],['slott']],
+  [['ghost'],['slott']],
+  [['candy', 'sweets', 'lollies'],['godteri']]
+]
+
+
 let main_database = []
 
 let prize_database = [
@@ -101,8 +112,8 @@ let prize_database = [
   'fox2.PNG', 'crystal.PNG', 'frozen.PNG', 'bighero.PNG', 'treehouse.PNG', 'encanto.PNG', 'link.PNG', 'space.PNG',
   'flowers.JPG', 'coffee.JPG', 'owl.JPG', 'signs.PNG', 'dog2.JPG', 'elk.JPG', 'cat2.PNG', 'flower2.JPG', 'land.JPG',
   'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG', 'heart.jpg',
-  'chill.jpg', 'city.PNG', 'flower4.PNG', 'fotball2.jpg', 'animals.PNG', 'art2.PNG', 'balloon.JPG', 'dog3.PNG',
-  'dinosaur.PNG', 'dog4.JPG'
+  'chill.jpg', 'city.PNG', 'flower4.PNG', 'flower5.PNG', 'fotball2.jpg', 'animals.PNG', 'art2.PNG', 'balloon.JPG', 
+  'dog3.PNG', 'dinosaur.PNG', 'dog4.JPG', 'wolf2.PNG', 'something.PNG', 'halloween.PNG', 'jellyfish.PNG'
 ]
 
 const max_antall_stamps = prize_database.length
@@ -173,6 +184,9 @@ function check_tema(){
   if(tema == 4){//UMBRELLA
     main_database = umbrella_database.slice(0) //Kopierer ord_database
   }
+  if(tema == 5){//HALLOWEEN
+    main_database = halloween_database.slice(0) //Kopierer ord_database
+  }
 }
 
 function change_img(){
@@ -198,11 +212,21 @@ function check_answer(){
   for(i=0; i<main_database[current_word][spraak].length; i++){
     if(user_answer == main_database[current_word][spraak][i]){
       audio_rett.play()
+      antall_feil = 0
+      document.getElementById('show_answer').innerHTML = ''
       wrong = false
       document.activeElement.blur()
       remove_item_database()
       get_xp()
       break
+    }else{
+      antall_feil += 1
+      console.log('Antal feil:' + antall_feil + '/' + mulige_feil)
+      if(antall_feil == mulige_feil){
+        antall_feil = 0
+        document.getElementById('show_answer').innerHTML = main_database[current_word][spraak][i]
+        console.log('Svar er:  ' + main_database[current_word][spraak][i])
+      }
     }
   }
   if(user_answer.toLowerCase() == '#getall'){
@@ -245,6 +269,8 @@ function remove_item_database(){
   if(tema == 1){console.log(main_database.length + "/" + body_database.length + " ord igjen")}
   if(tema == 2){console.log(main_database.length + "/" + animal_database.length + " ord igjen")}
   if(tema == 3){console.log(main_database.length + "/" + house_database.length + " ord igjen")}
+  if(tema == 4){console.log(main_database.length + "/" + umbrella_database.length + " ord igjen")}
+  if(tema == 5){console.log(main_database.length + "/" + halloween_database.length + " ord igjen")}
 
   console.log("---------------")
 }

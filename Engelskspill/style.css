@@ -117,6 +117,17 @@ html, body{
   height: 60px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
+  margin-top: -8px;
+}
+
+.oppg_img_div p2{
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  margin-top: 0px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: blue;
 }
 
 /*Oppgavebildet*/
