@@ -98,7 +98,7 @@ let halloween_database = [
   [['wizard'],['trollmann']],
   [['dragon'],['drage']],
   [['castle'],['slott']],
-  [['ghost'],['slott']],
+  [['ghost'],['spøkelse']],
   [['candy', 'sweets', 'lollies'],['godteri']]
 ]
 
@@ -165,6 +165,9 @@ function start_up(){
   console.log("Game loaded!")
   console.log("---------------")
 
+  antall_feil = 0
+  document.getElementById('show_answer').innerHTML = ''
+
   change_img()
 }
 
@@ -224,8 +227,8 @@ function check_answer(){
       console.log('Antal feil:' + antall_feil + '/' + mulige_feil)
       if(antall_feil == mulige_feil){
         antall_feil = 0
-        document.getElementById('show_answer').innerHTML = main_database[current_word][spraak][i]
-        console.log('Svar er:  ' + main_database[current_word][spraak][i])
+        document.getElementById('show_answer').innerHTML = main_database[current_word][spraak][0]
+        console.log('Svar er:  ' + main_database[current_word][spraak][0])
       }
     }
   }
