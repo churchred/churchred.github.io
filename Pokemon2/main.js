@@ -1080,10 +1080,12 @@ function load_dex_badges(){
   var bad2 = localStorage.getItem('Johto_badges')
   var bad3 = localStorage.getItem('Hoenn_badges')
   var bad4 = localStorage.getItem('Sinnoh_badges')
+  var bad5 = localStorage.getItem('Unova_badges')
   document.getElementById('Kanto_medal').src = 'Bilder/Badges/Kanto/box_'+ bad1 + '.png'
   document.getElementById('Johto_medal').src = 'Bilder/Badges/Johto/box_'+ bad2 + '.png'
   document.getElementById('Hoenn_medal').src = 'Bilder/Badges/Hoenn/box_'+ bad3 + '.png'
   document.getElementById('Sinnoh_medal').src = 'Bilder/Badges/Sinnoh/box_'+ bad4 + '.png'
+  document.getElementById('Unova_medal').src = 'Bilder/Badges/Unova/box_'+ bad5 + '.png'
 }
 
 //SJekker hvor mange pokemon vi har totalt
