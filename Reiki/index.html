@@ -18,31 +18,34 @@
   <link rel="shortcut icon" type="image/x-icon" href="Bilder/Ikoner/favicon.ico">
 
 </head>
-<body class="body">
+<body class="body" id="top">
 
   <section class="banner">
-    <h1 class="overskrift_logo" onclick="location.href='index.html';">Kirkerød Reiki</h1>
+    <div class="overskrift_greier">
+      <h1 class="overskrift_logo" onclick="location.href='index.html';">Kirkerød Reiki</h1>
+      <img src="Bilder/ikoner/menu.png" class="menu_icon" onclick="click_btn()" id="menu_btn">
+    </div>
+    
     <nav id="dropdown" class="dropdown">
       <ul>
-        <li><a href="index.html">Hjem</a></li>  
-        <li><a>Hva er Reiki</a></li>  
+        <li><a onClick="document.getElementById('top').scrollIntoView();">Hjem</a></li>  
+        <li><a onClick="document.getElementById('content3').scrollIntoView();">Hva er Reiki</a></li> 
         <li><a>Om meg</a></li> 
-        <li><button class="book_time">Book en time</button></li>   
+        <li><button class="book_time" onClick="document.getElementById('content4').scrollIntoView();">Book en time</button></li>   
       </ul>
-      
     </nav>
   </section>
 
 
-  <section class="main">
+  <section class="main" >
   
   <!--Top of page-->
-  <div class="main_img"></div>
+  <div class="main_img" id="main"></div>
   <div class="content1">
     <div>
       <h1>Noen ganger trenger kroppen litt hjelp</h1>
       <p>Prøv våre Reiki behandlinger. Healer både kropp og sinn.</p>
-      <button>Bestill time</button>
+      <button onClick="document.getElementById('content4').scrollIntoView();">Bestill time</button>
     </div>
   </div>
   
@@ -65,13 +68,13 @@
 
   </div>
 
-  <div class="content3">
+  <div class="content3" id="content3">
     <img src="Bilder/healing.jpg">
-    <div class="text_box_c4">
+    <div class="text_box_c3">
       <h1>Hva er Reiki?</h1>
       <p>Reiki er en healingteknikk som skal gi mulighet til å åpne opp mottageligheten for en universell energi, ved en innvielse gitt av en Reiki-lærer. Det er en enkel metode som benyttes til selvutvikling eller healing av andre, ved hjelp av hendene. Både mennesker, dyr og planter kan få Reiki.</br> </br>
       <b>Reiki kan hjelpe med:</b></br>
-        <ul class="c4_list">
+        <ul class="c3_list">
           <li>Avspenning</li>
           <li>Bedre søvn</li>
           <li>Smertelindring</li>
@@ -82,7 +85,7 @@
     </div>
   </div>
 
-  <div class="content4">
+  <div class="content4" id="content4">
     <h1 class="cont4_header">Priser</h1>
     
     <div class="kort_holder">
@@ -110,7 +113,8 @@
       </div>
   
       <div class="pris_kort">
-        <h2>Tre 60 minutters sessions</h2>
+        <h2><b>Tre</b> 60 minutter sessions</h2>
+        <h3><s>2 397 kr</s></h3>
         <h1>1650 kr</h1>
         <div class="blue_line"></div>
         <div class="price_info">

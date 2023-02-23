@@ -1,31 +1,157 @@
-@media only screen and (max-width: 800px){  
-  /*Banner*/
+@media only screen and (max-width: 1550px){  
+  
+  .content1 h1{
+    font-size: 2.5rem;
+  }
+
+
+  .content3 img{
+    width: 500px;
+    margin: auto;
+  }
+  
+  .text_box_c3{
+    
+    display: grid;
+  }
+  
+  .text_box_c3 h1{
+    margin: auto;
+    font-size:2rem;
+    margin-bottom: 40px;
+  }
+  
+  .text_box_c3 p{
+    width: 600px;
+    font-size: 1.1rem;
+    display: grid;
+  }
+  
+  .text_box_c3 ul{
+    margin-left: 50px;
+    font-size: 1.2rem;
+  }
+
+
+  
+
+.pris_kort{
+  display: grid;
+  margin: auto;
+  width: 320px;
+  height: 450px;
+  background-color: white;
+  border-radius: 3%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pris_kort:hover{
+  transform: scale(1.02);
+}
+
+.pris_kort h2{
+  text-align: center;
+  font-weight: normal;
+  padding-top: 20px;
+  font-size: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pris_kort h1{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'arial black';
+  margin-top: -10px;
+}
+
+
+.pris_kort h3{
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'arial black';
+  margin-top: -10px;
+  margin-bottom: -100px;
+  color: rgb(83, 82, 82);
+}
+
+
+
+.blue_line{
+  width: 100px;
+  height: 5px;
+  background-color: rgb(56, 140, 236);
+  margin: auto;
+  border-radius: 7px;
+  margin-top: 0;
+}
+
+.price_info{
+  margin-left: 30px;
+}
+
+.price_info div{
+  display: flex;
+  line-height: 50px;
+}
+
+.price_info div img{
+  width: auto;
+  height: 15px;
+  margin-top: 16px;
+  margin-right: 10px;
+}
+
+.pris_kort button{
+  width: 250px;
+  height: 50px;
+  background-color: rgb(56, 140, 236);
+  border: none;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  color: white;
+  margin: auto;
+  cursor: pointer;
+}
+
+}  
+
+
+@media only screen and (max-width: 1100px){  
 
   .banner{
     display: grid;
   }
 
-  .banner div{
-    width: 100vw;
+  .overskrift_greier{
     display: flex;
+    width: 100vw;
   }
 
-  .menu_btn{
+  .menu_icon{
     display: block;
     margin-right: 20px;
   }
 
   .dropdown{
-    height: 0px;
-    overflow-y: hidden;
-    background-color: rgb(131, 212, 123);
+    display: none;
+    background-color: rgb(212, 212, 212);
+    height: 240px;
   }
 
   .dropdown.active{
-    display: grid;
+    display: flex;
     width: 100vw;
-    height: 180px;
-    transition: height 0.2s ease-in-out;
+  }
+
+
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .first_ul li{
+    width: 100vw;
+
   }
 
   nav ul{
@@ -35,8 +161,43 @@
   }
 
   nav ul li a{
-    line-height: 40px;
+    line-height: 60px;
     height: 40px;
   }
 
-}  
+
+
+  .content2 img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .content1{
+    width: 90vw;
+  }
+  
+  .content1 h1{
+    font-size: 1.7rem;
+  }
+
+  .content1 p{
+    font-size: 1.2rem;
+  }
+
+  .content2{
+    margin-bottom: 100px;
+  }
+
+  .content3{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .kort_holder{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+}
