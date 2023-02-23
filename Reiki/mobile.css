@@ -1,0 +1,42 @@
+@media only screen and (max-width: 800px){  
+  /*Banner*/
+
+  .banner{
+    display: grid;
+  }
+
+  .banner div{
+    width: 100vw;
+    display: flex;
+  }
+
+  .menu_btn{
+    display: block;
+    margin-right: 20px;
+  }
+
+  .dropdown{
+    height: 0px;
+    overflow-y: hidden;
+    background-color: rgb(131, 212, 123);
+  }
+
+  .dropdown.active{
+    display: grid;
+    width: 100vw;
+    height: 180px;
+    transition: height 0.2s ease-in-out;
+  }
+
+  nav ul{
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+  }
+
+  nav ul li a{
+    line-height: 40px;
+    height: 40px;
+  }
+
+}  
