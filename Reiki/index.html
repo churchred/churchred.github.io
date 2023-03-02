@@ -22,7 +22,7 @@
 
   <section class="banner">
     <div class="overskrift_greier">
-      <h1 class="overskrift_logo" onclick="location.href='index.html';">Kirkerød Reiki</h1>
+      <h1 class="overskrift_logo" onclick="location.href='index.html';">Kirkerød Reiki AS</h1>
       <img src="Bilder/ikoner/menu.png" class="menu_icon" onclick="click_btn()" id="menu_btn">
     </div>
     
@@ -51,17 +51,17 @@
   
   <div class="content2">
 
-    <div class="cont_2_btn">
+    <div class="cont_2_btn" onClick="document.getElementById('content4').scrollIntoView();">
       <img src="Bilder/reiki-hero.jpg">
       <p>Priser</p>
     </div>
 
-    <div class="cont_2_btn">
+    <div class="cont_2_btn" onClick="document.getElementById('content3').scrollIntoView();">
       <img src="Bilder/krystal2.jpg">
       <p>Hva er Reiki</p>
     </div>
 
-    <div class="cont_2_btn">
+    <div class="cont_2_btn" >
       <img src="Bilder/ag.jpeg">
       <p>Om meg</p>
     </div>
@@ -72,16 +72,27 @@
     <img src="Bilder/healing.jpg">
     <div class="text_box_c3">
       <h1>Hva er Reiki?</h1>
-      <p>Reiki er en healingteknikk som skal gi mulighet til å åpne opp mottageligheten for en universell energi, ved en innvielse gitt av en Reiki-lærer. Det er en enkel metode som benyttes til selvutvikling eller healing av andre, ved hjelp av hendene. Både mennesker, dyr og planter kan få Reiki.</br> </br>
-      <b>Reiki kan hjelpe med:</b></br>
-        <ul class="c3_list">
-          <li>Avspenning</li>
-          <li>Bedre søvn</li>
-          <li>Smertelindring</li>
-          <li>Løse opp fastlåste energi- og tankemønstre</li>
-          <li>Økt bevissthet</li>
-        </ul>
+      <h2>Reiki betyr «universell livsenergi»</h2>
+      <p>Det er en helhetlig behandling som går til årsak og ikke symptom. Reiki støtter 
+        kroppens egen tilfriskningsprosess til helhetlig helse.<br><br>
+        Reiki er et gammelt japansk healing-system som ble oppdaget av og formidlet av den japanske healeren Mikao Usui.
+        Energien går automatisk til de områdene i kroppen som har størst behov for behandling eller påfyll. <br><br>Reiki-behandling har god effekt på helse, velvære og personlig vekst. En kan aldri feilbehandle eller overdosere noen med Reiki.
       </p>
+      <button onClick="document.getElementById('content5').scrollIntoView();">Hvordan foregår behandlingen?</button>
+    </div>
+  </div>
+
+  <div class="content5" id="content5">
+    <img src="Bilder/rom.jpg">
+    <div class="text_box_c5">
+      <h1>Hva skjer under en Reiki-behandling?</h1>
+      <p>
+        Jeg starter med en kort samtale med deg på ca. 10 min før Reiki-behandlingen starter. Behandlingen kan foregå både på behandlingsbenk eller stol med klærne på. <br><br>
+        Jeg legger hendene mine lett på kroppen din etter et bestemt mønster. Det er en stille og avslappende opplevelse med Reiki-musikk og de fleste kommer i en dyp avspent tilstand av ro og velvære. <br><br>
+        Varmen og energien går til de stedene i kroppen som trenger det og åpner opp ulike blokkeringer og du får mer flyt i kroppen til helhetlig helse.<br><br>
+        Behandlingen varer i en time og det anbefales å ta tre behandlinger tett etter hverandre for å oppnå best effekt. Andre vil ha behov for behandling over tid.
+      </p>
+      <button onClick="document.getElementById('content4').scrollIntoView();">Priser</button>
     </div>
   </div>
 
@@ -93,10 +104,6 @@
         <h2>Førstegangskunde?</h2>
         <h1>499 kr</h1>
         <div class="blue_line"></div>
-        <div class="price_info">
-          <div><img src="Bilder/checkmark2.png"> For førstegangskunder</div>
-          <div><img src="Bilder/checkmark2.png"> Avbestilling intill 1 time før</div>
-        </div>
         <button>Bestill nå</button>
       </div>
   
@@ -104,11 +111,6 @@
         <h2>En 60 minutters session</h2>
         <h1>799 kr</h1>
         <div class="blue_line"></div>
-        <div class="price_info">
-          <div><img src="Bilder/checkmark2.png"> Oljer er inklundert i prisen</div>
-          <div><img src="Bilder/checkmark2.png"> Avbestilling intill 1 time før</div>
-          <div><img src="Bilder/checkmark2.png"> Velg dato og tid som passer best for deg</div>
-        </div>
         <button>Bestill nå</button>
       </div>
   
@@ -117,16 +119,59 @@
         <h3><s>2 397 kr</s></h3>
         <h1>1650 kr</h1>
         <div class="blue_line"></div>
-        <div class="price_info">
-          <div><img src="Bilder/checkmark2.png"> Oljer er inkludert i prisen</div>
-          <div><img src="Bilder/checkmark2.png"> Velg tid og dato til hver session</div>
-          <div><img src="Bilder/checkmark2.png"> Kan endre tid og dato mellom sessions</div>
-        </div>
         <button>Bestill nå</button>
       </div>
     </div>
+  </div>
 
-    
+  <div class="content6" id="content6">
+
+
+    <div class="contact">
+
+      <div class="submit">
+        <form>      
+          <input name="name" type="text" class="feedback-input" placeholder="Navn" />   
+          <input name="email" type="text" class="feedback-input" placeholder="E-post" />
+          <textarea name="text" class="feedback-input" placeholder="Melding"></textarea>
+          <input type="submit" value="SUBMIT"/>
+        </form>
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2039.7101774844223!2d11.094935736569964!3d59.254283365336036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46440435a6a96c81%3A0xd8fc04b26224b02a!2sMelleml%C3%B8kka%2017%2C%201659%20Torp!5e0!3m2!1sen!2sno!4v1677786123422!5m2!1sen!2sno" class="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   
+    </div>
+
+    <div class="cont_info">
+
+      <div class="contact_card">
+        <img src="Bilder/ikoner/gps2.png">
+        <h1>Adresse</h1>
+        <p>Eventyrveien 12, 1234 Askeladd, Veibyen</p>
+      </div>
+
+      <div class="contact_card">
+        <img src="Bilder/ikoner/gps2.png">
+        <h1>Ring meg</h1>
+        <p>+47 123 33 123</p>
+      </div>
+
+      <div class="contact_card">
+        <img src="Bilder/ikoner/gps2.png">
+        <h1>Send en e-post</h1>
+        <p>test@test.no</p>
+      </div>
+
+      <div class="contact_card">
+        <img src="Bilder/ikoner/gps2.png">
+        <h1>Åpningstider</h1>
+        <p>Man-fre: 09:00- 17:00 <br><br> 
+           Søndag: Stengt</p>
+      </div>
+
+    </div>
+
+
 
   </div>
     
