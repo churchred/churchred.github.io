@@ -11,6 +11,12 @@
   left: 0;
 }
 
+
+.testy{
+  margin: auto;
+  height: 200px;
+}
+
 .content1{
   display: grid;
   width: 1300px;
@@ -72,7 +78,7 @@
   display: flex;
   margin: auto;
   margin-top: 80px;
-  margin-bottom: 200px;
+  background-color: rgb(188, 231, 167);
 }
 
 .cont_2_btn{
@@ -109,6 +115,8 @@
   grid-template-columns: 1fr 1fr;
   background: rgb(153,153,255);
   background: linear-gradient(90deg, rgba(153,153,255,1) 0%, rgba(204,153,255,1) 43%, rgba(255,255,255,1) 100%);
+  background: whitesmoke;
+  background-color: rgb(188, 231, 167);
 }
 
 .content3 img{
@@ -176,6 +184,8 @@
   grid-template-columns: 1fr 1fr;
   background: rgb(117,173,250);
   background: linear-gradient(90deg, rgba(117,173,250,1) 0%, rgba(153,196,255,1) 43%, rgba(255,255,255,1) 100%);
+  background: whitesmoke;
+  background-color: rgb(188, 231, 167);
 }
 
 .content4 img{
@@ -247,6 +257,8 @@
   width: 100vw;
   display: grid;
   background-color: rgb(219, 233, 211);
+  background-color: whitesmoke;
+  background-color: rgb(188, 231, 167);
 }
 
 .map{
@@ -294,6 +306,7 @@
   height: 150px;
   background-color: white;
   border-radius: 5px;
+  border: 2px solid rgb(137, 137, 255);
   margin: auto;
   display: grid;
   row-gap: -100px;
@@ -320,4 +333,104 @@
   text-align: center;
   color: rgb(56, 56, 56);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+
+
+
+/*Fjernhealing*/
+
+.fjern_content1{
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+}
+
+.contain_fh{
+  margin: auto;
+  display: flex;
+  width: 1500px;
+}
+
+.text_box_fh{
+  display: grid;
+  margin: auto;
+  max-width: 800px;
+}
+
+.fjern_content1 h1{
+  font-size: 3.4rem;
+  text-align: center;
+  margin-top: -100px;
+}
+
+.fjern_content1 p{
+  font-size: 1.3rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  
+}
+
+.fjern_content1 img{
+  height: 600px;
+  width: 500px;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+/*about*/
+
+.about_content1{
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+}
+
+.contain_about{
+  margin: auto;
+  display: flex;
+  width: 1500px;
+}
+
+.text_box_about{
+  display: grid;
+  margin: auto;
+  max-width: 800px;
+}
+
+.about_content1 h1{
+  font-size: 3.4rem;
+  text-align: center;
+  margin-top: -100px;
+}
+
+.about_content1 p{
+  font-size: 1.3rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  
+}
+
+.about_content1 img{
+  height: 700px;
+  width: 400px;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 10px;
 }
