@@ -1,6 +1,6 @@
 
-/*Small screen*/
-@media only screen and (max-width: 1203px){  
+/*ipad screen*/
+@media only screen and (max-width: 1250px){  
 
   .banner{
     display: grid;
@@ -77,7 +77,58 @@
   }
 
   .content3 img{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
   }
+
+
+
+
+
+  .text_box_c4 p{
+    width: 500px;
+  }
+
+  .text_box_c4 h1{
+    font-size: 1.6rem;
+  }
+
+  .content4 img{
+    width: 400px;
+    height: 400px;
+  }
+
+
+  .pay_info{
+    width: 800px;
+    text-align: center;
+  }
+
+
+
+  .contain_about{
+    margin: auto;
+    display: flex;
+    width: 1000px;
+  }
+  
+  .text_box_about{
+    display: grid;
+    margin: auto;
+    max-width: 500px;
+    margin-top: 200px;
+  }
+
+  .text_box_about p{
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+
+  .text_box_fh{
+    width: 500px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+  }
+
+
 }
