@@ -140,12 +140,17 @@
 @media only screen and (max-width: 500px){
 
   .overskrift_logo{
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+  }
+
+  .banner_img{
+    height: 40px;
   }
 
   .content1{
     margin-top: 0;
     height: 50vh;
+    margin-bottom: 100px;
   }
 
   .main_img{
@@ -174,11 +179,14 @@
     display: grid;
     margin-top: 0px;
     row-gap: 25px;
+    margin-bottom: 150px;
   }
 
 
   .content3{
     display: flex;
+    margin-bottom: 250px;
+
   }
 
   .content3 img{
@@ -190,6 +198,12 @@
     text-align: center;
   }
 
+  .content3 h2{
+    width: 90vw;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
   .content3 p{
     width: 90vw;
   }
@@ -198,6 +212,7 @@
 
   .content4{
     display: flex;
+    margin-bottom: 250px;
   }
 
   .content4 img{
@@ -289,6 +304,10 @@
     width: 100vw;
     display: grid;
     margin-top: 50px;
+  }
+
+  .contain_about img{
+    display: none;
   }
 
   .text_box_about{
