@@ -1,0 +1,49 @@
+@media only screen and (max-width: 1156px){  
+
+  .banner{
+    display: grid;
+  }
+
+  .overskrift_greier{
+    display: flex;
+    width: 100vw;
+  }
+
+  .menu_icon{
+    display: block;
+    margin-right: 20px;
+  }
+
+  .dropdown{
+    display: none;
+    background-color: rgb(212, 212, 212);
+    height: 300px;
+  }
+
+  .dropdown.active{
+    display: flex;
+    width: 100vw;
+  }
+
+
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .first_ul li{
+    width: 100vw;
+
+  }
+
+  nav ul{
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+  }
+
+  nav ul li a{
+    line-height: 60px;
+    height: 40px;
+  }
+}

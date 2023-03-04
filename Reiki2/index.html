@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tittel på side -->
+  <title>Kirkerød Reiki AS</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>
+
+  <!--Snarvei icon-->
+  <link rel="shortcut icon" type="image/x-icon" href="Bilder/Ikoner/favicon.ico">
+
+</head>
+<body class="body" id="top">
+
+  <section class="banner">
+    <div class="overskrift_greier">
+      <h1 class="overskrift_logo" onclick="location.href='index.html';">Kirkerød Reiki AS</h1>
+      <img src="Bilder/ikoner/menu.png" class="menu_icon" onclick="click_btn()" id="menu_btn">
+    </div>
+    
+    <nav id="dropdown" class="dropdown">
+      <ul>
+        <li><a onClick="document.getElementById('top').scrollIntoView();">Hjem</a></li>  
+        <li><a onClick="document.getElementById('content3').scrollIntoView();">Hva er Reiki</a></li> 
+        <li><a>Oljer & Krystaller</a></li> 
+        <li><a onclick="location.href='about.html';">Om meg</a></li> 
+        <li><button class="book_time" onClick="document.getElementById('content5').scrollIntoView();">Book en time</button></li>   
+      </ul>
+    </nav>
+  </section>
+
+
+  <section class="main" >
+  
+  <!--Top of page-->
+  <div class="main_img" id="main"></div>
+  <div class="content1">
+    <div>
+      <h1>Noen ganger trenger kroppen litt hjelp</h1>
+      <p>Prøv våre Reiki behandlinger. Healer både kropp og sinn.</p>
+      <button onClick="document.getElementById('content3').scrollIntoView();">Lær mer</button>
+    </div>
+  </div>
+  
+  <div class="content2">
+
+    <div class="cont_2_btn" onClick="document.getElementById('content5').scrollIntoView();">
+      <img src="Bilder/krystal2.jpg">
+      <p>Hva er Reiki</p>
+    </div>
+
+    <div class="cont_2_btn" onclick="location.href='fjernhealing.html';">
+      <img src="Bilder/fjernheal.jpg">
+      <p>Fjernhealing</p>
+    </div>
+
+    <div class="cont_2_btn" >
+      <img src="Bilder/reiki_dyr.jpg">
+      <p>Reiki på dyr</p>
+    </div>
+
+  </div>
+
+  <div class="content3" id="content3">
+    <img src="Bilder/healing.jpg">
+    <div class="text_box_c3">
+      <h1>Hva er Reiki?</h1>
+      <h2>Reiki betyr «universell livsenergi»</h2>
+      <p>Det er en helhetlig behandling som går til årsak og ikke symptom. Reiki støtter 
+        kroppens egen tilfriskningsprosess til helhetlig helse.<br><br>
+        Reiki er et gammelt japansk healing-system som ble oppdaget av og formidlet av den japanske healeren Mikao Usui.
+        Energien går automatisk til de områdene i kroppen som har størst behov for behandling eller påfyll. <br><br>Reiki-behandling har god effekt på helse, velvære og personlig vekst. En kan aldri feilbehandle eller overdosere noen med Reiki.
+      </p>
+      <button onClick="document.getElementById('content4').scrollIntoView();">Hvordan foregår behandlingen?</button>
+    </div>
+  </div>
+
+  <div class="content4" id="content4">
+    <img src="Bilder/rom.jpg">
+    <div class="text_box_c4">
+      <h1>Hva skjer under en Reiki-behandling?</h1>
+      <p>
+        Jeg starter med en kort samtale med deg på ca. 10 min før Reiki-behandlingen starter. Behandlingen kan foregå både på behandlingsbenk eller stol med klærne på. <br><br>
+        Jeg legger hendene mine lett på kroppen din etter et bestemt mønster. Det er en stille og avslappende opplevelse med Reiki-musikk og de fleste kommer i en dyp avspent tilstand av ro og velvære. <br><br>
+        Varmen og energien går til de stedene i kroppen som trenger det og åpner opp ulike blokkeringer og du får mer flyt i kroppen til helhetlig helse.<br><br>
+        Behandlingen varer i en time og det anbefales å ta tre behandlinger tett etter hverandre for å oppnå best effekt. Andre vil ha behov for behandling over tid.
+      </p>
+      <button onClick="document.getElementById('content5').scrollIntoView();">Priser</button>
+    </div>
+  </div>
+
+  <div class="content5" id="content5">
+
+
+    <div class="contact">
+
+      <div class="submit">
+        <form>      
+          <input name="name" type="text" class="feedback-input" placeholder="Navn" />   
+          <input name="email" type="text" class="feedback-input" placeholder="E-post" />
+          <textarea name="text" class="feedback-input" placeholder="Melding"></textarea>
+          <input type="submit" value="SUBMIT"/>
+        </form>
+      </div>
+
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2039.7101774844223!2d11.094935736569964!3d59.254283365336036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46440435a6a96c81%3A0xd8fc04b26224b02a!2sMelleml%C3%B8kka%2017%2C%201659%20Torp!5e0!3m2!1sen!2sno!4v1677786123422!5m2!1sen!2sno" class="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   
+    </div>
+
+    <div class="kort_holder">
+      <div class="pris_kort">
+        <h2>Førstegangskunde? <br>En 60 minutters session</h2>
+        <h1>499 kr</h1>
+        <div class="blue_line"></div>
+      </div>
+  
+      <div class="pris_kort">
+        <h2>En 60 minutters session</h2>
+        <h1>799 kr</h1>
+        <div class="blue_line"></div>
+      </div>
+  
+      <div class="pris_kort">
+        <h2><b>Tre</b> 60 minutter sessions</h2>
+        <h3><s>2 397 kr</s></h3>
+        <h1>1650 kr</h1>
+        <div class="blue_line"></div>
+      </div>
+    </div>
+
+    <div class="cont_info">
+
+      <div class="contact_card">
+        <img src="Bilder/ikoner/gps2.png">
+        <h1>Adresse</h1>
+        <p>Mellemløkka 17, 1659 TORP, Fredrikstad</p>
+      </div>
+
+      <div class="contact_card">
+        <img src="Bilder/ikoner/phone2.png">
+        <h1>Ring meg</h1>
+        <p>+47 924 83 598</p>
+      </div>
+
+      <div class="contact_card">
+        <img src="Bilder/ikoner/email_icon2.png">
+        <h1>Send en e-post</h1>
+        <p>ag.kirkerod@hotmail.com</p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+    
+
+    
+  </section>
+
+  
+</body>
+</html>
