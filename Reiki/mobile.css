@@ -1,7 +1,19 @@
-@media only screen and (max-width: 1156px){  
+
+/*Small screen*/
+@media only screen and (max-width: 1203px){  
 
   .banner{
     display: grid;
+  }
+
+  .overskrift_logo{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .banner_img{
+    margin-left: 5px;
+    margin-right: 0px;
   }
 
   .overskrift_greier{
@@ -45,5 +57,27 @@
   nav ul li a{
     line-height: 60px;
     height: 40px;
+  }
+
+
+
+  /*Annet*/
+
+  .cont_2_btn img{
+    width: 230px;
+    height: 230px;
+  }
+
+  .cont_2_btn p{
+    font-size: 1.3rem;
+  }
+
+  .text_box_c3 p{
+    width: 500px;
+  }
+
+  .content3 img{
+    width: 300px;
+    height: 300px;
   }
 }

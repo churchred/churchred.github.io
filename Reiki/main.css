@@ -104,11 +104,11 @@
 .content3{
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   background: rgb(153,153,255);
   background: linear-gradient(90deg, rgba(153,153,255,1) 0%, rgba(204,153,255,1) 43%, rgba(255,255,255,1) 100%);
   background: whitesmoke;
+  flex-wrap: wrap;
 }
 
 .content3 img{
