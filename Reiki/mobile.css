@@ -132,3 +132,167 @@
 
 
 }
+
+
+
+
+/*Phone*/
+@media only screen and (max-width: 500px){
+
+  .overskrift_logo{
+    font-size: 2.4rem;
+  }
+
+  .content1{
+    margin-top: 0;
+    height: 50vh;
+  }
+
+  .main_img{
+    height: 400px;
+    background-size: cover;
+  }
+
+  .content1 h1{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .content1 p{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 90vw;
+  }
+
+  .content1 button{
+    margin-top: 0px;
+    height: 40px;
+    width: 130px;
+  }
+
+  .content2{
+    display: grid;
+    margin-top: 0px;
+    row-gap: 25px;
+  }
+
+
+  .content3{
+    display: flex;
+  }
+
+  .content3 img{
+    display: none;
+  }
+
+  .content3 h1{
+    width: 90vw;
+    text-align: center;
+  }
+
+  .content3 p{
+    width: 90vw;
+  }
+
+
+
+  .content4{
+    display: flex;
+  }
+
+  .content4 img{
+    display: none;
+  }
+
+  .content4 h1{
+    width: 90vw;
+    text-align: center;
+  }
+
+  .content4 p{
+    width: 90vw;
+  }
+
+
+
+
+  .content5{
+    display: grid;
+    width: 100vw;
+  }
+
+  .map{
+    width: 90vw;
+    margin:auto;
+    margin-bottom: 50px;
+  }
+
+  .pay_info{
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+
+  .kort_holder{
+    display: grid;
+    margin: auto;
+    width: 100vw;
+    row-gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .cont_info{
+    display: grid;
+    width: 100vw;
+    height: auto;
+    row-gap: 20px;
+    padding-bottom: 50px;
+  }
+
+
+
+
+
+
+
+  .fjern_content1{
+    width: 100vw;
+    display: grid;
+  }
+
+  .contain_fh{
+    width: 100vw;
+    margin-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .text_box_fh{
+    width: 90vw;
+    margin: auto;
+  }
+
+  .contain_fh img{
+    display: none;
+  }
+
+
+
+
+
+
+  .about_content1{
+    width: 100vw;
+  }
+
+  .contain_about{
+    width: 100vw;
+    display: grid;
+    margin-top: 50px;
+  }
+
+  .text_box_about{
+    width: 90vw;
+  }
+  
+}
