@@ -277,7 +277,7 @@
   }
 
   .contain_fh{
-    width: 100vw;
+    width: 90vw;
     margin-top: 150px;
     padding-bottom: 100px;
   }
@@ -287,8 +287,21 @@
     margin: auto;
   }
 
+  .text_box_fh p{
+    width: 90vw;
+  }
+
+  .text_box_fh h1{
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
   .contain_fh img{
     display: none;
+  }
+
+  .text_box_fh button{
+    width: 80vw;
   }
 
 
