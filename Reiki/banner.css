@@ -12,6 +12,8 @@
   user-select: none; /* Standard syntax */
 }
 
+
+
 .menu_icon{
   display: none;
   height: 50px;
@@ -30,12 +32,18 @@
   cursor: pointer;
   user-select:none;
   margin-top: 8px;
-  margin-left: 20px;
 }
 
-.overskrift_logo img{
-  height: 45px;
-  margin-top: -5px;
+.overskrift_greier{
+  display: flex;
+  width: 340px;
+}
+
+.banner_img{
+  height: 50px;
+  margin: auto;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 nav{
