@@ -101,8 +101,7 @@
 
 
 
-
-
+/*Hva er*/
 .content3{
   width: 100vw;
   height: 100vh;
@@ -169,36 +168,8 @@
 
 
 
-
-
-
+/*Hva skjer*/
 .content4{
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-}
-
-.cont4_header{
-  margin: auto;
-  font-size: 4rem;
-}
-
-.kort_holder{
-  display: flex;
-  width: 90vw;
-  margin: auto;
-  margin-top: 0px;
-}
-
-
-
-
-
-
-
-
-
-.content5{
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -207,7 +178,7 @@
   background: linear-gradient(90deg, rgba(117,173,250,1) 0%, rgba(153,196,255,1) 43%, rgba(255,255,255,1) 100%);
 }
 
-.content5 img{
+.content4 img{
   width: 700px;
   height: 400px;
   margin: auto;
@@ -215,12 +186,12 @@
 }
 
 
-.text_box_c5{
+.text_box_c4{
   margin: auto;
   display: grid;
 }
 
-.text_box_c5 h1{
+.text_box_c4 h1{
   margin: auto;
   font-size:2rem;
   margin-bottom: 40px;
@@ -228,7 +199,7 @@
 
 }
 
-.text_box_c5 h2{
+.text_box_c4 h2{
   margin: auto;
   font-size:1rem;
   margin-bottom: 40px;
@@ -237,17 +208,15 @@
 
 }
 
-.text_box_c5 p{
-  width: 700px;
+.text_box_c4 p{
   margin: auto;
   font-size: 1.3rem;
   display: grid;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 500px;
-
+  width: 700px;
 }
 
-.text_box_c5 button{
+.text_box_c4 button{
     height: 40px;
     width: 350px;
     margin: auto;
@@ -263,7 +232,7 @@
 }
 
 
-.content5 button:hover{
+.content4 button:hover{
   background-color: rgb(165, 165, 255);
 }
 
@@ -273,12 +242,11 @@
 
 
 
-
-.content6{
+.content5{
   height: 100vh;
   width: 100vw;
-  background: rgb(226, 235, 204);
   display: grid;
+  background-color: rgb(219, 233, 211);
 }
 
 .map{
@@ -286,17 +254,30 @@
   height: 400px;
   margin: auto;
   border: solid 1px black;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/*Pris*/
+.kort_holder{
+  display: flex;
+  margin: auto;
+  margin-top: 0px;
+  width: 800px;
+  margin-bottom: -50px;
 }
 
 
 .contact{
   display: flex;
+  margin: auto;
+  width: 100vw;
+  margin-bottom: 0;
 }
 
 
 .submit{
   margin: auto;
+  display: none;
 }
 
 
@@ -309,18 +290,23 @@
 }
 
 .contact_card{
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
   background-color: white;
   border-radius: 5px;
   margin: auto;
   display: grid;
   row-gap: -100px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contact_card:hover{
+  transform: scale(1.02);
 }
 
 .contact_card img{
   margin: auto;
-  width: 25px;
+  width: 40px;
   image-rendering:optimizeQuality
 }
 
