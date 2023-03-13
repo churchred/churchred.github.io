@@ -375,7 +375,7 @@ function change_difficulty(diff){
   localStorage.setItem('difficulty', diff)
   difficulty = diff
   var sym = ""
-  if(diff == "pluss_level_1" || diff == "pluss_level_2" || diff == "pluss_level_3" || diff == "pluss_level_4" || 
+  if(diff == "pluss_level_0" || diff == "pluss_level_1" || diff == "pluss_level_2" || diff == "pluss_level_3" || diff == "pluss_level_4" || 
   diff == "pluss_level_5" || diff == 'tiervenn_level_1'){sym = "+"}
   if(diff == "minus_level_1" || diff == "minus_level_2" || diff == "minus_level_3" || diff == "minus_level_4" || diff == "minus_level_5"){sym = "-"}
   if(diff == "multi_level_1" || diff == "multi_level_2"){sym = "*"}
@@ -388,6 +388,12 @@ function change_difficulty(diff){
 function make_math(){
   var n1 = 0
   var n2 = 0
+
+    //Lag regnestykke men tall mellom 0-5
+    if(difficulty == "pluss_level_0"){
+      n1 = Math.floor(Math.random() * 4)+1
+      n2 = Math.floor(Math.random() * 5)
+    }
 
   //Lag regnestykke men tall mellom 1-10
   if(difficulty == "pluss_level_1"){
@@ -527,7 +533,8 @@ function check_answer(){
   document.activeElement.blur();
 
   if(difficulty == "pluss_level_1" || difficulty == "pluss_level_2" || difficulty == "pluss_level_3" || 
-     difficulty == "pluss_level_4" || difficulty == "pluss_level_5" || difficulty == "tiervenn_level_1"){
+     difficulty == "pluss_level_4" || difficulty == "pluss_level_5" || difficulty == "tiervenn_level_1"|| 
+     difficulty == "pluss_level_0"){
     if(user_answer == n1+n2){
       answer_is('correct')
     }else{answer_is('wrong')}
