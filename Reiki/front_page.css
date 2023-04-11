@@ -78,27 +78,32 @@
   }
   
   .front_page_text_div{
-    width: 90vw;
-    height: 60vh;
+    width: 100vw;
+    min-height: 65vh;
     margin: auto;
     display: grid;
   }
   
   .front_page_text{
-    width: 90vw;
+    width: 100vw;
     text-align: center;
     height: auto;
     min-height: 40vh;
+    margin-top: 50px;
+    display: grid;
+
   }
   
   .front_page_text h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
+    max-width: 90vw;
+    margin: auto;
   }
   
   .front_page_text p{
     margin: auto;
-    width: 95vw;
+    width: 90vw;
     font-size: 1.4rem;
     color: white;
     text-align: center;
