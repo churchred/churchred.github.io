@@ -1,0 +1,32 @@
+@import "banner.css";
+@import "front_page.css";
+@import "buttons.css";
+@import "article.css";
+@import "whole_article.css";
+@import "pris_kort.css";
+@import "contact.css";
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.body{
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
+
+
+.button_color{
+  background-color: rgb(137, 137, 255);
+}
+.button_color:hover{
+  background-color: rgb(165, 165, 255);
+}
+
+
+
