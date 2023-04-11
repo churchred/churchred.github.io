@@ -11,7 +11,7 @@
 
 
 .whole_article article{
-  width: 70vw;
+  width: 85vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto;
@@ -20,8 +20,9 @@
 
 
 .whole_article article img{
+  max-width: 600px;
+  max-height: 600px;
   height: 500px;
-  width: 500px;
   width: auto;
   border-radius: 10px;
   width:auto;
@@ -32,6 +33,9 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   height: auto;
   display: grid;
+  width: 40vw;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .w_art_text_div h1{
@@ -59,7 +63,7 @@
   width: 250px;
   margin: auto;
   border: none;
-  margin-top: 30px;
+  margin-top: 60px;
   font-size: 1.2rem;
   color: white;
   border-radius: 40px;
@@ -68,6 +72,61 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.fjern_heal_chg{
+  margin-top: -20px;
+}
 
 
+@media only screen and (max-width: 1650px){  
+  .whole_article article{
+    width: 95vw;
+  }
+  .whole_article article img{
+    height: auto;
+    width: auto;
+    max-width: 600px;
+    max-height: 600px;
+  }
+}
 
+@media only screen and (max-width: 1150px){  
+
+  .whole_article{
+    background-color: white;
+    width: 95vw;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .whole_article article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+
+  .whole_article article img{
+    height: auto;
+    width: 80vw;
+    max-width: 600px;
+    max-height: 600px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
+  .w_art_text_div{
+    height: auto;
+    display: grid;
+    width: 90vw;
+  }
+
+  .whole_article button{
+    margin-bottom: 30px;
+    border-radius: 15px;
+  }
+
+  .fjern_heal_chg{
+    margin-top: -100px;
+  }
+}
