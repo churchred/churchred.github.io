@@ -132,23 +132,38 @@
   .article article{
     grid-template-columns: 1fr;
     width: 90vw;
-    height: 90vh;
+    min-height: 50vh;
     background-color: white;
+    display: grid;
   }
 
   .article button{
     margin-top: 40px;
     border-radius: 15px;
+    display: none;
   }
 
   .hva_er_reiki p{
     font-size: 1rem;
+    margin: auto;
   }
 
   .hva_er_reiki h1{
     font-size: 2rem;
+    margin: auto;
   }
   .art_text_div h2{
     font-size: 1.1rem;
+    margin: auto;
+  }
+
+  .hvordan_reiki h1{
+    font-size: 1.5rem;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .hvordan_reiki p{
+    margin: auto;
+    margin-top: 10px;
   }
 }

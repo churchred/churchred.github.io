@@ -158,8 +158,16 @@ nav ul li a:hover{
   }
 }
 
-@media only screen and (max-width: 480px){ 
+@media only screen and (max-width: 500px){ 
   .overskrift_logo{
-    font-size: 35px;
+    font-size: 28px;
+  }
+
+  .menu_icon{
+    height: 35px;
+  }
+  
+  .banner_img{
+    height: 35px;
   }
 }

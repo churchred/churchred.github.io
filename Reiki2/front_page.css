@@ -74,21 +74,26 @@
     width: 100vw;
     height: 50vh;
     background-size: 100% 130%;
+    display: grid;
   }
   
   .front_page_text_div{
-    width: 80vw;
+    width: 90vw;
     height: 60vh;
+    margin: auto;
+    display: grid;
   }
   
   .front_page_text{
     width: 90vw;
     text-align: center;
-    height: 40vh;
+    height: auto;
+    min-height: 40vh;
   }
   
   .front_page_text h1{
     font-size: 3rem;
+    text-align: center;
   }
   
   .front_page_text p{

@@ -77,6 +77,15 @@
   
 }
 
+.cont_h1{
+  margin: auto;
+  text-align: center;
+  margin-bottom: -80px;
+  font-size: 3rem;
+  margin-top: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 
 /*MOBILE - GRID*/
 @media only screen and (max-width: 1000px){  
@@ -84,6 +93,7 @@
     width: 90vw;
     margin: auto;
     margin-bottom: 40px;
+    margin-top: 100px;
   }
 
   .kort_holder{
@@ -100,10 +110,17 @@
     display: grid;
     row-gap: 30px;
     margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .pay_info{
     max-width: 500px;
     width: 95vw;
+  }
+
+  .cont_h1{
+    font-size: 3rem;
+    margin-top: 150px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 }
