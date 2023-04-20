@@ -14,7 +14,7 @@ html, body{
 
 .banner{
   background-color: rgb(27, 27, 27);
-  width: 100%;
+  width: 100vw;
   height: 50px;
   align-items: center;
   display: flex;
@@ -28,11 +28,35 @@ html, body{
  }
 
  .banner select{
-  width: 225px;
+  width: 240px;
   height: 40px;
   margin: auto;
+  cursor: pointer;
   margin-left: 10px;
-  margin-right: 5vw;
+}
+
+.BC_btn{
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  min-width: 140px;
+  height: 30px;
+  cursor: pointer;
+  border: 2px solid white;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.BC_btn:hover{
+  color:rgb(146, 146, 146);
+  border: 2px solid rgb(146, 146, 146);
 }
 
  .lvl_btn{
