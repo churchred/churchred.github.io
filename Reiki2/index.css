@@ -135,7 +135,8 @@
 }
 
 .hero2cardBox div{
-  width: 400px;
+  width: 90vw;
+  max-width: 400px;
   height: 250px;
   border: 1px solid #F4EDE5;
   display: grid;
@@ -287,5 +288,47 @@
   .logoDiv div img{
     width: 40px;
     height: auto;
+  }
+
+  .textStuff h1{
+    font-size: 3.5rem;
+    width: 95vw;
+    height: auto;
+    margin: auto;
+  }
+
+  .textStuff p{
+    font-size: 1.4rem;
+    width: 80vw;
+    height: auto;
+    margin: auto;
+  }
+
+  .textStuff{
+    margin: auto;
+    width: 90vw;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .hero2cardBox div{
+    height: auto;
+  }
+
+  .hero img{
+    width: 90vw;
+  }
+
+  .article_template img{
+    width: 90vw;
+    height: auto;
+  }
+
+  .lshadow{
+    box-shadow: -5px 5px 0 #F4EDE5;
+  }
+  
+  .dshadow{
+    box-shadow: -5px 5px 0 #837558;
   }
 }
