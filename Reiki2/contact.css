@@ -1,0 +1,104 @@
+
+
+.map{
+  display: none;
+  width: 700px;
+  height: 300px;
+  margin: auto;
+  border: solid 1px black;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+/*Pris*/
+.kort_holder{
+  display: flex;
+  margin: auto;
+  width: 800px;
+}
+
+.cont_info{
+  width: 1000px;
+  height: 200px;
+  display: flex;
+  margin: auto;
+}
+
+.contact_card{
+  width: 300px;
+  height: 150px;
+  border-radius: 5px;
+  margin: auto;
+  display: grid;
+}
+
+.contact_card:hover{
+  transform: scale(1.02);
+}
+
+.contact_card img{
+  margin: auto;
+  width: 40px;
+  image-rendering:optimizeQuality
+}
+
+.contact_card h1{
+  margin: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contact_card a{
+  margin: auto;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+.cont_h1{
+  margin: auto;
+  text-align: center;
+  margin-bottom: -80px;
+  font-size: 3rem;
+  margin-top: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/*MOBILE - GRID*/
+@media only screen and (max-width: 1000px){  
+  .map{
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 100px;
+  }
+
+  .kort_holder{
+    display: grid;
+    width: 95vw;
+    height: auto;
+    row-gap: 30px;
+    margin-top: 30px;
+  }
+
+  .cont_info{
+    width: 95vw;
+    height: auto;
+    display: grid;
+    row-gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .pay_info{
+    max-width: 500px;
+    width: 95vw;
+  }
+
+  .cont_h1{
+    font-size: 3rem;
+    margin-top: 150px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+}

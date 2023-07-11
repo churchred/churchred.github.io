@@ -1,0 +1,67 @@
+
+
+.pris_kort{
+  display: grid;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  border-radius: 3%;
+}
+
+.pris_kort h2{
+  text-align: center;
+  font-weight: normal;
+  padding-top: 20px;
+  font-size: 1.4rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pris_kort h1{
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'arial black';
+  margin-top: -10px;
+}
+
+
+.pris_kort h3{
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: 'arial black';
+  margin-top: -10px;
+  margin-bottom: -100px;
+  color: rgb(83, 82, 82);
+}
+
+
+
+.blue_line{
+  width: 100px;
+  height: 5px;
+  margin: auto;
+  border-radius: 7px;
+  margin-top: 0;
+}
+
+.price_info{
+  margin-left: 30px;
+}
+
+.price_info div{
+  display: flex;
+  line-height: 50px;
+}
+
+
+.anbefales{
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  margin-top: -25px;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 150px;
+
+}
