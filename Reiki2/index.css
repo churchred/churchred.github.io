@@ -295,7 +295,7 @@
   }
 }
 
-@media only screen and (max-width: 450px){ 
+@media only screen and (max-width: 500px){ 
   .logoDiv div p{
     font-size: 2rem;
   }
