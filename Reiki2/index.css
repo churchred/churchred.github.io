@@ -55,6 +55,7 @@
   height: 300px;
   margin: auto;
   display: grid;
+  padding: 10px;
 }
 
 
@@ -276,14 +277,27 @@
   }
 
   .article_template_TextBox{
-    width: 90%;
+    width: 90vw;
+    margin: auto;
+  }
+
+  .article_template_TextBox{
+    max-width: 100%;
     height: auto;
+  }
+
+  .article_template_TextBox h1{
+    max-width: 100%;
+    font-size: clamp(0.5rem, 1rem + 3vw, 4rem);
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
   }
 }
 
 @media only screen and (max-width: 450px){ 
   .logoDiv div p{
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   .logoDiv div img{
     width: 40px;
@@ -291,7 +305,7 @@
   }
 
   .textStuff h1{
-    font-size: 3.5rem;
+    font-size: clamp(0.5rem, 1rem + 10vw, 4rem);
     width: 95vw;
     height: auto;
     margin: auto;
