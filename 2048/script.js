@@ -472,7 +472,39 @@ function load(){
   }
 }
 
-// KEYBOARD LOGIC - MOVEMENT
+
+// Logic for the buttons that appear when on mobile
+function mobile_move(direction){
+  if(clicked == false && lost == false){
+    
+    if(direction == "right"){   // Move right
+      moveRight()
+    }
+    
+    if(direction == "left"){   // Move left
+      moveLeft()
+    }
+    
+    if(direction == "up"){     // Move up
+      moveUp()
+    }
+    
+    if(direction == "down"){   // Move down
+      moveDown()
+    }
+
+    clicked = true     // This is so we cant click more than one button at the time and so that pressing a button only runs these functions once.
+    checkLose()        // After button press we check if we have lost the game.
+  }
+  
+  clicked = false
+
+  if (change == true){ 
+    onMove()             // This runs if the board has been changed after we pressed the button.
+  }
+}
+
+// Logic for keyboard presses
 addEventListener('keydown', ({key}) =>{
   if(clicked == false && lost == false){
     

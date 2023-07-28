@@ -76,7 +76,6 @@ body{
   margin: auto;  
   background-color: #b38860;
   display: grid;
-
 }
 
 .lost h1{
@@ -159,6 +158,72 @@ body{
   text-align: center;
   align-items: center;
   transition: .1s linear;
+}
+
+.phone-buttons{
+  display: grid;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  margin-top: -300px;
+  border-radius: 10px;
+}
+
+.phone-buttons div{
+  display: flex;
+  margin: auto;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.phone-buttons button{
+  margin: auto;
+  width: 80px;
+  height: 75px;
+  border-radius: 10px;
+  font-size: 3rem;
+  background-color: var(--color-bg);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 650px){  
+  .lost-bg{
+    width: 86%;
+    height: 400px;
+  }
+
+  .lost{
+    width: 100%;
+  }
+
+  .bgr{
+    width: 360px;
+    height: 400px;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .game-board{
+    width: 350px;
+    height: auto;
+    --cell-size: 80px;
+    --cell-gap: 10px;
+    --board-padding: 10px;
+    grid-template-columns: repeat(4, var(--cell-size));
+    grid-template-rows: repeat(4, var(--cell-size));
+  }
+
+  .lost{
+    width: 100%;
+  }
+
+  .tile{
+    font-size: 2rem;
+  }
+
+  .phone-buttons{
+    display: grid;
+  }
 }
 
 .new {
