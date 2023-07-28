@@ -485,22 +485,22 @@ function load(){
 addEventListener('keydown', ({key}) =>{
   if(clicked == false && lost == false){
     //Beveg mot høyre
-    if(key == "d" && keys.right.pressed != true){
+    if(key == "d" || key == "ArrowRight" && keys.right.pressed != true){
       keys.right.pressed = true
       moveRight()
     }
     //Beveg mot venstre
-    if(key == "a" && keys.left.pressed != true){
+    if(key == "a" || key == "ArrowLeft" && keys.left.pressed != true){
       keys.left.pressed = true
       moveLeft()
     }
     //Beveg mot opp
-    if(key == "w" && keys.up.pressed != true){
+    if(key == "w" || key == "ArrowUp" && keys.up.pressed != true){
       keys.up.pressed = true
       moveUp()
     }
     //Beveg mot ned
-    if(key == "s" && keys.down.pressed != true){
+    if(key == "s" || key == "ArrowDown" && keys.down.pressed != true){
       keys.down.pressed = true
       moveDown()
     }
@@ -513,19 +513,19 @@ addEventListener('keydown', ({key}) =>{
 addEventListener('keyup', ({key}) =>{
   if(lost == false){
     
-    if(key == "d"){ // Beveg mot høyre
+    if(key == "d" || key == "ArrowRight" ){ // Beveg mot høyre
       keys.right.pressed = false
     }
     
-    if(key == "a"){ // Beveg mot venstre
+    if(key == "a" || key == "ArrowLeft" ){ // Beveg mot venstre
       keys.left.pressed = false
     }
    
-    if(key == "w"){  // Beveg opp
+    if(key == "w" || key == "ArrowUp" ){  // Beveg opp
       keys.up.pressed = false
     }
     
-    if(key == "s"){ //Beveg ned
+    if(key == "s" || key == "ArrowDown" ){ //Beveg ned
       keys.down.pressed = false
     }
     
