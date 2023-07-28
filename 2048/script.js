@@ -112,7 +112,7 @@ function createChip(){
         new_tile.style.setProperty('--x', collum);
         document.getElementById('gameboard').appendChild(new_tile);
         gameBoard[row][collum][0] = temp_id
-        gameBoard[row][collum][1] = 2
+        gameBoard[row][collum][1] = new_value
 
         id_var += 1
         done = true
@@ -128,7 +128,7 @@ function createChip(){
 function moveRight(){
 
   //Beveger alt så langt bort vi kan
-  for(var j=0; j<5; j++){
+  for(var j=0; j<6; j++){
     if(j != 3){
       for(var i=0; i<number_of_rows; i++){
         for(var ii=0; ii<number_of_rows; ii++){
@@ -179,11 +179,10 @@ function moveRight(){
 
 }
 
-
 // Logikk for bevegelse mot venstre
 function moveLeft(){
   //Beveger alt så langt bort vi kan
-  for(var j=0; j<5; j++){
+  for(var j=0; j<6; j++){
     if(j != 3){
       for(var i=0; i<number_of_rows; i++){
         for(var ii=number_of_rows-1; ii>-1; ii--){
@@ -232,10 +231,9 @@ function moveLeft(){
   }
 }
 
-
 // Logikk for bevegelse mot opp
 function moveUp(){
-  for(var j=0; j<5; j++){
+  for(var j=0; j<6; j++){
     if(j != 3){
       for(var i=number_of_rows-1; i>-1; i--){
         for(var ii=0; ii<number_of_rows; ii++){
@@ -284,11 +282,9 @@ function moveUp(){
   }
 }
 
-
-
 // Logikk for bevegelse mot ned
 function moveDown(){
-  for(var j=0; j<5; j++){
+  for(var j=0; j<6; j++){
     if(j != 3){
       for(var i=0; i<number_of_rows; i++){
         for(var ii=0; ii<number_of_rows; ii++){
@@ -485,6 +481,7 @@ function load(){
 }
 
 // KEYBOARD LOGIC - MOVEMENT
+// Fremtid: left = 37   -   up = 38   -   right = 39   -   down = 40
 addEventListener('keydown', ({key}) =>{
   if(clicked == false && lost == false){
     //Beveg mot høyre
