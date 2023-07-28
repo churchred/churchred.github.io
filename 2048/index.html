@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2048 ver 0.9</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Script Links-->
+  <script src="script.js"></script>
+
+
+</head>
+<body onload="load()">
+  
+
+  
+  <div class="text-box">
+    <h1 class="header">2048</h1>
+    <div class="score-div">    
+      <p class="score" id="score">Score: 0</p>
+      <p class="score" id="best_score">Best: 0</p>
+    </div>
+
+    <button class="reset-btn" onclick="reset()">Ny</button>
+  </div>
+
+  <div class="bgr">
+    <div class="game-board" id="gameboard">
+      <div class="play-square-bg" id="sq1"></div>
+      <div class="play-square-bg" id="sq2"></div>
+      <div class="play-square-bg" id="sq3"></div>
+      <div class="play-square-bg" id="sq4"></div>
+      <div class="play-square-bg" id="sq5"></div>
+      <div class="play-square-bg" id="sq6"></div>
+      <div class="play-square-bg" id="sq7"></div>
+      <div class="play-square-bg" id="sq8"></div>
+      <div class="play-square-bg" id="sq9"></div>
+      <div class="play-square-bg" id="sq10"></div>
+      <div class="play-square-bg" id="sq11"></div>
+      <div class="play-square-bg" id="sq12"></div>
+      <div class="play-square-bg" id="sq13"></div>
+      <div class="play-square-bg" id="sq14"></div>
+      <div class="play-square-bg" id="sq15"></div>
+      <div class="play-square-bg" id="sq16"></div>
+    </div>
+
+
+    <div class="lost-bg" id="lost">
+      <div class="lost" >
+        <h1>Game over</h1>
+        <button onclick="reset()">Try again</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
