@@ -1,0 +1,106 @@
+
+
+
+
+.utdanning-page{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-col);
+  display: grid;
+}
+
+
+.utdanning-header{
+  font-size: 4rem;
+  width: auto;
+  font-family: var(--text-type);
+  margin: auto;
+  padding: 5px;
+  box-shadow: 0px 5px 0 var(--main-color);
+  padding: 20px;
+  box-shadow: 5px 5px 0 var(--main-color);
+}
+
+.utdanning-page-containter{
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  margin-top: 50px;
+}
+
+
+.utdanning-card{
+  width: 400px;
+  height: 560px;
+  margin: auto;
+  border: 5px solid var(--main-color);
+  background-color: var(--bg-col2);
+  display: grid;
+  grid-template-rows: 100px auto auto 1fr;
+  row-gap: 10px;
+}
+
+
+
+.utdanning-card img{
+  width: 20%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+
+.utdanning-card h1{
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.utdanning-card h2{
+  width: 100%;
+  line-height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.utdanning-card-year{
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+.utdanning-card-info{
+  padding: 15px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+.utdanning-card ul{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.utdanning-card li{
+  margin-left: 0;
+  display: flex;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+
+.utdanning-card li img{
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  margin-right: 10px;
+}
+
+.utdanning-card li p{
+  width: 100%;
+}

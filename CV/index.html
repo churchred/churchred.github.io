@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>
+
+
+</head>
+<body class="main-body">
+
+  <div class="banner-body">
+    <div class="logo-box">
+      <img src="assets/logo3.png" alt="Logo" class="logo">
+      <p>Portfolio</p>
+    </div>
+      <ul>
+        <li onClick="document.getElementById('landing').scrollIntoView()">Hjem</li>
+        <li onClick="document.getElementById('utdanning').scrollIntoView()">Utdanning</li>
+        <li onClick="document.getElementById('erfaring').scrollIntoView()">Erfaring</li>
+        <li onClick="document.getElementById('prosjekter').scrollIntoView()">Prosjekter</li>
+        <li onClick="document.getElementById('about').scrollIntoView()">Om meg</li>
+      </ul>
+    <div class="button-box">
+      <img src="assets/menu.png" alt="menu-logo" class="menu_logo" onclick="click_btn()">
+    </div>
+  </div>
+
+  <div class="landing-page" id="landing">
+    <div class="landing-page-containter">
+      <img src="assets/me.jpeg">
+      <div class="landing-page-text-box">
+        <h1>Kristoffer Kirkerød</h1>
+        <p>Data Inginør  /  Lærer</p>
+        <button class="main-button">CV</button>
+        <button class="main-button">Github</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="utdanning-page" id="utdanning">
+    <h1 class="utdanning-header">Min Utdanning</h1>
+    <div class="utdanning-page-containter">
+      <div class="utdanning-card">
+        <img src="assets/hiof2.png" alt="Logo">
+        <h1>Høgskolen i Østfold</h1>
+        <h2>Grunnskolelærer 1-7</h1>
+        <p class="utdanning-card-year">2015-2019</p>
+        <p class="utdanning-card-info">I 2019 begynte jeg på lærerutdanningen til Høgskolen i Østfold. Utdanningen var 4-årlig og endte opp i en bachelor. Jeg jobbet også frivillig i skolens IT-helpdesk igjennom de første 2 årene</p>
+        <ul> Emner(230stp):
+          <li><img src="assets/checkmark2.png"> <p>Norsk - 30stp</p></li>
+          <li><img src="assets/checkmark2.png"> <p>Matematikk - 60stp</p></li>
+          <li><img src="assets/checkmark2.png"> <p>Engelsk - 60stp</p></li>
+          <li><img src="assets/checkmark2.png"> <p>Kroppsøvning - 30stp</p></li>
+          <li><img src="assets/checkmark2.png"> <p>Pedagogikk - 60stp</p></li>
+        </ul>
+      </div>
+
+      <div class="utdanning-card">
+        <img src="assets/qut.png" alt="Logo">
+        <h1>Queensland University of Technology</h1>
+        <h2>Utveksling i Australia</h1>
+        <p class="utdanning-card-year">2019</p>
+        <p class="utdanning-card-info">I det siste halvåret av utdanningen min på Hiof utvekslet jeg til Australia. Her studerte jeg på Queensland Univeristy of Technology</p>
+        <ul> Emner(30stp):
+          <li><img src="assets/checkmark2.png"> <p>Gifted Children - 7,5stp</p></li>
+          <li><img src="assets/checkmark2.png"> <p>Australian History - 7,5stp</p></li>
+          <li><img src="assets/checkmark2.png"> <p>Creative Writing - 7,5stp</p></li>
+          <li><img src="assets/checkmark2.png"> <p>Children with Learning Difficulties - 7,5stp</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-page" id="prosjekter">
+    <h1 class="project-header">Mine Prosjekter</h1>
+    <div class="project-box">
+
+      <div class="project-card">
+        <img src="assets/pkmn.PNG">
+        <div class="project-card-text-containter">        
+          <h1>Pokemon Matte</h1>
+          <h2>HTML / CSS / JS &nbsp  - &nbsp 2021</h2>
+          <p>Dette var ideèn som gjorde at jeg begynte å lære meg HTML/CSS/JS. Jeg ville lage et kult matematikk spill til elevene mine. Prosjektet tok et par måneder. Når jeg nesten var ferdig med versjon 1 så begynte jeg prosjektet på nytt fordi jeg hadde lært så mye av å lage den første versjonen. Elevene får en pokemon hver femte oppgave de klarer. Pokemon de får blir lagret lokalt og forsvinner ikke.</p>
+          <div>
+            <button class="main-button">Link til siden</button>
+            <button class="main-button">Github</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <img src="assets/terning.PNG">
+        <div class="project-card-text-containter">        
+          <h1>Terninger</h1>
+          <h2>HTML / CSS / JS &nbsp  - &nbsp 2022</h2>
+          <p>Den ene skolen jeg jobbet på hadde aldri terninger tilgjenglig. Derfor bestemte jeg med for å lage en app som elevene kunne ha på iPadene sine. Jeg la til flere farger og typer terninger.</p>
+          <div>
+            <button class="main-button">Link til siden</button>
+            <button class="main-button">Github</button>
+          </div>
+        </div>
+      </div>
+
+        <div class="project-card">
+          <img src="assets/teller.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Teller'n</h1>
+            <h2>HTML / CSS / JS &nbsp  - &nbsp 2022</h2>
+            <p>Broren min trengte en animasjon på en fremføring han skulle ha på jobben. Animasjonen skulle være av et tall som teller fort oppover. Derfor lagde jeg denne. Den teller både opp og ned og du kan selv velge farten på tellingen og hvor mye den teller med hver gang.</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <img src="assets/gloser.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Engelsk Gloser</h1>
+            <h2>HTML / CSS / JS &nbsp  - &nbsp 2022</h2>
+            <p>Da jeg begynte med engelsk i 3.klasse tenkte jeg det hadde vært gøy å lage et spill for å pugge gloser. Her får elevene klistremerker for hver femte glose de klarer. Svaret kommer opp hvis de får mange nok feil.</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/blogg.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Dikt side</h1>
+            <h2>HTML / CSS / JS &nbsp  - &nbsp 2022</h2>
+            <p>Dette prosjektet lagde jeg kun for å øve litt. Brukte min mor sine dikt fra instagram.</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/reiki.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Reiki Side</h1>
+            <h2>HTML / CSS / JS &nbsp  - &nbsp 2023</h2>
+            <p>Mamma hadde begynt med reiki og spurte meg om å lage en side til henne. Hun trengte det ikke alikevel til slutt, men var gøy å lage.</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <img src="assets/2048.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Spill: 2048</h1>
+            <h2>HTML / CSS / JS &nbsp  - &nbsp 2023</h2>
+            <p>Enda et øveprosjekt. Dette var for å se om jeg kunne lage en spill med bare HMTL/CSS/JS men litt animasjoner. Var et morsomt prosjekt</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/watch.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Episode tracker</h1>
+            <h2>Python / Pygame &nbsp  - &nbsp 2017</h2>
+            <p>I slutten av VGS hadde jeg en del serier lastet ned på PCen min. For å huske hvor i serien jeg var skrev jeg ned episode-tallet in notepad-fil. Dette ble jeg til slutt lei og lagde denne. Du skriver hvor video-filene er lagret på pcen også lager den en liste. Trykker du på på en seier åpner den episoden for deg. Du kan trykke på neste og den går til neste episode automatisk, så lenge det finnes en ny episode eller sesong. Du kan bookmarke favoritt episoder.</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <img src="assets/pacman.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Pacman</h1>
+            <h2>Python / Pygame &nbsp  - &nbsp 2017</h2>
+            <p>Et prosjekt jeg begynte med for å lære meg pygame. Et av mine første prosjekter. Spøkelsene har ikke noe særlig AI, de beveger seg random.</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/spacecleaner.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Spacecleaner</h1>
+            <h2>Python / Pygame &nbsp  - &nbsp 2018</h2>
+            <p>Et prosjekt jeg begynte med for å lære meg velocity og acceleration.</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <img src="assets/data.PNG">
+          <div class="project-card-text-containter">        
+            <h1>Data behandling</h1>
+            <h2>Python &nbsp  - &nbsp 2019</h2>
+            <p>En kompis jobbet med et prosjekt hvor en maskin ble kastet ut i fallskjerm og samlet informasjon igjennom en sensor. Han spurte om jeg kunne lage en demo til en fremføring de hadde om dette. Jeg lagde en sensor-program som lagde random-generet data innenfor de rammene han faktisk kunne fått fra sensor, disse ble lagret i en txt-fil. Deretter lagde jeg et program som tok den dataen fra text filen og brukte formler for å konvertere den til lesbar data. Disse formlene fikk jeg og kom ikke på selv. Deretter blir ny lesbar data lagret i et nytt text dokument</p>
+            <div>
+              <button class="main-button">Link til siden</button>
+              <button class="main-button">Github</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        
+
+        
+    </div>
+  </div>
+  
+</body>
+</html>
