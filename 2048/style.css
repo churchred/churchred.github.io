@@ -8,6 +8,9 @@
 :root {
   --color-bg: #BBADA0;
   --color-bg-sq: #CDC1B4;
+  --fs-small-nr: 5rem;
+  --fs-medium-nr: 4rem;
+  --fs-big-nr: 3rem;
 }
 
 
@@ -153,7 +156,6 @@ body{
   height: var(--cell-size);
   display: grid;
   border-radius: 10px;
-  font-size: 5rem;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   align-items: center;
@@ -161,7 +163,7 @@ body{
 }
 
 .phone-buttons{
-  display: grid;
+  display: none;
   margin: auto;
   width: 250px;
   height: 250px;
@@ -223,7 +225,13 @@ body{
 
   .phone-buttons{
     display: grid;
+    margin: auto;
   }
+  :root{
+    --fs-medium-nr: 2rem;
+    --fs-small-nr: 1rem;
+  }
+  
 }
 
 .new {
@@ -241,74 +249,80 @@ body{
 .t2{
   background-color: #EDDFC4;
   color: #7B6B5E;
+  font-size: var(--fs-big-nr);
 }
 
 .t4{
   background-color: #EDDFC4;
   color: #7B6B5E;
+  font-size: var(--fs-big-nr);
 }
 
 .t8{
   background-color: #F29961;
   color: white;
+  font-size: var(--fs-big-nr);
 }
 
 .t16{
   background-color: #F29961;
   color: white;
+  font-size: var(--fs-big-nr);
 }
 
 .t32{
   background-color: #F65E39;
   color: white;
+  font-size: var(--fs-big-nr);
 }
 
 .t64{
   background-color: #F65E39;
   color: white;
+  font-size: var(--fs-big-nr);
 }
 
 .t128{
   background-color: #EDCA64;
   color: white;
-  font-size: 4rem;
+  font-size: var(--fs-medium-nr);
 }
 
 .t256{
   background-color: #EDCA64;
   color: white;
-  font-size: 4rem;
+  font-size: var(--fs-medium-nr);
 }
 
 .t512{
   background-color: #EEC744;
   color: white;
-  font-size: 4rem;
+  font-size: var(--fs-medium-nr);
 }
 
 .t1024{
   background-color: #EEC744;
   color: white;
-  font-size: 3rem;
+  font-size: var(--fs-small-nr);
 }
 
 .t2048{
   background-color: #ECC22E;
   color: white;
-  font-size: 3rem;
+  font-size: var(--fs-small-nr);
 }
 
 .t4096{
   background-color: #FE3D3E;
   color: white;
-  font-size: 3rem;
+  font-size: var(--fs-small-nr);
 }
 
 
 .t8192{
   background-color: rgb(71, 8, 8);
   color: white;
-  font-size: 3rem;
+  font-size: var(--fs-small-nr);
 }
 
 
