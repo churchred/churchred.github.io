@@ -8,9 +8,9 @@
 :root {
   --color-bg: #BBADA0;
   --color-bg-sq: #CDC1B4;
-  --fs-small-nr: 5rem;
+  --fs-big-nr: 5rem;
   --fs-medium-nr: 4rem;
-  --fs-big-nr: 3rem;
+  --fs-small-nr: 3rem;
 }
 
 
