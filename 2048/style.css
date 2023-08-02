@@ -87,7 +87,7 @@ body{
 }
 
 
-.lost button{
+.lost-reset-btn{
   width: 150px;
   height: 40px;
   font-size: 1rem;
@@ -99,7 +99,24 @@ body{
   cursor: pointer;
 }
 
-.lost button:hover{
+.lost-close-btn{
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin: auto;
+  color: white;
+  background-color: rgb(187, 53, 46);
+  border: 2px solid black;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.lost-close-btn:hover{
+  background-color: rgb(222, 81, 73);
+}
+
+.lost-reset-btn:hover{
   background-color: rgb(222, 81, 73);
 }
 

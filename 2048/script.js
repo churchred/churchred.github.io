@@ -473,6 +473,12 @@ function load(){
 }
 
 
+// Logic for closing the Game Over screen. Used to view the board after losing.
+function hide_reset(){
+  document.getElementById("lost_fg").style.display = "none";  // Gameover screen becomes visible on screen.
+  document.getElementById("lost").style.backgroundColor = "#7b6b5e62"; // Changes the transparency of the Lost screeen background.
+}
+
 // Logic for the buttons that appear when on mobile
 function mobile_move(direction){
   if(clicked == false && lost == false){

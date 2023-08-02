@@ -51,9 +51,10 @@
 
 
     <div class="lost-bg" id="lost">
-      <div class="lost" >
+      <div class="lost" id="lost_fg">
+        <button class="lost-close-btn" onclick="hide_reset()">X</button>
         <h1>Game over</h1>
-        <button onclick="reset()">Try again</button>
+        <button class="lost-reset-btn" onclick="reset()">Try again</button>
       </div>
     </div>
 
