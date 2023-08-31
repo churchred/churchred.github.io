@@ -167,6 +167,11 @@ let chance_shiny_array = [20, 4, 2, 1]
 let chance_shiny = chance_shiny_array[resets]
 
 
+//Er vanskelighetsgrad dropdown låst? locked eller unlocked
+var lock = 'unlocked'
+
+
+
 //Lyd variabler
 var audio_rett = new Audio('Sounds/correct.mp3');
 
@@ -233,6 +238,9 @@ function first_time_load(){
 
   //Sound volume
   localStorage.setItem('volume', sound_volume)
+
+  // diff dropdown lock
+  localStorage.setItem('diff_lock', lock)
 
   //Badges
   localStorage.setItem('Kanto_badges', 0)
@@ -343,9 +351,16 @@ function load_game(){
   if(total_pkmn_check() == pokedex_array.length && resets != 3){
     document.getElementById('reset_btn').style.visibility = "visible"
   }
+
+  // diff dropdown lock
+  lock = localStorage.getItem("diff_lock")
+  if(lock == "locked"){
+    lock_diff_dropdown()
+  }
+  
   
   console.log("--------------------------")
-  console.log("Difficulty:", difficulty)
+  console.log("Difficulty:", difficulty, " (", lock, ")")
   console.log("Current Region:", regions[current_region][1])
   console.log("Pokedex:", antall_pokemon, "/", regions[current_region][2])
   console.log("National Pokedex:", total_pkmn_check(), "/", pokedex_array.length)
@@ -888,6 +903,16 @@ function clear_pokedex(x){
   document.getElementById(x).innerHTML = ""
 }
 
+
+function lock_diff_dropdown(){
+  if(lock == 'locked'){
+    document.getElementById('dropdown').disabled = true;
+  }
+  if(lock == 'unlocked'){
+    document.getElementById('dropdown').disabled = false;
+  }
+}
+
 //Sjekker om vi trykker på et bilde
 document.addEventListener('click',function(e){
   if(natdex == true){return}
@@ -919,6 +944,19 @@ document.addEventListener('click',function(e){
 //Hva jukseknappene gjør
 function cheats(jk){
 
+
+  if(jk == "#lock" || jk == "#close"){
+    lock = 'locked'
+    localStorage.setItem('diff_lock', lock)
+    lock_diff_dropdown()
+  }
+
+  if(jk == "#unlock" || jk == "#open"){
+    lock = 'unlocked'
+    localStorage.setItem('diff_lock', lock)
+    lock_diff_dropdown()
+  }
+
   if(jk == "#enable"){
     cheating = true
     document.getElementById('input').style.color = 'orange'
@@ -934,6 +972,18 @@ function cheats(jk){
     
 
   if(cheating == false){return}
+
+  if(jk == "#lock" || jk == "#close"){
+    lock = 'locked'
+    localStorage.setItem('diff_lock', lock)
+    lock_diff_dropdown()
+  }
+
+  if(jk == "#unlock" || jk == "#open"){
+    lock = 'unlocked'
+    localStorage.setItem('diff_lock', lock)
+    lock_diff_dropdown()
+  }
   
   if(jk == "#right" || jk == "#r"){
     answer_is('correct')
