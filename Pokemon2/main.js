@@ -945,13 +945,13 @@ document.addEventListener('click',function(e){
 function cheats(jk){
 
 
-  if(jk == "#lock" || jk == "#close"){
+  if(jk == "#lock"){
     lock = 'locked'
     localStorage.setItem('diff_lock', lock)
     lock_diff_dropdown()
   }
 
-  if(jk == "#unlock" || jk == "#open"){
+  if(jk == "#unlock"){
     lock = 'unlocked'
     localStorage.setItem('diff_lock', lock)
     lock_diff_dropdown()
@@ -973,13 +973,13 @@ function cheats(jk){
 
   if(cheating == false){return}
 
-  if(jk == "#lock" || jk == "#close"){
+  if(jk == "#lock"){
     lock = 'locked'
     localStorage.setItem('diff_lock', lock)
     lock_diff_dropdown()
   }
 
-  if(jk == "#unlock" || jk == "#open"){
+  if(jk == "#unlock"){
     lock = 'unlocked'
     localStorage.setItem('diff_lock', lock)
     lock_diff_dropdown()
@@ -1034,6 +1034,19 @@ function cheats(jk){
         pokedex_array[d][3] = 1
         localStorage.setItem("pokedex", pokedex_array)
         add_pokemon(d, 0)
+      }
+    }
+  }
+
+
+  if(new_jk[0] == '#remove'){
+    for(d=0; d<pokedex_array.length; d++){
+      if(pokedex_array[d][1] == new_jk[1]){
+        console.log(pokedex_array[d][1])
+        pokedex_array[d][2] = 0
+        pokedex_array[d][3] = 0
+        localStorage.setItem("pokedex", pokedex_array)
+        location.reload()
       }
     }
   }
