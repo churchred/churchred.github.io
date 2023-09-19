@@ -163,7 +163,7 @@ var current_points = 0
 var resets = 0
 
 //Sjansen for en Shiny Pokemon
-let chance_shiny_array = [20, 4, 2, 1]
+let chance_shiny_array = [10000, 20, 4, 2, 1]
 let chance_shiny = chance_shiny_array[resets]
 
 
@@ -921,12 +921,12 @@ document.addEventListener('click',function(e){
     if(pokedex_array[e.target.id][3] == 1){
         var path = "Bilder/Sprites/Sprites3/" + pokedex_array[e.target.id][0] + ".png"
       }else{
-      var path = "https://img.pokemondb.net/artwork/large/" + pokedex_array[e.target.id][1] + ".jpg"  
+      var path = "Bilder/Sprites/Sprites4/" + pokedex_array[e.target.id][1] + ".jpg"  
       path = path.toLowerCase()
       for(i=0; i<pokemon_name_exceptions.length; i++){
         if(pokedex_array[e.target.id][1] == pokemon_name_exceptions[i][0]) {
           console.log(pokedex_array[e.target.id][1], "-->", pokemon_name_exceptions[i][1])
-          path = "https://img.pokemondb.net/artwork/large/" + pokemon_name_exceptions[i][1] + ".jpg" 
+          path = "Bilder/Sprites/Sprites4/" + pokemon_name_exceptions[i][1] + ".jpg" 
           path = path.toLowerCase()
         }
       }
