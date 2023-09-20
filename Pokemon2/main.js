@@ -170,7 +170,8 @@ let chance_shiny = chance_shiny_array[resets]
 //Er vanskelighetsgrad dropdown låst? locked eller unlocked
 var lock = 'unlocked'
 
-
+// Variabel som sjekker hvor mange ganger du trykker på RESETT knappen før spillet resetter seg
+var reset_check_counter = 0
 
 //Lyd variabler
 var audio_rett = new Audio('Sounds/correct.mp3');
@@ -858,6 +859,23 @@ function change_sprites(x){
   }else{
     clear_pokedex('pokedex')
     load_game()
+  }
+
+}
+
+//Resetter hele spillet og begynner HELT på nytt
+function reset(){
+
+  if(reset_check_counter < 2){
+    reset_check_counter += 1
+    if(reset_check_counter == 1){document.getElementById("setting_reset_btn").innerHTML = "Sikker?"}
+    if(reset_check_counter == 2){
+      document.getElementById("setting_reset_btn").innerHTML = "Helt sikker?"
+      document.getElementById("setting_reset_btn").style.width = "110px"
+    }
+  }else{
+    localStorage.clear()
+    location.reload()
   }
 
 }
