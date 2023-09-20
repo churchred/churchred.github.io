@@ -921,13 +921,11 @@ document.addEventListener('click',function(e){
     if(pokedex_array[e.target.id][3] == 1){
         var path = "Bilder/Sprites/Sprites3/" + pokedex_array[e.target.id][0] + ".png"
       }else{
-      var path = "Bilder/Sprites/Sprites4/" + pokedex_array[e.target.id][1] + ".jpg"  
-      path = path.toLowerCase()
+      var path = "Bilder/Sprites/Sprites4/" + pokedex_array[e.target.id][1].toLowerCase() + ".jpg"  
       for(i=0; i<pokemon_name_exceptions.length; i++){
         if(pokedex_array[e.target.id][1] == pokemon_name_exceptions[i][0]) {
           console.log(pokedex_array[e.target.id][1], "-->", pokemon_name_exceptions[i][1])
-          path = "Bilder/Sprites/Sprites4/" + pokemon_name_exceptions[i][1] + ".jpg" 
-          path = path.toLowerCase()
+          path = "Bilder/Sprites/Sprites4/" + pokemon_name_exceptions[i][1].toLowerCase() + ".jpg" 
         }
       }
     }
