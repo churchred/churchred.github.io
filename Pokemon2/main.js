@@ -163,7 +163,7 @@ var current_points = 0
 var resets = 0
 
 //Sjansen for en Shiny Pokemon
-let chance_shiny_array = [10000, 20, 4, 2, 1]
+let chance_shiny_array = [20, 4, 2, 1]
 let chance_shiny = chance_shiny_array[resets]
 
 
