@@ -577,8 +577,11 @@ function check_answer(){
 //Hva som skjer hvis svar er rett eller feil
 function answer_is(x){
   if(x == 'correct'){
+
+
     //Spiller av riktig lyd
-    audio_rett.play()
+    if(sound_volume != 0){audio_rett.play()}
+    
 
     //Skru av og på riktige knapper
     enable_button('new_btn')
