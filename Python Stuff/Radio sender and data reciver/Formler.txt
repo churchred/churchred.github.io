@@ -1,0 +1,23 @@
+P1 = Posisjon en   på raden
+P2 = Posisjon to   på raden
+P3 = Posisjon tre  på raden
+P4 = Posisjon fire på raden
+
+I RawData:
+512,256,128,64
+P1   P2  P3 P4
+
+PxC: C-en står for Calculated.
+
+P1C = ((0.095 + (5.0*P1/1023)/5)/0.009)*10
+
+P2C = ((5.0*P2/1023)/0.01)-273.15
+
+P3C = 1.33*(3.3*P3/1023) - 1.26
+
+P4C = 1.33*(3.3*P4/1023) - 1.26
+
+
+I Calculated
+661.65, -148.03, -210.59, -0.99
+ P1C	  P2C      P3C	   P4C
