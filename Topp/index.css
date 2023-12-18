@@ -1,0 +1,83 @@
+
+
+@import "top.css";
+@import "add.css";
+@import "banner.css";
+@import "grids.css";
+
+
+*{
+  margin: 0; padding: 0;
+  outline: none; border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #29344a;
+  color: #ababab;
+}
+
+
+
+.down_page{
+  position: fixed;
+  background: rgba(166, 166, 166, 0.379);  
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  font-weight: bolder;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  border: 2px solid rgb(44, 44, 44);
+  color: #29344a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.down_page:hover{
+  transform: scale(1.05);
+  background: rgba(215, 215, 215, 0.578); 
+}
+
+
+.up_page{
+  position: fixed;
+  background: rgba(166, 166, 166, 0.379);  
+  bottom: 65px;
+  right: 30px;
+  border-radius: 50%;
+  font-weight: bolder;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  border: 2px solid rgb(44, 44, 44);
+  color: #29344a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.up_page:hover{
+  transform: srgba(220, 220, 220, 0.379);
+  background: rgba(215, 215, 215, 0.578); 
+}

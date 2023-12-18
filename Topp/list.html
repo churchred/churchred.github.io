@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Last Tech: Top List</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/Icons/favicon.ico">
+
+  <link rel="stylesheet" href="index.css">
+
+  <script src="index.js"></script>
+
+</head>
+<body onload="Load()" id="body">
+  <div class="banner-body">
+    <img src="assets/Icons/Last Tech Logo 3.png" alt="Logo" class="logo" onclick="location.href='index.html';">
+      <ul>
+        <li><a onclick="location.href='index.html';">Home</a></li>  
+        <li><a href='javascript:location.hash="#0";reload();'>Games</a></li>  
+        <li><a href='javascript:location.hash="#1";reload();'>TV-series</a></li>  
+        <li><a href='javascript:location.hash="#2";reload();'>Movies</a></li> 
+        <li><a href='javascript:location.hash="#3";reload();'>Books</a></li> 
+        <li onclick="Reset()" id="reset_btn">Reset</li> 
+      </ul>
+    <div class="button-box">
+      <img src="assets/Icons/edit.png" id="edit_btn" class="search_logo" onclick="EnableEdit()">
+      <img src="assets/Icons/menu.png" alt="menu-logo" class="menu_logo" onclick="click_btn()">
+    </div>
+  </div>
+
+  <div class="top_list_div" id="top_list_div">
+    <h1 class="header" id="header">Title</h1>
+    <div class="line"></div>
+    <div class="top_list" id="top_list">
+
+      <!-- <div class="item">
+         <h1>1</h1>
+         <img src="assets/Games/masseffect.png">
+         <div class="button_div">
+           <button>&#x2191;</button>
+           <button>&#8595;</button>
+           <button>X</button>
+         </div>
+       </div>-->
+   
+   
+      <!-- <button class="add_item">+</button>-->
+   
+     </div>
+  </div>
+  
+
+  <div class="add_item_btn" id="add_item_btn">
+    <button onclick="ShowHideAddScreen(1)">+</button>
+  </div>
+
+  <button class="up_page" onclick="MoveUpDown('up')">&#x2191;</button>
+  <button class="down_page" onclick="MoveUpDown('down')">&#8595;</button>
+  
+
+  <div class="addItem_bg" id="addnew">
+    <div class="addItem">
+      <div class="addItem_banner">
+        <button onclick="ShowHideAddScreen(0)">X</button>
+      </div>
+      <h1>Add new item:</h1>
+
+      <form class="form_div" onsubmit="AddNewGame()">
+        <p class="input_txt">Choose the image.</p>
+        <p class="note">(Note: Please add into assets folder)</p>
+        <input type="file" id="input2" class="file_input" required>
+        <input type="number" id="input1" class="text_input" min="1" max="99">
+        <p class="note">Chose where on the list to place the new item (Optional)</p>
+        <button type="submit" class="add_btn">Add</button>
+      </form>
+    
+     
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
