@@ -1,26 +1,24 @@
 /*Banner*/
 .banner-body{
   width: 100%;
-  height: 60px;
-  background-color: rgb(51, 51, 51);
+  height: 40px;
+  background-color: var(--bg-col-banner);
   display: flex;
   position: fixed;
 }
 
-
-
 .logo-box{
   cursor: pointer;
-  width: 190px;
+  width: 130px;
   height: 100%;
   display: flex;
   margin: auto;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 
 .logo-box .logo{
-  height: 80%;
+  height: 60%;
   width: auto;
   margin: auto;
   user-select:none;
@@ -28,10 +26,10 @@
 }
 
 .logo-box p{
-  color: var(--text-color-1);
-  font-size: 2.2rem;
+  color: var(--text-color);
+  font-size: 1.6rem;
   margin: auto;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
   user-select:none;
 }
 
@@ -62,7 +60,7 @@
 
 .banner-body ul{
   margin: auto;
-  width: 400px;
+  width: 450px;
   display: flex;
   color: white;
   height: 100%;
@@ -94,11 +92,11 @@
     display: grid;
     height: 300px;
     right: 0px;
-    margin-top: 60px;
+    margin-top: 40px;
     width: 0px;
     position: absolute;
     background-color: rgb(34, 34, 34);
-    transition: none;
+    transition: 0.1s linear;
   }
 
   .banner-body.active .menu_logo{
