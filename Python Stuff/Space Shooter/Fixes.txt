@@ -1,0 +1,16 @@
+Ting jeg må fiske:
+
+	- "Next Level" vente funksjonen mellom levlene
+        - Bedre resetting
+	- Animasjons rescaling for alt
+        - Kan gjøre skjermen større eller mindre (Beveglse: 10% av skjermens lengde i sekundet)
+	- Mer animasjons vennlig
+        - Kulere boss battle + Flere boss battles
+	- Bedre shop
+	- Nerf Ability 4: Rapid Fire
+	- Bedre level skip
+	- Kanskje lage flere filer? __name__ == __main__  #Krever research
+	- HP Drop fra Astroider
+	- Nuke animasjon
+	- Ship damage += 1 eller 2
+	- Ylva Fixer Graphic Upgrade

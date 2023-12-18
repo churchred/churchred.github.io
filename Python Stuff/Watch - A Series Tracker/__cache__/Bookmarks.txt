@@ -1,0 +1,2 @@
+Angel,3,16
+Leverage,3,12
