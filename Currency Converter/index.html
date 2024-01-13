@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Currency Info</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>
+
+
+</head>
+<body>
+
+  <h1 class="overskrift">Currency Converter</h1>
+
+ <div class="main_page" id="main_page">
+    <div class="main-logo-div" id="main_logo_div">
+      <img src="assets/Icons/LOGO main2.png" class="main-logo">
+      <div>
+        <h1>Last Tech</h1>
+        <p>Industries</p>
+      </div>
+    </div>
+
+  <div class="app-box">
+
+    <div class="row">
+      <div class="menu-box">
+
+        <img src="assets/Flags/norsk.webp" class="flag" id="flag1">
+  
+        <input type="number" id="value1" class="input" minlength="0" value="0" onkeyup="convert(1)">
+  
+        <select name="from" id="from_input1" class="droppdown" onchange="updatedropdown()">
+          <option value="NOK">NOK</option>
+          <option value="EUR">Euro</option>
+          <option value="USD">USD</option>
+          <option value="SEK">SEK</option>
+          <option value="DKK">DKK</option>
+          <option value="GBP">GBP</option>
+        </select>
+  
+      </div>
+
+      <img src="assets/Icons/arrow2.png" class="arrow">
+  
+      <div class="menu-box">
+  
+        <img src="assets/Flags/Euro.png" class="flag" id="flag2">
+  
+        <input type="number" id="value2" class="input" minlength="0" value="0" onkeyup="convert(2)">
+  
+        <select name="from" id="from_input2" class="droppdown" onchange="updatedropdown()">
+          <option value="NOK">NOK</option>
+          <option value="EUR">Euro</option>
+          <option value="USD">USD</option>
+          <option value="SEK">SEK</option>
+          <option value="DKK">DKK</option>
+          <option value="GBP">GBP</option>
+        </select>
+  
+      </div>
+    </div>
+  
+  </div>
+  
+</body>
+</html>

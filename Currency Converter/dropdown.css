@@ -1,0 +1,20 @@
+
+.droppdown{
+  width: 140px;
+  height: 35px;
+  margin: auto;
+  font-size: 1.7rem;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:500;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.droppdown:hover{
+  background-color: rgb(208, 208, 208);
+}

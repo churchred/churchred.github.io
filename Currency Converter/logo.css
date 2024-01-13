@@ -1,0 +1,41 @@
+.main-logo-div{
+  display: flex;
+  margin: auto;
+  height: 130px;
+  gap: 5px;
+  user-select: none;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  visibility: hidden;
+}
+
+.main-logo-div div{
+  margin: auto;
+  display: grid;
+  margin-top: 60px;
+  margin-left: -30px;
+}
+
+.main-logo-div h1{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+  font-size: 33px;
+  margin: auto;
+  font-style: italic;
+}
+
+.main-logo-div p{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+  font-size: 20px;
+  margin: auto;
+  margin-top: -10px;
+  font-style: italic;
+}
+
+.main-logo{
+  margin: auto;
+  width: 100px;
+  -webkit-user-drag: none;
+}

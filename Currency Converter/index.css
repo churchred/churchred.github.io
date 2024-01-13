@@ -1,0 +1,120 @@
+@import url("input.css");
+@import url("dropdown.css");
+@import url("logo.css");
+
+*{
+  margin: 0; padding: 0;
+  outline: none; border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #d63535;
+}
+
+
+body{
+  background-color: rgb(38, 93, 233);
+  display: flex;
+  height: 100vh;
+  background-image: url('assets/bg.jpg');
+  display: grid;
+}
+
+
+.overskrift{
+  margin: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: white;
+}
+
+.logo{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 10;
+  height: 10;
+}
+
+.app-box{
+  margin: auto;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px 2px rgba(0,0,0.5);
+  width: 700px;
+  height: 350px;
+  border-radius: 10px;
+  border: solid 5px rgb(255, 255, 255);
+  margin-top: 0px;
+}
+
+
+.row{
+  display: flex;
+  width: 100%;
+}
+
+.menu-box{
+  margin: auto;
+  display: grid;
+  height: 200px;
+}
+
+
+.flag{
+  width: 100px;
+  height: 60px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+
+.submit_btn{
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 3px solid white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.submit_btn:hover{
+  background-color: white;
+  border: 3px solid white;
+  color: black;
+}
+
+
+.arrow{
+  height: auto;
+  width: 75px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 700px){ 
+
+  .overskrift{
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+  }
+
+
+.row{
+  display: grid;
+}
+
+.app-box{
+  width: 95vw;
+  height: 600px;
+}
+
+}
