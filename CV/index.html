@@ -12,20 +12,18 @@
 
 
 </head>
-<body class="main-body">
+<body class="main-body" id="top">
 
   <div class="banner-body">
-    <div class="logo-box">
+    <div class="logo-box" onClick="document.getElementById('top').scrollIntoView()">
       <img src="assets/logo3.png" alt="Logo" class="logo">
       <p>Portfolio</p>
     </div>
       <ul>
-        <li onClick="document.getElementById('landing').scrollIntoView()">Hjem</li>
         <li onClick="document.getElementById('about').scrollIntoView()">Om meg</li>
         <li onClick="document.getElementById('jobb').scrollIntoView()">Erfaring</li>
         <li onClick="document.getElementById('utdanning').scrollIntoView()">Utdanning</li>
         <li onClick="document.getElementById('prosjekter').scrollIntoView()">Prosjekter</li>
-
       </ul>
     <div class="button-box">
       <img src="assets/menu.png" alt="menu-logo" class="menu_logo" onclick="click_btn()">
@@ -33,60 +31,81 @@
   </div>
 
   <div class="landing-page" id="landing">
+
     <div class="landing-page-containter">
+
       <img src="assets/me.jpeg" class="shadow-2">
+
       <div class="landing-page-text-box">
         <h1>Kristoffer Kirkerød</h1>
-        <p>Data Ingenør   /   Lærer</p>
+        <p>Dataingeniør &nbsp;  / &nbsp;  Lærer</p>
         <a href="assets/CV 3.pdf" target="_blank"><button class="main-button">CV</button></a>
         <a href="https://github.com/churchred/churchred.github.io" target="_blank"><button class="main-button">Github</button></a>
       </div>
+
     </div>
+
   </div>
 
 
-  <div class="text-page" id="about">
-    <h1 class="text-header">Hvem er jeg?</h1>
-    <div class="text-content">
-      <img src="assets/me2.jpeg" class="shadow-1 bright">
-      <div class="text-div">
-        <p>
-            Jeg heter Kristoffer Kirkerød. </br></br>
-            Jeg er 28 år gammel og kommer fra Fredrikstad. </br></br>
-            Jeg er orignalt utdannet som grunnskolelærer, men etter 5 år innenfor yrket bestemte jeg med for å gå en annen vei. </br></br>
-            Siden jeg alltid har likt å kode, noe jeg lærte å gjøre fra Youtube videoer i en alder av 13år, så var det naturlig
-            at jeg begynte å jobbe mot en dataingenør-utdanning.
-        </p>
+  <div class="info-page" id="about"> 
+
+    <div class="info-page-containter">
+      <img src="assets/me2.jpeg" class="shadow-1">
+
+      <div class="info-right-box">
+        <div class="text-box">
+          <h1>Om meg</h1>
+          <p>Mitt navn er Kristoffer Kirkerød, 28 år, og jeg er fra Fredrikstad. Jeg har tidligere hatt en karriere som lærer, men valgte å skifte retning og begynte som dataingeniør i 2023.</p>
+        </div>
+
+        <div class="text-box">
+          <h1>Teknologi bakgrunn</h1>
+          <p>Min teknologiske interesse begynte tidlig; jeg lærte å kode enkle spill ved hjelp av batch-programmering mens jeg gikk på ungdomsskolen. På videregående skole tok jeg faget IT, og lærte meg ActionScript 3. </br></br> 
+          
+            Jeg har kodet mye på fritiden siden den gang, og lærte meg Python mens jeg gikk på lærerutdanningen for nesten 10 år siden. Som student var jeg også et aktivt medlem av Helpdesk ved høgskolen, hvor jeg bistod studenter med dataproblemer. </br></br>
+            
+            I tillegg er jeg årlig dommer i First Lego League, hvor jeg vurderer og veileder deltakernes teknologiprosjekter. I min tid som lærer lærte jeg meg Javascript for å lage lærerike spill og nyttige verktøy til elevene.</p>
+        </div>
+
       </div>
+
     </div>
+
   </div>
 
-  <div class="text-page" id="jobb">
-    <h1 class="text-header">Jobb erfaring</h1>
-    <div class="text-content">
 
-      <div class="text-div">
-        <div class="text-item">
+  <div class="info-page" id="jobb"> 
+
+    <div class="info-page-containter">
+      
+
+      <div class="info-right-box">
+        <div class="text-box">
           <h1>Peterson Packaging</h1>
-          <p>
-              Hver sommer fra 2014 til 2019 var jeg sommervikar hos VPK. 
-              Dette var en 100% stilling, hvor jeg jobbet 3.skift. VPK er en fabrikk som produserer papp.
+          <p>Hver sommer fra 2014 til 2019 arbeidet jeg som sommervikar hos VPK, i en 100% stilling med tredelt skiftordning. VPK er en fabrikk som primært produserer papp og pappesker. </br></br>I løpet av min tid der opparbeidet jeg omfattende erfaring med maskiner, automasjon og fabrikkarbeid generelt.</p>
+        </div>
+
+        <div class="text-box">
+          <h1>Lærer</h1>
+          <p>Fra 2019 til 2023 arbeidet jeg som lærer ved flere skoler i Viken. I løpet av denne perioden fungerte jeg hovedsakelig som kontaktlærer for elever på 1.-4. trinn. Jeg har hatt ansvaret som kontaktlærer ved Karlshus skole i Råde, samt ved Hannestad, Borgen og Alvim skole i Sarpsborg.
+          </br></br>
+            I tillegg har jeg hatt ansvar for IKT og iPads ved flere av skolene jeg har vært tilknyttet. Hver høst har jeg også deltatt i First Lego League, enten som veileder for elever eller som dommer.
           </p>
         </div>
-        <div class="text-item">
-          <h1 class="text-item-small">Lærer</h1>
-          <p>
-              Fra 2019 til 2023 jobbet jeg som lærer rundt på forskjellige skoler i Viken.
-              Jeg jobbet hovedsaklig som kontaktlærer på 1-4 trinn. Jeg har jobbet på Karlshus skole i Råde, Hannestad, Borgen og Alvim i Sarpsborg.
-          </p>
-        </div>
+
+ 
+
       </div>
 
-      <img src="assets/me4.jpg" class="shadow-2">
+      <img src="assets/me4.jpg" class="shadow-1">
+
     </div>
+
   </div>
 
 
+  
   <div class="utdanning-page" id="utdanning">
     <h1 class="text-header">Min Utdanning</h1>
     <div class="utdanning-page-containter">
@@ -132,7 +151,6 @@
       </div>
     </div>
   </div>
- 
 
   <div class="project-page" id="prosjekter">
     <h1 class="text-header">Mine Prosjekter</h1>
@@ -145,7 +163,7 @@
           <img src="assets/watchseries.PNG" class="project-card-img-mobile">
           <h2>Python / Pygame - &nbsp 2024</h2>
           <p> 
-            En app som skanner mappen den blir plassert i og lager en liste med serier, sesonger og episoder den finner. Den holder styr på hvor du er i en serie og favoritt episodene dine. I denne appen er alle elementer og deres logikk laget fra bunnen av. Dette innkluderer knapper, scrollbars, progressbars osv.
+            Appen skanner automatisk mappen den er plassert i og genererer en oversikt over tilgjengelige serier, sesonger og episoder. Den holder oversikt over hvor du er i en serie, og man kan markere sine favorittepisoder. Alle komponenter og funksjoner i appen, inkludert knapper, scrollbars, progressbars og annen brukergrensesnittlogikk, er utviklet fra grunnen av.
           </p>
           <div>
             <a href="https://github.com/churchred/churchred.github.io/tree/main/WatchseriesX" target="_blank"><button class="main-button">Github</button></a>
@@ -359,7 +377,9 @@
           </div>
         </div>
 
+    </div>
 
+  </div>
   
 </body>
 </html>
