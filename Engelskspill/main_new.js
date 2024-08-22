@@ -31,7 +31,7 @@ let body_database = [
   [['feet'],['føtter']],
   [['ear'],['øre']],
   [['chin'],['hake']],
-  [['eyes'],['øyne', 'øyer']],
+  [['eyes'],['øyne']],
   [['hair'],['hår']],
   [['finger'],['finger']]
 ]
@@ -66,7 +66,7 @@ let house_database = [
   [['sink'],['vask']],
   [['couch'],['sofa']],
   [['mirror'],['speil']],
-  [['cupboard'],['skap', 'kott']],
+  [['cupboard'],['skap']],
 
   [['chair'],['stol']],
   [['books'],['bøker']],
@@ -99,7 +99,7 @@ let halloween_database = [
   [['dragon'],['drage']],
   [['castle'],['slott']],
   [['ghost'],['spøkelse']],
-  [['candy', 'sweets', 'lollies'],['godteri']]
+  [['candy', 'sweets'],['godteri']]
 ]
 
 
@@ -110,7 +110,7 @@ let skole_database = [
   [['book'],['bok']],
   [['desk'],['pult']],
   [['chair'],['stol']],
-  [['blackboard'],['krittavle']],
+  [['blackboard', "board"],['krittavle']],
   [['colouring pencil', 'coloring pencil'],['fargeblyant']],
   [['scissor'],['saks']],
   [['ruler'],['linjal']],
