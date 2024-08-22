@@ -103,6 +103,28 @@ let halloween_database = [
 ]
 
 
+let skole_database = [
+  [['pencil'],['blyant']],
+  [['pen'],['penn']],
+  [['eraser'],['viskelær']],
+  [['book'],['bok']],
+  [['desk'],['pult']],
+  [['chair'],['stol']],
+  [['blackboard'],['krittavle']],
+  [['colouring pencil', 'coloring pencil'],['fargeblyant']],
+  [['scissor'],['saks']],
+  [['ruler'],['linjal']],
+  [['writing'],['skriving']],
+  [['reading'],['lesing']],
+  [['playing'],['leking']],
+  [['school yard'],['skolegård']],
+  [['playground'],['lekeplass']],
+  [['schoolbag'],['skolesekk']],
+  [['teacher'],['lærer']],
+]
+
+
+
 let main_database = []
 
 let prize_database = [
@@ -113,7 +135,9 @@ let prize_database = [
   'flowers.JPG', 'coffee.JPG', 'owl.JPG', 'signs.PNG', 'dog2.JPG', 'elk.JPG', 'cat2.PNG', 'flower2.JPG', 'land.JPG',
   'coala.PNG', 'cat3.PNG', 'flower3.JPG', 'art.PNG', 'cat4.PNG', 'brave.PNG', 'mulan.PNG', 'owl2.PNG', 'heart.jpg',
   'chill.jpg', 'city.PNG', 'flower4.PNG', 'flower5.PNG', 'fotball2.jpg', 'animals.PNG', 'art2.PNG', 'balloon.JPG', 
-  'dog3.PNG', 'dinosaur.PNG', 'dog4.JPG', 'wolf2.PNG', 'something.PNG', 'halloween.PNG', 'jellyfish.PNG'
+  'dog3.PNG', 'dinosaur.PNG', 'dog4.JPG', 'wolf2.PNG', 'something.PNG', 'halloween.PNG', 'jellyfish.PNG', 'art3.jpg',
+  'art4.jpg', 'art5.jpg', 'art6.jpg', 'art7.jpg', 'cars.jpg', 'cats4.jpg', 'disney.jpg', 'dog5.jpg', 'flowers6.jpg', 
+  'httyd.jpg', 'iceage.jpg', 'lionking.jpg', 'nemo.jpg', 'summer.jpg', 'walley.jpg'
 ]
 
 const max_antall_stamps = prize_database.length
@@ -189,6 +213,9 @@ function check_tema(){
   }
   if(tema == 5){//HALLOWEEN
     main_database = halloween_database.slice(0) //Kopierer ord_database
+  }
+  if(tema == 6){//SCHOOL
+    main_database = skole_database.slice(0) //Kopierer ord_database
   }
 }
 
@@ -274,6 +301,7 @@ function remove_item_database(){
   if(tema == 3){console.log(main_database.length + "/" + house_database.length + " ord igjen")}
   if(tema == 4){console.log(main_database.length + "/" + umbrella_database.length + " ord igjen")}
   if(tema == 5){console.log(main_database.length + "/" + halloween_database.length + " ord igjen")}
+  if(tema == 6){console.log(main_database.length + "/" + skole_database.length + " ord igjen")}
 
   console.log("---------------")
 }
