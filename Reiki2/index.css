@@ -65,8 +65,8 @@
 }
 
 .textStuff{
-  max-width: 800px;
-  height: 300px;
+  max-width: 850px;
+  min-height: 300px;
   margin: auto;
   display: grid;
   padding: 10px;
@@ -196,10 +196,12 @@
 
 
 .article_template_TextBox{
-  width: 50%;
+  max-width: 50%;
+  width: auto;
   height: 600px;
   margin: auto;
   display: grid;
+  padding: 23px;
 }
 
 .article_template_TextBox h1{
@@ -253,7 +255,16 @@
   display: grid;
 }
 
+.reverse_img{
+  flex-wrap:wrap;
+}
 
+
+@media (min-width:1250px) and (max-width:1650px) {
+  .too_big_img{
+    max-width: 500px;
+  }
+}
 
 /*Ipad*/
 @media only screen and (max-width: 1500px){ 
