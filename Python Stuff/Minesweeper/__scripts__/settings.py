@@ -17,12 +17,11 @@ DIFFICULTY = [
   [9,     9,      10,   [40, 40],      [376, 376],    [430, 500]],
   [13,    13,     40,   [35, 35],      [479, 479],    [540, 600]],
   [16,    30,     99,   [30, 30],      [958, 510],    [1000, 630]],
-
 ]
 
 # Basic info
 FPS = 60
-VERSION = "LastTech: Minesweeper    v0.9"
+VERSION = "LastTech: Minesweeper"
 
 TITLE_WIDTH = 325
 TITLE_HEIGHT = 350
@@ -33,9 +32,10 @@ BTN_SPACE = 2
 
 # Skins:
 SKINS = [
-  # Name,       Tile_img,         BG/MAIN BUTTONS,    Tile click,    Clock, BG, TEXT, BORDER,    TILE_BG,     BOMB_CLICK
-  ['Normal',  'assets/skin_1/', [GRAY_LIGHT, GRAY],   GRAY_LIGHT,    [BLACK, RED, GRAY],          GRAY,       RED_LIGHT],
-  ['Frozen',  'assets/skin_2/', [BLUE_LIGHT, BLUE],   GRAY_LIGHT,    [BLUE_LIGHT, BLACK, GRAY],   GRAY,       RED_LIGHT]
+  # Name,         Tile_img,          BG/MAIN BUTTONS,    Tile click,    Clock, BG, TEXT, BORDER,    TILE_BG,     BOMB_CLICK
+  ['Normal',   'assets/skin_1/',   [GRAY_LIGHT, GRAY],   GRAY_LIGHT,    [BLACK, RED, GRAY],          GRAY,       RED_LIGHT],
+  ['Frozen',   'assets/skin_2/',   [BLUE_LIGHT, BLUE],   GRAY_LIGHT,    [BLUE_LIGHT, BLACK, GRAY],   GRAY,       RED_LIGHT],
+  ['Minecraft','assets/skin_3/',   [BROWN, BROWN_DARK],  GRAY_LIGHT,    [BROWN, BLACK, BLACK],       BLACK,      RED_LIGHT]
 ]
 
 # Color of the numbers

@@ -18,7 +18,10 @@ BLUE_LIGHT = (135,206,235)
 GREEN = (0,255,0)
 GREEN_LIGHT = (0, 204, 102)
 
+BROWN = (171, 119, 60)
+BROWN_DARK = (132, 92, 46)
 
+SAFE_COLOR = (53, 122, 54)
 
 # Text colors for console
 RED_TXT = '\33[31m'

@@ -71,9 +71,9 @@ class Game():
 
     # Makes a list with bombs and their index location on the gameboard
     for i in range(self.bombs):
-      random_location = random.choice([i for i in range(0, game_board_size) if i not in temp_bomb_list])
+      random_location = random.choice([i for i in range(1, game_board_size+1) if i not in temp_bomb_list])
       temp_bomb_list.append(random_location)
-      
+
     # Adds the bombs from the list onto the gameboard
     for row in self.game_board:
       for colum in row:
@@ -82,6 +82,7 @@ class Game():
 
   # Makes the numbers on the screen, around the bombs    
   def find_numbers(self):
+    
     for r_index, row in enumerate(self.game_board):
       for c_index, colum in enumerate(row):
         if colum[0] == "X":
@@ -128,11 +129,17 @@ class Game():
               if self.game_board[r_index+1][c_index+1][0] != "X": 
                 self.game_board[r_index+1][c_index+1][0] += 1
 
+
+
+
   # Makes the buttons we are going to print onto the screen      
   def make_buttons(self):
 
     # Get button size, different difficulties have different sizes
     btn_size = DIFFICULTY[self.difficulty][3][0]
+    
+    # List containing index of all 0 value tiles
+    safety_list = []
 
     # Space between buttons, in other words, width of a line in the grid between buttons
     btn_space = BTN_SPACE
@@ -149,6 +156,7 @@ class Game():
         # Checks if it is blank space or not
         if colum[0] == 0:
           txt = ""
+          safety_list.append(colum[1])
         else:
           txt = str(colum[0])
 
@@ -159,10 +167,22 @@ class Game():
           btn_size, btn_size,                             # w, h,
           SKINS[self.skin_index][3],                      # color, 
           "Arial", 30, txt_col, txt_col,                  # font, font_size, font_color, font_color_hover,
-          txt, colum[1], self.image_list, self.skin_index # id(name_txt), index, skin, skin_index
+          txt, colum[1], self.image_list, self.skin_index, # id(name_txt), index, skin, skin_index
         )
         colum.append(btn)     
-               
+
+    # Find a safe tile
+    if self.difficulty > 0:
+      random_location = random.choice(safety_list)
+      for r_index, row in enumerate(self.game_board):
+        for c_index, colum in enumerate(row):
+          if colum[1] == random_location:
+            colum[2].safe_click = True
+            break
+    
+
+
+
   # Runs the app
   def run(self, screen, mouse):
 
@@ -202,6 +222,7 @@ class Game():
             colum[2].hidden = False
             self.started = True
             self.tiles_left -= 1
+            #print("Removed id: " + str(colum[2].location_info) + "  ---> " + str(self.tiles_left))
             if colum[0] == "X":
               colum[2].color = SKINS[self.skin_index][6]
               self.game_over = True
@@ -210,7 +231,6 @@ class Game():
           
             elif packet_from_btn[1] == "":
               self.clear_empty_spaces(r_index, c_index)
-            print("Tiles: " + str(self.tiles_left) + "/" + str(self.bombs))
 
 
     # If we win, print text
@@ -240,12 +260,12 @@ class Game():
         temp_row += txt_col + "[" + str(colum[0]) + "] " + RESET_TXT
       print(temp_row)
   
-
   # Checks all squares around a clicked button
   def clear_empty_spaces_checker(self, row, col):
     if self.game_board[row][col][2].hidden == True and self.game_board[row][col][0] != "X":
       self.game_board[row][col][2].hidden = False
       self.tiles_left -= 1
+      #print("Removed: row(" + str(row+1) + ") " +  "col(" + str(col+1) + ")" + "  ->" + str(self.tiles_left))
 
       if self.game_board[row][col][2].flagged == True:
         self.flags -= 1
@@ -289,7 +309,6 @@ class Game():
 
   # What happen when you win    
   def victory(self, screen):
-    return
     rect_w = 250
     rect_h = 75
     border_w = 5

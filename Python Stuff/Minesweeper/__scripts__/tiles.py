@@ -29,6 +29,7 @@ class Tiles():
     self.color = color
     self.image_list = images
     self.skin_index = skin
+    self.safe_click = False
 
     # Load Tile image
     self.tile_image = self.image_list[0]
@@ -38,6 +39,8 @@ class Tiles():
 
     # Load Tile image
     self.flag_image = self.image_list[2]
+
+    self.safe_img = self.image_list[3]
   
 
     # Text variabels
@@ -135,6 +138,8 @@ class Tiles():
     else:
       # Draw the unclicked button
       screen.blit(self.tile_image, (self.x, self.y+self.sink))
+      if self.safe_click == True and self.hidden == True:
+        screen.blit(self.safe_img, (self.x, self.y))
 
       # Draw the flag if button is flagged
       if self.flagged == True:

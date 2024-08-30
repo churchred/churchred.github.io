@@ -177,12 +177,10 @@ class App():
       self.reset()
 
     if package[1] == "Skins":
-      print("New skin")
       self.skin_index += 1
       if self.skin_index >= len(SKINS):
         self.skin_index = 0
       self.load_images()
-      self.reset()
       self.title_screen.skin_index = self.skin_index
       self.title_screen.reset()
 
@@ -208,8 +206,12 @@ class App():
     self.flag_image = pygame.image.load(SKINS[self.skin_index][1] + "flag.png").convert_alpha()
     self.flag_image = pygame.transform.scale(self.flag_image, (DIFFICULTY[self.difficulty][3][0], DIFFICULTY[self.difficulty][3][1]))
 
+    # A safe tile to click on at the start
+    self.safe_img = pygame.image.load("assets/safe.png").convert_alpha()
+    self.safe_img = pygame.transform.scale(self.safe_img, (DIFFICULTY[self.difficulty][3][0], DIFFICULTY[self.difficulty][3][1]))
+
     # A list to send to tile class
-    self.tile_image_list = [self.tile_image, self.bomb_image, self.flag_image]
+    self.tile_image_list = [self.tile_image, self.bomb_image, self.flag_image, self.safe_img]
 
   # What happens when we reset the game      
   def reset(self):
