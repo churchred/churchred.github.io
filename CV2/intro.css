@@ -1,0 +1,37 @@
+
+
+.intro{
+  max-width: 900px;
+  height: auto;
+  display: flex;
+  margin: auto;
+  gap: 50px;
+  color: var(--color-1);;
+}
+
+.intro img{
+  width: 230px;
+  height: 250px;
+  margin: auto;
+  box-shadow: 10px 10px 0 var(--color-1);
+}
+
+.landing-page-text-box{
+  margin: auto;
+  box-shadow: 3px -3px 0 var(--color-1);
+  padding: 30px;
+  padding-right: 80px;
+}
+
+.landing-page-text-box h1{
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: var(--text-type);
+}
+
+.landing-page-text-box p{
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 20px;}
+
+

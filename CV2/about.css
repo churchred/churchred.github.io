@@ -3,9 +3,10 @@
 
 .info-page{
   width: 100%;
-  min-height: 100vh;
-  background-color: var(--bg-col);
+  min-height: 80vh;
   margin: auto;
+  margin-top: 100px;
+  margin-bottom: -250px;
   display: flex;
 }
 
@@ -36,12 +37,16 @@
 .text-box{
   margin: auto;
   display: block;
+  color: var(--color-3);
+  text-align: left;
 }
 
 .text-box h1{
   font-family: var(--text-type);
   font-size: 1.7rem;
-  box-shadow: 0px 1px 0 var(--main-color);
+  box-shadow: 0px 1px 0 var(--color-3);
+  line-height: 23px;
+  margin-bottom: 5px;
   display: inline-block; 
 }
 
@@ -49,18 +54,15 @@
   font-family: var(--main-text-font);
   font-size: 1rem;
   padding-top: 10px;
-  margin-left: 5px;
+  margin-left: 0px;
+  color: var(--color-4);
 }
 
 
-.text-header{
-  font-size: 3rem;
-  width: auto;
-  font-family: var(--text-type);
-  margin: auto;
-  margin-top: 100px;
-  padding: 10px;
-  padding-top: 10px;
-  padding-bottom: 2px;
-  box-shadow: 0px 3px 0 var(--main-color);
+.shadow-1{
+  box-shadow: 10px 10px 0 var(--color-3);
+}
+
+.shadow-2{
+  box-shadow: -10px 10px 0 var(--color-3);
 }

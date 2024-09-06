@@ -1,0 +1,113 @@
+
+
+
+.landing-page{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  
+}
+
+.page{
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+  display: flex;
+  transition: 0.3s linear;
+  width: 60%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title{
+  width: auto;
+  font-size: 4em;
+  font-weight: bolder;
+  writing-mode: vertical-rl;
+  margin: auto;
+  position: absolute;
+  text-orientation: mixed;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+.page.active{
+  width: 750%;
+  cursor: default;
+  max-width: none;
+  display: block;
+}
+
+.page.active .title{
+  opacity: 0;
+  display: flex;
+  writing-mode:horizontal-tb;
+  transition: 1s linear;
+}
+
+.content{
+  opacity: 0;
+  transition: 0.2s linear;
+  overflow: scroll;
+  display: grid;
+}
+
+.page.active .content{
+  width: 100%;
+  height: 100vh;
+  opacity: 100;
+  transition: 0.2s linear;
+}
+
+
+.col1{
+  background-color: var(--color-2);
+}
+
+
+.col2{
+  background-color: var(--color-1);
+}
+
+.col3{
+  background-color: var(--color-4);
+}
+
+
+.main-button{
+  font-size: 1rem;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+ font-weight: bold;
+ width: 140px;
+ height: 40px;
+ cursor: pointer;
+ margin-right: 20px;
+ text-decoration: none;
+}
+
+
+
+.btn-1{
+  background-color: var(--color-4);
+  color: var(--color-1);
+  border: 4px solid var(--color-1);
+}
+
+.btn-2{
+  background-color: var(--color-2);
+  color: var(--color-3);
+  border: 4px solid var(--color-3);
+}
+
+.btn-1:hover{
+  background-color: var(--color-1);
+  color: var(--color-4);
+}
+
+.btn-2:hover{
+background-color: var(--color-3);
+color: var(--color-2);
+}

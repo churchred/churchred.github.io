@@ -36,7 +36,7 @@
 
 .utdanning-card{
   width: 300px;
-  height: 480px;
+  height: 450px;
   margin: auto;
   border: 1px solid var(--main-color);
   box-shadow: 7px 7px 0 var(--main-color);
@@ -49,7 +49,7 @@
 
 
 .utdanning-card img{
-  width: 20%;
+  width: 25%;
   margin: auto;
   margin-top: 10px;
 }
@@ -60,6 +60,7 @@
   text-align: center;
   padding: 10px;
   font-size: 1rem;
+  margin-top: -10px;
 }
 
 .utdanning-card h2{
@@ -87,10 +88,11 @@
   display: flex;
   flex-direction: column;
   height: 300px;
-  gap: 10px;
+  gap: 20px;
   font-size: 0.9rem;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 25px;
+  margin-top: -20px;
 }
 
 .utdanning-card li{

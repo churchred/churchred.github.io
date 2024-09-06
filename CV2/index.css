@@ -1,0 +1,33 @@
+@import url("intro.css");
+@import url("landing.css");
+@import url("about.css");
+@import url("project.css");
+
+*{
+  margin: 0; padding: 0;
+  outline: none; border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --color-1: #723d46;
+  --color-2: #e26d5c;
+  --color-3: #ffe1a8;
+  --color-4: #c9cba3;
+  --text-type: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --main-text-font: Arial;
+}
+
+body{
+  background-color: var(--bg-col);
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+
+
