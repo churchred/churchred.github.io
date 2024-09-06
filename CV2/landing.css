@@ -6,20 +6,18 @@
   height: 100vh;
   display: flex;
   flex-flow: row;
-  
 }
 
 .page{
-  width: 100%;
   height: 100vh;
   cursor: pointer;
-  display: flex;
+  display: grid;
   transition: 0.3s linear;
   width: 60%;
-  text-align: center;
+  overflow-x: hidden;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  text-align: center;
 }
 
 .title{
@@ -27,18 +25,22 @@
   font-size: 4em;
   font-weight: bolder;
   writing-mode: vertical-rl;
-  margin: auto;
   position: absolute;
   text-orientation: mixed;
-  text-align: center;
-  transition: 0.2s linear;
+  transition: 0.3s linear;
+  vertical-align: middle;
+  line-height: calc(100vw / 15); /* Dynamically set line-height based on parent width */
 }
 
 .page.active{
   width: 750%;
   cursor: default;
   max-width: none;
-  display: block;
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+  padding-left: 20px;
 }
 
 .page.active .title{
@@ -46,12 +48,12 @@
   display: flex;
   writing-mode:horizontal-tb;
   transition: 1s linear;
+
 }
 
 .content{
   opacity: 0;
-  transition: 0.2s linear;
-  overflow: scroll;
+  transition: 0.4s linear;
   display: grid;
 }
 
@@ -59,7 +61,7 @@
   width: 100%;
   height: 100vh;
   opacity: 100;
-  transition: 0.2s linear;
+  transition: 0.4s linear;
 }
 
 
