@@ -66,3 +66,19 @@
   padding-bottom: 50px;
   color: var(--color-3);
 }
+
+
+@media (max-width:1400px) {
+  .project-card{
+    max-width: 800px;
+    max-height: 400px;
+  }
+
+  .project-card-img-pc{
+    display: grid;
+    max-width: 600px;
+    max-height: 500px;
+    margin: auto;
+    box-shadow: 10px 10px 0 var(--color-4);
+  }
+}
