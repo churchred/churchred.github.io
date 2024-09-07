@@ -27,8 +27,8 @@
   font-weight: bolder;
   writing-mode: vertical-rl;
   position: absolute;
-  text-orientation: mixed;
-  transition: 0.3s linear;
+  text-orientation:mixed;
+  transition: 0.2s linear;
   vertical-align: middle;
   line-height: calc(100vw / 15); /* Dynamically set line-height based on parent width */
 }
@@ -48,7 +48,7 @@
   opacity: 0;
   display: flex;
   writing-mode:horizontal-tb;
-  transition: 1s linear;
+  transition: none;
 
 }
 
@@ -89,6 +89,7 @@
  cursor: pointer;
  margin-right: 20px;
  text-decoration: none;
+ transition: 0.2s linear;
 }
 
 

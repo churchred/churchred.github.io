@@ -1,6 +1,8 @@
 
 
 function change_page(nr){
+
+
   const items = document.querySelectorAll('.page');
 
   items.forEach(item => {
@@ -12,9 +14,17 @@ function change_page(nr){
 
       // Add 'active' class to the clicked item
       this.classList.add('active');
-      
     });
   });
+
+  // Scroll to top of div we are not in
+  if(nr != 1){
+    document.getElementById("portfolio").scroll(0,0)
+  }
+  if(nr != 2){
+    document.getElementById("about").scroll(0,0)
+  }
+  
 }
 
 
