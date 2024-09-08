@@ -41,19 +41,19 @@ body{
 
 .hidden{
   opacity: 0;
-  filter: blur(10px);
+  filter: blur(6px);
 }
 
 .hidden-l{
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 
 .hidden-r{
-  transform: translateX(+100%);
+  transform: translateX(+50%);
 }
 
 .show{
-  transition: 0.4s linear;
+  transition: 0.3s linear;
   opacity: 1;
   transform: translateX(0);
   filter: blur(0);

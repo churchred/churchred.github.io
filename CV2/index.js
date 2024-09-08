@@ -29,6 +29,9 @@ function change_page(nr){
 // Logic for animastion happening on load
 function load_page(){
   
+
+  // logic for seeing if a project div is within screen or not.
+  // 
   const observer = new IntersectionObserver((entries) =>{
     entries.forEach((entry) =>{
       //console.log(entry)
@@ -42,6 +45,24 @@ function load_page(){
   hiddenElements.forEach((el) => observer.observe(el))
 
   document.getElementById("portfolio").scroll(0,0)
+
+
+  // Logic for video play on hover and reset/pause otherwise
+  //
+  //
+  const videos = document.querySelectorAll('video');
+
+  videos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      video.play();
+    });
+    
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
 }
 
 
