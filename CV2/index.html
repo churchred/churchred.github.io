@@ -15,7 +15,7 @@
 
 
 </head>
-<body id="top">
+<body id="top" onload="load_page()">
 
   
   <section class="landing-page">
@@ -28,7 +28,7 @@
 
 
           <!-- Serie Tracker -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-l">
             <img src="assets/watchseries.PNG" class="project-card-img-pc right-shadow">
             <div class="project-card-text-containter left-pad">        
               <h1>Serie tracker</h1>
@@ -37,14 +37,14 @@
                 Appen skanner automatisk mappen den er plassert i og genererer en oversikt over tilgjengelige serier, sesonger og episoder. Den holder oversikt over hvor du er i en serie, og man kan markere sine favorittepisoder. Alle komponenter og funksjoner i appen, inkludert knapper, scrollbars, progressbars og annen brukergrensesnittlogikk, er utviklet fra grunnen av.
               </p>
               <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/WatchseriesX" target="_blank"><button class="main-button btn-2">Github</button></a>
+                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Watchseries%20X" target="_blank"><button class="main-button btn-2">Github</button></a>
               </div>
             </div>
           </div>
 
     
           <!-- Minesweeper -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-r">
             
             <div class="project-card-text-containter right-pad">        
               <h1>Minesweeper</h1>
@@ -61,7 +61,7 @@
 
     
           <!-- Currency Converter -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-l">
             <img src="assets/cc.PNG" class="project-card-img-pc right-shadow">
             <div class="project-card-text-containter left-pad">        
               <h1>Currency Converter</h1>
@@ -76,7 +76,7 @@
           </div>
     
           <!-- Pokemon matte -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-r">
             
             <div class="project-card-text-containter right-pad">        
               <h1>Pokemon Matte</h1>
@@ -91,7 +91,7 @@
           </div>
     
           <!-- 2048 -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-l">
             <img src="assets/2048.PNG" class="project-card-img-pc right-shadow">
             <div class="project-card-text-containter left-pad">        
               <h1>Spill: 2048</h1>
@@ -105,7 +105,7 @@
           </div>
     
           <!-- Terninger -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-r">
             
             <div class="project-card-text-containter right-pad">        
               <h1>Terninger</h1>
@@ -120,7 +120,7 @@
           </div>
     
           <!-- Tellern -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-l">
             <img src="assets/teller.PNG" class="project-card-img-pc right-shadow">
             <div class="project-card-text-containter left-pad">        
               <h1>Teller'n</h1>
@@ -134,7 +134,7 @@
           </div>
     
           <!-- Engelsk gloser -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-r">
             
             <div class="project-card-text-containter right-pad">        
               <h1>Engelsk Gloser</h1>
@@ -149,7 +149,7 @@
           </div>
     
           <!-- Reiki side -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-l">
             <img src="assets/reiki.PNG" class="project-card-img-pc right-shadow">
             <div class="project-card-text-containter left-pad">        
               <h1>Reiki Side</h1>
@@ -163,7 +163,7 @@
           </div>
     
           <!-- spacecleaner -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-r">
             
             <div class="project-card-text-containter right-pad">        
               <h1>Spacecleaner</h1>
@@ -177,7 +177,7 @@
           </div>
     
           <!-- Space Shooter -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-l">
             <img src="assets/Spaceshooter.PNG" class="project-card-img-pc right-shadow">
             <div class="project-card-text-containter left-pad">        
               <h1>Space Shooter</h1>
@@ -190,7 +190,7 @@
           </div>
     
           <!-- Pacman -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-r">
            
             <div class="project-card-text-containter right-pad">        
               <h1>Pacman</h1>
@@ -205,7 +205,7 @@
           </div>
     
           <!-- Simple Encoder/Decoder -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-l">
             <img src="assets/encode.PNG" class="project-card-img-pc right-shadow">
             <div class="project-card-text-containter left-pad">        
               <h1>Simple Encoder/Decoder</h1>
@@ -218,7 +218,7 @@
           </div>
     
           <!-- Topplister -->
-          <div class="project-card">
+          <div class="project-card hidden hidden-r">
             
             <div class="project-card-text-containter right-pad">        
               <h1>Topplister</h1>
@@ -304,7 +304,7 @@
     </div>
 
 
-    <div class="page active col3" onclick="change_page(3)">
+    <div class="page col3 active" onclick="change_page(3)" id="intro">
       <h1 class="title">CV</h1>
       <div class="content">
         <div class="intro">

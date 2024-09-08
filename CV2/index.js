@@ -1,7 +1,6 @@
 
-
+// Logic for changing page
 function change_page(nr){
-
 
   const items = document.querySelectorAll('.page');
 
@@ -27,7 +26,23 @@ function change_page(nr){
   
 }
 
+// Logic for animastion happening on load
+function load_page(){
+  
+  const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) =>{
+      //console.log(entry)
+      if (entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else {entry.target.classList.remove('show');}
+    })
+  })
+  
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el))
 
-function change_page2(nr){
-  console.log(nr)
+  document.getElementById("portfolio").scroll(0,0)
 }
+
+
+

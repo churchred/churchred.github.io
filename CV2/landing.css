@@ -13,7 +13,7 @@
   cursor: pointer;
   display: grid;
   transition: 0.3s linear;
-  width: 60%;
+  width: 7vw;
   overflow-x: hidden;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@
 }
 
 .page.active{
-  width: 750%;
+  width: 86vw;
   cursor: default;
   max-width: none;
   display: grid;
@@ -44,12 +44,12 @@
   padding-left: 20px;
 }
 
+
 .page.active .title{
   opacity: 0;
   display: flex;
   writing-mode:horizontal-tb;
   transition: none;
-
 }
 
 .content{

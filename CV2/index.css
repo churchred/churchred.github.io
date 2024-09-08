@@ -39,4 +39,24 @@ body{
 }
 
 
+.hidden{
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.hidden-l{
+  transform: translateX(-100%);
+}
+
+.hidden-r{
+  transform: translateX(+100%);
+}
+
+.show{
+  transition: 0.4s linear;
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
 
