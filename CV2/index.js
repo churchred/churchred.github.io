@@ -17,10 +17,10 @@ function change_page(nr){
   });
 
   // Scroll to top of div we are not in
-  if(nr != 1){
+  if(nr == 1){
     document.getElementById("portfolio").scroll(0,0)
   }
-  if(nr != 2){
+  if(nr == 2){
     document.getElementById("about").scroll(0,0)
   }
   
@@ -28,6 +28,9 @@ function change_page(nr){
 
 // Logic for animastion happening on load
 function load_page(){
+  
+  document.getElementById("intro").classList.add('active');
+  document.getElementById("site").classList.add('launched');
   
 
   // logic for seeing if a project div is within screen or not.

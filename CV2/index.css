@@ -27,7 +27,7 @@ img{
 }
 
 body{
-  background-color: var(--bg-col);
+  background-color: var(--color-4);
 }
 
 
@@ -45,11 +45,11 @@ body{
 }
 
 .hidden-l{
-  transform: translateX(-50%);
+  transform: translateX(-20%);
 }
 
 .hidden-r{
-  transform: translateX(+50%);
+  transform: translateX(+20%);
 }
 
 .show{

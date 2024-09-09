@@ -68,3 +68,7 @@
 .shadow-2{
   box-shadow: -10px 10px 0 var(--color-3);
 }
+
+@media screen and (max-width: 1400px){
+  
+}

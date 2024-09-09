@@ -18,10 +18,10 @@
 <body id="top" onload="load_page()">
 
   
-  <section class="landing-page">
+  <section class="landing-page" id="site">
 
-    <div class="page col1" onclick="change_page(1)" id="portfolio">
-      <h1 class="title">PORTFOLIO</h1>
+    <div class="page col1" id="portfolio">
+      <div class="title-wrapper col1"  onclick="change_page(1)"><h1 class="title">PORTFOLIO</h1></div>
       <div class="content">
 
         <div class="project-box">
@@ -62,7 +62,7 @@
     
           <!-- Currency Converter -->
           <div class="project-card hidden hidden-l">
-            <img src="assets/cc.PNG" class="project-card-img-pc right-shadow">
+            <video src="assets/cc.mp4" class="project-card-img-pc right-shadow"></video>
             <div class="project-card-text-containter left-pad">        
               <h1>Currency Converter</h1>
               <h2>HTML / CSS / JS</h2>
@@ -87,7 +87,7 @@
                 <a href="https://github.com/churchred/churchred.github.io/tree/main/Pokemon2" target="_blank"><button class="main-button btn-2">Github</button></a>
               </div>
             </div>
-            <img src="assets/pkmn.PNG" class="project-card-img-pc left-shadow">
+            <video src="assets/pkmn.mp4" class="project-card-img-pc left-shadow"></video>
           </div>
     
           <!-- 2048 -->
@@ -248,7 +248,6 @@
                 <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Runner" target="_blank"><button class="main-button btn-2">Github</button></a>
               </div>
             </div>
-            
           </div>
         
           <!-- Topplister -->
@@ -275,8 +274,8 @@
     </div>
 
 
-    <div class="page col2" onclick="change_page(2)" id="about">
-      <h1 class="title">OM MEG</h1>
+    <div class="page col2" id="about">
+      <div class="title-wrapper col2" onclick="change_page(2)"><h1 class="title">OM MEG</h1></div>
       <div class="content">
         <div class="info-page" id="about"> 
 
@@ -338,14 +337,14 @@
     </div>
 
 
-    <div class="page col3 active" onclick="change_page(3)" id="intro">
-      <h1 class="title">CV</h1>
+    <div class="page col3" id="intro">
+      <div class="title-wrapper col3" onclick="change_page(3)"><h1 class="title">CV</h1></div>
       <div class="content">
         <div class="intro">
           <img src="assets/me.jpeg" class="shadow-2">
           <div class="landing-page-text-box">
             <h1>Kristoffer Kirkerød</h1>
-            <p>Dataingeniør &nbsp;  / &nbsp;  Lærer</p>
+            <p>Dataingeniørstudent&nbsp;  / &nbsp;  Lærer</p>
             <a href="assets/CV 3.pdf" target="_blank"><button class="main-button btn-1">CV</button></a>
             <a href="https://github.com/churchred/churchred.github.io" target="_blank"><button class="main-button btn-1">Github</button></a>
           </div>

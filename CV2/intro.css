@@ -8,6 +8,11 @@
   margin: auto;
   gap: 50px;
   color: var(--color-1);
+  pointer-events: none;
+}
+
+.page.active .intro{
+  pointer-events:all;
 }
 
 .intro img{
@@ -37,3 +42,20 @@
   margin-bottom: 20px;}
 
 
+@media screen and (max-width: 1400px){
+  .intro{
+    max-width: 700px;
+    height: auto;
+  }
+
+  .landing-page-text-box h1{
+    font-size: 2.2rem;
+    width: 390px;
+  }
+
+  .intro img{
+    width: 190px;
+    height: 190px;
+  }
+
+}

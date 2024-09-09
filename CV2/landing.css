@@ -12,13 +12,24 @@
   height: 100vh;
   cursor: pointer;
   display: grid;
-  transition: 0.3s linear;
+  transition: width 0.3s linear, height 0s;
   width: 7vw;
   overflow-x: hidden;
   justify-content: center;
   align-items: center;
   text-align: center;
   scrollbar-width: none;
+}
+
+.title-wrapper{
+  margin: auto;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  display: flex;
+  width: 350px;
+  height: 100px;
+  background-color: red;
 }
 
 .title{
@@ -44,12 +55,11 @@
   padding-left: 20px;
 }
 
-
 .page.active .title{
-  opacity: 0;
-  display: flex;
+  opacity: 1;
   writing-mode:horizontal-tb;
   transition: none;
+  position: absolute;
 }
 
 .content{
