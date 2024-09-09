@@ -23,13 +23,13 @@
 
 .title-wrapper{
   margin: auto;
-  align-items: center;
-  position: relative;
+  width: 7vw;
+  height: 100vh;
   text-align: center;
   display: flex;
-  width: 350px;
-  height: 100px;
-  background-color: red;
+  z-index: 10;
+  position: absolute;
+  align-items: center;
 }
 
 .title{
@@ -37,10 +37,9 @@
   font-size: 4em;
   font-weight: bolder;
   writing-mode: vertical-rl;
-  position: absolute;
   text-orientation:mixed;
   transition: 0.2s linear;
-  vertical-align: middle;
+  margin: auto;
   line-height: calc(100vw / 15); /* Dynamically set line-height based on parent width */
 }
 
@@ -52,15 +51,9 @@
   justify-content: center;
   align-items: start;
   text-align: start;
-  padding-left: 20px;
 }
 
-.page.active .title{
-  opacity: 1;
-  writing-mode:horizontal-tb;
-  transition: none;
-  position: absolute;
-}
+
 
 .content{
   opacity: 0;
