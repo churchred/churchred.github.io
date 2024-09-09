@@ -35,14 +35,17 @@ function load_page(){
 
   // logic for seeing if a project div is within screen or not.
   // 
-  const observer = new IntersectionObserver((entries) =>{
-    entries.forEach((entry) =>{
-      //console.log(entry)
-      if (entry.isIntersecting){
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {entry.target.classList.remove('show');}
-    })
-  })
+      } else{entry.target.classList.remove('show');}
+    });
+  }, { 
+    threshold: 0,  // Trigger when 50% of the element is in view
+    root: null
+  });
+
   
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((el) => observer.observe(el))

@@ -15,6 +15,7 @@
 
 img{
   pointer-events: none; /* Make images non interactive (not draggable or saveable) */  
+  image-rendering: optimizeQuality;
 }
 
 :root {
