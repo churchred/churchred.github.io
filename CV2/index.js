@@ -29,7 +29,7 @@ function change_page(nr){
 // Logic for animastion happening on load
 function load_page(){
   
-  document.getElementById("about").classList.add('active');
+  document.getElementById("intro").classList.add('active');
   document.getElementById("site").classList.add('launched');
   
 
@@ -45,6 +45,7 @@ function load_page(){
     threshold: 0,  // Trigger when 50% of the element is in view
     root: null
   });
+
 
   
   const hiddenElements = document.querySelectorAll('.hidden');
