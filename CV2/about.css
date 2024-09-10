@@ -48,16 +48,17 @@
   font-size: 1.7rem;
   box-shadow: 0px 1px 0 var(--color-3);
   line-height: 23px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   display: inline-block; 
 }
 
 .text-box p{
   font-family: var(--main-text-font);
   font-size: 1rem;
-  padding-top: 10px;
+  padding-top: 0px;
   margin-left: 0px;
   color: var(--color-4);
+  line-height: 20px;
 }
 
 
@@ -69,6 +70,29 @@
   box-shadow: -10px 10px 0 var(--color-3);
 }
 
+
 @media screen and (max-width: 1400px){
-  
+  .info-page{
+    width: 700px;
+    margin-bottom: -220px;;
+  }
+
+  .info-page-containter{
+    width: 700px;
+
+  }
+
+  .info-page-containter img{
+    height: 350px;
+  }
+
+  .text-box h1{
+    font-size: 1.3rem;
+  }
+
+  .text-box p{
+    font-size: 0.9rem;
+    padding-bottom: 30px;
+  }
+
 }

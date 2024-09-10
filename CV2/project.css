@@ -86,16 +86,49 @@
 
 
 @media (max-width:1400px) {
+
+  .project-box{
+    margin-top: 200px;
+    gap: 50px;
+    padding-bottom: 100px;
+    width: 100%;    
+  }
+
   .project-card{
-    max-width: 800px;
+    max-width: 650px;
     max-height: 400px;
   }
 
   .project-card-img-pc{
-    display: grid;
-    max-width: 600px;
-    max-height: 500px;
-    margin: auto;
-    box-shadow: 10px 10px 0 var(--color-4);
+    max-width: 400px;
+    max-height: 300px;
   }
+
+  .project-box{
+    gap: 250px;
+  }
+
+  .project-card-text-containter{
+    width: 350px;
+  }
+
+  .project-card h1{
+    font-size: 1.5rem;
+  }
+
+  .project-card h2{
+    font-size: 0.8rem;
+  }
+
+  .project-card p{
+    font-size: 1rem;
+  }
+  .right-pad{
+    padding-right: 40px;
+  }
+  
+  .left-pad{
+    padding-left: 40px;
+  }
+
 }

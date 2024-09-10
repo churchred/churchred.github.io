@@ -29,7 +29,7 @@ function change_page(nr){
 // Logic for animastion happening on load
 function load_page(){
   
-  document.getElementById("intro").classList.add('active');
+  document.getElementById("about").classList.add('active');
   document.getElementById("site").classList.add('launched');
   
 
