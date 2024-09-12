@@ -39,12 +39,13 @@ function load_page(){
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else{entry.target.classList.remove('show');}
+      } //else{entry.target.classList.remove('show');}
     });
   }, { 
-    threshold: 0,  // Trigger when 50% of the element is in view
+    threshold: 0.4,  // Trigger when 50% of the element is in view
     root: null
   });
+  
 
 
   
