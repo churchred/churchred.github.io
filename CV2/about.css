@@ -2,97 +2,88 @@
 
 
 .info-page{
-  width: 1000px;
-  min-height: 80vh;
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: -250px;
+  margin-top: 300px;
+  display: grid;
+  gap: 100px;
+  padding-bottom: 100px;
+
+}
+
+
+.info-page-containter-wrapper{
   display: flex;
   flex-wrap: nowrap;
-  
+  gap: 0px;
+  width: 100%;
 }
 
 
 .info-page-containter{
-  width: 1000px;
-  height: auto;
-  display: flex;
+  width: 800px;
+  min-height: 280px;
+  display: grid;
   margin: auto;
-  gap: 50px;
+  background-color: white;
+  
 }
 
 
 .info-page-containter img{
-  height: 450px;
-  width: auto;
   margin: auto;
 }
 
-
-.info-right-box{
-  margin: auto;
-  display: grid;
-  height: 440px;
-  max-width: 500px;
-}
 
 .text-box{
-  margin: auto;
   display: block;
-  color: var(--color-3);
+  width: auto;
+  height: auto;
+  color: var(--text-color);
   text-align: left;
+  margin: auto;
+  width: 80%;
+  padding-bottom: 10px;
 }
 
 .text-box h1{
   font-family: var(--text-type);
-  font-size: 1.7rem;
-  box-shadow: 0px 1px 0 var(--color-3);
-  line-height: 23px;
-  margin-bottom: 15px;
-  display: inline-block; 
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
 
 .text-box p{
   font-family: var(--main-text-font);
-  font-size: 1rem;
-  padding-top: 0px;
-  margin-left: 0px;
-  color: var(--color-4);
-  line-height: 20px;
+  font-size: 1.5rem;
+  line-height: var(--text-line-height);
+}
+
+.about-1{
+  height: 300px;
+  margin: auto;
+}
+
+.about-2{
+  height: 550px;
+  margin: auto;
+}
+
+.about-3{
+  height: 300px;
+  margin: auto;
+}
+
+.about-4{
+  height: 350px;
+  margin: auto;
 }
 
 
 .shadow-1{
-  box-shadow: 10px 10px 0 var(--color-3);
+  box-shadow: 0px 0px 0px var(--color-1);
 }
 
 .shadow-2{
-  box-shadow: -10px 10px 0 var(--color-3);
+  box-shadow: -0px 0px 0px var(--color-1);
 }
 
-
-@media screen and (max-width: 1400px){
-  .info-page{
-    width: 700px;
-    margin-bottom: -220px;;
-  }
-
-  .info-page-containter{
-    width: 700px;
-
-  }
-
-  .info-page-containter img{
-    height: 350px;
-  }
-
-  .text-box h1{
-    font-size: 1.3rem;
-  }
-
-  .text-box p{
-    font-size: 0.9rem;
-    padding-bottom: 30px;
-  }
-
-}

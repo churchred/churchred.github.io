@@ -1,59 +1,63 @@
-@import url("banner.css");
+@import url("intro.css");
 @import url("landing.css");
 @import url("about.css");
 @import url("project.css");
-@import url("utdanning.css");
 
 *{
   margin: 0; padding: 0;
   outline: none; border: none;
-  text-decoration: none;
-  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  color-scheme: dark;
-  scroll-behavior: smooth;
+  -webkit-user-select: none;          /* Safari */        
+  -moz-user-select: none;             /* Firefox */
+  -ms-user-select: none;              /* IE10+/Edge */
+  user-select: none;                  /* Standard */
+}
+
+img{
+  pointer-events: none; /* Make images non interactive (not draggable or saveable) */  
+  image-rendering: optimizeQuality;
 }
 
 :root {
-  --main-color: #d63535;
-  --text-color: #E4E7E7;
-  --bg-col: rgb(17, 17, 17);
-  --bg-col-banner: rgb(36, 36, 36);
+  --color-1: #723d46;
+  --color-2: #e26d5c;
+  --color-3: #ffe1a8;
+  --color-4: #c9cba3;
   --text-type: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   --main-text-font: Arial;
 }
 
 body{
-  background-color: var(--bg-col);
+  background-color: var(--color-4);
 }
 
 
 
-.main-button{
-  font-size: 1rem;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  width: 140px;
-  height: 40px;
-  background-color: var(--bg-col);
-  color: var(--main-color);
-  border: 4px solid var(--main-color);
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.main-button:hover{
-  background-color: var(--main-color);
-  color: var(--text-color);
-  transition: 0.25s linear;
+::-webkit-scrollbar {
+  width: 0px;
+  scrollbar-width: none;
+  background: transparent; /* make scrollbar transparent */
 }
 
 
-.shadow-1{
-  box-shadow: 10px 10px 0 var(--main-color);
+.hidden{
+  opacity: 0;
+  filter: blur(6px);
 }
 
-.shadow-2{
-  box-shadow: -10px 10px 0 var(--main-color);
+.hidden-l{
+  transform: translateX(-20%);
 }
+
+.hidden-r{
+  transform: translateX(+20%);
+}
+
+.show{
+  transition: 0.3s linear;
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
 

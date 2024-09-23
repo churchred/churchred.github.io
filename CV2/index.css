@@ -7,10 +7,7 @@
   margin: 0; padding: 0;
   outline: none; border: none;
   font-family: 'Roboto', sans-serif;
-  -webkit-user-select: none;          /* Safari */        
-  -moz-user-select: none;             /* Firefox */
-  -ms-user-select: none;              /* IE10+/Edge */
-  user-select: none;                  /* Standard */
+
 }
 
 img{
@@ -19,12 +16,27 @@ img{
 }
 
 :root {
-  --color-1: #723d46;
-  --color-2: #e26d5c;
-  --color-3: #ffe1a8;
-  --color-4: #c9cba3;
+  --color-1: #723d46; /* Page: Om meg     */
+  --color-2: #e26d5c; /* Page: Portfolio  */
+  --color-3: #c9cba3; /* Page: CV         */
+  --color-4: black;   /* Shadows          */
+
+  --color-1: #f3dfa2; /* Page: Om meg     */
+  --color-2: #7ebdc2; /* Page: Portfolio  */
+  --color-3: #bb4430; /* Page: CV         */
+  --color-4: #231f20; /* Shadows          */
+
+  --text-color: black;
+  --bg-color: whitesmoke;
+
+
   --text-type: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   --main-text-font: Arial;
+  --font-size-p: 1.3rem;
+  --font-size-h1: 2.1rem;
+  --text-line-height: 33px;
+
+  --screen_size: 1100;
 }
 
 body{
@@ -59,5 +71,6 @@ body{
   transform: translateX(0);
   filter: blur(0);
 }
+
 
 

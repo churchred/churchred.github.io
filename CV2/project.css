@@ -4,36 +4,30 @@
 .project-box{
   margin: auto;
   display: grid;
-  margin-top: 250px;
-  gap: 200px;
+  margin-top: 15vh;
+  gap: 150px;
   padding-bottom: 100px;
   text-align: start;
-  width: 1300px;
-  
+  width: 70vw;
+
 }
 
 
 .project-card{
   display: flex;
-  max-width: 1200px;
-  max-height: 500px;
+  max-width: 70vw;
   margin: auto;
-
+  transition: none;
 }
 
-.project-card-img-pc{
-  display: grid;
-  max-width: 600px;
-  max-height: 500px;
+.vert_image{
   margin: auto;
+  max-width: 30%;
 }
 
-.right-shadow{
-  box-shadow: 10px 10px 0 var(--color-4);
-}
-
-.left-shadow{
-  box-shadow: -10px 10px 0 var(--color-4);
+.hor_image{
+  margin: auto;
+  max-width: 42%;
 }
 
 .project-card-text-containter{
@@ -43,13 +37,7 @@
   
 }
 
-.right-pad{
-  padding-right: 100px;
-}
 
-.left-pad{
-  padding-left: 100px;
-}
 
 .project-card-text-containter div{
   display: flex;
@@ -59,9 +47,8 @@
 
 
 .project-card h1{
-  font-size: 2rem;
+  font-size: var(--font-size-h1);
   width: auto;
-  box-shadow: 0px 1px 0 var(--color-3);
   display: inline-block;
   line-height: 25px;
   color: var(--color-3);
@@ -69,9 +56,9 @@
 
 .project-card h2{
   font-size: 1rem;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   margin-left: 0px;
-  margin-top: 25px;
+  margin-top: 20px;
   color: var(--color-3);
 }
 
@@ -79,56 +66,35 @@
 .project-card p{
   max-width: 800px;
   margin: auto;
-  font-size: 1.3rem;
+  font-size: var(--font-size-p);
   padding-bottom: 50px;
   color: var(--color-3);
+  line-height: var(--text-line-height);
+}
+
+.project-card h1, .project-card h2, .project-card p{
+  color: var(--text-color);
+}
+
+
+
+
+.right-shadow{
+  box-shadow: 8px 8px 10px var(--color-4);
+}
+.left-shadow{
+  box-shadow: -8px 8px 10px var(--color-4);
+}
+.right-pad{
+  padding-right: 100px;
+}
+.left-pad{
+  padding-left: 100px;
 }
 
 
 @media (max-width:1400px) {
-
-  .project-box{
-    margin-top: 200px;
-    gap: 50px;
-    padding-bottom: 100px;
-    width: 100%;    
-  }
-
-  .project-card{
-    max-width: 650px;
-    max-height: 400px;
-  }
-
-  .project-card-img-pc{
-    max-width: 400px;
-    max-height: 300px;
-  }
-
-  .project-box{
-    gap: 250px;
-  }
-
-  .project-card-text-containter{
-    width: 350px;
-  }
-
-  .project-card h1{
-    font-size: 1.5rem;
-  }
-
-  .project-card h2{
-    font-size: 0.8rem;
-  }
-
   .project-card p{
     font-size: 1rem;
   }
-  .right-pad{
-    padding-right: 40px;
-  }
-  
-  .left-pad{
-    padding-left: 40px;
-  }
-
 }

@@ -46,14 +46,15 @@ function load_page(){
     root: null
   });
   
-
-
-  
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((el) => observer.observe(el))
 
   document.getElementById("portfolio").scroll(0,0)
 
+
+
+
+  
 
   // Logic for video play on hover and reset/pause otherwise
   //

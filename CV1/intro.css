@@ -7,7 +7,7 @@
   flex-wrap: nowrap;
   margin: auto;
   gap: 50px;
-  color: var(--text-color);
+  color: var(--color-1);
   pointer-events: none;
 }
 
@@ -19,12 +19,12 @@
   width: 230px;
   height: 250px;
   margin: auto;
-  box-shadow: 10px 10px 10px var(--color-4);
+  box-shadow: 10px 10px 0 var(--color-1);
 }
 
 .landing-page-text-box{
   margin: auto;
-  box-shadow: 3px -3px 0 var(--color-3);
+  box-shadow: 3px -3px 0 var(--color-1);
   padding: 30px;
   padding-right: 80px;
 }
