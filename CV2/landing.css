@@ -120,24 +120,25 @@
 
 /* Button on CV-Screen */
 .btn-1{
-  background-color: transparent;
-  color: var(--text-color);
+  background-color: var(--color-3);
+  color: var(--bg-color);
   border: 4px solid var(--text-color);
 }
 .btn-1:hover{
-  background-color: var(--color-3);
-  color: var(--bg-color);
+  background-color: var(--color-1);
+  color: var(--color-4);
 }
 
 
 /* Button on CV-Screen */
 .btn-2{
-  background-color: transparent;
+  background-color: var(--color-2);
   color: var(--text-color);
   border: 4px solid var(--text-color);
 }
 .btn-2:hover{
-  background-color: var(--color-2);
+  background-color: var(--color-1);
+  color: var(--color-4);
 }
 
 

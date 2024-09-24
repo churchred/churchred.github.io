@@ -20,14 +20,43 @@
   transition: none;
 }
 
+.video-wrapper{
+  margin: auto;
+  background-color: rgb(49, 49, 49);
+  width: auto;
+  height: 100%;
+  display: grid;
+  position: relative;
+}
+
+.video-wrapper::after{
+  content: 'Hover to play';
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+  font-weight: bold;
+  top: 7px;
+  left: 5px;
+  border-radius: 10px;
+  width: 145px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.video-wrapper:hover::after{
+  content: '';
+}
+
+
 .vert_image{
   margin: auto;
-  max-width: 30%;
+  max-width: 20vw;
 }
 
 .hor_image{
   margin: auto;
-  max-width: 42%;
+  max-width: 30vw;
 }
 
 .project-card-text-containter{
@@ -91,7 +120,6 @@
 .left-pad{
   padding-left: 100px;
 }
-
 
 @media (max-width:1400px) {
   .project-card p{

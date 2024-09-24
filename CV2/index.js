@@ -60,15 +60,19 @@ function load_page(){
   //
   //
   const videos = document.querySelectorAll('video');
-
+  
   videos.forEach(video => {
+
+    video.currentTime = video.duration;
+
     video.addEventListener('mouseenter', () => {
+      video.currentTime = 0;
       video.play();
     });
     
     video.addEventListener('mouseleave', () => {
       video.pause();
-      video.currentTime = 0;
+      video.currentTime = video.duration;
     });
   });
 
