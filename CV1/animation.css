@@ -1,0 +1,25 @@
+
+
+/* Animation for grid light movement */
+@keyframes grid-light-move {
+  0% {
+      top: -30%;
+  }
+  100% {
+      top: 120%;
+  }
+}
+
+
+
+/* Animation for grid light movement */
+@keyframes typing {
+  40%, 60% {left: calc(100% + 2rem);}
+  100%{left: 0%;}
+}
+
+
+/* Animation for grid light movement */
+@keyframes sliding {
+  100%{top: calc(-46px * 3);}
+}

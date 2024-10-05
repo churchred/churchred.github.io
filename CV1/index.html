@@ -18,343 +18,55 @@
 <body id="top" onload="load_page()">
 
   
-  <section class="landing-page" id="site">
+  <section class="landing-page">
+    <div class="grid-wrapper">
+      <div class="grid-light-animation"></div>
+      <div class="grid-container" id="grid"></div>
+    </div>
 
-    <div class="page col1" id="portfolio">
-      <div class="title-wrapper col1"  onclick="change_page(1)"><h1 class="title">PORTFOLIO</h1></div>
-      <div class="content">
+    <div class="banner-body">
+        <ul>
+          <li>Hjem</li>
+          <li>CV</li>
+          <li>Om meg</li>
+          <li>Portfolio</li>
+        </ul>
+        <img src="assets/menu.png" alt="menu-logo" class="menu_logo" onclick="click_btn()">
+    </div>
 
-        <div class="project-box">
+    <div class="intro-wrapper">
+      <h1>Kristoffer</h1>
+      <p>Dataingeniørstudent   &nbsp;  / &nbsp;  Utvikler   &nbsp;  / &nbsp;  Lærer</p>
+      <div class="intro-button-div">
+        <button>CV</button>
+        <button>Portfolio</button>
+      </div>
+    </div>
+
+  </section>
 
 
-          <!-- Serie Tracker -->
-          <div class="project-card hidden hidden-l">
-            <video src="assets/watchseries.mp4" class="project-card-img-pc right-shadow"></video>
-            <div class="project-card-text-containter left-pad">        
-              <h1>Serie tracker</h1>
-              <h2>Python / Pygame</h2>
-              <p> 
-                Appen skanner automatisk mappen den er plassert i og genererer en oversikt over tilgjengelige serier, sesonger og episoder. Den holder oversikt over hvor du er i en serie, og man kan markere sine favorittepisoder. Alle komponenter og funksjoner i appen, inkludert knapper, scrollbars, progressbars og annen brukergrensesnittlogikk, er utviklet fra grunnen av.
-              </p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Watchseries%20X" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-          </div>
+  <section class="about-me-page">
+    <article>
+      <div class="about-me-text-wrapper">
+        <h1>Hei, mitt navn er </h1>
+        <div class="dymatic-text">
+          <div>Jeg er en </div>
+          <ul>
+            <li><span>Dataingeniør</span></li>
+            <li><span>Webutvikler</span></li>
+            <li><span>App designer</span></li>
+          </ul>
+        </div>
+        <p>
+          Min teknologiske interesse begynte tidlig; jeg lærte å kode enkle spill ved hjelp av batch-programmering mens jeg gikk på ungdomsskolen. På videregående skole valgte jeg IT som fag og lærte meg både ActionScript 3 og Adobe Dreamviewer. </br></br>
 
-    
-          <!-- Minesweeper -->
-          <div class="project-card hidden hidden-r">
-            
-            <div class="project-card-text-containter right-pad">        
-              <h1>Minesweeper</h1>
-              <h2>Python / Pygame</h2>
-              <p> 
-                Jeg utviklet et Minesweeper-spill som inkluderer ulike vanskelighetsgrader, samt muligheten til å tilpasse utseendet gjennom hovedmenyen. Dette prosjektet ga meg verdifull erfaring med rekursive algoritmer, og demonstrerte deres effektivitet i å løse komplekse problemer innen spillutvikling.
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Minesweeper" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-            <video src="assets/minesweeper.mp4" class="project-card-img-pc left-shadow"></video>
-          </div>
-    
-
-    
-          <!-- Currency Converter -->
-          <div class="project-card hidden hidden-l">
-            <video src="assets/cc.mp4" class="project-card-img-pc right-shadow"></video>
-            <div class="project-card-text-containter left-pad">        
-              <h1>Currency Converter</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p> 
-                En nettside som henter sanntidsdata fra en API for valutakurser, og lar brukeren enkelt konvertere mellom ulike valutaer. Dette prosjektet lærte meg mye innen henting og behandling av API-data.              </p>
-              <div>
-                <a href="https://churchred.github.io/Currency%20Converter/" target="_blank"><button class="main-button btn-2">Link til siden</button></a>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Currency%20Converter" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Pokemon matte -->
-          <div class="project-card hidden hidden-r">
-            
-            <div class="project-card-text-containter right-pad">        
-              <h1>Pokemon Matte</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p>Dette prosjektet var inspirasjonen som fikk meg til å begynne å lære HTML, CSS og JavaScript. Målet var å lage et engasjerende matematikkspill for mine elever. Prosjektet tok flere uker, og da jeg nesten var ferdig med prosjektet, valgte jeg å starte på nytt for å dra nytte av alt jeg hadde lært underveis. I spillet mottar elevene en Pokémon for hver femte oppgave de klarer, og disse lagres lokalt slik at de ikke forsvinner.</p>
-              <div>
-                <a href="https://churchred.github.io/Pokemon2/" target="_blank"><button class="main-button btn-2">Link til siden</button></a>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Pokemon2" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-            <video src="assets/pkmn.mp4" class="project-card-img-pc left-shadow"></video>
-          </div>
-    
-          <!-- 2048 -->
-          <div class="project-card hidden hidden-l">
-            <video src="assets/2048.mp4" class="project-card-img-pc right-shadow"></video>
-            <div class="project-card-text-containter left-pad">        
-              <h1>Spill: 2048</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p>Et prosjekt utviklet for å teste om jeg kunne lage et mer komplekst spill med animasjoner ved bruk av HTML, CSS og JavaScript. Gjennom arbeidet fikk jeg verdifull erfaring med å bruke CSS som et verktøy for animasjoner, noe som gjorde prosjektet svært lærerikt.</p>
-              <div>
-                <a href="https://churchred.github.io/2048/" target="_blank"><button class="main-button btn-2">Link til siden</button></a>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/2048" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Terninger -->
-          <div class="project-card hidden hidden-r">
-            
-            <div class="project-card-text-containter right-pad">        
-              <h1>Terninger</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p>På en av skolene jeg jobbet ved, var det ofte mangel på terninger. For å løse dette, utviklet jeg en app som elevene kunne bruke på iPadene sine. Jeg inkluderte flere farger og typer terninger for å gi fleksibilitet og variasjon.</p>
-              <div>
-                <a href="https://churchred.github.io/Terning/" target="_blank"><button class="main-button btn-2">Link til siden</button></a>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Terning" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-            <video src="assets/dice.mp4" class="project-card-img-pc left-shadow"></video>
-          </div>
-    
-          <!-- Tellern -->
-          <div class="project-card hidden hidden-l">
-            <img src="assets/teller.PNG" class="project-card-img-pc right-shadow">
-            <div class="project-card-text-containter left-pad">        
-              <h1>Teller'n</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p>Min bror trengte en animasjon for en presentasjon på jobben, hvor et tall raskt skulle telle oppover. Jeg utviklet en løsning som teller både opp og ned, og som gir brukeren muligheten til å justere hastigheten og verdien for hvert steg i tellingen.</p>
-              <div>
-                <a href="https://churchred.github.io/Telle/" target="_blank"><button class="main-button btn-2">Link til siden</button></a>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Telle" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Engelsk gloser -->
-          <div class="project-card hidden hidden-r">
-            
-            <div class="project-card-text-containter right-pad">        
-              <h1>Engelsk Gloser</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p>Da jeg startet som engelsklærer for en 3. klasse, fikk jeg ideen om å lage et spill for å gjøre læring av gloser morsommere. I spillet får elevene et klistremerke for hver femte glose de klarer. Hvis de gjør mange feil, vises riktig svar som hjelp. Klistremerkene blir ikke lagret, slik at spillet varer lenger og utfordringen opprettholdes.</p>
-              <div>
-                <a href="https://churchred.github.io/Engelskspill/" target="_blank"><button class="main-button btn-2">Link til siden</button></a>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Engelskspill" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-            <img src="assets/gloser.PNG" class="project-card-img-pc left-shadow">
-          </div>
-
+          Jeg har kodet mye på fritiden siden den gang, og lærte meg Python på fritiden mens jeg tok bachelor innenfor lærerutdanning. Da jeg senere jobbet som lærer, utvidet jeg min kompetanse ved å lære meg Javascript for å lage lærerike spill og nyttige verktøy til elevene.
           
-    
-          <!-- Reiki side -->
-          <div class="project-card hidden hidden-l">
-            <img src="assets/reiki.PNG" class="project-card-img-pc right-shadow">
-            <div class="project-card-text-containter left-pad">        
-              <h1>Reiki Side</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p>En nettside jeg utviklet for mamma, som ga meg verdifull erfaring innen webdesign, fargevalg og andre viktige designelementer.</p>
-              <div>
-                <a href="https://churchred.github.io/Reiki2/" target="_blank"><button class="main-button btn-2">Link til siden</button></a> 
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Reiki2" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- spacecleaner -->
-          <div class="project-card hidden hidden-r">
-            
-            <div class="project-card-text-containter right-pad">        
-              <h1>Spacecleaner</h1>
-              <h2>Python / Pygame</h2>
-              <p>Et spill jeg utviklet i Pygame for å lære hvordan akselerasjon og hastighet kan brukes til å skape mer realistiske bevegelser for spillelementene.</p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Space%20Cleaner" target="_blank"><button class="main-button btn-2" btn-2>Github</button></a>
-              </div>
-            </div>
-            <img src="assets/spacecleaner.PNG" class="project-card-img-pc left-shadow">
-          </div>
-
-          <!-- Lotto -->
-          <div class="project-card hidden hidden-l">
-            <img src="assets/lotto.PNG" class="project-card-img-pc right-shadow">
-            <div class="project-card-text-containter left-pad">        
-              <h1>Lotto simulator</h1>
-              <h2>Python</h2>
-              <p>
-                Dette skriptet ble utviklet for å undersøke om det lønner seg å bytte lottotall hver gang, eller om det er bedre å bruke de samme tallene ved hver trekning. Resultatene viser at over tid vil gevinsten være omtrent den samme, uavhengig av om man bytter tall eller beholder de samme hver gang. 
-                Loadingbaren ble utviklet fra bunn av, og var det mest læreriket med prosjektet, da det lærte meg å optimalisere python scripts for å ungå tregheter.
-              </p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Lotto" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-          </div>     
-    
-          <!-- Space Shooter -->
-          <div class="project-card hidden hidden-r">
-            
-            <div class="project-card-text-containter right-pad">        
-              <h1>Space Shooter</h1>
-              <h2>Python / Pygame</h2>
-              <p>Det første spillet jeg utviklet mens jeg lærte meg Pygame. Selv om spillet ikke er spesielt bra med dagens øyne, var det utrolig gøy å lage og en viktig del av læringsprosessen.</p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Space%20Shooter" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-            <img src="assets/Spaceshooter.PNG" class="project-card-img-pc left-shadow">
-          </div>
-    
-          <!-- Pacman -->
-          <div class="project-card hidden hidden-l">
-            <img src="assets/pacman.PNG"  class="project-card-img-pc right-shadow">
-            <div class="project-card-text-containter left-pad">        
-              <h1>Pacman</h1>
-              <h2>Python / Pygame </h2>
-              <p>Et av mine tidlige prosjekter for å lære meg Pygame. I dette prosjektet har spøkelsene enkel AI: de beveger seg rett fram, med en 50/50 sjanse for å svinge eller ikke hvis muligheten for å svinge er der.</p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Pacman" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-
-            
-          </div>
-    
-          <!-- Simple Encoder/Decoder -->
-          <div class="project-card hidden hidden-r">
-            
-            <div class="project-card-text-containter right-pad">        
-              <h1>Simple Encoder/Decoder</h1>
-              <h2>Python / Pygame</h2>
-              <p>En enkel encoder/decoder jeg laget for moro skyld. Denne fungerer ved å endre ASCII-verdien til tegnene ved å enten legge til eller trekke fra 1.</p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/SAFE%20-%20Encoder%20and%20Decoder" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-            <img src="assets/encode.PNG" class="project-card-img-pc left-shadow">
-          </div>
-    
-          <!-- Physics runner -->
-          <div class="project-card hidden hidden-l">
-            <img src="assets/runner.PNG" class="project-card-img-pc right-shadow">
-            <div class="project-card-text-containter left-pad">        
-              <h1>Physics runner</h1>
-              <h2>Python</h2>
-              <p>
-                Dette er et skript jeg utviklet som en del av fysikk 1-faget. Programmet lar deg spesifisere startfart, akselerasjon og distanse for en løper, og simulerer deretter bevegelsen med hensyn til luftmotstand. Under simuleringen kan du følge med på løperens tid, tilbakelagte distanse og hastighet. Etter fullført simulering er det mulig å visualisere resultatene gjennom flere ulike grafer som presenterer data fra løpet.
-              </p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Python%20Stuff/Runner" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-          </div>
-        
-          <!-- Topplister -->
-          <div class="project-card hidden hidden-r">
-            
-
-            <div class="project-card-text-containter right-pad">        
-              <h1>Topplister</h1>
-              <h2>HTML / CSS / JS</h2>
-              <p> 
-                Jeg utviklet denne nettsiden fordi jeg ikke fant en passende løsning for å lage tilpassede topplister. Jeg er spesielt fornøyd med at det bare finnes én toppliste.html, og at JavaScript bygger den riktige listen basert på lagrede data. Dette gjør det enkelt å legge til nye topplister. Nettsiden ble laget som en offline-løsning, noe som betyr at den kun fungerer på din egen PC og ikke som en nettside på internett."
-              </p>
-              <div>
-                <a href="https://github.com/churchred/churchred.github.io/tree/main/Topp" target="_blank"><button class="main-button btn-2">Github</button></a>
-              </div>
-            </div>
-            <img src="assets/top.PNG" class="project-card-img-pc left-shadow">
-          </div>
-    
-    
-        </div>
-
+        </p>
       </div>
-    </div>
-
-
-    <div class="page col2" id="about">
-      <div class="title-wrapper col2" onclick="change_page(2)"><h1 class="title">OM MEG</h1></div>
-      <div class="content">
-
-        
-        <div class="info-page" id="about"> 
-
-          <div class="info-page-containter">
-            <img src="assets/me2.jpeg" class="shadow-1">
-      
-            <div class="info-right-box">
-              <div class="text-box">
-                <h1>Om meg</h1>
-                <p>Mitt navn er Kristoffer Kirkerød, 28 år, og jeg er fra Fredrikstad. Jeg har tidligere hatt en karriere som lærer, men valgte å skifte retning og begynte som dataingeniørstudent i 2023.</p>
-              </div>
-      
-              <div class="text-box">
-                <h1>Teknologi bakgrunn</h1>
-                <p>Min teknologiske interesse begynte tidlig; jeg lærte å kode enkle spill ved hjelp av batch-programmering mens jeg gikk på ungdomsskolen. På videregående skole tok jeg faget IT, og lærte meg ActionScript 3. </br></br> 
-                
-                  Jeg har kodet mye på fritiden siden den gang, og lærte meg Python mens jeg gikk på lærerutdanningen for nesten 10 år siden. Som student var jeg også et aktivt medlem av Helpdesk ved høgskolen, hvor jeg bistod studenter med dataproblemer. </br></br>
-                  
-                  I tillegg er jeg årlig dommer i First Lego League, hvor jeg vurderer og veileder deltakernes teknologiprosjekter. I min tid som lærer lærte jeg meg Javascript for å lage lærerike spill og nyttige verktøy til elevene.</p>
-              </div>
-      
-            </div>
-      
-          </div>
-      
-        </div>
-
-          <!-- Job experience -->
-        <div class="info-page" id="jobb"> 
-
-          <div class="info-page-containter">
-            
-
-            <div class="info-right-box">
-              <div class="text-box">
-                <h1>Peterson Packaging</h1>
-                <p>Hver sommer fra 2014 til 2019 arbeidet jeg som sommervikar hos VPK, i en 100% stilling med tredelt skiftordning. VPK er en fabrikk som primært produserer papp og pappesker. </br></br>I løpet av min tid der opparbeidet jeg omfattende erfaring med maskiner, automasjon og fabrikkarbeid generelt.</p>
-              </div>
-
-              <div class="text-box">
-                <h1>Lærer</h1>
-                <p>Fra 2019 til 2023 arbeidet jeg som lærer ved flere skoler i Østfold. I løpet av denne perioden fungerte jeg hovedsakelig som kontaktlærer for elever på 1.-4. trinn. Jeg har hatt ansvaret som kontaktlærer ved Karlshus skole i Råde, samt ved Hannestad, Borgen og Alvim skole i Sarpsborg.
-                </br></br>
-                  I tillegg har jeg hatt ansvar for IKT og iPads ved flere av skolene jeg har vært tilknyttet. Hver høst har jeg også deltatt i First Lego League, enten som veileder for elever eller som dommer.
-                </p>
-              </div>
-
-      
-
-            </div>
-
-            <img src="assets/me4.jpg" class="shadow-2">
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-
-    <div class="page col3" id="intro">
-      <div class="title-wrapper col3" onclick="change_page(3)"><h1 class="title">CV</h1></div>
-      <div class="content">
-        <div class="intro">
-          <img src="assets/me4.jpeg" class="shadow-2">
-          <div class="landing-page-text-box">
-            <h1>Kristoffer Kirkerød</h1>
-            <p>Dataingeniørstudent&nbsp;  / &nbsp;  Lærer</p>
-            <a href="assets/CV.pdf" target="_blank"><button class="main-button btn-1">CV</button></a>
-            <a href="https://github.com/churchred/churchred.github.io" target="_blank"><button class="main-button btn-1">Github</button></a>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="about-me-image-wrapper"><img src="assets/me4-removebg-preview.png"></div>
+    </article>
 
 
   </section>

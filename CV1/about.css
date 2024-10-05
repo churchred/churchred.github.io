@@ -1,98 +1,132 @@
+@import url("animation.css");
 
 
-
-.info-page{
-  width: 1000px;
-  min-height: 80vh;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: -250px;
+.about-me-page{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color-2);
+  color:var(--text-color);
   display: flex;
-  flex-wrap: nowrap;
+  font-family: var(--main-text-font);
+  position: relative;
+  z-index: -2;
+}
+
+
+
+
+.dymatic-text{
+  display: flex;
+  position: relative;
+}
+
+.dymatic-text div{
+  font-size: 2rem;
   
 }
 
+.dymatic-text ul{
+  margin: auto;
+  margin-left: 10px;
+  height: 45px;
+  overflow: hidden;
+  margin-top: -3px;
+  justify-content: center;
+}
 
-.info-page-containter{
-  width: 1000px;
+.dymatic-text ul li{
+  list-style: none;
+  color: var(--grid-light);
+  
+  font-size: 2rem;
+  position: relative;
+  animation: sliding 9s steps(3) infinite;
+  line-height: 45px;
+  top: 0;
+}
+
+.dymatic-text ul li::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid var(--text-color);
+  background-color: var(--bg-color-2);
+  animation: typing 3s steps(12) infinite;
+}
+
+
+
+.about-me-page article{
+  margin: auto;
+  width: 80%;
   height: auto;
   display: flex;
-  margin: auto;
-  gap: 50px;
+  position: relative;
+  gap: 100px;
+  
+
 }
 
-
-.info-page-containter img{
-  height: 450px;
+.about-me-text-wrapper{
   width: auto;
-  margin: auto;
-}
-
-
-.info-right-box{
-  margin: auto;
+  height: fit-content;
   display: grid;
-  height: 440px;
-  max-width: 500px;
+  row-gap: 50px;
 }
 
-.text-box{
+.about-me-page article h1{
+  font-size: 2.4rem;
+  color:var(--text-color);
+  font-weight: normal;
+}
+
+.about-me-page article h1::after{
+  content: 'Kristoffer Kirkerød';
+  color: var(--grid-light);
+}
+
+.about-me-page article p{
+  font-size: 1.4rem;
+  color:var(--text-color);
+  font-weight: normal;
+  line-height: 40px;
+}
+
+.about-me-image-wrapper{
+  width: 850px;
+  height: 500px;
+  background-color: var(--bg-color-2);
+  position: relative;
+  display: flex;
+
+}
+
+.about-me-image-wrapper img{
   margin: auto;
-  display: block;
-  color: var(--color-3);
-  text-align: left;
-}
-
-.text-box h1{
-  font-family: var(--text-type);
-  font-size: 1.7rem;
-  box-shadow: 0px 1px 0 var(--color-3);
-  line-height: 23px;
-  margin-bottom: 15px;
-  display: inline-block; 
-}
-
-.text-box p{
-  font-family: var(--main-text-font);
-  font-size: 1rem;
-  padding-top: 0px;
-  margin-left: 0px;
-  color: var(--color-4);
-  line-height: 20px;
 }
 
 
-.shadow-1{
-  box-shadow: 10px 10px 0 var(--color-3);
+
+.about-me-image-wrapper::after{
+  content: '';
+  width: 150px;
+  height: 150px;
+  background-color: var(--grid-light);
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: -1;
 }
 
-.shadow-2{
-  box-shadow: -10px 10px 0 var(--color-3);
-}
-
-
-@media screen and (max-width: 1400px){
-  .info-page{
-    width: 700px;
-    margin-bottom: -220px;;
-  }
-
-  .info-page-containter{
-    width: 700px;
-
-  }
-
-  .info-page-containter img{
-    height: 350px;
-  }
-
-  .text-box h1{
-    font-size: 1.3rem;
-  }
-
-  .text-box p{
-    font-size: 0.9rem;
-    padding-bottom: 30px;
-  }
-
+.about-me-image-wrapper::before{
+  content: '';
+  width: 150px;
+  height: 150px;
+  background-color: var(--grid-light);
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  z-index: -1;
 }

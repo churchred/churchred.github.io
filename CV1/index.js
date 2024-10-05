@@ -1,77 +1,35 @@
 
-// Logic for changing page
-function change_page(nr){
-
-  const items = document.querySelectorAll('.page');
-
-  items.forEach(item => {
-    item.addEventListener('click', function() {
-
-      // Remove 'active' class from all items
-      items.forEach(i => i.classList.remove('active'));
 
 
-      // Add 'active' class to the clicked item
-      this.classList.add('active');
-    });
-  });
 
-  // Scroll to top of div we are not in
-  if(nr == 1){
-    document.getElementById("portfolio").scroll(0,0)
-  }
-  if(nr == 2){
-    document.getElementById("about").scroll(0,0)
-  }
-  
-}
-
-// Logic for animastion happening on load
 function load_page(){
-  
-  document.getElementById("intro").classList.add('active');
-  document.getElementById("site").classList.add('launched');
-  
 
-  // logic for seeing if a project div is within screen or not.
-  // 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      } //else{entry.target.classList.remove('show');}
-    });
-  }, { 
-    threshold: 0.4,  // Trigger when 50% of the element is in view
-    root: null
-  });
-  
+  // Make all the boxes for the background grid
+  const div_container = document.getElementById('grid');
 
+  // Size of the grid (20x20)
+  const grid_size = 400;
 
-  
-  const hiddenElements = document.querySelectorAll('.hidden');
-  hiddenElements.forEach((el) => observer.observe(el))
+  // Make all the boxes(divs) and add them into the grid
+  for (i = 0; i < grid_size; i++) {
 
-  document.getElementById("portfolio").scroll(0,0)
+    // Makes the new div
+    box = document.createElement('div');
 
+    // Adds class name
+    box.className = ('grid-item');
 
-  // Logic for video play on hover and reset/pause otherwise
-  //
-  //
-  const videos = document.querySelectorAll('video');
-
-  videos.forEach(video => {
-    video.addEventListener('mouseenter', () => {
-      video.play();
-    });
-    
-    video.addEventListener('mouseleave', () => {
-      video.pause();
-      video.currentTime = 0;
-    });
-  });
+    // Adds the div to the container
+    div_container.append(box)
+  }
 
 }
 
 
+// What happens if we click meny button
+function click_btn(){
+  const nav_bar = document.getElementsByClassName('banner-body')[0]
+  nav_bar.classList.toggle('active')
+  console.log("CLICKED")
+}
 

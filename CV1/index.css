@@ -1,63 +1,52 @@
-@import url("intro.css");
+@import url("banner.css");
 @import url("landing.css");
 @import url("about.css");
-@import url("project.css");
+
+
 
 *{
   margin: 0; padding: 0;
   outline: none; border: none;
   font-family: 'Roboto', sans-serif;
-  -webkit-user-select: none;          /* Safari */        
-  -moz-user-select: none;             /* Firefox */
-  -ms-user-select: none;              /* IE10+/Edge */
-  user-select: none;                  /* Standard */
 }
 
 img{
-  pointer-events: none; /* Make images non interactive (not draggable or saveable) */  
   image-rendering: optimizeQuality;
 }
 
 :root {
-  --color-1: #723d46;
-  --color-2: #e26d5c;
-  --color-3: #ffe1a8;
-  --color-4: #c9cba3;
+
+  --bg-color: rgb(33, 35, 38);
+  --bg-color-2: rgb(22, 24, 26);
+  --grid-light: #00bfff;
+
   --text-type: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   --main-text-font: Arial;
+  --text-color: white;
+
+  --font-size-p: 1.5rem;
+  --font-size-h1: 2.5rem;
+  --text-line-height: 33px;
 }
 
 body{
-  background-color: var(--color-4);
+  background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 
 
-::-webkit-scrollbar {
-  width: 0px;
-  scrollbar-width: none;
-  background: transparent; /* make scrollbar transparent */
-}
 
 
-.hidden{
-  opacity: 0;
-  filter: blur(6px);
-}
 
-.hidden-l{
-  transform: translateX(-20%);
-}
 
-.hidden-r{
-  transform: translateX(+20%);
-}
 
-.show{
-  transition: 0.3s linear;
-  opacity: 1;
-  transform: translateX(0);
-  filter: blur(0);
-}
+
+
+
+
+
+
+
 
 
