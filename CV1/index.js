@@ -23,6 +23,48 @@ function load_page(){
     div_container.append(box)
   }
 
+
+  // We make an observer to see if a project div is within the viewport or not
+  // If it is we give it the show class, which will play an entry animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } //else{entry.target.classList.remove('show');}
+    });
+  }, { 
+    threshold: 0.3,  // Trigger when 40% of the element is in view
+    root: null
+
+
+  });
+  
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el))
+
+
+
+  // Makes two eventlisteners. 
+  // One to see if the mouse is within the video, 
+  // and another to see if it leaves.
+  const videos = document.querySelectorAll('video');
+  
+  videos.forEach(video => {
+
+    video.currentTime = video.duration;
+
+    video.addEventListener('mouseenter', () => {
+      video.currentTime = 0;
+      video.play();
+    });
+    
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = video.duration;
+    });
+  });
+
+
 }
 
 

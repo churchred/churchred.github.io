@@ -9,7 +9,7 @@
   display: flex;
   font-family: var(--main-text-font);
   position: relative;
-  z-index: -2;
+  z-index: 1;
 }
 
 
@@ -95,8 +95,8 @@
 }
 
 .about-me-image-wrapper{
-  width: 850px;
-  height: 500px;
+  width: 650px;
+  height: 400px;
   background-color: var(--bg-color-2);
   position: relative;
   display: flex;
@@ -105,6 +105,8 @@
 
 .about-me-image-wrapper img{
   margin: auto;
+  width: 80%;
+  height: 80%;
 }
 
 

@@ -1,6 +1,7 @@
 @import url("banner.css");
 @import url("landing.css");
 @import url("about.css");
+@import url("project.css");
 
 
 
@@ -8,6 +9,7 @@
   margin: 0; padding: 0;
   outline: none; border: none;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 img{
@@ -18,6 +20,7 @@ img{
 
   --bg-color: rgb(33, 35, 38);
   --bg-color-2: rgb(22, 24, 26);
+  --bg-color-3: rgb(33, 35, 38);
   --grid-light: #00bfff;
 
   --text-type: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -37,12 +40,25 @@ body{
 
 
 
+.buttons{
+  font-size: 1.5rem;
+  font-family: var(--main-text-font);  
+  width: 200px;
+  height: 55px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.1s linear;
+  background-color: var(--bg-color);
+  border: 1px solid var(--grid-light);
+  color: var(--text-color);
+  box-shadow: 8px 8px 0px var(--grid-light);
+  transition: box-shadow 0.2s linear, rotate .2s linear;
+  z-index: 3;
+}
 
-
-
-
-
-
+.buttons:hover{
+  box-shadow: 0px 0px 0px var(--grid-light);
+}
 
 
 
