@@ -11,7 +11,7 @@ function makeSound(name){
 function stopPlayers(){
   var temp
   for(i=1; i<audio_lenght+1; i++){
-
+    console.log(i)
     temp = document.getElementById((i.toString()))
     temp.pause()
     temp.style.display = 'none'
