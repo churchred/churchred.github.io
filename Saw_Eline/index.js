@@ -1,6 +1,6 @@
 
 
-let audio_lenght = 15
+let audio_lenght = 25
 
 function makeSound(name){
   stopPlayers()
