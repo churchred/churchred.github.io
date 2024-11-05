@@ -1,0 +1,48 @@
+@import url("/style/login.css");
+@import url("/style/button_menu.css");
+@import url("/style/absent.css");
+@import url("/style/overlay.css");
+@import url("/style/qr.css");
+@import url("/style/approve.css");
+
+*{
+  margin: 0; padding: 0;
+  outline: none; border: none;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+img{
+  image-rendering: optimizeQuality;
+}
+
+:root {
+
+  --color-1: #00203f;
+  --color-2: #adefd1;
+  --color-2-hover: #9fdbc0;
+
+  --text-color-1: #00203f;
+  --text-color-2: #adefd1;
+
+  --text-type: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --main-text-font: Arial;
+
+  --font-size-p: 1.5rem;
+  --font-size-title: 3.5rem;
+  --font-size-button-small: 2.2rem;
+  --font-size-button-big: 3rem;
+  --text-line-height: 40px;
+}
+
+
+body{
+  background-color: var(--color-1);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+
+

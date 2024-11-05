@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Title -->
+  <title>Fraværsappen</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>
+
+
+</head>
+<body>
+
+  <section class="login-screen">
+
+    <div class="login-title">
+      <h1>Fraværsappen</h1>
+      <p>-- VoK Tech SB --</p>
+    </div>
+  
+    <section class="login">
+      <div class="login-input">
+        <div class="login-image-wrapper"><img src="assets/profile_icon-2.png"></div>
+        <input placeholder="Brukernavn", id="username">
+      </div>
+  
+      <div class="login-input">
+        <div class="login-image-wrapper"><img src="assets/lock.png"></div>
+        <input type="password" id="pass" placeholder="Passord">
+        <img src="assets/eye_closed.png" class="hidden" id="eye" onclick="show_password()">
+      </div>
+      
+      <button onclick="logIn()">Logg inn</button>
+
+    </section>
+
+  </section>
+
+
+
+</body>

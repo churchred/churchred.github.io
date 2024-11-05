@@ -1,0 +1,53 @@
+.qr-wrapper{
+  margin: auto;
+  display: grid;
+  z-index: 1;
+}
+
+.qr-frame{
+  background-color: var(--color-2);
+  width: 480px;
+  height: 480px;
+  display: grid;
+  border-radius: 10px;
+}
+
+
+.qr-frame img{
+  margin: auto;
+  width: 450px;
+  height: 450px;
+}
+
+
+.qr-text-wrapper{
+  display: flex;
+  gap: 40px;
+  margin: auto;
+  padding-top: 10px;
+  font-size: var(--font-size-p);
+  color: var(--color-2);
+}
+
+
+.qr-text-wrapper div{
+  display: flex;
+  gap: 10px;
+  margin: auto;
+}
+
+.underline{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.title{
+  font-size: var(--font-size-title);
+  color: var(--color-2);
+  margin: auto;
+  text-transform: uppercase;
+}

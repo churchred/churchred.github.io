@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Title -->
+  <title>Fraværsappen</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>
+
+
+</head>
+<body onload="set_time()">
+
+  <section class="page">
+
+    <section class="overlay-corner">
+      <p class="teacher-top-left clickable" onclick="new_page('teacher.html')"> &#8592; Lærer</p>
+      <p class="overlay-corner-top-right-student">Klasse 2B</p>
+      <p class="overlay-corner-bottom-left" id="date">Mandag 07. januar 2025</p>
+      <p class="overlay-corner-bottom-right" id="clock">08:30</p>
+    </section>
+  
+    <section class="qr-wrapper">
+      <div class="qr-frame"><img src="assets/qr.png" alt=""></div>
+      <div class="qr-text-wrapper">
+        <div>
+          <p>Tilstede: </p>
+          <p class="underline" onclick="new_page('presentqr.html')">17 elever</p>
+        </div>
+
+        <div>
+          <p>Fravær:</p>
+          <p class="underline" onclick="new_page('absentqr.html')">4 elever</p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+
+
+</body>

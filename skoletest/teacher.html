@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Title -->
+  <title>Fraværsappen</title>
+
+  <!-- Css Link -->
+  <link rel="stylesheet" href="index.css">
+
+  <!--Script Links-->
+  <script src="index.js"></script>
+
+
+</head>
+<body onload="set_time()">
+
+  <section class="page">
+
+    <section class="overlay-corner">
+      <p class="overlay-corner-top-left">Lærer - </p>
+      <p class="logout underline" onclick="new_page('index.html')">Logg ut</p>
+      <p class="overlay-corner-top-right">Klasse 2B - </p>
+      <p class="overlay-corner-bottom-left" id="date">Mandag 07. januar 2025</p>
+      <p class="overlay-corner-bottom-right" id="clock">08:30</p>
+    </section>
+  
+    <section class="button-wrapper">
+      <button onclick="new_page('absent.html')">Meld Fravær</button>
+      <button onclick="new_page('approve.html')">Godkjenn Fravær</button>
+      <button onclick="new_page('qr.html')">Opprop</button>
+    </section>
+
+  </section>
+
+
+
+</body>
