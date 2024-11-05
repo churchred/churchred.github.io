@@ -1,9 +1,9 @@
-@import url("/style/login.css");
-@import url("/style/button_menu.css");
-@import url("/style/absent.css");
-@import url("/style/overlay.css");
-@import url("/style/qr.css");
-@import url("/style/approve.css");
+@import url("login.css");
+@import url("button_menu.css");
+@import url("absent.css");
+@import url("overlay.css");
+@import url("qr.css");
+@import url("approve.css");
 
 *{
   margin: 0; padding: 0;
